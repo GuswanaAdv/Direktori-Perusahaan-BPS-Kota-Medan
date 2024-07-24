@@ -1,0 +1,68 @@
+Tahapan Persiapan Back-End Proyek RPL
+
+1) Membuat satu database kosong di phpmyadmin yang akan digunakan untuk menyimpan data
+   dari proses bisnis proyek.
+
+2) Mengatur file .env pada aplikasi laravel agar dapat dihubungkan ke database yang telah dibuat
+   sebelumnya dengan menulis perintah sebagai berikut
+   
+   -pengaturan aplikasi
+   APP_NAME=Guzz_blog
+   APP_ENV=local
+   APP_KEY=base64:HMI9Fv6I9t2/2Rdl/5FK/XYBlt3RqURPGaWup4pytWQ=
+   APP_DEBUG=true
+   APP_URL=http://latihan-1.test/
+
+   -pengaturan koneksi ke database
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=guzz_blog
+   DB_USERNAME=root
+   DB_PASSWORD=
+
+   -pengaturan untuk seeder dan factory
+   FAKER_LOCALE=id_ID
+
+3) Mengatur satu pengaturan pada file dengan path app\config\app.php dengan mengubah 
+   perintah berikut
+   > 'faker_locale' => 'en_US',
+   menjadi
+   > 'faker_locale' => env('FAKER_LOCALE','en_US'),
+   pengaturan tersebut berguna untuk menjadikan data palsu di database yang dihasilkan
+   sesuai dengan keadaan masyarakat di Indonesia terkhusus nama user. Data palsu ini dibuat
+   untuk melakukan uji coba pada proyek yang telah dibuat.
+
+4) Membuat kerangka database dengan perintah
+   > php artisan migrate
+   perintah tersebut berfungsi untuk membentuk tabel users, password_resets, failed_jobs,
+   dan personal_access_tokens. Maka dari itu tabel pengguna di database tidak perlu dibuat 
+   lagi, namun perlu diatur kembali untuk komponen atributnya agar dapat disesuaikan dengan
+   rancangan proyek. Selain itu dengan perintah di atas class model dari tabel user juga dibentuk
+   sehingga tidak perlu dibuat lagi secara manual namun tetap perlu dilakukan beberapa pengaturan
+   untuk penyesuian dengan proyek. 
+
+5) Membuat model setiap entitas di proyek pada laravel selain entitas user dengan perintah
+   > php artisan make:model nama_model -mfs
+   perintah tidak hanya membentuk class model namun juga membentuk file migrate, factory, dan 
+   seeder secara bersamaan. Perlu diperhatikan dalam menuliskan nama model pada perintah di atas
+   gunakan aturan penulisan OOP	yakni huruf kata pertama diawali dengan huruf kapital dan tidak 
+   diberikan spasi ataupun underscore antar kata.
+
+6) Menambahkan atribut berikut pada setiap class model kecuali model User
+   > protected $guarded = ['id'];
+   hal ini berguna untuk mempermudah dan mengizinkan penginputan data ke dalam database untuk
+   uji coba proyek.
+
+7) Menambahkan fungsi berikut ke dalam setiap class model tanpa terkecuali
+
+   public function nama_model_yang_dituju(){
+        //Hubungan one to one
+        //satu NamaModelAsal memiliki satu NamaModelYangDituju
+        return $this->belongsTo(NamaModelYangDituju::class);
+   }
+
+   fungsi ini berguna untuk menghubungkan relasi antar model baik di dalam aplikasi laravel
+   maupun di dalam database nama lain dari fungsi ini adalah Eloquent Relationship. Selain itu 
+   fungsi ini juga membuat aktifnya satu variabel atau objek global yang sangat membantu 
+   pembuatan program yaitu ORM (Object Relational Mapper) atau juga disebut collection.
