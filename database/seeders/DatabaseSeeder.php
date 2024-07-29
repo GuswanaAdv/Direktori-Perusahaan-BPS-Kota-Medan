@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        $this->call(KBLISeeder::class); 
         $this->call(UnitStatistikSeeder::class);
         $this->call(JabatanPenanggungjawabSeeder::class);
         $this->call(SkalaUsahaSeeder::class);

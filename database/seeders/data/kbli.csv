@@ -1,0 +1,1792 @@
+kode_kbli,nama_kbli
+01111,Pertanian Jagung
+01112,Pertanian Gandum
+01113,Pertanian Kedelai
+01114,Pertanian Kacang Tanah
+01115,Pertanian Kacang Hijau
+01116,Pertanian Aneka Kacang Hortikultura
+01117,Pertanian Biji-bijian Penghasil Minyak Makan
+01118,Pertanian Biji-bijian Penghasil Bukan Minyak Makan
+01119,"Pertanian Serealia Lainnya, Aneka Kacang dan Biji-Bijian Penghasil Minyak Lainnya"
+01121,Pertanian Padi Hibrida
+01122,Pertanian Padi Inbrida
+01131,Pertanian Hortikultura Sayuran Daun
+01132,Pertanian Hortikultura Buah
+01133,Pertanian Hortikultura Sayuran Buah
+01134,Pertanian Hortikultura Sayuran Umbi
+01135,Pertanian Aneka Umbi Palawija
+01136,Pertanian Jamur
+01137,Pertanian Bit Gula Dan Tanaman Pemanis Bukan Tebu
+01139,"Pertanian Sayuran, Buah dan Aneka Umbi Lainnya"
+01140,Perkebunan Tebu
+01150,Perkebunan Tembakau
+01160,Pertanian Tanaman Berserat
+01191,Pertanian Tanaman Pakan Ternak
+01192,Perbenihan Tanaman Pakan Ternak dan Pembibitan Bit (Bukan Bit Gula)
+01193,Pertanian Tanaman Bunga
+01194,Pertanian Pembibitan Tanaman Bunga
+01199,Pertanian tanaman semusim lainnya ytdl
+01210,Pertanian Buah Anggur
+01220,Pertanian Buah-Buahan Tropis dan Subtropis
+01230,Pertanian Buah Jeruk
+01240,Pertanian Buah Apel dan Buah Batu (Pome and Stone Fruits)
+01251,Pertanian Buah Beri
+01252,Pertanian Buah Biji Kacang-Kacangan
+01253,Pertanian Sayuran Tahunan
+01259,Pertanian Buah Semak Lainnya
+01261,Perkebunan Buah Kelapa
+01262,Perkebunan Buah Kelapa Sawit
+01269,Perkebunan Buah Oleaginous Lainnya
+01270,Pertanian Tanaman Untuk Bahan Minuman
+01281,Perkebunan Lada
+01282,Perkebunan Cengkeh
+01283,Pertanian Cabai
+01284,Perkebunan Tanaman Aromatik/Penyegar
+01285,Pertanian Tanaman Obat atau Biofarmaka Rimpang
+01286,Pertanian Tanaman Obat atau Biofarmaka Non Rimpang
+01287,Pertanian Tanaman Narkotika dan Tanaman Obat Terlarang
+01289,"Pertanian Tanaman Rempah-Rempah, Aromatik/Penyegar, dan Obat Lainnya"
+01291,Perkebunan Karet Dan Tanaman Penghasil Getah Lainnya
+01299,Pertanian Cemara dan Tanaman Tahunan Lainnya
+01301,Pertanian Tanaman Hias
+01302,Pertanian Pengembangbiakan Tanaman
+01411,Pembibitan Dan Budidaya Sapi Potong
+01412,Pembibitan Dan Budidaya Sapi Perah
+01413,Pembibitan Dan Budidaya Kerbau Potong
+01414,Pembibitan Dan Budidaya Kerbau Perah
+01420,Peternakan Kuda dan Sejenisnya
+01430,Peternakan unta dan sejenisnya
+01441,Pembibitan Dan Budidaya Domba Potong
+01442,Pembibitan Dan Budidaya Kambing Potong
+01443,Pembibitan Dan Budidaya Kambing Perah
+01444,Pembibitan Dan Budidaya Domba Perah
+01445,Produksi Bulu Domba Mentah/Raw Wool
+01450,Peternakan Babi
+01461,Budidaya Ayam Ras Pedaging
+01462,Budidaya Ayam Ras Petelur
+01463,Pembibitan Ayam Lokal dan Persilangannya
+01464,Budidaya Ayam Lokal dan Persilangannya
+01465,Pembibitan dan Budidaya Itik dan/atau Bebek
+01466,Pembibitan Dan Budidaya Burung Puyuh
+01467,Pembibitan Dan Budidaya Burung Merpati
+01468,Pembibitan Ayam Ras
+01469,Pembibitan Dan Budidaya Ternak Unggas Lainnya
+01491,Pembibitan Dan Budidaya Burung Unta
+01492,Pengusahaan Kokon/Kepompong Ulat Sutera
+01493,Pembibitan Dan Budidaya Lebah
+01494,Pembibitan Dan Budidaya Rusa
+01495,Pembibitan Dan Budidaya Kelinci
+01496,Pembibitan Dan Budidaya Cacing
+01497,Pembibitan dan Budidaya Burung Walet
+01499,Pembibitan Dan Budidaya Aneka Ternak Lainnya
+01611,Jasa Pengolahan Lahan
+01612,"Jasa Pemupukan, Penanaman Bibit/Benih Dan Pengendalian Hama dan Gulma"
+01613,Jasa Pemanenan
+01614,Jasa Penyemprotan Dan Penyerbukan Melalui Udara
+01619,Jasa Penunjang Pertanian Lainnya
+01621,Jasa Pelayanan Kesehatan Ternak
+01622,Jasa Perkawinan Ternak
+01623,Jasa Penetasan Telur
+01629,Jasa Penunjang Peternakan Lainnya
+01630,Jasa Pasca Panen
+01640,Pemilihan benih tanaman untuk pengembangbiakan
+01711,Perburuan dan Penangkapan Primata
+01712,Perburuan dan Penangkapan Mamalia
+01713,Perburuan dan Penangkapan Reptil
+01714,Perburuan dan Penangkapan Burung
+01715,Perburuan dan Penangkapan Insekta
+01719,Perburuan dan Penangkapan Satwa Liar Lainnya
+01721,Penangkaran Primata
+01722,Penangkaran Mamalia
+01723,Penangkaran Reptil
+01724,Penangkaran Burung
+01725,Penangkaran Insekta
+01726,Penangkaran Anggrek
+01727,Penangkaran Ikan dan Coral/karang
+01729,Penangkaran Tumbuhan/Satwa Liar Lainnya
+02111,Pemanfaatan Kayu Hutan Tanaman pada Hutan Produksi
+02112,Pemanfaatan kayu hutan tanaman hasil rehabilitasi pada hutan produksi
+02113,Pemanfaatan kayu hutan tanaman rakyat
+02119,Pemanfaatan kayu hutan tanaman lainnya
+02121,Pemanfaatan Kayu Hutan Alam
+02122,Pemanfaatan kayu hasil restorasi ekosistem pada hutan alam
+02130,Pemanfaatan Hasil Hutan Bukan Kayu
+02140,Pengusahaan Perbenihan Tanaman Kehutanan
+02201,Pemanenan kayu
+02202,Usaha Pemungutan Kayu
+02209,Usaha Kehutanan Lainnya
+02301,Pemungutan Getah Karet
+02302,Pemungutan Rotan
+02303,Pemungutan Getah Pinus
+02304,Pemungutan Daun Kayu Putih
+02305,Pemungutan Kokon/Kepompong Ulat Sutera
+02306,Pemungutan Damar
+02307,Pemungutan Madu
+02308,Pemungutan Bambu
+02309,Pemungutan Bukan Kayu Lainnya
+02401,Jasa Penggunaan Kawasan Hutan Di Luar Sektor Kehutanan
+02402,Jasa Perlindungan Hutan Dan Konservasi Alam
+02403,Jasa Rehabilitasi Dan Restorasi Kehutanan Sosial
+02404,Jasa Kehutanan Bidang Perencanaan Kehutanan
+02409,Jasa Penunjang Kehutanan Lainnya
+03111,Penangkapan Pisces/Ikan Bersirip Di Laut
+03112,Penangkapan Crustacea Di Laut
+03113,Penangkapan Mollusca Di Laut
+03114,Penangkapan/Pengambilan Tumbuhan Air Di Laut
+03115,Penangkapan/Pengambilan Induk/Benih Ikan Di Laut
+03116,Penangkapan Echinodermata Di Laut
+03117,Penangkapan Coelenterata Di Laut
+03118,Penangkapan Ikan Hias Laut
+03119,Penangkapan Biota Air Lainnya Di Laut
+03121,Penangkapan Pisces/Ikan Bersirip Di Perairan Darat
+03122,Penangkapan Crustacea Di Perairan Darat
+03123,Penangkapan Mollusca Di Perairan Darat
+03124,Penangkapan/Pengambilan Tumbuhan Air Di Perairan Darat
+03125,Penangkapan/Pengambilan Induk/Benih Ikan Di Perairan Darat
+03126,Penangkapan Ikan Hias di Perairan Darat
+03129,Penangkapan Biota Air Lainnya Di Perairan Darat
+03131,Jasa Sarana Produksi Penangkapan Ikan Di Laut
+03132,Jasa Produksi Penangkapan Ikan Di Laut
+03133,Jasa Pasca Panen Penangkapan Ikan Di Laut
+03141,Jasa Sarana Produksi Penangkapan Ikan Di Perairan Darat
+03142,Jasa Produksi Penangkapan Ikan Di Perairan Darat
+03143,Jasa Pasca Panen Penangkapan Ikan Di Perairan Darat
+03151,Penangkapan/Pengambilan Ikan Bersirip (Pisces) yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03152,Penangkapan/Pengambilan Crustacea yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03153,Penangkapan/Pengambilan Mollusca yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03154,Penangkapan/Pengambilan Coelenterata yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03155,Penangkapan/Pengambilan Echinodermata yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03156,Penangkapan/Pengambilan Amphibia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03157,Penangkapan/Pengambilan Reptilia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03158,Penangkapan/Pengambilan Mamalia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03159,Penangkapan/Pengambilan Algae dan Biota Perairan Lainnya yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03211,Pembesaran Pisces/ Ikan Bersirip Laut
+03212,Pembenihan Ikan Laut
+03213,Budidaya Ikan Hias Air Laut
+03214,Budidaya Karang (Coral)
+03215,Pembesaran Mollusca Laut
+03216,Pembesaran Crustacea Laut
+03217,Pembesaran Tumbuhan air Laut
+03219,Budidaya Biota Air Laut Lainnya
+03221,Pembesaran Ikan Air Tawar Di Kolam
+03222,Pembesaran Ikan Air Tawar Di Karamba Jaring Apung
+03223,Pembesaran Ikan Air Tawar Di Karamba
+03224,Pembesaran Ikan Air Tawar Di Sawah
+03225,Budidaya Ikan Hias Air Tawar
+03226,Pembenihan Ikan Air Tawar
+03227,Pembesaran Ikan Air Tawar Di Karamba Jaring Tancap
+03229,Budidaya Ikan Air Tawar di Media Lainnya
+03231,Jasa Sarana Produksi Budidaya Ikan Laut
+03232,Jasa Produksi Budidaya Ikan Laut
+03233,Jasa Pasca Panen Budidaya Ikan Laut
+03241,Jasa Sarana Produksi Budidaya Ikan Air Tawar
+03242,Jasa Produksi Budidaya Ikan Air Tawar
+03243,Jasa Pasca Panen Budidaya Ikan Air Tawar
+03251,Pembesaran Pisces/Ikan Bersirip Air Payau
+03252,Pembenihan Ikan Air Payau
+03253,Pembesaran Mollusca Air Payau
+03254,Pembesaran Crustacea Air Payau
+03255,Pembesaran Tumbuhan Air Payau
+03259,Budidaya Biota Air Payau Lainnya
+03261,Jasa Sarana Produksi Budidaya Ikan Air Payau
+03262,Jasa Produksi Budidaya Ikan Air Payau
+03263,Jasa Pasca Panen Budidaya Ikan Air Payau
+03271,Pengembangbiakan Ikan Bersirip (Pisces) yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03272,Pengembangbiakan Crustacea yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03273,Pengembangbiakan Mollusca yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03274,Pengembangbiakan Coelenterata yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03275,Pengembangbiakan Echinodermata yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03276,Pengembangbiakan Amphibia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03277,Pengembangbiakan Reptilia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03278,Pengembangbiakan Mamalia yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+03279,Pengembangbiakan Algae dan Biota Perairan Lainnya yang Dilindungi dan/atau Termasuk dalam Appendiks CITES
+05100,Pertambangan Batu Bara
+05200,Pertambangan Lignit
+06100,Pertambangan Minyak Bumi
+06201,Pertambangan Gas Alam
+06202,Pengusahaan Tenaga Panas Bumi
+07101,Pertambangan Pasir Besi
+07102,Pertambangan Bijih Besi
+07210,Pertambangan Bijih Uranium Dan Torium
+07291,Pertambangan Bijih Timah
+07292,Pertambangan Bijih Timah Hitam
+07293,Pertambangan Bijih Bauksit
+07294,Pertambangan Bijih Tembaga
+07295,Pertambangan Bijih Nikel
+07296,Pertambangan Bijih Mangan
+07299,Pertambangan Bahan Galian Lainnya Yang Tidak Mengandung Bijih Besi
+07301,Pertambangan Emas Dan Perak
+07309,Pertambangan Bijih Logam Mulia Lainnya
+08101,Penggalian Batu Hias Dan Batu Bangunan
+08102,Penggalian Batu Kapur/Gamping
+08103,Penggalian Kerikil/Sirtu
+08104,Penggalian Pasir
+08105,Penggalian Tanah dan Tanah Liat
+08106,Penggalian Gips
+08107,Penggalian Tras
+08108,Penggalian Batu Apung
+08109,"Penggalian batu, pasir dan tanah liat lainnya"
+08911,Pertambangan Belerang
+08912,Pertambangan Fosfat
+08913,Pertambangan Nitrat
+08914,Pertambangan Yodium
+08915,Pertambangan Potash (Kalium Karbonat)
+08919,"Pertambangan Mineral, Bahan Kimia Dan Bahan Pupuk Lainnya"
+08920,Ekstraksi Tanah Gemuk (Peat)
+08930,Ekstraksi Garam
+08991,Pertambangan Batu Mulia
+08992,Penggalian Feldspar dan Kalsit
+08993,Pertambangan Aspal Alam
+08994,Penggalian Asbes
+08995,Penggalian Kuarsa/Pasir Kuarsa
+08999,Pertambangan Dan Penggalian Lainnya Ytdl
+09100,Aktivitas Penunjang Pertambangan Minyak Bumi Dan Gas Alam
+09900,Aktivitas Penunjang pertambangan dan penggalian lainnya
+10110,Kegiatan Rumah Potong Dan Pengepakan Daging Bukan Unggas
+10120,Kegiatan Rumah Potong Dan Pengepakan Daging Unggas
+10130,Industri Pengolahan dan Pengawetan Produk Daging dan Daging Unggas
+10211,Industri Penggaraman/Pengeringan Ikan
+10212,Industri Pengasapan/Pemanggangan Ikan
+10213,Industri Pembekuan Ikan
+10214,Industri Pemindangan Ikan
+10215,Industri Peragian/Fermentasi Ikan
+10216,Industri Berbasis Daging Lumatan Dan Surimi
+10217,Industri Pendinginan/Pengesan Ikan
+10219,Industri Pengolahan Dan Pengawetan Lainnya untuk Ikan
+10221,Industri Pengolahan dan Pengawetan Ikan dan Biota Air (Bukan Udang) Dalam Kaleng
+10222,Industri Pengolahan dan Pengawetan Udang Dalam Kaleng
+10291,Industri Penggaraman/Pengeringan Biota Air Lainnya
+10292,Industri Pengasapan/Pemanggangan Biota Air Lainnya
+10293,Industri Pembekuan Biota Air Lainnya
+10294,Industri Pemindangan Biota Air Lainnya
+10295,Industri Peragian/Fermentasi Biota Air Lainnya
+10296,Industri Berbasis Lumatan Biota Air Lainnya
+10297,Industri Pendinginan/Pengesan Biota Air Lainnya
+10298,Industri pengolahan rumput laut
+10299,Industri Pengolahan Dan Pengawetan Lainnya untuk Biota Air Lainnya
+10311,Industri Pengasinan Buah-buahan Dan Sayuran
+10312,Industri Pelumatan Buah-buahan Dan Sayuran
+10313,Industri Pengeringan Buah-buahan Dan Sayuran
+10314,Industri Pembekuan Buah-buahan Dan Sayuran
+10320,Industri Pengolahan dan Pengawetan Buah-buahan dan Sayuran Dalam Kaleng
+10330,Industri Pengolahan Sari Buah Dan Sayuran
+10391,Industri Tempe Kedelai
+10392,Industri Tahu Kedelai
+10393,Industri Pengolahan dan Pengawetan Kedelai dan Kacang-kacangan Lainnya Selain Tahu dan Tempe
+10399,Industri Pengolahan dan Pengawetan Lainnya Buah-buahan Dan Sayuran Bukan Kacang-kacangan
+10411,Industri Minyak Mentah dan Lemak Nabati
+10412,Industri Margarine
+10413,Industri Minyak Mentah Dan Lemak Hewani Selain Ikan
+10414,Industri Minyak Ikan
+10415,Industri Minyak Goreng Bukan Minyak Kelapa Dan Minyak Kelapa Sawit
+10421,Industri Kopra
+10422,Industri Minyak Mentah Kelapa
+10423,Industri Minyak Goreng Kelapa
+10424,Industri Pelet Kelapa
+10431,Industri Minyak Mentah Kelapa Sawit (Crude Palm Oil)
+10432,Industri Minyak Mentah Inti Kelapa Sawit (Crude Palm Kernel Oil)
+10433,Industri Pemisahan/Fraksinasi Minyak Mentah Kelapa Sawit dan Minyak Mentah Inti Kelapa Sawit
+10434,Industri Pemurnian Minyak Mentah Kelapa Sawit dan Minyak Mentah Inti Kelapa Sawit
+10435,Industri Pemisahan/Fraksinasi Minyak Murni Kelapa Sawit
+10436,Industri Pemisahan/Fraksinasi Minyak Murni Inti Kelapa Sawit
+10437,Industri Minyak Goreng Kelapa Sawit
+10490,Industri Minyak Mentah Dan Lemak Nabati Dan Hewani Lainnya
+10510,Industri Pengolahan Susu Segar dan Krim
+10520,Industri Pengolahan Susu Bubuk dan Susu Kental
+10531,Industri Pengolahan Es Krim
+10532,Industri Pengolahan Es Sejenisnya Yang Dapat Dimakan (Bukan Es Batu dan Es Balok)
+10590,Industri Pengolahan Produk dari Susu Lainnya
+10611,Industri Penggilingan Gandum dan Serelia Lainnya
+10612,Industri Penggilingan Aneka Kacang (Termasuk leguminous)
+10613,Industri Penggilingan Aneka Umbi Dan Sayuran (Termasuk Rhizoma)
+10614,Industri Tepung Campuran dan Adonan Tepung
+10615,Industri Makanan Sereal
+10616,Industri Tepung Terigu
+10621,Industri Pati Ubi Kayu
+10622,Industri Berbagai Macam Pati Palma
+10623,Industri Glukosa Dan Sejenisnya
+10629,Industri Pati dan Produk Pati Lainnya
+10631,Industri Penggilingan Padi Dan Penyosohan Beras
+10632,Industri Penggilingan Dan Pembersihan Jagung
+10633,Industri Tepung Beras Dan Tepung Jagung
+10634,Industri Pati Beras dan Jagung
+10635,Industri Pemanis dari Beras dan Jagung
+10636,Industri Minyak Dari Jagung dan Beras
+10710,Industri Produk Roti Dan Kue
+10721,Industri Gula Pasir
+10722,Industri Gula Merah
+10723,Industri Sirop
+10729,Industri Pengolahan Gula Lainnya Bukan Sirop
+10731,Industri Kakao
+10732,Industri Makanan Dari Cokelat Dan Kembang Gula dari Coklat
+10733,Industri Manisan Buah-buahan Dan Sayuran Kering
+10734,Industri Kembang Gula
+10739,Industri Kembang Gula Lainnya
+10740,"Industri Makaroni, Mie Dan Produk Sejenisnya"
+10750,Industri Makanan dan Masakan Olahan
+10761,Industri Pengolahan Kopi
+10762,Industri Pengolahan Herbal (herb infusion)
+10763,Industri Pengolahan Teh
+10771,Industri Kecap
+10772,Industri Bumbu Masak Dan Penyedap Masakan
+10773,Industri Produk Masak Dari Kelapa
+10774,Industri Pengolahan Garam
+10779,Industri Produk Masak Lainnya
+10791,Industri Makanan Bayi
+10792,Industri Kue Basah
+10793,"Industri Makanan Dari Kedele Dan Kacang-kacangan Lainnya Bukan Kecap, Tempe Dan Tahu"
+10794,"Industri Kerupuk, Keripik, Peyek Dan Sejenisnya"
+10795,Industri Krimer Nabati
+10796,Industri Dodol
+10799,Industri Produk Makanan Lainnya
+10801,Industri Ransum Makanan Hewan
+10802,Industri Konsentrat Makanan Hewan
+11010,Industri Minuman Beralkohol Hasil Destilasi
+11020,Industri Minuman Beralkohol Hasil Fermentasi Anggur dan Hasil Pertanian Lainnya
+11031,Industri Minuman Beralkohol Hasil Fermentasi Malt
+11032,Industri Malt
+11040,Industri Minuman Ringan
+11051,Industri Air Kemasan
+11052,Industri Air Minum Isi Ulang
+11090,Industri Minuman Lainnya
+12011,Industri Sigaret Kretek Tangan
+12012,Industri Rokok Putih
+12013,Industri Sigaret Kretek Mesin
+12019,Industri Rokok Lainnya
+12091,Industri Pengeringan Dan Pengolahan Tembakau
+12099,Industri Bumbu Rokok Serta Kelengkapan Rokok Lainnya
+13111,Industri Persiapan Serat Tekstil
+13112,Industri Pemintalan Benang
+13113,Industri Pemintalan Benang Jahit
+13121,Industri Pertenunan (Bukan Pertenunan Karung Goni Dan Karung Lainnya)
+13122,Industri Kain Tenun Ikat
+13123,Industri Bulu Tiruan Tenunan
+13131,Industri Penyempurnaan Benang
+13132,Industri Penyempurnaan Kain
+13133,Industri Pencetakan Kain
+13134,Industri Batik
+13911,Industri Kain Rajutan
+13912,Industri Kain Sulaman
+13913,Industri Bulu Tiruan Rajutan
+13921,Industri Barang Jadi Tekstil Untuk Keperluan Rumah Tangga
+13922,Industri Barang Jadi Tekstil Sulaman
+13923,Industri Bantal dan Sejenisnya
+13924,Industri Barang Jadi Rajutan dan Sulaman
+13925,Industri Karung Goni
+13926,Industri Karung Bukan Goni
+13929,Industri Barang Jadi Tekstil Lainnya
+13930,Industri Karpet dan Permadani
+13941,Industri Tali
+13942,Industri Barang Dari Tali
+13991,Industri Kain Pita (Narrow Fabric)
+13992,Industri Yang Menghasilkan Kain Keperluan Industri
+13993,Industri Non Woven (bukan Tenunan)
+13994,Industri Kain Ban
+13995,Industri Kapuk
+13996,Industri Kain Tulle dan Kain Jaring
+13999,Industri Tekstil Lainnya YTDL
+14111,Industri Pakaian Jadi (Konveksi) Dari Tekstil
+14112,Industri Pakaian Jadi (Konveksi) Dari Kulit
+14120,Penjahitan Dan Pembuatan Pakaian Sesuai Pesanan
+14131,Industri Perlengkapan Pakaian Dari Tekstil
+14132,Industri Perlengkapan Pakaian Dari Kulit
+14200,Industri Pakaian Jadi dan Barang Dari Kulit Berbulu
+14301,Industri Pakaian Jadi Rajutan
+14302,Industri Pakaian Jadi Sulaman/Bordir
+14303,Industri Rajutan Kaos Kaki dan Sejenisnya
+15111,Industri Pengawetan Kulit
+15112,Industri Penyamakan Kulit
+15113,Industri Pencelupan Kulit Bulu
+15114,Industri Kulit Komposisi
+15121,Industri Barang Dari Kulit Dan Kulit Komposisi Untuk Keperluan Pribadi
+15122,Industri Barang Dari Kulit Dan Kulit Komposisi Untuk Keperluan Teknik/Industri
+15123,Industri Barang Dari Kulit Dan Kulit Komposisi Untuk Keperluan Hewan
+15129,Industri Barang Dari Kulit Dan Kulit Komposisi Untuk Keperluan Lainnya
+15201,Industri Alas Kaki Untuk Keperluan Sehari-hari
+15202,Industri Sepatu Olahraga
+15203,Industri Sepatu Teknik Lapangan/Keperluan Industri
+15209,Industri Alas Kaki Lainnya
+16101,Industri Penggergajian Kayu
+16102,Industri Pengawetan Kayu
+16103,"Industri Pengawetan Rotan, Bambu Dan Sejenisnya"
+16104,Industri Pengolahan Rotan
+16105,Industri Partikel Kayu dan Sejenisnya
+16211,Industri Kayu Lapis
+16212,"Industri Kayu Lapis Laminasi, Termasuk Decorative Plywood"
+16213,Industri Panel Kayu Lainnya
+16214,Industri Veneer
+16215,Industri Kayu Laminasi
+16221,Industri Barang Bangunan Dari Kayu
+16222,Industri Bangunan Prafabrikasi Dari Kayu
+16230,Industri Wadah Dari Kayu
+16291,Industri Barang Anyaman Dari Rotan Dan Bambu
+16292,Industri barang Anyaman Dari Tanaman Bukan Rotan Dan Bambu
+16293,Industri Kerajinan Ukiran Dari Kayu Bukan Mebeller
+16294,"Industri Alat Dapur Dari Kayu, Rotan Dan Bambu"
+16295,Industri Kayu Bakar dan Pelet Kayu
+16299,"Industri Barang Dari Kayu, Rotan, Gabus Lainnya YTDL"
+17011,Industri Bubur Kertas (Pulp)
+17012,Industri Kertas Budaya
+17013,Industri Kertas Berharga
+17014,Industri Kertas Khusus
+17019,Industri Kertas Lainnya
+17021,Industri Kertas dan Papan Kertas Bergelombang
+17022,Industri Kemasan Dan Kotak Dari Kertas Dan Karton
+17091,Industri Kertas Tissue
+17099,Industri Barang Dari Kertas Dan Papan Kertas Lainnya YTDL
+18111,Industri Pencetakan Umum
+18112,Industri Pencetakan Khusus
+18113,Industri Pencetakan 3D Printing
+18120,Kegiatan Jasa Penunjang Pencetakan
+18201,Reproduksi Media Rekaman Suara dan Piranti Lunak
+18202,Reproduksi Media Rekaman Film Dan Video
+19100,Industri produk dari batu bara
+19211,Industri Bahan Bakar Dari Pemurnian Dan Pengilangan Minyak Bumi
+19212,Industri Pembuatan Minyak Pelumas
+19213,Industri Pengolahan Kembali Minyak Pelumas Bekas
+19214,Industri Pengolahan Minyak Pelumas Bekas Menjadi Bahan Bakar
+19291,Industri Produk Dari Hasil Kilang Minyak Bumi
+19292,Industri Briket Batu Bara
+20111,Industri Kimia Dasar Anorganik Khlor Dan Alkali
+20112,Industri Kimia Dasar Anorganik Gas Industri
+20113,Industri Kimia Dasar Anorganik Pigmen
+20114,Industri Kimia Dasar Anorganik Lainnya
+20115,Industri Kimia Dasar Organik Yang Bersumber Dari Hasil Pertanian
+20116,"Industri Kimia Dasar Organik Untuk Bahan Baku Zat Warna Dan Pigmen, Zat Warna Dan Pigmen"
+20117,"Industri Kimia Dasar Organik Yang Bersumber Dari Minyak Bumi, Gas Alam Dan Batu Bara"
+20118,Industri Kimia Dasar Organik Yang Menghasilkan Bahan Kimia Khusus
+20119,Industri Kimia Dasar Organik Lainnya
+20121,Industri Pupuk Alam/Non Sintetis Hara Makro Primer
+20122,Industri Pupuk Buatan Tunggal Hara Makro Primer
+20123,Industri Pupuk Buatan Majemuk Hara Makro Primer
+20124,Industri Pupuk Buatan Campuran Hara Makro Primer
+20125,Industri Pupuk Hara Makro Sekunder
+20126,Industri Pupuk Hara Mikro
+20127,Industri Pupuk Pelengkap
+20128,Industri Media Tanam
+20129,Industri Pupuk Lainnya
+20131,Industri Damar Buatan (Resin Sintetis) Dan Bahan Baku Plastik
+20132,Industri Karet Buatan
+20211,Industri Bahan Baku Pemberantas Hama (Bahan Aktif)
+20212,Industri Pemberantas Hama (Formulasi)
+20213,Industri Zat Pengatur Tumbuh
+20214,Industri Bahan Amelioran (Pembenah Tanah)
+20221,Industri Cat dan Tinta Cetak
+20222,Industri Pernis (Termasuk Mastik)
+20223,Industri Lak
+20231,Industri Sabun Dan Bahan Pembersih Keperluan Rumah Tangga
+20232,"Industri Kosmetik Untuk Manusia, Termasuk Pasta Gigi"
+20233,Industri Kosmetik Untuk Hewan
+20234,Industri Perekat Gigi
+20291,Industri Perekat/Lem
+20292,Industri Bahan Peledak
+20293,Industri Tinta
+20294,Industri Minyak Atsiri
+20295,Industri Korek Api
+20296,Industri Minyak Atsiri Rantai Tengah
+20299,Industri Barang Kimia Lainnya YTDL
+20301,Industri Serat/Benang/Strip Filamen Buatan
+20302,Industri Serat Stapel Buatan
+21011,Industri Bahan Farmasi Untuk Manusia
+21012,Industri Produk Farmasi Untuk Manusia
+21013,Industri Produk Farmasi Untuk Hewan
+21014,Industri Bahan Farmasi Untuk Hewan
+21015,Industri Alat Kesehatan dalam Subgolongan 2101
+21021,Industri Bahan Baku Obat Tradisional untuk Manusia
+21022,Industri Produk Obat Tradisional untuk Manusia
+21023,Industri Produk Obat Tradisional Untuk Hewan
+21024,Industri Bahan Baku Obat Tradisional Untuk Hewan
+22111,Industri Ban Luar Dan Ban Dalam
+22112,Industri Vulkanisir Ban
+22121,Industri Pengasapan Karet
+22122,Industri Remilling Karet
+22123,Industri Karet Remah (Crumb Rubber)
+22191,Industri Barang Dari Karet Untuk Keperluan Rumah Tangga
+22192,Industri Barang Dari Karet Untuk Keperluan Industri
+22193,Industri Barang dari Karet untuk Keperluan Infrastruktur
+22194,Industri Barang Dari Karet Untuk Kesehatan
+22199,Industri Barang Dari Karet Lainnya Ytdl
+22210,Industri Barang dari Plastik Untuk Bangunan
+22220,Industri Barang Dari Plastik Untuk Pengemasan
+22230,Industri Pipa Plastik Dan Perlengkapannya
+22291,Industri Barang Plastik Lembaran
+22292,Industri Perlengkapan Dan Peralatan Rumah Tangga (tidak Termasuk Furnitur)
+22293,Industri Barang Dan Peralatan Teknik/Industri Dari Plastik
+22299,Industri Barang Plastik Lainnya Ytdl
+23111,Industri Kaca Lembaran
+23112,Industri Kaca Pengaman
+23119,Industri Kaca Lainnya
+23121,Industri Perlengkapan Dan Peralatan Rumah Tangga Dari Kaca
+23122,"Industri Alat-alat Laboratorium Non Klinis, Farmasi Dan Kesehatan Dari Kaca"
+23123,Industri Kemasan Dari Kaca
+23124,Industri Alat Laboratorium Klinis dari Kaca
+23129,Industri Barang Lainnya Dari Kaca
+23911,"Industri Bata, Mortar, Semen, dan Sejenisnya yang Tahan Api"
+23919,Industri Barang Tahan Api Dari Tanah Liat/Keramik Lainnya
+23921,Industri Batu Bata Dari Tanah Liat/Keramik
+23922,Industri Genteng Dari Tanah Liat/Keramik
+23923,Industri Peralatan Saniter Dari Porselen
+23929,Industri Bahan Bangunan Dari Tanah Liat/Keramik Bukan Batu Bata Dan Genteng
+23931,Industri Perlengkapan Rumah Tangga Dari Porselen
+23932,Industri Perlengkapan Rumah Tangga Dari Tanah Liat/Keramik
+23933,Industri Alat Laboratorium Dan Alat Listrik/Teknik Dari Porselen
+23939,Industri Barang Tanah Liat/Keramik dan Porselen Lainnya Bukan Bahan Bangunan
+23941,Industri Semen
+23942,Industri Kapur
+23943,Industri Gips
+23951,Industri Barang Dari Semen
+23952,Industri Barang Dari Kapur
+23953,Industri Barang Dari Semen Dan Kapur Untuk Konstruksi
+23954,Industri Barang dari Gips Untuk Konstruksi
+23955,Industri Barang Dari Asbes Untuk Keperluan Bahan Bangunan
+23956,Industri Barang Dari Asbes Untuk Keperluan Industri
+23957,Industri Mortar atau Beton Siap Pakai
+23959,"Industri Barang Dari Semen, Kapur, Gips dan Asbes Lainnya"
+23961,Industri Barang Dari Marmer Dan Granit Untuk Keperluan Rumah Tangga Dan Pajangan
+23962,Industri Barang Dari Marmer Dan Granit Untuk Keperluan Bahan Bangunan
+23963,"Industri Barang Dari Batu Untuk Keperluan Rumah Tangga, Pajangan, dan Bahan Bangunan"
+23969,"Industri Barang Dari Marmer, Granit Dan Batu Lainnya"
+23990,Industri Barang Galian Bukan Logam Lainnya Ytdl
+24101,Industri Besi Dan Baja Dasar (Iron And Steel Making)
+24102,Industri Penggilingan Baja (Steel Rolling)
+24103,Industri Pipa Dan Sambungan Pipa Dari Baja Dan Besi
+24201,Industri Pembuatan Logam Dasar Mulia
+24202,Industri Pembuatan Logam Dasar Bukan Besi
+24203,Industri Penggilingan Logam Bukan Besi
+24204,Industri Ekstrusi Logam Bukan Besi
+24205,Industri Pipa Dan Sambungan Pipa Dari Logam Bukan Besi Dan Baja
+24206,Industri Pengolahan Uranium dan Bijih Uranium
+24310,Industri Pengecoran Besi Dan Baja
+24320,Industri Pengecoran Logam Bukan Besi Dan Baja
+25111,Industri Barang Dari Logam Bukan Aluminium Siap Pasang Untuk Bangunan
+25112,Industri Barang Dari Logam Aluminium Siap Pasang Untuk Bangunan
+25113,Industri Konstruksi Berat Siap Pasang Dari Baja Untuk Bangunan
+25119,Industri Barang Dari Logam Siap Pasang Untuk Konstruksi Lainnya
+25120,"Industri Tangki, Tandon Air Dan Wadah Dari Logam"
+25130,"Industri Generator Uap, Bukan Ketel Pemanas"
+25200,Industri Senjata Dan Amunisi
+25910,"Industri Penempaan, Pengepresan, Pencetakan Dan Pembentukan Logam; Metalurgi Bubuk"
+25920,Jasa Industri Untuk Berbagai Pengerjaan Khusus Logam Dan Barang Dari Logam
+25931,Industri Alat Potong dan Perkakas Tangan Untuk Pertanian
+25932,Industri Alat Potong dan Perkakas Tangan Pertukangan
+25933,Industri Alat Potong Dan Perkakas Tangan Yang Digunakan Dalam Rumah Tangga
+25934,Industri Peralatan Umum
+25940,"Industri Ember, Kaleng, Drum Dan Wadah Sejenis Dari Logam"
+25951,Industri Barang Dari Kawat
+25952,"Industri Paku, Mur Dan Baut"
+25991,"Industri Brankas, Filling Kantor dan Sejenisnya"
+25992,Industri Peralatan Dapur Dan Peralatan Meja Dari Logam
+25993,Industri Keperluan Rumah Tangga Dari Logam Bukan Peralatan Dapur dan Peralatan Meja
+25994,Industri Pembuatan Profil
+25995,Industri Lampu Dari Logam
+25999,Industri Barang Logam Lainnya YTDL
+26110,Industri Tabung Elektron Dan Konektor Elektronik
+26120,Industri Semi Konduktor Dan Komponen Elektronik Lainnya
+26210,Industri Komputer Dan/Atau Perakitan Komputer
+26220,Industri Perlengkapan Komputer
+26310,Industri Peralatan Telepon Dan Faksimili
+26320,Industri Peralatan Komunikasi Tanpa kabel (Wireless)
+26391,Industri Kartu Cerdas (Smart Card)
+26399,Industri Peralatan Komunikasi Lainnya
+26410,Industri Televisi Dan/Atau Perakitan Televisi
+26420,"Industri Peralatan Perekam, Penerima dan Pengganda Audio Dan Video, Bukan Industri Televisi"
+26490,Industri Peralatan Audio dan Video Elektronik Lainnya
+26511,Industri Alat Ukur Dan Alat Uji Manual
+26512,Industri Alat Ukur Dan Alat Uji Elektrik
+26513,Industri Alat Ukur Dan Alat Uji Elektronik
+26514,Industri Alat Uji Dalam Proses Industri
+26520,Industri Alat Ukur Waktu
+26601,"Industri Peralatan Iradiasi/Sinar X, Perlengkapan Dan Sejenisnya"
+26602,Industri Peralatan Elektromedikal dan Elektroterapi
+26710,Industri Peralatan Fotografi
+26791,Industri Kamera Cinematografi Proyektor Dan Perlengkapannya
+26792,Industri Teropong Dan Instrumen Optik Bukan Kaca Mata
+26800,Industri Media Magnetik dan Media Optik
+27111,Industri Motor Listrik
+27112,Industri Mesin Pembangkit Listrik
+27113,"Industri Pengubah Tegangan (Transformator), Pengubah Arus (Rectifier) Dan Pengontrol Tegangan (Voltage Stabilizer)"
+27120,Industri Peralatan Pengontrol dan Pendistribusian Listrik
+27201,Industri Batu Baterai
+27202,Industri Akumulator Listrik
+27203,Industri Baterai Untuk Kendaraan Bermotor Listrik
+27310,Industri Kabel Serat Optik
+27320,Industri Kabel Listrik Dan Elektronik Lainnya
+27330,Industri Perlengkapan Kabel
+27401,"Industri Bola Lampu Pijar, Lampu Penerangan Terpusat Dan Lampu Ultra Violet"
+27402,Industri Lampu Tabung Gas (Lampu Pembuang Listrik)
+27403,Industri Peralatan Penerangan Untuk Alat Transportasi
+27404,Industri Lampu LED
+27409,Industri Peralatan Penerangan Lainnya
+27510,Industri Peralatan Listrik Rumah Tangga
+27520,Industri Peralatan Elektrotermal Rumah Tangga
+27530,Industri Peralatan Pemanas Dan Masak Bukan Listrik Rumah Tangga
+27900,Industri Peralatan Listrik Lainnya
+28111,"Industri Mesin Uap, Turbin Dan Kincir"
+28112,Industri Motor Pembakaran Dalam
+28113,Industri Komponen Dan Suku Cadang Mesin Dan Turbin
+28120,Industri Peralatan Tenaga Zat Cair dan Gas
+28130,"Industri Pompa Lainnya, Kompresor, Kran dan Klep/Katup"
+28140,"Industri Bearing, Roda Gigi dan Elemen Penggerak Mesin"
+28151,"Industri Oven, Perapian dan Tungku Pembakar Sejenis Yang Tidak Menggunakan Arus Listrik"
+28152,"Industri Oven, Perapian dan Tungku Pembakar Sejenis Yang Menggunakan Arus Listrik"
+28160,Industri Alat Pengangkat Dan Pemindah
+28171,Industri Mesin Kantor Dan Akuntansi Manual
+28172,Industri Mesin Kantor Dan Akuntansi Elektrik
+28173,Industri Mesin Kantor Dan Akuntansi Elektronik
+28174,Industri Mesin Fotocopi
+28179,Industri Mesin dan Peralatan Kantor Lainnya
+28180,Industri Perkakas Tangan Yang Digerakkan Tenaga
+28191,"Industri Mesin Untuk Pembungkus, Pembotolan Dan Pengalengan"
+28192,Industri Mesin Timbangan
+28193,Industri Mesin Pendingin
+28199,Industri Mesin Untuk Keperluan Umum Lainnya Ytdl
+28210,Industri Mesin Pertanian Dan Kehutanan
+28221,Industri Mesin dan Perkakas Mesin Untuk Pengerjaan Logam
+28222,Industri Mesin dan Perkakas Mesin Untuk Pengerjaan Kayu
+28223,Industri Mesin dan Perkakas Mesin Untuk Pengerjaan Bahan Bukan Logam Dan Kayu
+28224,Industri Mesin dan Perkakas Mesin Untuk Pengelasan Yang Menggunakan Arus Listrik
+28230,Industri Mesin Metalurgi
+28240,"Industri Mesin Penambangan, Penggalian Dan Konstruksi"
+28250,"Industri Mesin Pengolahan Makanan, Minuman Dan Tembakau"
+28261,Industri Kabinet Mesin Jahit
+28262,Industri Mesin Jahit Serta Mesin Cuci Dan Mesin Pengering Untuk Keperluan Niaga
+28263,Industri Mesin Tekstil
+28264,"Industri Jarum Mesin Jahit, Rajut, Bordir Dan Sejenisnya"
+28265,Industri Mesin Penyiapan Dan Pembuatan Produk Kulit
+28291,Industri Mesin Percetakan
+28292,Industri Mesin Pabrik Kertas
+28299,Industri Mesin Keperluan Khusus Lainnya
+29101,Industri Kendaraan Bermotor Roda Empat Atau Lebih
+29102,Industri Kendaraan Multiguna Pedesaan
+29200,Industri Karoseri Kendaraan Bermotor Roda Empat Atau Lebih dan Industri Trailer dan Semi Trailer
+29300,Industri Suku Cadang dan Aksesori Kendaraan Bermotor Roda Empat Atau Lebih
+30111,Industri Kapal Dan Perahu
+30112,Industri Bangunan Lepas Pantai Dan Bangunan Terapung
+30113,"Industri Peralatan, Perlengkapan Dan Bagian Kapal"
+30120,Industri Pembuatan Kapal dan Perahu Untuk Tujuan Wisata atau Rekreasi dan Olahraga
+30200,Industri Lokomotif dan Gerbong Kereta
+30300,Industri Pesawat Terbang Dan Perlengkapannya
+30400,Industri Kendaraan Perang
+30911,Industri Sepeda Motor Roda Dua Dan Tiga
+30912,Industri Komponen Dan Perlengkapan Sepeda Motor Roda Dua Dan Tiga
+30921,Industri Sepeda Dan Kursi Roda Termasuk Becak
+30922,Industri Perlengkapan Sepeda Dan Kursi Roda Termasuk Becak
+30990,Industri Alat Angkutan Lainnya YTDL
+31001,Industri Furnitur Dari Kayu
+31002,Industri Furnitur Dari Rotan Dan Atau Bambu
+31003,Industri Furnitur Dari Plastik
+31004,Industri Furnitur Dari Logam
+31009,Industri Furnitur Lainnya
+32111,Industri Permata
+32112,Industri Barang Perhiasan Dari Logam Mulia Untuk Keperluan Pribadi
+32113,Industri Barang Perhiasan Dari Logam Mulia Bukan Untuk Keperluan Pribadi
+32114,Industri Barang Dari Logam Mulia Untuk Keperluan Teknik Dan Atau Laboratorium
+32115,Industri Perhiasan Mutiara
+32119,Industri Barang Lainnya Dari Logam Mulia
+32120,Industri Perhiasan Imitasi dan Barang Sejenis
+32201,Industri Alat Musik Tradisional
+32202,Industri Alat Musik Bukan Tradisional
+32300,Industri Alat Olahraga
+32401,Industri Alat Permainan
+32402,Industri Mainan Anak-anak
+32501,"Industri Furnitur Untuk Operasi, Perawatan Kedokteran Dan Kedokteran Gigi"
+32502,"Industri Peralatan Kedokteran Dan Kedokteran Gigi, Perlengkapan Orthopaedic Dan Prosthetic"
+32503,Industri Kaca Mata
+32509,Industri Peralatan Kedokteran Dan Kedokteran Gigi Serta Perlengkapan Lainnya
+32901,Industri Alat Tulis Dan Gambar Termasuk Perlengkapannya
+32902,Industri Pita Mesin Tulis/Gambar
+32903,Industri Kerajinan YTDL
+32904,Industri Peralatan Untuk Pelindung Keselamatan
+32905,Industri Serat Sabut Kelapa
+32906,Industri Produksi Radioisotop
+32907,Industri Fabrikasi Elemen Bakar Uranium
+32909,Industri Pengolahan Lainnya YTDL
+33111,"Reparasi Produk Logam Siap Pasang Untuk Bangunan, Tangki, Tandon Air Dan Generator Uap"
+33112,Reparasi Produk Senjata Dan Amunisi
+33119,Reparasi Produk Logam Pabrikasi Lainnya
+33121,Reparasi Mesin Untuk Keperluan Umum
+33122,Reparasi Mesin Untuk Keperluan Khusus
+33131,"Reparasi Alat Ukur, Alat Uji dan Peralatan Navigasi Dan Pengontrol"
+33132,"Reparasi Peralatan Iradiasi, Elektromedis Dan Elektroterapi"
+33133,Reparasi Peralatan Fotografi Dan Optik
+33141,"Reparasi Motor Listrik, Generator Dan Transformator"
+33142,Reparasi Baterai Dan Akumulator Listrik
+33149,Reparasi Peralatan Listrik Lainnya
+33151,"Reparasi Kapal, Perahu Dan Bangunan Terapung"
+33152,Reparasi Lokomotif Dan Gerbong Kereta
+33153,Reparasi Pesawat Terbang
+33159,"Reparasi Alat Angkutan Lainnya, Bukan Kendaraan Bermotor"
+33190,Reparasi Peralatan Lainnya
+33200,Instalasi/Pemasangan Mesin dan Peralatan Industri
+35111,Instalasi/Pemasangan Mesin dan Peralatan Industri Listrik
+35112,Transmisi Tenaga Listrik
+35113,Distribusi Tenaga Listrik
+35114,Penjualan Tenaga Listrik
+35115,"Pembangkit, Transmisi, Distribusi dan Penjualan Tenaga Listrik Dalam Satu Kesatuan Usaha"
+35116,"Pembangkit, Transmisi, dan Penjualan Tenaga Listrik Dalam Satu Kesatuan Usaha"
+35117,"Pembangkit, Distribusi, dan Penjualan Tenaga Listrik Dalam Satu Kesatuan Usaha"
+35118,"Distribusi, dan Penjualan Tenaga Listrik Dalam Satu Kesatuan Usaha"
+35121,Pengoperasian Instalasi Penyediaan Tenaga Listrik
+35122,Pengoperasian Instalasi Pemanfaatan Tenaga Listrik
+35129,Aktivitas penunjang tenaga listrik lainnya
+35201,Pengadaan Gas Alam Dan Buatan
+35202,Distribusi Gas Alam Dan Buatan
+35203,Pengadaan Gas Bio
+35301,Pengadaan Uap/Air Panas Dan Udara Dingin
+35302,Produksi Es
+36001,"Penampungan, Penjernihan dan Penyaluran Air Minum"
+36002,Penampungan dan Penyaluran Air Baku
+36003,Aktivitas Penunjang Treatment Air
+37011,Pengumpulan Air Limbah Tidak Berbahaya
+37012,Pengumpulan Air Limbah Berbahaya
+37021,Treatment dan Pembuangan Air Limbah Tidak Berbahaya
+37022,Treatment dan Pembuangan Air Limbah Berbahaya
+38110,Pengumpulan limbah dan sampah tidak berbahaya
+38120,Pengumpulan Limbah Berbahaya
+38211,Treatment dan Pembuangan Limbah dan Sampah Tidak Berbahaya
+38212,Produksi Kompos Sampah Organik
+38220,Treatment dan Pembuangan Limbah Berbahaya
+38301,Pemulihan Material Barang Logam
+38302,Pemulihan Material Barang Bukan Logam
+39000,Aktivitas Remediasi dan Pengelolaan Limbah dan Sampah Lainnya
+41011,Konstruksi Gedung Hunian
+41012,Konstruksi Gedung Perkantoran
+41013,Konstruksi Gedung Industri
+41014,Konstruksi Gedung Perbelanjaan
+41015,Konstruksi Gedung Kesehatan
+41016,Konstruksi Gedung Pendidikan
+41017,Konstruksi Gedung Penginapan
+41018,Konstruksi Gedung Tempat Hiburan dan Olahraga
+41019,Konstruksi Gedung Lainnya
+41020,Jasa Pekerjaan Konstruksi Prapabrikasi Bangunan Gedung
+42101,Konstruksi Bangunan Sipil Jalan
+42102,"Konstruksi Bangunan Sipil Jembatan, Jalan Layang, Fly Over, dan Underpass"
+42103,Konstruksi Jalan Rel
+42104,Konstruksi Terowongan
+42201,Konstruksi Jaringan Irigasi dan Drainase
+42202,Konstruksi Bangunan Sipil Pengolahan Air Bersih
+42203,"Konstruksi Bangunan Sipil Prasarana dan Sarana Sistem Pengolahan Limbah Padat, Cair, dan Gas"
+42204,Konstruksi Bangunan Sipil Elektrikal
+42205,Konstruksi Bangunan Sipil Telekomunikasi untuk Prasarana Transportasi
+42206,Konstruksi Sentral Telekomunikasi
+42207,Pembuatan/Pengeboran Sumur Air Tanah
+42209,"Konstruksi Jaringan Irigasi, Komunikasi, dan Limbah Lainnya"
+42911,Konstruksi Bangunan Prasarana Sumber Daya Air
+42912,Konstruksi Bangunan Pelabuhan Bukan Perikanan
+42913,Konstruksi Bangunan Pelabuhan Perikanan
+42914,Pengerukan
+42915,Konstruksi Bangunan Sipil Minyak dan Gas Bumi
+42916,Konstruksi Bangunan Sipil Pertambangan
+42917,Konstruksi Bangunan Sipil Panas Bumi
+42918,Konstruksi Bangunan Sipil Fasilitas Olah Raga
+42919,Konstruksi Bangunan Sipil Lainnya Ytdl
+42921,Konstruksi Reservoir Pembangkit Listrik Tenaga Air
+42922,Jasa Pekerjaan Konstruksi Pelindung Pantai
+42923,"Konstruksi Bangunan Sipil Fasilitas Pengolahan Produk Kimia, Petrokimia, Farmasi, dan Industri Lainnya"
+42924,Konstruksi Bangunan Sipil Fasilitas Militer dan Peluncuran Satelit
+42929,Konstruksi Khusus Bangunan Sipil Lainnya Ytdl
+42930,Jasa Pekerjaan Konstruksi Prapabrikasi Bangunan Sipil
+43110,Pembongkaran
+43120,Penyiapan Lahan
+43211,Instalasi Listrik
+43212,Instalasi Telekomunikasi
+43213,Instalasi Elektronika
+43214,"Jasa Instalasi Konstruksi Navigasi Laut, Sungai, dan Udara"
+43215,Instalasi Sinyal Dan Telekomunikasi Kereta Api
+43216,Instalasi Sinyal Dan Rambu-rambu Jalan Raya
+43221,Instalasi Saluran Air (Plambing)
+43222,Instalasi Pemanas Dan Geotermal
+43223,Instalasi Minyak Dan Gas
+43224,Instalasi Pendingin Dan Ventilasi Udara
+43291,Instalasi Mekanikal
+43292,"Instalasi Meteorologi, Klimatologi Dan Geofisika"
+43293,Instalasi Fasilitas Sumber Radiasi Pengion
+43294,Instalasi Nuklir
+43299,Instalasi Konstruksi Lainnya Ytdl
+43301,Pengerjaan Pemasangan Kaca Dan Alumunium
+43302,"Pengerjaan Lantai, Dinding, Peralatan Saniter Dan Plafon"
+43303,Pengecatan
+43304,Dekorasi Interior
+43305,Dekorasi Eksterior
+43309,Penyelesaian Konstruksi Bangunan Lainnya
+43901,Pemasangan Pondasi Dan Tiang Pancang
+43902,Pemasangan Perancah (Steiger)
+43903,Pemasangan Rangka dan Atap/Roof Covering
+43904,Pemasangan Kerangka Baja
+43905,Penyewaan Alat Konstruksi Dengan Operator
+43909,Konstruksi Khusus Lainnya Ytdl
+45101,Perdagangan Besar Mobil Baru
+45102,Perdagangan Besar Mobil Bekas
+45103,Perdagangan Eceran Mobil Baru
+45104,Perdagangan Eceran Mobil Bekas
+45201,Reparasi Mobil
+45202,Pencucian Dan Salon Mobil
+45301,Perdagangan Besar Suku Cadang Dan Aksesori Mobil
+45302,Perdagangan Eceran Suku Cadang Dan Aksesori Mobil
+45401,Perdagangan Besar Sepeda Motor Baru
+45402,Perdagangan Besar Sepeda Motor Bekas
+45403,Perdagangan Eceran Sepeda Motor Baru
+45404,Perdagangan Eceran Sepeda Motor Bekas
+45405,Perdagangan Besar Suku Cadang Sepeda Motor Dan Aksesorinya
+45406,Perdagangan Eceran Suku Cadang Sepeda Motor Dan Aksesorinya
+45407,Reparasi Dan Perawatan Sepeda Motor
+46100,Perdagangan Besar Atas Dasar Balas Jasa (Fee) Atau Kontrak
+46201,Perdagangan Besar Padi Dan Palawija
+46202,Perdagangan Besar Buah Yang Mengandung Minyak
+46203,Perdagangan Besar Bunga Dan Tanaman Hias
+46204,Perdagangan Besar Tembakau Rajangan
+46205,Perdagangan Besar Binatang Hidup
+46206,Perdagangan Besar Hasil Perikanan
+46207,Perdagangan Besar Hasil Kehutanan Dan Perburuan
+46208,Perdagangan Besar Kulit Dan Kulit Jangat
+46209,Perdagangan Besar Hasil Pertanian Dan Hewan Hidup Lainnya
+46311,Perdagangan Besar Beras
+46312,Perdagangan Besar Buah-buahan
+46313,Perdagangan Besar Sayuran
+46314,"Perdagangan Besar Kopi, Teh Dan Kakao"
+46315,Perdagangan Besar Minyak dan Lemak Nabati
+46319,Perdagangan Besar Bahan Makanan Dan Minuman Hasil Pertanian Lainnya
+46321,Perdagangan Besar Daging Sapi Dan Daging Sapi Olahan
+46322,Perdagangan Besar Daging Ayam Dan Daging Ayam Olahan
+46323,Perdagangan Besar Daging Dan Daging Olahan Lainnya
+46324,Perdagangan Besar Hasil Olahan Perikanan
+46325,Perdagangan Besar Telur Dan Hasil Olahan Telur
+46326,Perdagangan Besar Susu Dan Produk Susu
+46327,Perdagangan Besar Minyak Dan Lemak Hewani
+46329,Perdagangan Besar Bahan Makanan Dan Minuman Hasil Peternakan Dan Perikanan Lainnya
+46331,"Perdagangan Besar Gula, Coklat Dan Kembang Gula"
+46332,Perdagangan Besar Produk Roti
+46333,Perdagangan Besar Minuman Beralkohol
+46334,Perdagangan Besar Minuman Non Alkohol Bukan Susu
+46335,Perdagangan Besar Rokok Dan Tembakau
+46339,Perdagangan Besar Makanan Dan Minuman Lainnya
+46411,Perdagangan Besar Tekstil
+46412,Perdagangan Besar Pakaian
+46413,Perdagangan Besar Alas Kaki
+46414,Perdagangan Besar Barang Lainnya Dari Tekstil
+46419,"Perdagangan besar tekstil, pakaian dan alas kaki lainnya"
+46421,Perdagangan Besar Alat Tulis Dan Gambar
+46422,Perdagangan Besar Barang Percetakan Dan Penerbitan Dalam Berbagai Bentuk
+46430,Perdagangan Besar Alat Fotografi dan Barang Optik
+46441,Perdagangan Besar Obat Farmasi Untuk Manusia
+46442,Perdagangan Besar Obat Tradisional Untuk Manusia
+46443,Perdagangan Besar Kosmetik Untuk Manusia
+46444,Perdagangan Besar Obat Farmasi Untuk Hewan
+46445,Perdagangan Besar Obat Tradisional Untuk Hewan
+46446,Perdagangan Besar Kosmetik Untuk Hewan
+46447,Perdagangan Besar Bahan Farmasi Untuk Manusia Dan Hewan
+46448,Perdagangan Besar Bahan Baku Obat Tradisional Untuk Manusia Dan Hewan
+46491,Perdagangan Besar Peralatan Dan Perlengkapan Rumah Tangga
+46492,Perdagangan Besar Alat Olahraga
+46493,Perdagangan Besar Alat Musik
+46494,Perdagangan Besar Perhiasan Dan Jam
+46495,Perdagangan Besar Alat Permainan Dan Mainan Anak-anak
+46499,Perdagangan Besar Berbagai Barang Dan Perlengkapan Rumah Tangga Lainnya Ytdl
+46511,Perdagangan Besar Komputer dan Perlengkapan Komputer
+46512,Perdagangan Besar Piranti Lunak
+46521,Perdagangan Besar Suku Cadang Elektronik
+46522,"Perdagangan Besar Disket, Flash Drive, Pita Audio dan Video, CD dan DVD Kosong"
+46523,Perdagangan Besar Peralatan Telekomunikasi
+46530,"Perdagangan Besar Mesin, Peralatan Dan Perlengkapan Pertanian"
+46591,"Perdagangan Besar Mesin Kantor dan Industri Pengolahan, Suku Cadang Dan Perlengkapannya"
+46592,"Perdagangan Besar Alat Transportasi Laut, Suku Cadang Dan Perlengkapannya"
+46593,"Perdagangan Besar Alat Transportasi Darat (Bukan Mobil, Sepeda Motor, Dan Sejenisnya), Suku Cadang Dan Perlengkapannya"
+46594,"Perdagangan Besar Alat Transportasi Udara, Suku Cadang Dan Perlengkapannya"
+46599,"Perdagangan Besar Mesin, Peralatan Dan Perlengkapan Lainnya"
+46610,"Perdagangan Besar Bahan Bakar Padat, Cair Dan Gas Dan Produk YBDI"
+46620,Perdagangan Besar Logam Dan Bijih Logam
+46631,Perdagangan Besar Barang Logam Untuk Bahan Konstruksi
+46632,Perdagangan Besar Kaca
+46633,"Perdagangan Besar Genteng, Batu Bata, Ubin Dan Sejenisnya Dari Tanah Liat, Kapur, Semen Atau Kaca"
+46634,"Perdagangan Besar Semen, Kapur, Pasir Dan Batu"
+46635,Perdagangan Besar Bahan Konstruksi Dari Porselen
+46636,Perdagangan Besar Bahan Konstruksi Dari Kayu
+46637,Perdagangan Besar Cat
+46638,Perdagangan Besar Berbagai Macam Material Bangunan
+46639,Perdagangan Besar Bahan Konstruksi Lainnya
+46641,Perdagangan Besar Mineral Bukan Logam
+46642,Perdagangan Besar Mineral Radioaktif
+46643,Perdagangan Besar Zat Radioaktif Dan Pembangkit Radiasi Pengion
+46651,Perdagangan Besar Bahan Dan Barang Kimia
+46652,Perdagangan Besar Pupuk Dan Produk Agrokimia
+46653,Perdagangan Besar Bahan Berbahaya (B2)
+46654,Perdagangan Besar Bahan Berbahaya Dan Beracun (B3)
+46691,"Perdagangan Besar Alat Laboratorium, Alat Farmasi Dan Alat Kedokteran Untuk Manusia"
+46692,"Perdagangan Besar Alat Laboratorium, Alat Farmasi Dan Alat Kedokteran Untuk Hewan"
+46693,Perdagangan Besar Karet Dan Plastik Dalam Bentuk Dasar
+46694,Perdagangan Besar Kertas Dan Karton
+46695,Perdagangan Besar Barang Dari Kertas Dan Karton
+46696,Perdagangan Besar Barang Bekas Dan Sisa-sisa Tak Terpakai (Scrap)
+46699,Perdagangan Besar Produk Lainnya YTDL
+46900,Perdagangan Besar Berbagai Macam Barang
+47111,"Perdagangan Eceran Berbagai Macam Barang Yang Utamanya Makanan, Minuman Atau Tembakau Di Minimarket/Supermarket/Hypermarket"
+47112,"Perdagangan Eceran Berbagai Macam Barang Yang Utamanya Makanan, Minuman Atau Tembakau Bukan Di Minimarket/Supermarket/Hypermarket (Tradisional)"
+47191,"Perdagangan Eceran Berbagai Macam Barang Yang Utamanya Bukan Makanan, Minuman Atau Tembakau Di Toserba (Department Store)"
+47192,"Perdagangan Eceran Berbagai Macam Barang Yang Utamanya Bukan Makanan, Minuman Atau Tembakau (barang-barang Kelontong) Bukan Di Toserba (Department Store)"
+47211,Perdagangan Eceran Padi Dan Palawija
+47212,Perdagangan Eceran Buah-buahan
+47213,Perdagangan Eceran Sayuran
+47214,Perdagangan Eceran Hasil Peternakan
+47215,Perdagangan Eceran Hasil Perikanan
+47216,Perdagangan Eceran Hasil Kehutanan dan Perburuan
+47219,Perdagangan Eceran Hasil Pertanian Lainnya
+47221,Perdagangan Eceran Minuman Beralkohol
+47222,Perdagangan Eceran Minuman Tidak Beralkohol
+47230,Perdagangan Eceran Khusus Rokok dan Tembakau di Toko
+47241,Perdagangan Eceran Beras
+47242,"Perdagangan Eceran Roti, Kue Kering, serta Kue Basah dan Sejenisnya"
+47243,"Perdagangan Eceran Kopi, Gula Pasir dan Gula Merah"
+47244,"Perdagangan Eceran Tahu, Tempe, Tauco dan Oncom"
+47245,Perdagangan Eceran Daging dan Ikan Olahan
+47249,Perdagangan Eceran Makanan Lainnya
+47301,"Perdagangan Eceran Bahan Bakar Minyak, Bahan Bakar Gas (BBG), dan Liquefied Petroleum Gas (LPG) di Sarana Pengisian Bahan Bakar Transportasi Darat, Laut, dan Udara"
+47302,"Perdagangan Eceran Bahan Bakar Minyak, Bahan Bakar Gas (BBG), dan Liquefied Petroleum Gas (LPG) Selain Di Sarana Pengisian Bahan Bakar Transportasi Darat, Laut, dan Udara"
+47303,Perdagangan Eceran Minyak Pelumas Di Toko
+47411,Perdagangan Eceran Komputer Dan Perlengkapannya
+47412,Perdagangan Eceran Peralatan Video Game Dan Sejenisnya
+47413,Perdagangan Eceran Piranti Lunak (Software)
+47414,Perdagangan Eceran Alat Telekomunikasi
+47415,Perdagangan Eceran Mesin Kantor
+47420,Perdagangan Eceran Khusus Peralatan Audio dan Video di Toko
+47511,Perdagangan Eceran Tekstil
+47512,Perdagangan Eceran Perlengkapan Rumah Tangga Dari Tekstil
+47513,Perdagangan Eceran Perlengkapan Jahit Menjahit
+47521,Perdagangan Eceran Barang Logam Untuk Bahan Konstruksi
+47522,Perdagangan Eceran Kaca
+47523,"Perdagangan Eceran Genteng, Batu Bata, Ubin Dan Sejenisnya Dari Tanah Liat, Kapur, Semen Atau Kaca"
+47524,"Perdagangan Eceran Semen, Kapur, Pasir Dan Batu"
+47525,Perdagangan Eceran Bahan Konstruksi Dari Porselen
+47526,Perdagangan Eceran Bahan Konstruksi Dari Kayu
+47527,"Perdagangan Eceran Cat, Pernis Dan Lak"
+47528,Perdagangan Eceran Berbagai Macam Material Bangunan
+47529,Perdagangan Eceran Bahan Dan Barang Konstruksi Lainnya
+47530,"Perdagangan Eceran Khusus Karpet, Permadani dan Penutup Dinding dan Lantai di Toko"
+47591,Perdagangan Eceran Furnitur
+47592,Perdagangan Eceran Peralatan Listrik Rumah Tangga Dan Peralatan Penerangan Dan Perlengkapannya
+47593,Perdagangan Eceran Barang Pecah Belah Dan Perlengkapan Dapur Dari Plastik
+47594,Perdagangan Eceran Barang Pecah Belah Dan Perlengkapan Dapur Dari Batu Atau Tanah Liat
+47595,"Perdagangan Eceran Barang Pecah Belah Dan Perlengkapan Dapur Dari Kayu, Bambu Atau Rotan"
+47596,"Perdagangan Eceran Barang Pecah Belah Dan Perlengkapan Dapur Bukan Dari Plastik, Batu, Tanah Liat, Kayu, Bambu Atau Rotan"
+47597,Perdagangan Eceran Alat Musik
+47599,Perdagangan Eceran Peralatan Dan Perlengkapan Rumah Tangga Lainnya YTDL
+47611,Perdagangan Eceran Alat Tulis Menulis Dan Gambar
+47612,Perdagangan Eceran Hasil Pencetakan Dan Penerbitan
+47620,Perdagangan Eceran Khusus Rekaman Musik dan Video di Toko
+47630,Perdagangan Eceran Khusus Peralatan Olahraga di Toko
+47640,Perdagangan Eceran Khusus Alat Permainan dan Mainan Anak-anak di Toko
+47650,"Perdagangan Eceran Kertas, Kertas Karton Dan Barang Dari Kertas/Karton"
+47711,Perdagangan Eceran Pakaian
+47712,"Perdagangan Eceran Sepatu, Sandal Dan Alas Kaki Lainnya"
+47713,Perdagangan Eceran Pelengkap Pakaian
+47714,"Perdagangan Eceran Tas, Dompet, Koper, Ransel Dan Sejenisnya"
+47721,Perdagangan Eceran Barang Dan Obat Farmasi Untuk Manusia Di Apotik
+47722,Perdagangan Eceran Barang Dan Obat Farmasi Untuk Manusia Bukan Di ApotikÂ
+47723,Perdagangan Eceran Obat Tradisional Untuk Manusia
+47724,Perdagangan Eceran Kosmetik Untuk Manusia
+47725,"Perdagangan Eceran Alat Laboratorium, Alat Farmasi Dan Alat Kesehatan Untuk Manusia"
+47726,Perdagangan Eceran Barang Dan Obat Farmasi Untuk Hewan Di Apotik Dan Bukan Di Apotik
+47727,Perdagangan Eceran Obat Tradisional Untuk Hewan
+47728,Perdagangan Eceran Kosmetik Untuk Hewan
+47729,"Perdagangan Eceran Khusus Barang Dan Obat Farmasi, Alat Kedokteran, Parfum Dan Kosmetik Lainnya"
+47731,Perdagangan Eceran Alat Fotografi Dan Perlengkapannya
+47732,Perdagangan Eceran Alat Optik Dan Perlengkapannya
+47733,Perdagangan Eceran Kaca Mata
+47734,Perdagangan Eceran Jam
+47735,Perdagangan Eceran Barang Perhiasan
+47736,Perdagangan Eceran Perlengkapan Pengendara Kendaraan Bermotor
+47737,Perdagangan Eceran Pembungkus Dari Plastik
+47739,Perdagangan eceran khusus barang baru lainnya ytdl
+47741,Perdagangan Eceran Barang Bekas Perlengkapan Rumah Tangga
+47742,"Perdagangan Eceran Pakaian, Alas Kaki Dan Pelengkap Pakaian Bekas"
+47743,Perdagangan Eceran Barang Perlengkapan Pribadi Bekas
+47744,Perdagangan Eceran Barang Listrik Dan Elektronik Bekas
+47745,Perdagangan Eceran Bahan Konstruksi Dan Sanitasi Bekas
+47746,Perdagangan Eceran Barang Antik
+47749,Perdagangan Eceran Barang Bekas Lainnya
+47751,Perdagangan Eceran Hewan Piaraan (Pet Animals)
+47752,Perdagangan Eceran Hewan Ternak
+47753,Perdagangan Eceran Ikan Hias
+47754,Perdagangan Eceran Pakan Ternak/Unggas/Ikan dan Hewan Piaraan
+47761,Perdagangan Eceran Bunga Potong/Florist
+47762,Perdagangan Eceran Tanaman Dan Bibit Tanaman
+47763,Perdagangan Eceran Pupuk Dan Pemberantas Hama
+47764,Perdagangan Eceran Perlengkapan Dan Media Tanaman Hias
+47771,Perdagangan Eceran Minyak Tanah
+47772,Perdagangan Eceran Gas Elpiji
+47773,Perdagangan Eceran Bahan Kimia
+47774,Perdagangan Eceran Aromatik/Penyegar (Minyak Atsiri)
+47779,"Perdagangan Eceran Bahan Kimia, dan Aromatik/Penyegar (Minyak Atsiri), Dan Bahan Bakar Bukan Bahan Bakar Untuk Kendaraan Bermotor Lainnnya"
+47781,"Perdagangan Eceran Barang Kerajinan Dari Kayu, Bambu, Rotan, Pandan, Rumput Dan Sejenisnya"
+47782,"Perdagangan Eceran Barang Kerajinan Dari Kulit, Tulang, Tanduk, Gading, Bulu Dan Binatang/Hewan Yang Diawetkan"
+47783,Perdagangan Eceran Barang Kerajinan Dari Logam
+47784,Perdagangan Eceran Barang Kerajinan Dari Keramik
+47785,Perdagangan Eceran Lukisan
+47789,Perdagangan Eceran Barang Kerajinan Dan Lukisan Lainnya
+47791,Perdagangan Eceran Mesin Pertanian Dan Perlengkapannya
+47792,Perdagangan Eceran Mesin Jahit Dan Perlengkapannya
+47793,Perdagangan Eceran Mesin Lainnya Dan Perlengkapannya
+47794,Perdagangan Eceran Alat Transportasi Darat Tidak Bermotor Dan Perlengkapannya
+47795,Perdagangan Eceran Alat Transportasi Air Dan Perlengkapannya
+47796,Perdagangan Eceran Alat-alat Pertanian
+47797,Perdagangan Eceran Alat-alat Pertukangan
+47811,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Padi Dan Palawija
+47812,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Buah-buahan
+47813,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Sayur-sayuran
+47814,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Peternakan
+47815,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Perikanan
+47816,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Kehutanan Dan Perburuan
+47819,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Tanaman Hias Dan Hasil Pertanian Lainnya
+47821,Perdagangan Eceran Kaki Lima Dan Los Pasar Beras
+47822,"Perdagangan Eceran Kaki Lima Dan Los Pasar Roti, Kue Kering, Kue Basah Dan Sejenisnya"
+47823,"Perdagangan Eceran Kaki Lima Dan Los Pasar Kopi, Gula Pasir, Gula Merah Dan Sejenisnya"
+47824,"Perdagangan Eceran Kaki Lima Dan Los Pasar Tahu, Tempe, Tauco Dan Oncom"
+47825,Perdagangan Eceran Kaki Lima Dan Los Pasar Daging Olahan Dan Ikan Olahan
+47826,Perdagangan Eceran Kaki Lima Dan Los Pasar Minuman
+47827,Perdagangan Eceran Kaki Lima Dan Los Pasar Rokok Dan Tembakau
+47828,"Perdagangan Eceran Kaki Lima Dan Los Pasar Pakan Ternak, Pakan Unggas Dan Pakan Ikan"
+47829,Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Makanan Dan Minuman Ytdl
+47831,Perdagangan Eceran Kaki Lima Dan Los Pasar Tekstil
+47832,Perdagangan Eceran Kaki Lima Dan Los Pasar Pakaian
+47833,"Perdagangan Eceran Kaki Lima Dan Los Pasar Sepatu, Sandal Dan Alas Kaki Lainnya"
+47834,Perdagangan Eceran Kaki Lima Dan Los Pasar Pelengkap Pakaian Dan Benang
+47841,Perdagangan Eceran Kaki Lima Dan Los Pasar Bahan Kimia
+47842,Perdagangan Eceran Kaki Lima Dan Los Pasar Farmasi
+47843,Perdagangan Eceran Kaki Lima Dan Los Pasar Obat Tradisional
+47844,Perdagangan Eceran Kaki Lima Dan Los Pasar Kosmetik
+47845,Perdagangan Eceran Kaki Lima Dan Los Pasar Pupuk Dan Pemberantas Hama
+47846,Perdagangan Eceran Kaki Lima Dan Los Pasar Aromatik/Penyegar (Minyak Atsiri)
+47849,"Perdagangan Eceran Kaki Lima Dan Los Pasar Bahan Kimia, Farmasi, Kosmetik Dan Alat Laboratorium dan Ybdi Ytdl"
+47851,Perdagangan Eceran Kaki Lima Dan Los Pasar Kaca Mata
+47852,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Perhiasan
+47853,Perdagangan Eceran Kaki Lima Dan Los Pasar Jam
+47854,"Perdagangan Eceran Kaki Lima Dan Los Pasar Tas, Dompet, Koper, Ransel Dan Sejenisnya"
+47855,Perdagangan Eceran Kaki Lima Dan Los Pasar Perlengkapan Pengendara Sepeda Motor
+47859,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Keperluan Pribadi Lainnya
+47861,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Elektronik
+47862,Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Dan Perlengkapan Listrik
+47863,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Pecah Belah Dan Perlengkapan Dapur Dari Plastik/Melamin
+47864,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Pecah Belah Dan Perlengkapan Dapur Dari Batu Atau Tanah Liat
+47865,"Perdagangan Eceran Kaki Lima Dan Los Pasar Barang dan Perlengkapan Dapur Dari Kayu, Bambu Atau Rotan"
+47866,"Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Pecah Belah Dan Perlengkapan Dapur Bukan Dari Plastik, Batu, Tanah Liat, Kayu, Bambu Atau Rotan"
+47867,Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Kebersihan
+47869,Perdagangan Eceran Kaki Lima Dan Los Pasar Perlengkapan Rumah Tangga Lainnya
+47871,"Perdagangan Eceran Kaki Lima Dan Los Pasar Kertas, Karton Dan Barang Dari Kertas"
+47872,Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Tulis Menulis Dan Gambar
+47873,Perdagangan Eceran Kaki Lima Dan Los Pasar Hasil Pencetakan dan Penerbitan
+47874,Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Olahraga Dan Alat Musik
+47875,"Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Fotografi, Alat Optik Dan Perlengkapannya"
+47876,Perdagangan Eceran Kaki Lima Dan Los Pasar Mesin Kantor
+47877,Perdagangan Eceran Kaki Lima Dan Los Pasar Peralatan Telekomunikasi
+47879,"Perdagangan Eceran Kaki Lima Dan Los Pasar Campuran Kertas, Karton, Barang Dari Kertas, Alat Tulis Menulis, Alat Gambar, Hasil Pencetakan, Penerbitan Dan Lainnya"
+47881,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Kerajinan
+47882,Perdagangan Eceran Kaki Lima Dan Los Pasar Mainan Anak-anak
+47883,Perdagangan Eceran Kaki Lima Dan Los Pasar Lukisan
+47891,Perdagangan Eceran Kaki Lima Dan Los Pasar Hewan Hidup
+47892,"Perdagangan Eceran Kaki Lima Dan Los Pasar Bahan Bakar Minyak, Gas, Minyak Pelumas Dan Bahan Bakar Lainnya"
+47893,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Antik
+47894,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Bekas Perlengkapan Rumah Tangga
+47895,"Perdagangan Eceran Kaki Lima Dan Los Pasar Pakaian, Alas Kaki, Perlengkapan Pakaian Dan Barang Perlengkapan Pribadi Bekas"
+47896,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Listrik Dan Elektronik Bekas
+47897,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Bekas Campuran
+47899,Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Lainnya
+47911,"Perdagangan Eceran Melalui Media Untuk Komoditi Makanan, Minuman, Tembakau, Kimia, Farmasi, Kosmetik Dan Alat Laboratorium"
+47912,"Perdagangan Eceran Melalui Media Untuk Komoditi Tekstil, Pakaian, Alas Kaki Dan Barang Keperluan Pribadi"
+47913,Perdagangan Eceran Melalui Media Untuk Barang Perlengkapan Rumah Tangga Dan Perlengkapan Dapur
+47914,Perdagangan Eceran Melalui Media Untuk Barang Campuran Sebagaimana Tersebut Dalam 47911 S.D. 47913
+47919,Perdagangan Eceran Melalui Media Untuk Berbagai Macam Barang Lainnya
+47920,Perdagangan Eceran Atas Dasar Balas Jasa (Fee) Atau Kontrak
+47991,Perdagangan Eceran Keliling Komoditi Makanan Dari Hasil Pertanian
+47992,"Perdagangan Eceran Keliling Komoditi Makanan, Minuman Atau Tembakau Hasil Industri Pengolahan"
+47993,"Perdagangan Eceran Keliling Bahan Kimia, Farmasi, Kosmetik Dan Alat Laboratorium"
+47994,"Perdagangan Eceran Keliling Tekstil, Pakaian, Alas Kaki Dan Barang Keperluan Pribadi"
+47995,Perdagangan Eceran Keliling Perlengkapan Rumah Tangga Dan Perlengkapan Dapur
+47996,Perdagangan Eceran Keliling Bahan Bakar Dan Minyak Pelumas
+47997,"Perdagangan Eceran Keliling Kertas, Barang Dari Kertas, Alat Tulis, Barang Cetakan, Alat Olahraga, Alat Musik, Alat Fotografi Dan Komputer"
+47998,"Perdagangan Eceran Keliling Barang Kerajinan, Mainan Anak-anak Dan Lukisan"
+47999,"Perdagangan eceran bukan di toko, kios, kaki lima dan los pasar lainnya YTDL"""
+49110,Angkutan Jalan Rel untuk Penumpang
+49120,Angkutan Jalan Rel untuk Barang
+49211,Angkutan bus Antarkota Antarprovinsi (AKAP)
+49212,Angkutan Bus Perbatasan
+49213,Angkutan bus Antarkota Dalam Provinsi (AKDP)
+49214,Angkutan Bus Kota
+49215,Angkutan Bus Lintas Batas Negara
+49216,Angkutan Bus Khusus
+49219,Angkutan Bus Dalam Trayek Lainnya
+49221,Angkutan Bus Pariwisata
+49229,Angkutan Bus Tidak Dalam Trayek Lainnya
+49300,Angkutan Melalui Saluran Pipa
+49411,"Angkutan Perbatasan Bukan Bus, Dalam Trayek"
+49412,"Angkutan Antarkota Dalam Provinsi (AKDP) Bukan Bus, Dalam Trayek"
+49413,"Angkutan Perkotaan Bukan Bus, Dalam Trayek"
+49414,"Angkutan Perdesaan Bukan Bus, Dalam Trayek"
+49415,Angkutan Darat Khusus Bukan Bus
+49419,"Angkutan Darat Bukan Bus untuk Penumpang Lainnya, Dalam Trayek"
+49421,Angkutan Taksi
+49422,Angkutan Sewa
+49423,Angkutan Tidak Bermotor untuk Penumpang
+49424,Angkutan Ojek Motor
+49425,Angkutan Darat Wisata
+49426,Angkutan Sewa Khusus
+49429,Angkutan Darat Lainnya untuk Penumpang
+49431,Angkutan Bermotor untuk Barang Umum
+49432,Angkutan Bermotor untuk Barang Khusus
+49433,Angkutan Tidak Bermotor untuk Barang Umum
+49441,Angkutan Jalan Rel Perkotaan
+49442,Angkutan Jalan Rel Wisata
+49450,Angkutan Jalan Rel Lainnya
+50111,Angkutan Laut Dalam Negeri Liner dan Tramper untuk Penumpang
+50112,Angkutan Laut Perairan Pelabuhan Dalam Negeri untuk Penumpang
+50113,Angkutan Laut Dalam Negeri untuk Wisata
+50114,Angkutan Laut Dalam Negeri Perintis untuk Penumpang
+50121,Angkutan Laut Luar Negeri Liner dan Tramper untuk Penumpang
+50122,Angkutan Laut Luar Negeri untuk Wisata
+50131,Angkutan Laut Dalam Negeri untuk Barang Umum
+50132,Angkutan Laut Perairan Pelabuhan Dalam Negeri untuk Barang
+50133,Angkutan Laut Dalam Negeri untuk Barang Khusus
+50134,Angkutan Laut Dalam Negeri Perintis untuk Barang
+50135,Angkutan Laut Dalam Negeri Pelayaran Rakyat
+50141,Angkutan Laut Luar Negeri untuk Barang Umum
+50142,Angkutan Laut Luar Negeri untuk Barang Khusus
+50143,Angkutan Laut Luar Negeri Pelayaran Rakyat
+50211,Angkutan Sungai dan Danau Liner (Trayek Tetap dan Teratur) untuk Penumpang
+50212,Angkutan Sungai dan Danau Tramper (Trayek Tidak Tetap dan Tidak Teratur) untuk Penumpang
+50213,Angkutan Sungai dan Danau untuk Wisata dan YBDI
+50214,Angkutan Penyeberangan Antarprovinsi untuk Penumpang
+50215,Angkutan Penyeberangan Perintis Antarprovinsi untuk Penumpang
+50216,Angkutan Penyeberangan Antarkabupaten/kota untuk Penumpang
+50217,Angkutan Penyeberangan Perintis Antarkabupaten/kota untuk Penumpang
+50218,Angkutan Penyeberangan Dalam Kabupaten/kota untuk Penumpang
+50219,Angkutan Penyeberangan Lainnya untuk Penumpang Termasuk Penyeberangan Antarnegara
+50221,Angkutan Sungai dan Danau untuk Barang Umum dan/atau Hewan
+50222,Angkutan Sungai dan Danau untuk Barang Khusus
+50223,Angkutan Sungai dan Danau untuk Barang Berbahaya
+50224,Angkutan Penyeberangan Umum Antarprovinsi untuk Barang
+50225,Angkutan Penyeberangan Perintis Antarprovinsi untuk Barang
+50226,Angkutan Penyeberangan Umum Antarkabupaten/kota untuk Barang
+50227,Angkutan Penyeberangan Perintis Antarkabupaten/kota untuk Barang
+50228,Angkutan Penyeberangan Umum Dalam Kabupaten/kota untuk Barang
+50229,Angkutan Penyeberangan Lainnya untuk Barang Termasuk Penyeberangan Antarnegara
+51101,Angkutan Udara Niaga Berjadwal Dalam Negeri untuk Penumpang atau Penumpang dan Kargo
+51102,Angkutan Udara Niaga Tidak Berjadwal Dalam Negeri untuk Penumpang atau Penumpang dan Kargo
+51103,Angkutan Udara NIaga Berjadwal Luar Negeri untuk Penumpang atau Penumpang dan Kargo
+51104,Angkutan Udara Niaga Tidak Berjadwal Luar Negeri untuk Penumpang atau Penumpang dan Kargo
+51105,Angkutan Udara Niaga Tidak Berjadwal Lainnya
+51106,Angkutan Udara untuk Olahraga
+51107,Angkutan Udara untuk Wisata
+51108,Angkutan Udara Bukan Niaga
+51109,Angkutan Udara untuk Penumpang Lainnya
+51201,Angkutan Udara Niaga Berjadwal Dalam Negeri untuk Kargo
+51202,Angkutan Udara Niaga Tidak Berjadwal dalam Negeri untuk Kargo
+51203,Angkutan Udara Niaga Berjadwal Luar Negeri untuk Kargo
+51204,Angkutan Udara Niaga Tidak Berjadwal Luar Negeri untuk Kargo
+52101,Pergudangan dan Penyimpanan
+52102,Aktivitas Cold Storage
+52103,Aktivitas Bounded Warehousing atau Wilayah Kawasan Berikat
+52104,Penyimpanan Minyak dan Gas Bumi
+52105,Aktivitas Penyimpanan B3
+52106,Fasilitas Penyimpanan Sumber Radiasi Pengion
+52107,Penyimpanan yang Termasuk Dalam Naturally Occuring Radioactive Material (NORM)
+52108,Pengelola Gudang Sistem Resi Gudang
+52109,Pergudangan dan Penyimpanan Lainnya
+52211,Aktivitas Terminal Darat
+52212,Aktivitas Stasiun Kereta Api
+52213,Aktivitas Jalan Tol
+52214,Aktivitas Perparkiran di Badan Jalan (On Street Parking)
+52215,Aktivitas Perparkiran di Luar Badan Jalan (Off Street Parking)
+52219,Aktivitas Penunjang Angkutan Darat Lainnya
+52221,Aktivitas Pelayanan Kepelabuhanan Laut
+52222,Aktivitas Pelayanan Kepelabuhanan Sungai dan Danau
+52223,Aktivitas Pelayanan Kepelabuhanan Penyeberangan
+52224,Aktivitas Pelabuhan Perikanan
+52225,Aktivitas Pengelolaan Kapal
+52229,Aktivitas Penunjang Angkutan Perairan Lainnya
+52231,Aktivitas Kebandarudaraan
+52232,Jasa Pelayanan Navigasi Penerbangan
+52240,Penanganan Kargo (Bongkar Muat Barang)
+52291,Jasa Pengurusan Transportasi (JPT)
+52292,Aktivitas Ekspedisi Muatan Kereta Api dan Ekspedisi Angkutan Darat (EMKA & EAD)
+52293,Aktivitas Ekspedisi Muatan Kapal (EMKL)
+52294,Aktivitas Ekspedisi Muatan Pesawat Udara (EMPU)
+52295,Angkutan Multimoda
+52296,Jasa Penunjang Angkutan Udara
+52297,Jasa Keagenan Kapal/Agen Perkapalan Perusahaan Pelayaran
+52298,Aktivitas Tally Mandiri
+52299,Aktivitas Penunjang Angkutan Lainnya YTDL
+53100,Aktivitas Pos
+53201,Aktivitas Kurir
+53202,Aktivitas Agen Kurir
+55110,Hotel Bintang
+55120,Hotel Melati
+55130,Pondok Wisata
+55191,Penginapan Remaja (Youth Hostel)
+55192,"Bumi Perkemahan, Persinggahan Karavan dan Taman Karavan"
+55193,Vila
+55194,Apartemen Hotel
+55199,Penyediaan Akomodasi Jangka Pendek Lainnya
+55900,Penyediaan Akomodasi Lainnya
+56101,Restoran
+56102,Rumah/Warung Makan
+56103,Kedai Makanan
+56104,Penyediaan Makanan Keliling/Tempat Tidak Tetap
+56109,Restoran dan penyediaan makanan keliling lainnya
+56210,Jasa Boga Untuk Suatu Event Tertentu (Event Catering)
+56290,Penyediaan Jasa Boga Periode Tertentu
+56301,Bar
+56302,Kelab Malam Atau Diskotek Yang Utamanya Menyediakan Minuman
+56303,Rumah Minum/Kafe
+56304,Kedai Minuman
+56305,Rumah/Kedai Obat Tradisional
+56306,Penyediaan Minuman Keliling/Tempat Tidak Tetap
+58110,Penerbitan Buku
+58120,Penerbitan Direktori dan Mailing List
+58130,"Penerbitan Surat Kabar, Jurnal Dan Buletin Atau Majalah"
+58190,Aktivitas Penerbitan lainnya
+58200,Penerbitan piranti lunak (Software)
+59111,"Aktivitas Produksi Film, Video dan Program Televisi Oleh Pemerintah"
+59112,"Aktivitas Produksi Film, Video dan Program Televisi Oleh Swasta"
+59121,"Aktivitas Pascaproduksi Film, Video dan Program Televisi Oleh Pemerintah"
+59122,"Aktivitas Pascaproduksi Film, Video dan Program Televisi Oleh Swasta"
+59131,"Aktivitas Distribusi Film, Video dan Program televisi Oleh Pemerintah"
+59132,"Aktivitas Distribusi Film, Video dan Program Televisi Oleh Swasta"
+59140,Aktivitas Pemutaran Film
+59201,Aktivitas Perekaman Suara
+59202,Aktivitas Penerbitan Musik Dan Buku Musik
+60101,Penyiaran Radio Oleh Pemerintah
+60102,Penyiaran Radio Oleh Swasta
+60201,Aktivitas Penyiaran dan Pemrograman Televisi Oleh Pemerintah
+60202,Aktivitas Penyiaran dan Pemrograman Televisi Oleh Swasta
+61100,Aktivitas Telekomunikasi Dengan Kabel
+61200,Aktivitas Telekomunikasi Tanpa Kabel
+61300,Aktivitas Telekomunikasi Satelit
+61911,Jasa Panggilan Premium (Premium Call)
+61912,Jasa Konten SMS Premium
+61913,Jasa Internet Teleponi Untuk Keperluan Publik (ITKP)
+61914,Jasa Panggilan Terkelola (Calling Card)
+61919,Jasa Nilai Tambah Teleponi Lainnya
+61921,Internet Service Provider
+61922,Jasa Sistem Komunikasi Data
+61923,Jasa Televisi Protokol Internet (IPTV)
+61924,Jasa Interkoneksi Internet (NAP)
+61929,Jasa Multimedia Lainnya
+61991,Aktivitas Telekomunikasi Khusus Untuk Penyiaran
+61992,Aktivitas Telekomunikasi Khusus Untuk Keperluan Sendiri
+61993,Aktivitas Telekomunikasi Khusus Untuk Keperluan Pertahanan Keamanan
+61994,Jasa Jual Kembali Jasa Telekomunikasi
+61999,Aktivitas Telekomunikasi Lainnya YTDL
+62011,Aktivitas Pengembangan Video game
+62012,Aktivitas Pengembangan Aplikasi Perdagangan Melalui Internet (E-Commerce)
+62013,Aktivitas Pemrograman dan Produksi Konten Media Imersif
+62014,Aktivitas Pengembangan Teknologi Blockchain
+62015,Aktivitas Pemrograman Berbasis Kecerdasan Artifisial
+62019,Aktivitas Pemrograman Komputer Lainnya
+62021,Aktivitas Konsultasi Keamanan Informasi
+62022,Aktivitas Penyediaan Identitas Digital
+62023,Aktivitas Penyediaan Sertifikat Elektronik dan Layanan yang Menggunakan Sertifikat Elektronik
+62024,Aktivitas Konsultasi dan Perancangan Internet of Things (IoT)
+62029,Aktivitas Konsultasi Komputer dan Manajemen Fasilitas Komputer Lainnya
+62090,Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya
+63111,Aktivitas Pengolahan Data
+63112,Aktivitas Hosting dan Ybdi
+63121,Portal Web Dan/Atau Platform Digital Tanpa Tujuan Komersial
+63122,Portal Web Dan/Atau Platform Digital Dengan Tujuan Komersial
+63911,Aktivitas Kantor Berita Oleh Pemerintah
+63912,Aktivitas Kantor Berita Oleh Swasta
+63990,Aktivitas Jasa Informasi Lainnya YTDL
+64110,Bank Sentral
+64121,Bank Umum Konvensional
+64122,Bank Umum Syariah
+64123,Unit Usaha Syariah Bank Umum
+64131,Bank Perkreditan Rakyat
+64132,Bank Pembiayaan Rakyat Syariah
+64141,Koperasi Simpan Pinjam Primer (KSP Primer)
+64142,Unit Simpan Pinjam Koperasi Primer (USP Koperasi Primer)
+64143,Koperasi Simpan Pinjam Sekunder (KSP Sekunder)
+64144,Unit Simpan Pinjam Koperasi Sekunder (USP Koperasi Sekunder)
+64145,Koperasi Simpan Pinjam dan Pembiayaan Syariah Primer (KSPPS Primer)
+64146,Unit Simpan Pinjam dan Pembiayaan Syariah Koperasi Primer (USPPS Koperasi Primer)
+64147,Koperasi Simpan Pinjam dan Pembiayaan Syariah Sekunder (KSPPS Sekunder)
+64148,Unit Simpan Pinjam dan Pembiayaan Syariah Koperasi Sekunder (USPPS Koperasi Sekunder)
+64151,Lembaga Keuangan Mikro Konvensional
+64152,Lembaga Keuangan Mikro Syariah
+64190,Perantara moneter lainnya
+64200,Aktivitas Perusahaan Holding
+64300,"Trust, Pendanaan dan Entitas Keuangan Sejenis"
+64400,Otoritas Jasa Keuangan (OJK)
+64500,Lembaga Penjamin Simpanan (LPS)
+64911,Perusahaan Pembiayaan Konvensional
+64912,Perusahaan Pembiayaan Syariah
+64913,Unit Usaha Syariah Perusahaan Pembiayaan
+64921,Pergadaian Konvensional
+64922,Pergadaian Syariah
+64923,Unit Usaha Syariah Pergadaian
+64931,Perusahaan Modal Ventura Konvensional
+64932,Perusahaan Modal Ventura Syariah
+64933,Unit Usaha Syariah Modal Ventura
+64941,Perusahaan Pembiayaan Infrastruktur Konvensional
+64942,Perusahaan Pembiayaan Infrastruktur Syariah
+64943,Unit Usaha Syariah Perusahaan Pembiayaan Infrastruktur
+64951,Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi (Fintech P2P Lending) Konvensional
+64952,Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi (Fintech P2P Lending) Syariah
+64953,Unit Usaha Syariah Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi (Fintech P2P Lending)
+64991,Lembaga Pembiayaan Ekspor Indonesia
+64992,Perusahaan Pembiayaan Sekunder Perumahan
+64999,"Aktivitas Jasa Keuangan Lainnya Ytdl, Bukan Asuransi dan Dana Pensiun"
+65111,Asuransi Jiwa Konvensional
+65112,Asuransi Jiwa Syariah
+65113,Unit Syariah Asuransi Jiwa
+65121,Asuransi Umum Konvensional
+65122,Asuransi Umum Syariah
+65123,Unit Syariah Asuransi Umum
+65131,Perusahaan Penjaminan Konvensional
+65132,Perusahaan Penjaminan Syariah
+65133,Unit Usaha Syariah Perusahaan Penjaminan
+65211,Reasuransi Konvensional
+65212,Reasuransi Syariah
+65213,Unit Syariah Reasuransi
+65221,Perusahaan Penjaminan Ulang Konvensional
+65222,Perusahaan Penjaminan Ulang Syariah
+65311,Dana Pensiun Pemberi Kerja Konvensional
+65312,Dana Pensiun Pemberi Kerja Syariah
+65313,Unit Syariah Dana Pensiun Pemberi Kerja
+65321,Dana Pensiun Lembaga Keuangan Konvensional
+65322,Dana Pensiun Lembaga Keuangan Syariah
+66111,Bursa Efek
+66112,Lembaga Kliring dan Penjaminan Efek
+66113,Lembaga Penyimpanan dan Penyelesaian
+66114,Lembaga Penilaian Harga Efek (LPHE)
+66115,Penyelenggara Dana Perlindungan Pemodal (PDPP)
+66116,Lembaga Pendanaan Efek
+66117,Penyelenggara Pasar Alternatif
+66118,Penyelenggara Penawaran Efek Melalui Layanan Urun Dana Berbasis Teknologi Informasi (Securities Crowdfunding)
+66119,Penyelenggara Infrastruktur Perdagangan di Pasar Modal Lainnya
+66121,Bursa Berjangka
+66122,Lembaga Kliring dan Penjaminan Berjangka
+66123,Bursa Berjangka Penyelenggara Pasar Fisik
+66124,Lembaga Kliring dan Penjaminan Berjangka Penyelenggara Pasar Fisik
+66131,Penyelenggara Sarana Pelaksanaan Transaksi di Pasar Uang dan Pasar Valuta Asing
+66132,Central Counterparty Transaksi Derivatif Suku Bunga dan Nilai Tukar
+66139,Penyelenggara Infrastruktur Pasar Uang dan Pasar Valuta Asing Lainnya
+66141,Penjamin Emisi Efek (Underwriter)
+66142,Perantara Pedagang Efek (Broker Dealer)
+66143,Perusahaan Efek Daerah (PED)
+66144,Perantara Pedagang Efek Untuk Efek Bersifat Utang dan Sukuk (PPE-EBUS)
+66145,Agen Perantara Pedagang Efek
+66146,Agen Penjual Efek Reksa Dana (APERD)
+66147,Gerai Penjualan Efek Reksa Dana
+66149,Perusahaan Efek Selain Manajemen Investasi Lainnya
+66151,Pedagang Berjangka
+66152,Pialang Perdagangan Berjangka
+66153,Pedagang Fisik Komoditi
+66154,Perantara Perdagangan Fisik Komoditi
+66159,Perantara Perdagangan Berjangka Komoditi Lainnya
+66160,Kegiatan Penukaran Valuta Asing (Money Changer)
+66171,Penyelenggara Sistem Perdagangan Alternatif
+66172,Pengelola Sentra Dana Berjangka
+66173,Penasihat Berjangka
+66174,Pengelola Tempat Penyimpanan Fisik Komoditi
+66179,Aktivitas Penunjang Perdagangan Berjangka Komoditi Lainnya
+66191,Biro Administrasi Efek
+66192,Kustodian (Custodian)
+66193,Wali Amanat (Trustee)
+66194,Perusahaan Pemeringkat Efek
+66195,Ahli Syariah Pasar Modal (ASPM)
+66199,Aktivitas Penunjang Jasa Keuangan Lainnya Ytdl
+66211,Aktivitas Penilai Risiko Asuransi
+66212,Aktivitas Penilai Kerugian Asuransi
+66221,Aktivitas Agen Asuransi
+66222,Aktivitas Pialang Asuransi
+66223,Aktivitas Pialang Reasuransi
+66224,Aktivitas Agen Penjamin
+66225,Aktivitas Broker Penjaminan
+66226,Aktivitas Broker Penjaminan Ulang
+66291,Aktivitas Konsultan Aktuaria
+66292,"Aktivitas Pemeringkat Usaha Mikro, Kecil, Menengah dan Koperasi"
+66299,"Aktivitas Penunjang Asuransi, dan Dana Pensiun Lainnya"
+66311,Manajer Investasi
+66312,Manajer Investasi Syariah
+66321,Penasihat Investasi Perorangan
+66322,Penasihat Investasi Berbentuk Perusahaan
+66390,Aktivitas Manajemen Dana Lainnya
+66411,Penyedia Jasa Pembayaran (PJP)
+66412,Penyelenggara Infrastruktur Sistem Pembayaran (PIP)
+66413,Penyelenggara Penunjang Sistem Pembayaran
+66420,Penyelenggara Kegiatan Jasa Pengolahan Uang Rupiah
+68111,Real Estat Yang Dimiliki Sendiri Atau Disewa
+68112,Penyewaan Venue Penyelenggaraan Aktifitas MICE dan Event Khusus
+68120,Kawasan Pariwisata
+68130,Kawasan Industri
+68200,Real Estat Atas Dasar Balas Jasa (Fee) Atau Kontrak
+69101,Aktivitas pengacara
+69102,Aktivitas konsultan hukum
+69103,Aktivitas konsultan kekayaan intelektual
+69104,Aktivitas notaris dan pejabat pembuat akta tanah
+69109,Aktivitas hukum lainnya
+69201,"Aktivitas Akuntansi, Pembukuan dan Pemeriksa"
+69202,Aktivitas Konsultasi Pajak
+70100,Aktivitas Kantor Pusat
+70201,Aktivitas Konsultansi Pariwisata
+70202,Aktivitas Konsultansi Transportasi
+70203,Aktivitas Kehumasan
+70204,Aktivitas Konsultansi Manajemen Industri
+70209,Aktivitas Konsultasi Manajemen Lainnya
+71101,Aktivitas Arsitektur
+71102,Aktivitas Keinsinyuran dan Konsultasi Teknis YBDI
+71201,Jasa Sertifikasi
+71202,Jasa Pengujian Laboratorium
+71203,Jasa Inspeksi Periodik
+71204,Jasa Inspeksi Teknik Instalasi
+71205,Jasa Kalibrasi/Metrologi
+71206,"Jasa Commissioning Proses Industrial, Quality Assurance (QA), dan Quality Control (QC)"
+71207,Jasa Klasifikasi Kapal
+71208,Aktivitas Pengujian dan atau Kalibrasi Alat Kesehatan dan Inspeksi Sarana Prasarana Kesehatan
+71209,Analisis Dan Uji Teknis Lainnya
+72101,Penelitian Dan Pengembangan Ilmu Pengetahuan Alam
+72102,Penelitian Dan Pengembangan Teknologi Dan Rekayasa
+72103,Penelitian Dan Pengembangan Ilmu Kedokteran
+72104,Penelitian Dan Pengembangan Bioteknologi
+72105,"Penelitian Dan Pengembangan Ilmu Pertanian, Peternakan, dan Kehutanan"
+72106,Penelitian Dan Pengembangan Ilmu Perikanan dan Kelautan
+72107,Penelitian dan Pengembangan Ketenaganukliran
+72109,Penelitian Dan Pengembangan Ilmu Pengetahuan Alam dan Teknologi Rekayasa Lainnya
+72201,Penelitian Dan Pengembangan Ilmu Pengetahuan Sosial
+72202,Penelitian Dan Pengembangan Linguistik dan Sastra
+72203,Penelitian Dan Pengembangan Agama
+72204,Penelitian Dan Pengembangan Seni
+72205,Penelitian Dan Pengembangan Psikologi
+72206,Penelitian Dan Pengembangan Sejarah/Cagar Budaya
+72209,Penelitian Dan Pengembangan Ilmu Pengetahuan Sosial dan Humaniora Lainnya.
+73100,Periklanan
+73201,Penelitian Pasar
+73202,Jajak Pendapat Masyarakat
+74111,Aktivitas Desain Alat Transportasi dan Permesinan
+74112,Aktivitas Desain Peralatan Rumah Tangga dan Furnitur
+74113,"Aktivitas Desain Tekstil, Fashion dan Apparel"
+74114,Aktivitas Desain industri strategis dan pertahanan
+74115,Aktivitas Desain Alat Komunikasi dan Elektronika
+74116,Aktivitas Desain Peralatan Olahraga dan Permainan
+74117,"Aktivitas Desain Produk Kesehatan, Kosmetik dan Perlengkapan Laboratorium"
+74118,Aktivitas Desain Pengemasan
+74119,Aktivitas Desain Industri Lainnya
+74120,Aktivitas Desain Interior
+74130,Aktivitas Desain Komunikasi Visual/ Desain Grafis
+74141,"Aktivitas Desain Khusus Film, Video, Program TV, Animasi dan Komik"
+74142,Aktivitas Desain Konten Game
+74149,Aktivitas Desain Konten Kreatif Lainya
+74201,Aktivitas Fotografi
+74202,"Aktivitas Angkutan Udara Khusus Pemotretan, Survei Dan Pemetaan"
+74311,Aktivitas Sertifikasi Profesi Pihak 1
+74312,Aktivitas Sertifikasi Profesi Pihak 2
+74321,Aktivitas Sertifikasi Profesi Pihak 3
+74322,Aktivitas Sertifikasi Personel Independen
+74901,Aktivitas Penerjemah Atau Interpreter
+74902,Aktivitas Konsultasi Bisnis Dan Broker Bisnis
+74909,"Aktivitas Profesional, Ilmiah dan Teknis Lainnya YTDL"
+75000,Aktivitas Kesehatan Hewan
+77100,"Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Mobil, Bus, Truk Dan Sejenisnya"
+77210,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat rekreasi dan Olahraga
+77220,"Aktivitas Penyewaan Kaset Video, CD, VCD/DVD Dan Sejenisnya"
+77291,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Pesta
+77292,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Barang Keperluan Rumah Tangga Dan Pribadi
+77293,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Barang Hasil Pencetakan Dan Penerbitan
+77294,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Bunga Dan Tanaman Hias
+77295,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Musik
+77299,Aktivitas penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Barang Keperluan Rumah Tangga Dan Pribadi Lainnya YTDL
+77311,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Transportasi Darat Bukan Kendaraan Bermotor Roda Empat Atau Lebih
+77312,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Transportasi Air
+77313,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Transportasi Udara
+77319,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Alat Transportasi Lainnya
+77321,Aktivitas Penyewaan dan Sewa Guna Tanpa Hak Opsi Alat Perekaman Gambar & Editing
+77322,Aktivitas Penyewaan dan Sewa Guna Tanpa Hak Opsi Alat Alat Bantu Teknologi Digital
+77323,Aktivitas Penyewaan dan Sewa Guna Tanpa Hak Opsi Alat Kebutuhan MICE
+77329,Aktivitas Penyewaan dan Sewa Guna Tanpa Hak Opsi Mesin dan Peralatan Industri Kreatif Lainnya
+77391,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Mesin dan Peralatan Industri Pengolahan
+77392,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Mesin Pertanian Dan Peralatannya
+77393,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Mesin Dan Peralatan Konstruksi Dan Teknik Sipil
+77394,Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak opsi Mesin Kantor Dan Peralatannya
+77395,Aktivitas Penyewaan dan Sewa Guna Tanpa Hak Opsi Mesin Pertambangan dan Energi serta Peralatannya
+77399,"Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi Mesin, Peralatan dan Barang Berwujud Lainnya YTDL"
+77400,"Sewa Guna Usaha Tanpa Hak Opsi Intelektual Properti, Bukan Karya Hak Cipta"
+78101,Aktivitas Penyeleksian Dan Penempatan Tenaga Kerja Dalam Negeri
+78102,Aktivitas Penyeleksian Dan Penempatan Tenaga Kerja Luar Negeri
+78103,Aktivitas Penempatan Pekerja Rumah Tangga
+78104,Aktivitas Penempatan Tenaga Kerja Daring (Job portal)
+78200,Aktivitas Penyediaan Tenaga Kerja Waktu Tertentu
+78300,Penyediaan Sumber Daya Manusia dan Manajemen Fungsi Sumber Daya Manusia
+78411,Pelatihan Kerja Teknik Pemerintah
+78412,Pelatihan Kerja Teknologi Informasi dan Komunikasi Pemerintah
+78413,Pelatihan Kerja Industri Kreatif Pemerintah
+78414,Pelatihan Kerja Pariwisata dan Perhotelan Pemerintah
+78415,Pelatihan Kerja Bisnis dan Manajemen Pemerintah
+78416,Pelatihan Kerja Pekerjaan Domestik Pemerintah
+78417,Pelatihan Kerja Pertanian dan Perikanan Pemerintah
+78419,Pelatihan Kerja Pemerintah Lainnya
+78421,Pelatihan Kerja Teknik Swasta
+78422,Pelatihan Kerja Teknologi Informasi dan Komunikasi Swasta
+78423,Pelatihan Kerja Industri Kreatif Swasta
+78424,Pelatihan Kerja Pariwisata dan Perhotelan Swasta
+78425,Pelatihan Kerja Bisnis dan Manajemen Swasta
+78426,Pelatihan Kerja Pekerjaan Domestik Swasta
+78427,Pelatihan Kerja Pertanian dan Perikanan Swasta
+78429,Pelatihan Kerja Swasta Lainnya
+78431,Pelatihan Kerja Teknik Perusahaan
+78432,Pelatihan Kerja Teknologi Informasi dan Komunikasi Perusahaan
+78433,Pelatihan Kerja Industri Kreatif Perusahaan
+78434,Pelatihan Kerja Pariwisata dan Perhotelan Perusahaan
+78435,Pelatihan Kerja Bisnis dan Manajemen Perusahaan
+78436,Pelatihan Kerja Pekerjaan Domestik Perusahaan
+78437,Pelatihan Kerja Pertanian dan Perikanan Perusahaan
+78439,Pelatihan Kerja Perusahaan Lainnya
+79111,Aktivitas Agen Perjalanan Wisata
+79112,Aktivitas Agen Perjalanan Ibadah Umroh dan Haji Khusus
+79119,Aktivitas Agen Perjalanan Lainnya
+79121,Aktivitas Biro Perjalanan Wisata
+79122,Aktivitas Biro Perjalanan Ibadah Umroh dan Haji Khusus
+79129,Aktivitas Biro Perjalanan Lainnya
+79911,Jasa Informasi Pariwisata
+79912,Jasa Informasi Daya Tarik Wisata
+79921,Jasa Pramuwisata
+79922,Jasa interpreter wisata
+79990,Jasa Reservasi Lainnya YBDI YTDL
+80100,Aktivitas Keamanan Swasta
+80200,Aktivitas Jasa Sistem Keamanan
+80300,Aktivitas Penyelidikan
+81100,Aktivitas Penyedia Gabungan Jasa Penunjang Fasilitas
+81210,Aktivitas Kebersihan Umum Bangunan
+81290,Aktivitas Kebersihan Bangunan Dan Industri Lainnya
+81300,Aktivitas Perawatan dan Pemeliharaan Taman
+82110,Aktivitas Penyedia Gabungan Jasa Administrasi Kantor
+82190,"Aktivitas Fotokopi, Penyiapan Dokumen dan Aktivitas Khusus Penunjang Kantor Lainnya"
+82200,Aktivitas call centre
+82301,"Jasa Penyelenggara Pertemuan, Perjalanan Insentif, Konferensi dan Pameran (MICE)"
+82302,Jasa Penyelenggara Event Khusus (Special Event)
+82911,Aktivitas Debt Collection
+82912,Aktivitas Lembaga Pengelola Informasi Perkreditan
+82920,Aktivitas Pengepakan
+82990,Aktivitas Jasa Penunjang Usaha Lainnya YTDL
+84111,Lembaga Legislatif
+84112,Penyelenggaraan Pemerintah Negara Dan Kesekretariatan Negara
+84113,"Lembaga Eksekutif Keuangan, Perpajakan Dan Bea Cukai"
+84114,Lembaga Eksekutif Perencanaan
+84115,Lembaga Pemerintah Non Kementrian Dengan Tugas Khusus
+84119,Kegiatan Administrasi Pemerintahan Lainnya
+84121,Administrasi Pelayanan Pemerintah Bidang Pendidikan
+84122,Administrasi Pelayanan Pemerintah Bidang Kesehatan
+84123,Administrasi Pelayanan Pemerintah Bidang Perumahan
+84124,Administrasi Pelayanan Pemerintah Bidang Kesejahteraan Sosial
+84125,Administrasi Pelayanan Pemerintah Bidang Keagamaan
+84126,Administrasi Pelayanan Pemerintah Bidang Kebudayaan/Kesenian/Rekreasi/Olahraga
+84127,Administrasi Pelayanan Pemerintah Bidang Lingkungan Hidup
+84129,"Administrasi Pelayanan Pemerintah Bidang Sosial Lainnya Bukan Kesehatan, Pendidikan, Keagamaan Dan Kebudayaan"
+84131,Kegiatan Lembaga Pemerintahan Bidang Pertanian
+84132,"Kegiatan Lembaga Pemerintahan Bidang Pertambangan Dan Penggalian, Listrik, Air dan Gas"
+84133,Kegiatan Lembaga Pemerintahan Bidang Perindustrian
+84134,Kegiatan Lembaga Pemerintahan Bidang Komunikasi Dan Informatika
+84135,Kegiatan Lembaga Pemerintahan Bidang Konstruksi
+84136,Kegiatan Lembaga Pemerintahan Bidang Perdagangan Dan Pariwisata
+84137,Kegiatan Lembaga Pemerintahan Bidang Perhubungan
+84138,Kegiatan Lembaga Pemerintahan Bidang Ketenagakerjaan
+84139,Kegiatan Lembaga Pemerintahan Untuk Menciptakan Efisiensi Produksi Dan Bisnis Lainnya
+84210,Hubungan Luar Negeri
+84221,Lembaga Pertahanan Dan Angkatan Bersenjata
+84222,Angkatan Darat
+84223,Angkatan Udara
+84224,Angkatan Laut
+84231,Kepolisian
+84232,Pertahanan Sipil
+84233,Lembaga Peradilan
+84234,Badan Nasional Penanggulangan Bencana dan Pemadam Kebakaran
+84300,Jaminan Sosial Wajib
+85111,Pendidikan Dasar/Ibtidaiyah Pemerintah
+85112,Pendidikan Menengah Pertama/Tsanawiyah Pemerintah
+85121,Pendidikan Dasar/Ibtidaiyah Swasta
+85122,Pendidikan Menengah Pertama/Tsanawiyah Swasta
+85131,Pendidikan Taman Kanak-kanak Pemerintah
+85132,Pendidikan Taman Kanak-kanak Swasta/Raudatul Athfal/Bustanul Athfal
+85133,Pendidikan Kelompok Bermain
+85134,Pendidikan Taman Penitipan Anak
+85135,Pendidikan Taman Kanak-kanak Luar Biasa
+85139,Pendidikan anak usia dini sejenis lainnya
+85141,Satuan Pendidikan Kerjasama Kelompok Bermain
+85142,Satuan Pendidikan Kerjasama Taman Kanak-Kanak
+85143,Satuan Pendidikan Kerjasama Pendidikan Dasar
+85144,Satuan Pendidikan Kerjasama Pendidikan Menengah Pertama
+85151,Satuan Pendidikan Anak Usia Dini/PAUD Al-Quran
+85152,Satuan Pendidikan Muadalah/Pendidikan Diniyah Formal Ula
+85153,Satuan Pendidikan Muadalah/Pendidikan Diniyah Formal Wustha
+85154,Satuan Pendidikan Pesantren Pengkajian Kitab Kuning Ula
+85155,Satuan Pendidikan Pesantren Pengkajian Kitab Kuning Wustha
+85161,Satuan Pendidikan Keagamaan Anak Usia Dini
+85162,Satuan Pendidikan Keagamaan Dasar
+85163,Satuan Pendidikan Keagamaan Menengah Pertama
+85210,Pendidikan Menengah Atas/Aliyah Pemerintah
+85220,Pendidikan Menengah/Aliyah Swasta
+85230,Pendidikan Menengah Kejuruan dan Teknis/Aliyah Kejuruan Pemerintah
+85240,Pendidikan Menengah Kejuruan/Aliyah Kejuruan Swasta
+85251,Satuan Pendidikan Kerjasama Pendidikan Menengah Atas
+85252,Satuan Pendidikan Kerjasama Pendidikan Menengah Kejuruan
+85261,Satuan Pendidikan Muadalah/ Pendidikan Diniyah Formal Ulya
+85262,Satuan Pendidikan Pesantren Pengkajian Kitab Kuning Ulya
+85263,Satuan Pendidikan Muadalah Wustha dan Ulya Berkesinambungan
+85270,Satuan Pendidikan Keagamaan Menengah
+85311,Pendidikan Tinggi Akademik Pemerintah
+85312,Pendidikan Tinggi Vokasi dan Profesi Pemerintah
+85321,Pendidikan Tinggi Akademik Swasta
+85322,Pendidikan Tinggi Vokasi dan Profesi Swasta
+85331,Pendidikan Tinggi Keagamaan Pemerintah
+85332,Pendidikan Tinggi Keagamaan Swasta
+85340,Pendidikan Pesantren Tinggi (Mahad Aly)
+85410,Jasa Pendidikan Olahraga Dan Rekreasi
+85420,Pendidikan Kebudayaan
+85430,Pendidikan Lainnya Pemerintah
+85440,Satuan Pendidikan Kerjasama Pendidikan NonFormal
+85451,Pendidikan Pesantren Lainnya
+85452,Pendidikan Keagamaan Islam Non Formal
+85459,Pendidikan Keagamaan Lainnya YTDL
+85491,Jasa Pendidikan Manajemen Dan Perbankan
+85492,Jasa Pendidikan Komputer (Teknologi Informasi dan Komunikasi) Swasta
+85493,Pendidikan Bahasa Swasta
+85494,Pendidikan Kesehatan Swasta
+85495,Pendidikan Bimbingan Belajar Dan Konseling Swasta
+85496,Pendidikan Awak Pesawat dan jasa Angkutan Udara Khusus Pendidikan Awak Pesawat
+85497,Pendidikan Teknik Swasta
+85498,Pendidikan Kerajinan Dan Industri
+85499,Pendidikan Lainnya Swasta
+85500,Kegiatan Penunjang Pendidikan
+86101,Aktivitas Rumah Sakit Pemerintah
+86102,Aktivitas Puskesmas
+86103,Aktivitas Rumah Sakit Swasta
+86104,Aktivitas Klinik Pemerintah
+86105,Aktivitas Klinik Swasta
+86109,Aktivitas Rumah Sakit Lainnya
+86201,Aktivitas Praktik Dokter
+86202,Aktivitas Praktik Dokter Spesialis
+86203,Aktivitas Praktik Dokter Gigi
+86901,Aktivitas pelayanan kesehatan yang dilakukan oleh tenaga kesehatan selain dokter dan dokter gigi
+86902,Aktivitas Pelayanan Kesehatan Tradisional
+86903,Aktivitas Pelayanan Penunjang Kesehatan
+86904,Aktivitas Angkutan Khusus Pengangkutan Orang Sakit (Medical Evacuation)
+87100,Aktivitas sosial di dalam panti untuk perawatan dan pemulihan kesehatan
+87201,Aktivitas Sosial di Dalam Panti untuk Penyandang Disabilitas Grahita
+87202,Aktivitas Sosial di Dalam Panti untuk Penyandang Disabilitas Laras
+87203,"Aktivitas Sosial di Dalam Panti untuk Korban Penyalah Gunaan Narkotika, Alkohol , Psikotropika dan Zat adiktif (NAPZA)"
+87301,Aktivitas Sosial Pemerintah di Dalam Panti Untuk Lanjut Usia
+87302,Aktivitas Sosial Swasta di Dalam Panti Untuk Lanjut Usia
+87303,Aktivitas Sosial di Dalam Panti untuk Penyandang Disabilitas Netra
+87304,Aktivitas Sosial di Dalam Panti untuk Penyandang Disabilitas Daksa
+87305,Aktivitas Sosial di Dalam Panti untuk Penyandang Disabilitas Rungu Wicara
+87901,Aktivitas Panti Asuhan Pemerintah
+87902,Aktivitas Panti Asuhan Swasta
+87903,Aktivitas Sosial di Dalam Panti untuk Anak yang Berhadapan dengan Hukum
+87904,Aktivitas Sosial di Dalam Panti untuk Bina Remaja
+87905,Aktivitas Sosial di Dalam Panti untuk Petirahan anak
+87906,Aktivitas Sosial di Dalam Panti Sosial Karya Wanita
+87907,Aktivitas Sosial di Dalam Panti Gelandangan dan Pengemis
+87909,Aktivitas Sosial Di Dalam Panti Lainnya YTDL
+88101,Aktivitas Sosial Pemerintah Tanpa Akomodasi Untuk Lanjut Usia Dan Penyandang Disabilitas
+88102,Aktivitas Sosial Swasta Tanpa Akomodasi Untuk Lanjut Usia Dan Penyandang Disabilitas
+88911,Aktivitas Sosial Pengumpulan Dana Keislaman
+88919,Aktivitas Sosial Pengumpulan Dana Lainnya
+88991,Aktivitas Sosial Pemerintah Tanpa Akomodasi Lainnya YTDL
+88992,Aktivitas Sosial Swasta Tanpa Akomodasi Lainnya YTDL
+90011,Aktivitas Seni Pertunjukan
+90012,Aktivitas Penunjang Seni Pertunjukan
+90021,Pelaku Kreatif Seni Pertunjukan
+90022,Pelaku Kreatif Seni Musik
+90023,Aktivitas Pelaku Kreatif Seni Rupa
+90024,Aktivitas Penulis dan Pekerja Sastra
+90025,Jurnalis Berita Independen
+90029,Aktivitas Pekerja Seni dan Pekerja Kreatif Lainnya
+90030,Aktivitas Impresariat Bidang Seni dan Festival Seni
+90040,Aktivitas Operasional Fasilitas Seni
+90090,"Aktivitas Hiburan, Seni dan Kreativitas Lainnya"
+91011,Perpustakaan Dan Arsip Pemerintah
+91012,Perpustakaan dan Arsip Swasta
+91021,Museum Yang Dikelola Pemerintah
+91022,Museum Yang Dikelola Swasta
+91023,Peninggalan Sejarah/Cagar Budaya Yang Dikelola Pemerintah
+91024,Peninggalan Sejarah/Cagar Budaya Yang Dikelola Swasta
+91025,Taman Budaya
+91029,Wisata Budaya Lainnya
+91031,Taman Konservasi Di Luar Habitat Alami (Ex-Situ)
+91032,Taman Nasional
+91033,Taman Hutan Raya
+91034,Taman Wisata Alam
+91035,Suaka Margasatwa
+91036,Taman Laut
+91037,Kawasan Buru
+91038,Hutan Lindung
+91039,Aktivitas Kawasan Alam Lainnya
+92000,Aktivitas Perjudian Dan Pertaruhan
+93111,Fasilitas Stadion
+93112,Fasilitas Sirkuit
+93113,Fasilitas Gelanggang/Arena
+93114,Fasilitas Lapangan
+93115,Fasilitas Olahraga Beladiri
+93116,Fasilitas Pusat Kebugaran/ Fitness Center
+93119,Pengelolaan Fasilitas Olah raga Lainnya
+93121,Klub Sepak Bola
+93122,Klub Golf
+93123,Klub Renang
+93124,Klub Tenis Lapangan
+93125,Klub Tinju
+93126,Klub Bela Diri
+93127,Klub Kebugaran/Fitness Dan Binaraga
+93128,Klub Bowling
+93129,Klub Olahraga Lainnya
+93191,Promotor Kegiatan Olahraga
+93192,"Olahragawan, Juri dan Wasit Profesional"
+93193,Aktivitas Perburuan
+93194,Badan Regulasi Dan Liga Olahraga
+93195,Aktivitas Olahraga Tradisional
+93199,Aktivitas Lainnya Yang Berkaitan Dengan Olahraga
+93211,Taman Rekreasi
+93219,Aktivitas taman bertema atau taman hiburan lainnya
+93221,Pemandian Alam
+93222,Wisata Gua
+93223,Wisata Petualangan Alam
+93224,Wisata Pantai
+93229,Daya Tarik Wisata Alam Lainnya
+93231,Wisata Agro
+93232,Taman Rekreasi/Taman Wisata
+93233,Kolam Pemancingan
+93239,Daya Tarik Wisata Buatan/Binaan Manusia Lainnya
+93241,Arung Jeram
+93242,Wisata Selam
+93243,Dermaga Marina
+93244,Kolam Pemancingan
+93245,Wisata Memancing
+93246,Aktivitas Wisata Air
+93249,Wisata Tirta Lainnya
+93291,Klub Malam
+93292,Karaoke
+93293,Usaha Arena Permainan
+93294,Diskotek
+93299,Aktivitas Hiburan dan Rekreasi Lainnya Ytdl
+94110,Aktivitas Organisasi Bisnis Dan Pengusaha
+94121,Aktivitas Organisasi Ilmu Pengetahuan Sosial Dan Masyarakat
+94122,Aktivitas Organisasi Ilmu Pengetahuan Alam Dan Teknologi
+94200,Aktivitas Organisasi Buruh
+94910,Aktivitas Organisasi Keagamaan
+94920,Aktivitas Organisasi Politik
+94990,Aktivitas Organisasi Keanggotaan Lainnya YTDL
+95110,Reparasi Komputer dan Peralatan Sejenisnya
+95120,Reparasi Peralatan Komunikasi
+95210,Reparasi Alat-alat Elektronik Konsumen
+95220,Reparasi Peralatan Rumah Tangga Dan Peralatan Rumah Dan Kebun
+95230,Reparasi Alas Kaki Dan Barang Dari Kulit
+95240,Reparasi Furnitur Dan Perlengkapan Rumah
+95291,Aktivitas Vermak Pakaian
+95299,Reparasi Barang Rumah Tangga Dan Pribadi Lainnya
+96111,Aktivitas Pangkas Rambut
+96112,Aktivitas Salon Kecantikan
+96121,Rumah Pijat
+96122,Aktivitas SPA (Sante Par Aqua)
+96129,Aktivitas Kebugaran Lainnya
+96200,Aktivitas penatu
+96910,Aktivitas Pemakaman Dan Kegiatan YBDI
+96990,Aktivitas Jasa Perorangan Lainnya YTDL
+97000,Aktivitas Rumah Tangga Sebagai Pemberi Kerja Dari Personil Domestik
+98100,Aktivitas Yang Menghasilkan Barang Oleh Rumah Tangga Yang Digunakan Untuk Memenuhi Kebutuhan Sendiri
+98200,Aktivitas yang menghasilkan jasa oleh rumah tangga yang digunakan untuk memenuhi kebutuhan sendiri
+99000,Aktivitas Badan Internasional Dan Badan Ekstra Internasional Lainnya

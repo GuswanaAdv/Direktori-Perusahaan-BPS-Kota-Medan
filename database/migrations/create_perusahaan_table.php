@@ -38,7 +38,7 @@ return new class extends Migration
             $table->char('kegiatan_utama',200);
             $table->char('kode_kbli',10)->constrained('kbli');
             $table->char('produk_utama',200);
-            $table->char('kode_kbki',10)->constrained('kbki');
+            $table->char('kode_kbki',10);
             $table->integer('kode_jenis_kepemilikan')->constrained('jenis_kepemilikan');
             $table->integer('kode_bentuk_badan_usaha')->constrained('bentuk_badan_usaha');
             $table->integer('kode_laporan_keuangan')->constrained('laporan_keuangan');
