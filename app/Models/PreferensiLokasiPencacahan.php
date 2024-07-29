@@ -20,7 +20,7 @@ class PreferensiLokasiPencacahan extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'kode_preferensi_lokasi_pencacahan',
-        'nama_preferensi_lokasi_pencacahan',
+        'kode_preferensi',
+        'nama_preferensi',
     ];
 }

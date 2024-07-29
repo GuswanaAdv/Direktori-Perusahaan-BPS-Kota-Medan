@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('skala_usaha', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('kode_skala_usaha')->primary();
+            $table->char('nama_skala_usaha', 50);
         });
     }
 

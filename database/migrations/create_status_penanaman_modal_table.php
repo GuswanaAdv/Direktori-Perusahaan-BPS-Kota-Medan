@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('status_penanaman_modal', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('kode_status_penanaman_modal')->primary();
+            $table->char('nama_status_penanaman_modal', 50);
         });
     }
 

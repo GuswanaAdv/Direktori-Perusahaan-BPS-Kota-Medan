@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('unit_statistik', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('kode_unit_statistik')->primary();
+            $table->char('nama_unit_statistik', 50);
         });
     }
 

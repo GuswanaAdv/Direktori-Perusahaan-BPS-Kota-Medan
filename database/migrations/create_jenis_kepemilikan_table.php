@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jenis_kepemilikan', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('kode_jenis_kepemilikan')->primary();
+            $table->char('nama_jenis_kepemilikan', 50);
         });
     }
 

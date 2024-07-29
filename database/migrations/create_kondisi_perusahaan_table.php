@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kondisi_perusahaan', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('kode_kondisi_perusahaan')->primary();
+            $table->char('nama_kondisi_perusahaan', 50);
         });
     }
 
