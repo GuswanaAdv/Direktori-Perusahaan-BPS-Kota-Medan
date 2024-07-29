@@ -21,6 +21,7 @@ return new class extends Migration
             $table->char('id_petugas',5)->consrainted('petugas');
             $table->char('nip',18)->constranted('pegawai');
             $table->char('keterangan',200);
+            $table->timestamps();
         });
     }
 
