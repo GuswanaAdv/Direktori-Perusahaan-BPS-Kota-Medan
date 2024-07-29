@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kbli', function (Blueprint $table) {
-            $table->char('kode_kbli',5)->primmary();
-            $table->char('nama_kbli',200);
+        Schema::create('preferensi_lokasi_pencacahan', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kbli');
+        Schema::dropIfExists('preferensi_lokasi_pencacahan');
     }
 };

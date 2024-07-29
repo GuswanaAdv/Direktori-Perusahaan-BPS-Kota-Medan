@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KBLI extends Model
+class JaringanUsaha extends Model
 {
     use HasFactory;
-
-    protected $table = 'kbli';
+    protected $table = 'jaringan_usaha';
 
     // The primary key is not auto-incrementing
     public $incrementing = false;
@@ -21,7 +20,7 @@ class KBLI extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'kode_kbli',
-        'nama_kbli',
+        'kode_jaringan_usaha',
+        'nama_jaringan_usaha',
     ];
 }
