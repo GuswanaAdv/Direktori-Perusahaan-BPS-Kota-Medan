@@ -1,0 +1,49 @@
+47779	Perdagangan Eceran Bahan Kimia, dan Aromatik/Penyegar (Minyak Atsiri), Dan Bahan Bakar Bukan Bahan Bakar Untuk Kendaraan Bermotor Lainnnya
+47781	Perdagangan Eceran Barang Kerajinan Dari Kayu, Bambu, Rotan, Pandan, Rumput Dan Sejenisnya
+47782	Perdagangan Eceran Barang Kerajinan Dari Kulit, Tulang, Tanduk, Gading, Bulu Dan Binatang/Hewan Yang Diawetkan
+47783	Perdagangan Eceran Barang Kerajinan Dari Logam 
+47784 	Perdagangan Eceran Barang Kerajinan Dari Keramik 
+47785	Perdagangan Eceran Lukisan
+47789	Perdagangan Eceran Barang Kerajinan Dan Lukisan Lainnya 
+47791	Perdagangan Eceran Mesin Pertanian Dan Perlengkapannya 
+47792	Perdagangan Eceran Mesin Jahit Dan Perlengkapannya 
+47793	Perdagangan Eceran Mesin Lainnya Dan Perlengkapannya
+47794	Perdagangan Eceran Alat Transportasi Darat Tidak Bermotor Dan Perlengkapannya 
+47795	Perdagangan Eceran Alat Transportasi Air Dan Perlengkapannya
+47796	Perdagangan Eceran Alat-alat Pertanian 
+47797	Perdagangan Eceran Alat-alat Pertukangan
+47811	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Padi Dan Palawija 
+47812	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Buah-buahan 
+47813	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Sayur-sayuran 
+47814	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Peternakan 
+47815	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Perikanan
+47816	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Hasil Kehutanan Dan Perburuan
+47819	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Tanaman Hias Dan Hasil Pertanian Lainnya 
+47821	Perdagangan Eceran Kaki Lima Dan Los Pasar Beras
+47822	Perdagangan Eceran Kaki Lima Dan Los Pasar Roti, Kue Kering, Kue Basah Dan Sejenisnya 
+47823	Perdagangan Eceran Kaki Lima Dan Los Pasar Kopi, Gula Pasir, Gula Merah Dan Sejenisnya 
+47824	Perdagangan Eceran Kaki Lima Dan Los Pasar Tahu, Tempe, Tauco Dan Oncom
+47825	Perdagangan Eceran Kaki Lima Dan Los Pasar Daging Olahan Dan Ikan Olahan 
+47826	Perdagangan Eceran Kaki Lima Dan Los Pasar Minuman
+47827	Perdagangan Eceran Kaki Lima Dan Los Pasar Rokok Dan Tembakau
+47828	Perdagangan Eceran Kaki Lima Dan Los Pasar Pakan Ternak, Pakan Unggas Dan Pakan Ikan 
+47829	Perdagangan Eceran Kaki Lima Dan Los Pasar Komoditi Makanan Dan Minuman Ytdl  
+47831	Perdagangan Eceran Kaki Lima Dan Los Pasar Tekstil
+47832	Perdagangan Eceran Kaki Lima Dan Los Pasar Pakaian
+47833	Perdagangan Eceran Kaki Lima Dan Los Pasar Sepatu, Sandal Dan Alas Kaki Lainnya 
+47834	Perdagangan Eceran Kaki Lima Dan Los Pasar Pelengkap Pakaian Dan Benang 
+47841	Perdagangan Eceran Kaki Lima Dan Los Pasar Bahan Kimia
+47842	Perdagangan Eceran Kaki Lima Dan Los Pasar Farmasi
+47843	Perdagangan Eceran Kaki Lima Dan Los Pasar Obat Tradisional 
+47844	Perdagangan Eceran Kaki Lima Dan Los Pasar Kosmetik
+47845	Perdagangan Eceran Kaki Lima Dan Los Pasar Pupuk Dan Pemberantas Hama 
+47846	Perdagangan Eceran Kaki Lima Dan Los Pasar Aromatik/Penyegar (Minyak Atsiri)
+47849	Perdagangan Eceran Kaki Lima Dan Los Pasar Bahan Kimia, Farmasi, Kosmetik Dan Alat Laboratorium dan Ybdi Ytdl
+47851	Perdagangan Eceran Kaki Lima Dan Los Pasar Kaca Mata
+47852	Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Perhiasan
+47853	Perdagangan Eceran Kaki Lima Dan Los Pasar Jam
+47854	Perdagangan Eceran Kaki Lima Dan Los Pasar Tas, Dompet, Koper, Ransel Dan Sejenisnya 
+47855	Perdagangan Eceran Kaki Lima Dan Los Pasar Perlengkapan Pengendara Sepeda Motor 
+47859	Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Keperluan Pribadi Lainnya
+47861	Perdagangan Eceran Kaki Lima Dan Los Pasar Barang Elektronik
+47862	Perdagangan Eceran Kaki Lima Dan Los Pasar Alat Dan Perlengkapan Listrik

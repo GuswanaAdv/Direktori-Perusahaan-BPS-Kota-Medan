@@ -23,7 +23,6 @@ class Perusahaan extends Model
     protected $fillable = [
         // Blok 1
         'id_brs',
-        'id_brs',
         'nama_usaha',
         'nama_komersial',
         'kode_unit_statistik',
@@ -38,7 +37,7 @@ class Perusahaan extends Model
         'telepon',
         'email',
         'website',
-        'id_kondisi_perusahaan',
+        'kode_kondisi_perusahaan',
         'lattitude',
         'longitude',
 
@@ -55,7 +54,7 @@ class Perusahaan extends Model
         'no_induk_berusaha',
         'kode_skala_usaha',
         'kode_jaringan_usaha',
-        'kode_preferensi_lokasi_pencacahan',
+        'kode_preferensi',
         'nama_kantor_pusat',
         'alamat_kantor_pusat',
         'email_kantor_pusat',
@@ -71,7 +70,6 @@ class Perusahaan extends Model
         'kewarganegaraan_penanggungjawab',
         'kode_jabatan_penanggungjawab',
         'nama_pemegang_saham',
-        'negara_pemegang_saham',
         'npwp_perusahaan',
         'kode_status_penanaman_modal',
     ];

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Perusahaan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {   
+        $this->call(PerusahaanSeeder::class);
         $this->call(KBLISeeder::class); 
         $this->call(UnitStatistikSeeder::class);
         $this->call(JabatanPenanggungjawabSeeder::class);
