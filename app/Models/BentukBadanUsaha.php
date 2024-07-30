@@ -23,4 +23,9 @@ class BentukBadanUsaha extends Model
         'kode_bentuk_badan_usaha',
         'nama_bentuk_badan_usaha',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_bentuk_badan_usaha','kode_bentuk_badan_usaha');
+    }
 }

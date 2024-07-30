@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('survei', function (Blueprint $table) {
             $table->char('kode_survei',5)->primmary();
-            $table->char('kode_brs',10)->constrained('perusahaan');
             $table->char('nama_survei',50);
         });
     }

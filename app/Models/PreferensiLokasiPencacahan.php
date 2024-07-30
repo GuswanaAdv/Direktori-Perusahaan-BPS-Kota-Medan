@@ -23,4 +23,9 @@ class PreferensiLokasiPencacahan extends Model
         'kode_preferensi',
         'nama_preferensi',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_preferensi','kode_preferensi');
+    }
 }

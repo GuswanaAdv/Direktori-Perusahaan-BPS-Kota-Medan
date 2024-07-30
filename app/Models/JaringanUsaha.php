@@ -23,4 +23,9 @@ class JaringanUsaha extends Model
         'kode_jaringan_usaha',
         'nama_jaringan_usaha',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_jaringan_usaha','kode_jaringan_usaha');
+    }
 }

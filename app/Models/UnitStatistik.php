@@ -24,4 +24,9 @@ class UnitStatistik extends Model
         'kode_unit_statistik',
         'nama_unit_statistik',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_unit_statistik','kode_unit_statistik');
+    }
 }

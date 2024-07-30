@@ -24,9 +24,30 @@ class Histori extends Model
         'id_histori',
         'id_perusahaan_survei',
         'kode_survei',
-        'kode_brs',
+        'id_brs',
         'id_petugas',
         'nip',
         'keterangan',
     ];
+
+    // Relasi satu ke banyak
+    function survei(){
+        return $this->hasMany(Survei::class,'kode_survei','kode_survei');
+    }
+
+    function petugas(){
+        return $this->hasMany(Petugas::class,'id_petugas','id_petugas');
+    }
+
+    function perusahaan(){
+        return $this->hasMany(Perusahaan::class,'id_brs','id_brs');
+    }
+
+    function pegawai(){
+        return $this->hasMany(Pegawai::class,'nip','nip');
+    }
+
+    function perusahaanSurvei(){
+        return $this->hasMany(PerusahaanSurvei::class,'id_perusahaan_survei','id_perusahaan_survei');
+    }
 }

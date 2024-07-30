@@ -22,7 +22,15 @@ class Petugas extends Model
 
     protected $fillable = [
         'id_petugas',
-        'kode_survei',
         'nama_petugas',
     ];
+
+    // Relasi banyak ke satu
+    function perusahaanSurvei(){
+        return $this->belongsTo(PerusahaanSurvei::class,'id_petugas','id_petugas');
+    }
+
+    function histori(){
+        return $this->belongsTo(Histori::class,'id_petugas','id_petugas');
+    }
 }

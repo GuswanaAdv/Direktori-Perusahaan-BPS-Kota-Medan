@@ -23,4 +23,9 @@ class SkalaUsaha extends Model
         'kode_skala_usaha',
         'nama_skala_usaha',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_skala_usaha','kode_skala_usaha');
+    }
 }

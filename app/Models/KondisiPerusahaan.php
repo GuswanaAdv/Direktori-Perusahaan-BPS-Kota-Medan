@@ -23,4 +23,9 @@ class KondisiPerusahaan extends Model
         'kode_kondisi_perusahaan',
         'nama_kondisi_perusahaan',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_kondisi_perusahaan','kode_kondisi_perusahaan');
+    }
 }

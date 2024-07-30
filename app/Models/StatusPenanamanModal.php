@@ -24,4 +24,9 @@ class StatusPenanamanModal extends Model
         'kode_status_penanaman_modal',
         'nama_status_penanaman_modal',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_status_penanaman_modal','kode_status_penanaman_modal');
+    }
 }

@@ -22,7 +22,15 @@ class Survei extends Model
 
     protected $fillable = [
         'kode_survei',
-        'kode_brs',
         'nama_survei',
     ];
+
+    // Relasi banyak ke satu
+    function perusahaanSurvei(){
+        return $this->belongsTo(PerusahaanSurvei::class,'id_survei','id_survei');
+    }
+
+    function histori(){
+        return $this->belongsTo(Histori::class,'id_survei','id_survei');
+    }
 }

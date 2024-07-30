@@ -23,4 +23,9 @@ class JabatanPenanggungjawab extends Model
         'kode_jabatan_penanggungjawab',
         'nama_jabatan_penanggungjawab',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_jabatan_penanggungjawab','kode_jabatan_penanggungjawab');
+    }
 }

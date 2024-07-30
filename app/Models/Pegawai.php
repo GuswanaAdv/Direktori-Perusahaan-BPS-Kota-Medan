@@ -24,4 +24,9 @@ class Pegawai extends Model
         'nip',
         'nama_pegawai',
     ];
+
+    // Relasi banyak ke satu
+    function histori(){
+        return $this->belongsTo(Histori::class,'nip','nip');
+    }
 }

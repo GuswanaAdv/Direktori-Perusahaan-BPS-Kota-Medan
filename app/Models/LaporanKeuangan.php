@@ -23,4 +23,9 @@ class LaporanKeuangan extends Model
         'kode_laporan_keuangan',
         'nama_laporan_keuangan',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_laporan_keuangan','kode_laporan_keuangan');
+    }
 }

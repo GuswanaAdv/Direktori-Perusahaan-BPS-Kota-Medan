@@ -73,4 +73,59 @@ class Perusahaan extends Model
         'npwp_perusahaan',
         'kode_status_penanaman_modal',
     ];
+
+    
+    // Relasi satu ke banyak
+    function bentukBadanUsaha(){
+        return $this->hasMany(BentukBadanUsaha::class, 'kode_bentuk_badan_usaha', 'kode_bentuk_badan_usaha');
+    }
+
+    function jabatanPenanggungjawab(){
+        return $this->hasMany(JabatanPenanggungjawab::class, 'kode_jabatan_penanggungjawab', 'kode_jabatan_penanggungjawab');
+    }
+
+    function jaringanUsaha(){
+        return $this->hasMany(JaringanUsaha::class, 'kode_jaringan_usaha', 'kode_jaringan_usaha');
+    }
+
+    function jenisKepemilikan(){
+        return $this->hasMany(JenisKepemilikan::class, 'kode_jenis_kepemilikan', 'kode_jenis_kepemilikan');
+    }
+
+    function kbli(){
+        return $this->hasMany(KBLI::class, 'kode_kbli', 'kode_kbli');
+    }
+
+    function kondisiPerusahaan(){
+        return $this->hasMany(KondisiPerusahaan::class, 'kode_kondisi_perusahaan', 'kode_kondisi_perusahaan');
+    }
+
+    function laporanKeuangan(){
+        return $this->hasMany(LaporanKeuangan::class, 'kode_laporan_keuangan', 'kode_laporan_keuangan');
+    }
+
+    function preferensiLokasiPencacahan(){
+        return $this->hasMany(PreferensiLokasiPencacahan::class, 'kode_preferensi', 'kode_preferensi');
+    }
+
+    function skalaUsaha(){
+        return $this->hasMany(SkalaUsaha::class, 'kode_skala_usaha', 'kode_skala_usaha');
+    }
+
+    function statusPenanamanModal(){
+        return $this->hasMany(StatusPenanamanModal::class, 'kode_status_penanaman_modal', 'kode_status_penanaman_modal');
+    }
+
+    function unitStatistik(){
+        return $this->hasMany(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
+    }
+
+    // Relasi banyak ke satu
+    function perusahaanSurvei(){
+        return $this->belongsTo(PerusahaanSurvei::class, 'id_brs', 'id_brs');
+    }
+
+    function histori(){
+        return $this->belongsTo(Histori::class, 'id_brs', 'id_brs');
+    }
 }

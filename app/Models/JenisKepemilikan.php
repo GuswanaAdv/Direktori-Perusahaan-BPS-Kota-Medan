@@ -22,4 +22,9 @@ class JenisKepemilikan extends Model
         'kode_jenis_kepemilikan',
         'nama_jenis_kepemilikan',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_jenis_kepemilikan','kode_jenis_kepemilikan');
+    }
 }

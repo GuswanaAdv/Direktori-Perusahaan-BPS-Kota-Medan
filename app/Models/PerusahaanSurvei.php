@@ -23,9 +23,27 @@ class PerusahaanSurvei extends Model
     protected $fillable = [
         'id_perusahaan_survei',
         'kode_survei',
-        'kode_brs',
+        'id_brs',
         'id_petugas',
         'hari_tanggal',
         'keterangan',
     ];
+
+    // Relasi satu ke banyak
+    function survei(){
+        return $this->hasMany(Survei::class,'kode_survei','kode_survei');
+    }
+
+    function petugas(){
+        return $this->hasMany(Petugas::class,'id_petugas','id_petugas');
+    }
+
+    function perusahaan(){
+        return $this->hasMany(Perusahaan::class,'id_brs','id_brs');
+    }
+
+    // Relasi banyak ke satu
+    function histori(){
+        return $this->belongsTo(Histori::class,'id_perusahaan_survei','id_perusahaan_survei');
+    }
 }

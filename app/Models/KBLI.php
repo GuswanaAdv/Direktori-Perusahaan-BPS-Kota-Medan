@@ -24,4 +24,9 @@ class KBLI extends Model
         'kode_kbli',
         'nama_kbli',
     ];
+
+    // Relasi banyak ke satu ke tabel Perusahaan
+    function perusahaan(){
+        return $this->belongsTo(Perusahaan::class,'kode_kbli','kode_kbli');
+    }
 }
