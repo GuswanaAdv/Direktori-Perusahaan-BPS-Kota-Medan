@@ -29,4 +29,8 @@ class Pegawai extends Model
     function histori(){
         return $this->belongsTo(Histori::class,'nip','nip');
     }
+
+    function perusahaan_survei(){
+        return $this->belongsTo(PerusahaanSurvei::class,'nip','nip');
+    }
 }

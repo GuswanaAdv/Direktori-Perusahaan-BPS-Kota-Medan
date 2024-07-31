@@ -9,13 +9,13 @@
             </div>
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
-                <li><a>Perusahaan</a></li>
-                <li><a>Petugas</a></li>
+                <li><a href="{{route('beranda')}}">Beranda</a></li>
+                <li><a href="{{route('survei')}}">Survei</a></li>
                 <li>
                     <a>Direktori</a>
                       <ul class="p-2 w-32 text-black">
-                        <li><a>Perusahaan</a></li>
-                        <li><a>Petugas</a></li>
+                        <li><a href="{{route('perusahaan')}}">Perusahaan</a></li>
+                        <li><a href="{{route('petugas')}}">Petugas</a></li>
                       </ul>
                   </li>
                 <li><a>Akun</a></li>
@@ -26,7 +26,7 @@
     </div>
 
     {{-- Tampilan Desktop --}}
-    <div class="navbar-end hidden lg:flex mr-36 text-white">
+    <div class="navbar-end hidden lg:flex mr-36 text-white z-10">
         <ul class="menu menu-horizontal px-1">
             <li><a href="{{route('beranda')}}" class="{{($judul == 'Beranda')? 'border-b border-white' : ''}}">Beranda</a></li>
             <li><a href="{{route('survei')}}" class="{{($judul == 'Survei')? 'border-b border-white' : ''}}">Survei</a></li>

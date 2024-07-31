@@ -75,49 +75,49 @@ class Perusahaan extends Model
     ];
 
     
-    // Relasi satu ke banyak
+    // Relasi satu ke satu
     function bentukBadanUsaha(){
-        return $this->hasMany(BentukBadanUsaha::class, 'kode_bentuk_badan_usaha', 'kode_bentuk_badan_usaha');
+        return $this->hasOne(BentukBadanUsaha::class, 'kode_bentuk_badan_usaha', 'kode_bentuk_badan_usaha');
     }
 
     function jabatanPenanggungjawab(){
-        return $this->hasMany(JabatanPenanggungjawab::class, 'kode_jabatan_penanggungjawab', 'kode_jabatan_penanggungjawab');
+        return $this->hasOne(JabatanPenanggungjawab::class, 'kode_jabatan_penanggungjawab', 'kode_jabatan_penanggungjawab');
     }
 
     function jaringanUsaha(){
-        return $this->hasMany(JaringanUsaha::class, 'kode_jaringan_usaha', 'kode_jaringan_usaha');
+        return $this->hasOne(JaringanUsaha::class, 'kode_jaringan_usaha', 'kode_jaringan_usaha');
     }
 
     function jenisKepemilikan(){
-        return $this->hasMany(JenisKepemilikan::class, 'kode_jenis_kepemilikan', 'kode_jenis_kepemilikan');
+        return $this->hasOne(JenisKepemilikan::class, 'kode_jenis_kepemilikan', 'kode_jenis_kepemilikan');
     }
 
     function kbli(){
-        return $this->hasMany(KBLI::class, 'kode_kbli', 'kode_kbli');
+        return $this->hasOne(KBLI::class, 'kode_kbli', 'kode_kbli');
     }
 
     function kondisiPerusahaan(){
-        return $this->hasMany(KondisiPerusahaan::class, 'kode_kondisi_perusahaan', 'kode_kondisi_perusahaan');
+        return $this->hasOne(KondisiPerusahaan::class, 'kode_kondisi_perusahaan', 'kode_kondisi_perusahaan');
     }
 
     function laporanKeuangan(){
-        return $this->hasMany(LaporanKeuangan::class, 'kode_laporan_keuangan', 'kode_laporan_keuangan');
+        return $this->hasOne(LaporanKeuangan::class, 'kode_laporan_keuangan', 'kode_laporan_keuangan');
     }
 
     function preferensiLokasiPencacahan(){
-        return $this->hasMany(PreferensiLokasiPencacahan::class, 'kode_preferensi', 'kode_preferensi');
+        return $this->hasOne(PreferensiLokasiPencacahan::class, 'kode_preferensi', 'kode_preferensi');
     }
 
     function skalaUsaha(){
-        return $this->hasMany(SkalaUsaha::class, 'kode_skala_usaha', 'kode_skala_usaha');
+        return $this->hasOne(SkalaUsaha::class, 'kode_skala_usaha', 'kode_skala_usaha');
     }
 
     function statusPenanamanModal(){
-        return $this->hasMany(StatusPenanamanModal::class, 'kode_status_penanaman_modal', 'kode_status_penanaman_modal');
+        return $this->hasOne(StatusPenanamanModal::class, 'kode_status_penanaman_modal', 'kode_status_penanaman_modal');
     }
 
     function unitStatistik(){
-        return $this->hasMany(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
+        return $this->hasOne(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
     }
 
     // Relasi banyak ke satu

@@ -25,6 +25,8 @@ class PerusahaanSurvei extends Model
         'kode_survei',
         'id_brs',
         'id_petugas',
+        'nip',
+        'aktivitas',
         'hari_tanggal',
         'keterangan',
     ];
@@ -40,6 +42,10 @@ class PerusahaanSurvei extends Model
 
     function perusahaan(){
         return $this->hasMany(Perusahaan::class,'id_brs','id_brs');
+    }
+
+    function pegawai(){
+        return $this->hasMany(Pegawai::class,'nip','nip');
     }
 
     // Relasi banyak ke satu

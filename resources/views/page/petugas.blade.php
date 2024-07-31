@@ -3,17 +3,21 @@
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">
-            <div class="flex sm:space-x-40 space-x-4">
-                <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
-                    Daftar Perusahaan:
-                </button>
-                <button class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white">
-                    Tambah Perusahaan
-                    <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png" 
-                    alt=""
-                    height="32"
-                    width="32">
-                </button>
+            <div class="flex sm:space-x-20 grid sm:grid-cols-2 grid-cols-1">
+                <div class="flex items-center justify-center py-4">
+                    <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
+                        Daftar Petugas:
+                    </button>
+                </div>
+                <div class="flex items-center justify-center py-4">
+                    <button class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white">
+                        Tambah Petugas
+                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png" 
+                        alt=""
+                        height="32"
+                        width="32">
+                    </button>
+                </div>
             </div>
         </div>
 

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->char('kode_survei',5)->constrained('survei');
             $table->char('id_brs',10)->constrained('perusahaan');
             $table->char('id_petugas',5)->consrainted('petugas');
+            $table->char('nip',18)->constranted('pegawai');
+            $table->char('aktivitas',20);
             $table->char('hari_tanggal',20);
             $table->char('keterangan',200);
         });

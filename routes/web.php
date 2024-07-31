@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PerusahaanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,10 @@ Route::get('/survei', function () {return view('page.survei',[
     'judul' => 'Survei'
 ]);})->name('survei');
 
-Route::get('/perusahaan', function () {return view('page.perusahaan',[
-    'judul' => 'Perusahaan'
-]);})->name('perusahaan');
+Route::get('/perusahaan', [PerusahaanController::class, 'tampil'])->name('perusahaan');
+Route::get('/perusahaan/{id_brs}', [PerusahaanController::class, 'lengkap'])->name('perusahaan-view');
+Route::post('/perusahaan_search', [PerusahaanController::class, 'search1'])->name('perusahaan-search1');
+Route::get('/perusahaan_search', [PerusahaanController::class, 'search2'])->name('perusahaan-search2');
 
 Route::get('/petugas', function () {return view('page.petugas',[
     'judul' => 'Petugas'
