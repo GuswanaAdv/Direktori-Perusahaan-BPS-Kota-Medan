@@ -22,7 +22,7 @@ class Perusahaan extends Model
 
     protected $fillable = [
         // Blok 1
-        'id_brs',
+        'id_sbr',
         'nama_usaha',
         'nama_komersial',
         'kode_unit_statistik',
@@ -121,11 +121,11 @@ class Perusahaan extends Model
     }
 
     // Relasi banyak ke satu
-    function perusahaanSurvei(){
-        return $this->belongsTo(PerusahaanSurvei::class, 'id_brs', 'id_brs');
+    function perusahaanKegiatan(){
+        return $this->belongsTo(PerusahaanKegiatan::class, 'id_sbr', 'id_sbr');
     }
 
     function histori(){
-        return $this->belongsTo(Histori::class, 'id_brs', 'id_brs');
+        return $this->belongsTo(Histori::class, 'id_sbr', 'id_sbr');
     }
 }

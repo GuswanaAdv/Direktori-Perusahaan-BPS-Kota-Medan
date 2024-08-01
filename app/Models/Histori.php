@@ -23,16 +23,16 @@ class Histori extends Model
     protected $fillable = [
         'id_histori',
         'id_perusahaan_survei',
-        'kode_survei',
-        'id_brs',
+        'kode_kegiatan',
+        'id_sbr',
         'id_petugas',
         'nip',
         'keterangan',
     ];
 
     // Relasi satu ke banyak
-    function survei(){
-        return $this->hasMany(Survei::class,'kode_survei','kode_survei');
+    function kegiatanStatistik(){
+        return $this->hasMany(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
     }
 
     function petugas(){
@@ -40,14 +40,14 @@ class Histori extends Model
     }
 
     function perusahaan(){
-        return $this->hasMany(Perusahaan::class,'id_brs','id_brs');
+        return $this->hasMany(Perusahaan::class,'id_sbr','id_sbr');
     }
 
     function pegawai(){
         return $this->hasMany(Pegawai::class,'nip','nip');
     }
 
-    function perusahaanSurvei(){
-        return $this->hasMany(PerusahaanSurvei::class,'id_perusahaan_survei','id_perusahaan_survei');
+    function perusahaanKegiatan(){
+        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_survei','id_perusahaan_survei');
     }
 }

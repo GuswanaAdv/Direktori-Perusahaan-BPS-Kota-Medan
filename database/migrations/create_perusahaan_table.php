@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('perusahaan', function (Blueprint $table) {
             // Blok 1
-            $table->char('id_brs',10)->primmary();
+            $table->char('id_sbr',10)->primmary();
             $table->char('nama_usaha',100);
             $table->char('nama_komersial',100);
             $table->integer('kode_unit_statistik')->constrained('unit_statistik');

@@ -12,13 +12,15 @@ class PerusahaanController extends Controller
         $perusahaans = Perusahaan::paginate(10);
         return view('page.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
-            'perusahaans' => $perusahaans
+            'perusahaans' => $perusahaans,
+            'cari' => "-",
+            'pesan' => "-",
         ]);
     }
 
-    public function lengkap($id_brs)
+    public function lengkap($id_sbr)
     {   
-        $perusahaan = Perusahaan::with(['jenisKepemilikan'])->where('id_brs', $id_brs)->first();
+        $perusahaan = Perusahaan::with(['jenisKepemilikan'])->where('id_sbr', $id_sbr)->first();
 
         if ($perusahaan->lattitude != 0)
             $initialMarkers = [
@@ -36,7 +38,7 @@ class PerusahaanController extends Controller
         return view('page.perusahaan.perusahaan-view',[
             'judul' => 'Perusahaan',
             'perusahaan' => $perusahaan,
-            'initialMarkers' => $initialMarkers
+            'initialMarkers' => $initialMarkers,
         ]);
     }
 
@@ -45,16 +47,22 @@ class PerusahaanController extends Controller
         $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")->paginate(10);
         return view('page.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
-            'perusahaans' => $perusahaans
+            'perusahaans' => $perusahaans,
+            'cari' => $search,
+            'pesan' => "-",
         ]);
     }
 
     public function search2(){
         $search = request('search');
         $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")->paginate(10);
+        $message = $perusahaans->isEmpty() ? 'tidak ditemukan' : '';
+
         return view('page.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
-            'perusahaans' => $perusahaans
+            'perusahaans' => $perusahaans,
+            'cari' => $search,
+            'pesan' => $message,
         ]);
     }
 }

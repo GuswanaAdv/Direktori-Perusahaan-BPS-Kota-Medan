@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PerusahaanSurvei extends Model
+class PerusahaanKegiatan extends Model
 {
     use HasFactory;
 
-    protected $table = 'perusahaan_survei';
+    protected $table = 'perusahaan_kegiatan';
 
     // The primary key is not auto-incrementing
     public $incrementing = true;
@@ -21,9 +21,9 @@ class PerusahaanSurvei extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id_perusahaan_survei',
-        'kode_survei',
-        'id_brs',
+        'id_perusahaan_kegiatan',
+        'kode_kegiatan',
+        'id_sbr',
         'id_petugas',
         'nip',
         'aktivitas',
@@ -32,8 +32,8 @@ class PerusahaanSurvei extends Model
     ];
 
     // Relasi satu ke banyak
-    function survei(){
-        return $this->hasMany(Survei::class,'kode_survei','kode_survei');
+    function kegiatanStatistik(){
+        return $this->hasMany(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
     }
 
     function petugas(){
@@ -41,7 +41,7 @@ class PerusahaanSurvei extends Model
     }
 
     function perusahaan(){
-        return $this->hasMany(Perusahaan::class,'id_brs','id_brs');
+        return $this->hasMany(Perusahaan::class,'id_sbr','id_sbr');
     }
 
     function pegawai(){
@@ -50,6 +50,6 @@ class PerusahaanSurvei extends Model
 
     // Relasi banyak ke satu
     function histori(){
-        return $this->belongsTo(Histori::class,'id_perusahaan_survei','id_perusahaan_survei');
+        return $this->belongsTo(Histori::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
     }
 }

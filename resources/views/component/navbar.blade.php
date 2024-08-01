@@ -9,16 +9,17 @@
             </div>
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
-                <li><a href="{{route('beranda')}}">Beranda</a></li>
-                <li><a href="{{route('survei')}}">Survei</a></li>
+                <li><a href="{{route('beranda')}}" class="hover:bg-blue">Beranda</a></li>
+                <li><a href="{{route('survei')}}" class="hover:bg-blue">Survei</a></li>
                 <li>
-                    <a>Direktori</a>
+                    <a class="hover:bg-white">Direktori</a>
                       <ul class="p-2 w-32 text-black">
-                        <li><a href="{{route('perusahaan')}}">Perusahaan</a></li>
-                        <li><a href="{{route('petugas')}}">Petugas</a></li>
+                        <li><a href="{{route('perusahaan')}}" class="hover:bg-blue">Perusahaan</a></li>
+                        <li><a href="{{route('petugas')}}" class="hover:bg-blue">Petugas</a></li>
                       </ul>
                   </li>
-                <li><a>Akun</a></li>
+                <li><a class="hover:bg-white">Akun</a></li>
+                <li><a class="hover:bg-blue" href="{{route('login')}}">Logout</a></li>
             </ul>
         </div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskAcjFxQzZFo7W70mjP4OwNoovJe62tZ5Yw&s" class="w-16 mx-8 rounded-box">
@@ -27,21 +28,21 @@
 
     {{-- Tampilan Desktop --}}
     <div class="navbar-end hidden lg:flex mr-36 text-white z-10">
-        <ul class="menu menu-horizontal px-1">
-            <li><a href="{{route('beranda')}}" class="{{($judul == 'Beranda')? 'border-b border-white' : ''}}">Beranda</a></li>
-            <li><a href="{{route('survei')}}" class="{{($judul == 'Survei')? 'border-b border-white' : ''}}">Survei</a></li>
+        <ul class="menu menu-horizontal px-1 space-x-2">
+            <li><a href="{{route('beranda')}}" class="{{($judul == 'Beranda')? 'border-b-2 border-white' : ''}} hover:bg-blue">Beranda</a></li>
+            <li><a href="{{route('survei')}}" class="{{($judul == 'Survei')? 'border-b-2 border-white' : ''}} hover:bg-blue">Survei</a></li>
             <li>
               <details>
-                <summary class="{{($judul == 'Perusahaan')||($judul == 'Petugas')? 'border-b border-white' : ''}}">Direktori</summary>
+                <summary class="{{($judul == 'Perusahaan')||($judul == 'Petugas')? 'border-b-2 border-white' : ''}} hover:bg-blue">Direktori</summary>
                 <ul class="p-2 w-32 shadow-lg text-black">
-                  <li><a href="{{route('perusahaan')}}">Perusahaan</a></li>
-                  <li><a href="{{route('petugas')}}">Petugas</a></li>
+                  <li><a href="{{route('perusahaan')}}" class="hover:bg-blue">Perusahaan</a></li>
+                  <li><a href="{{route('petugas')}}" class="hover:bg-blue">Petugas</a></li>
                 </ul>
               </details>
             </li>
             <li>
                 <details>
-                  <summary>Akun</summary>
+                  <summary class="hover:bg-blue">Akun</summary>
                   <ul class="p-2 w-56 shadow-lg text-black">
                     <li><a class="mt-4 hover:bg-transparent">username: ...</a></li>
                     <li><a class="mt-4 hover:bg-transparent">team: .....</a></li>

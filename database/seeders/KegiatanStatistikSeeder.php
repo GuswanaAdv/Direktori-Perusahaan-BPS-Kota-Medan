@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Petugas;
+use App\Models\KegiatanStatistik;
 use Illuminate\Database\Seeder;
 
-class PetugasSeeder extends Seeder
+class KegiatanStatistikSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class PetugasSeeder extends Seeder
     public function run()
     {
         // Truncate the table
-        Petugas::truncate();
+        KegiatanStatistik::truncate();
 
         // Open the CSV file
-        $csvFile = fopen(base_path('database/seeders/data/petugas.csv'), 'r');
+        $csvFile = fopen(base_path('database/seeders/data/kegiatan_statistik.csv'), 'r');
 
         // Skip the header row
         fgetcsv($csvFile);
@@ -26,10 +26,12 @@ class PetugasSeeder extends Seeder
         // Iterate over each row of the file
         while (($row = fgetcsv($csvFile)) !== FALSE) {
             // Insert data into the database
-            Petugas::insert([
-                'id_petugas' => $row[0],
-                'id_pengguna' => $row[1],
-                'nama_petugas' => $row[2],
+            KegiatanStatistik::insert([
+                'kode_kegiatan' => $row[0],
+                'nama_kegiatan' => $row[1],
+                'tanggal_mulai' => $row[2],
+                'tanggal_selesai' => $row[3],
+                'keterangan' => $row[4],
             ]);
         }
 

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('petugas', function (Blueprint $table) {
             $table->char('id_petugas',5)->primmary();
+            $table->integer('id_pengguna')->constrained('pengguna');
             $table->char('nama_petugas',50);
         });
     }

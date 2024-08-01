@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pegawai', function (Blueprint $table) {
-            $table->char('nip', 18)->primary() ;
-            $table->integer('id_pengguna')->constrained('pengguna');
-            $table->char('nama_pegawai', 50);
+        Schema::create('pengguna', function (Blueprint $table) {
+            $table->integer('id_pengguna')->primary();
+            $table->char('email',50);
+            $table->char('password',50);
+            $table->char('id_peran',2)->constrained('peran');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pegawai');
+        Schema::dropIfExists('pengguna');
     }
 };

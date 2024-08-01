@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('survei', function (Blueprint $table) {
-            $table->char('kode_survei',5)->primmary();
-            $table->char('nama_survei',50);
+        Schema::create('peran', function (Blueprint $table) {
+            $table->char('id_peran',2)->primary();
+            $table->char('nama_peran',20);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survei');
+        Schema::dropIfExists('peran');
     }
 };

@@ -28,7 +28,7 @@ class PerusahaanSeeder extends Seeder
             // Insert data into the database
             Perusahaan::insert([
                 // Blok 1
-                'id_brs' => $row[0],
+                'id_sbr' => $row[0],
                 'nama_usaha' => $row[1],
                 'nama_komersial' => $row[2],
                 'kode_unit_statistik' => $row[3],

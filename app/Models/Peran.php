@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Survei extends Model
+class Peran extends Model
 {
     use HasFactory;
-
-    protected $table = 'survei';
+    protected $table = 'peran';
 
     // The primary key is not auto-incrementing
     public $incrementing = false;
@@ -21,16 +20,12 @@ class Survei extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'kode_survei',
-        'nama_survei',
+        'id_peran',
+        'nama_peran',
     ];
 
-    // Relasi banyak ke satu
-    function perusahaanSurvei(){
-        return $this->belongsTo(PerusahaanSurvei::class,'id_survei','id_survei');
-    }
-
-    function histori(){
-        return $this->belongsTo(Histori::class,'id_survei','id_survei');
+    // Relasi satu ke satu
+    function pengguna(){
+        return $this->belongsTo(Pengguna::class,'id_peran','id_peran');
     }
 }
