@@ -14,14 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {   
+        $this->call(PerusahaanKegiatanSeeder::class);
         $this->call(PeranSeeder::class);
         $this->call(PenggunaSeeder::class);
         $this->call(PegawaiSeeder::class);
         $this->call(PetugasSeeder::class);
         $this->call(KegiatanStatistikSeeder::class);
         $this->call(PerusahaanSeeder::class);
-        $this->call(PerusahaanKegiatanSeeder::class);
-        
+
         $this->call(KBLISeeder::class); 
         $this->call(UnitStatistikSeeder::class);
         $this->call(JabatanPenanggungjawabSeeder::class);

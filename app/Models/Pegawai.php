@@ -26,13 +26,13 @@ class Pegawai extends Model
         'nama_pegawai',
     ];
 
-    // Relasi banyak ke satu
+    // Relasi satu ke banyak
     function histori(){
-        return $this->belongsTo(Histori::class,'nip','nip');
+        return $this->hasMany(Histori::class,'id_histori','id_histori');
     }
 
     function perusahaanKegiatan(){
-        return $this->belongsTo(PerusahaanKegiatan::class,'nip','nip');
+        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
     }
 
     // Relasi satu ke satu

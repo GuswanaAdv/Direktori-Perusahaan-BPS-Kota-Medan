@@ -28,12 +28,12 @@ class KegiatanStatistik extends Model
         'keterangan',
     ];
 
-    // Relasi banyak ke satu
+    // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->belongsTo(PerusahaanKegiatan::class,'kode_kegiatan','kode_kegiatan');
+        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
     }
 
     function histori(){
-        return $this->belongsTo(Histori::class,'kode_kegiatan','kode_kegiatan');
+        return $this->hasMany(Histori::class,'id_histori','id_histori');
     }
 }

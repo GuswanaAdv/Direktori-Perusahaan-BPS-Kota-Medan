@@ -4,7 +4,7 @@
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">
             <a class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white"
-             href="{{route('survei')}}">Survei Bulan Ini:</a>
+             href="{{route('kegiatan-statistik')}}">Kegiatan Statistik Bulan Ini:</a>
         </div>
 
         <div class="flex items-center justify-center py-8">

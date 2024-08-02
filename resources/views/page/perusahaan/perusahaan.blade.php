@@ -3,7 +3,7 @@
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">
-            <div class="flex sm:space-x-20 grid sm:grid-cols-2 grid-cols-1">
+            <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
                 <div class="flex items-center justify-center py-2">
                     <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
                         Daftar Perusahaan:
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            
+
             @else
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 @foreach ($perusahaans as $perusahaan)
@@ -56,8 +56,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
+            </div>
             @endif
 
         </div>

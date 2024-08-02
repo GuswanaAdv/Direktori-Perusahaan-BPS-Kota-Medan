@@ -2364,9 +2364,6 @@ details.collapse summary::-webkit-details-marker {
 .border {
   border-width: 1px;
 }
-.border-b {
-  border-bottom-width: 1px;
-}
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -2378,9 +2375,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .border-t {
   border-top-width: 1px;
-}
-.border-none {
-  border-style: none;
 }
 .border-darkblue {
   --tw-border-opacity: 1;
@@ -2786,10 +2780,10 @@ details.collapse summary::-webkit-details-marker {
     justify-content: space-between;
   }
 
-  .sm\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
+  .sm\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(5rem * var(--tw-space-x-reverse));
-    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .sm\:space-y-24 > :not([hidden]) ~ :not([hidden]) {

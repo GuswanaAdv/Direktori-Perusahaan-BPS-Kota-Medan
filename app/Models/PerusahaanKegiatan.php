@@ -27,29 +27,30 @@ class PerusahaanKegiatan extends Model
         'id_petugas',
         'nip',
         'aktivitas',
-        'hari_tanggal',
+        'tanggal_kegiatan',
+        'tanggal_penginputan',
         'keterangan',
     ];
 
-    // Relasi satu ke banyak
+    // Relasi banyak ke satu
     function kegiatanStatistik(){
-        return $this->hasMany(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
+        return $this->belongsTo(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
     }
 
     function petugas(){
-        return $this->hasMany(Petugas::class,'id_petugas','id_petugas');
+        return $this->belongsTo(Petugas::class,'id_petugas','id_petugas');
     }
 
     function perusahaan(){
-        return $this->hasMany(Perusahaan::class,'id_sbr','id_sbr');
+        return $this->belongsTo(Perusahaan::class,'id_sbr','id_sbr');
     }
 
     function pegawai(){
-        return $this->hasMany(Pegawai::class,'nip','nip');
+        return $this->belongsTo(Pegawai::class,'nip','nip');
     }
 
-    // Relasi banyak ke satu
+    // Relasi satu ke banyak
     function histori(){
-        return $this->belongsTo(Histori::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
+        return $this->hasMany(Histori::class,'id_histori','id_histori');
     }
 }

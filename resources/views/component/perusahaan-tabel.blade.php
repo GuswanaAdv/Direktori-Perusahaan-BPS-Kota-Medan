@@ -13,32 +13,23 @@
       </thead>
       <tbody>
         <!-- row 1 -->
-        <tr>
-          <th>1</th>
-          <td>Cy Ganderton</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
-        </tr>
-        <!-- row 2 -->
-        <tr>
-          <th>2</th>
-          <td>Hart Hagerty</td>
-          <td>Desktop Support Technician</td>
-          <td>Purple</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
-        </tr>
-        <!-- row 3 -->
-        <tr>
-          <th>3</th>
-          <td>Brice Swyre</td>
-          <td>Tax Accountant</td>
-          <td>Red</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
-        </tr>
+        @php
+            $no = ($perusahaanKegiatans->currentPage() - 1) * $perusahaanKegiatans->perPage();
+        @endphp
+        @foreach ($perusahaanKegiatans as $row)
+            @php
+                $no++;
+            @endphp
+            <tr>
+                <th>{{$no}}</th>
+                <td>{{!empty($row->kegiatanStatistik->nama_kegiatan)? $row->kegiatanStatistik->nama_kegiatan: " "}}</td>
+                <td>{{!empty($row->petugas->nama_petugas)? $row->petugas->nama_petugas: " "}}</td>
+                <td>{{!empty($row->tanggal_kegiatan)? $row->tanggal_kegiatan: " "}}</td>
+                <td>{{!empty($row->pegawai->nama_pegawai)? $row->pegawai->nama_pegawai: " "}}</td>
+                <td>{{!empty($row->keterangan)? $row->keterangan: " "}}</td>
+            </tr> 
+        @endforeach
+
       </tbody>
     </table>
 </div>

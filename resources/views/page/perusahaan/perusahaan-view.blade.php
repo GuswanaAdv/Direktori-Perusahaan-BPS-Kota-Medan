@@ -46,8 +46,17 @@
              </div>
 
             <div class="card-body w-full text-left sm:px-20 mb-8">
-                <p>Riwayat Survei</p>
-                @include('component.perusahaan-tabel')
+                <p>Riwayat Kegiatan Statistik</p>
+                @if ($pesan == 'tidak ditemukan')
+                    <p class="text-2xl text-red text-center"> Perusahaan belum pernah terpilih sebagai sampel </p>
+                @else
+                    @include('component.perusahaan-tabel')
+                @endif
+                
+            </div>
+
+            <div class="flex items-center justify-center pb-16">
+                {{ $perusahaanKegiatans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
             </div>
         </div>    
     </div>  

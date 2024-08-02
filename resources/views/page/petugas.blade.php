@@ -3,7 +3,7 @@
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">
-            <div class="flex sm:space-x-20 grid sm:grid-cols-2 grid-cols-1">
+            <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
                 <div class="flex items-center justify-center py-4">
                     <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
                         Daftar Petugas:
@@ -34,40 +34,35 @@
                         <th>Detail</th>
                     </tr>
                     </thead>
+                    
                     <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Blue</td>
-                        <td>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <th>2</th>
-                        <td>Hart Hagerty</td>
-                        <td>Desktop Support Technician</td>
-                        <td>Purple</td>
-                        <td>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </td>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <th>3</th>
-                        <td>Brice Swyre</td>
-                        <td>Tax Accountant</td>
-                        <td>Red</td>
-                        <td>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </td>
-                    </tr>
+                        @php
+                            $no = ($petugass->currentPage() - 1) * $petugass->perPage();
+                        @endphp
+                        
+                        @foreach ($petugass as $petugas)
+                            @php
+                                $no++;
+                            @endphp
+                            <!-- row 1 -->
+                            <tr>
+                                <th>{{$no}}</th>
+                                <td>{{!empty($petugas->nama_petugas)? $petugas->nama_petugas : ""}}</td>
+                                <td>Quality Control Specialist</td>
+                                <td>Blue</td>
+                                <td>
+                                    <button class="btn btn-ghost btn-xs">details</button>
+                                </td>
+                            </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="flex items-center justify-center pb-16">
+            {{ $petugass->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
         </div>
 
     </div>

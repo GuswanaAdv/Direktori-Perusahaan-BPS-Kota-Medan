@@ -120,12 +120,12 @@ class Perusahaan extends Model
         return $this->hasOne(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
     }
 
-    // Relasi banyak ke satu
+    // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->belongsTo(PerusahaanKegiatan::class, 'id_sbr', 'id_sbr');
+        return $this->hasMany(PerusahaanKegiatan::class, 'kode_kegiatan', 'kode_kegiatan');
     }
 
     function histori(){
-        return $this->belongsTo(Histori::class, 'id_sbr', 'id_sbr');
+        return $this->hasMany(Histori::class, 'id_histori', 'id_histori');
     }
 }

@@ -32,22 +32,22 @@ class Histori extends Model
 
     // Relasi satu ke banyak
     function kegiatanStatistik(){
-        return $this->hasMany(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
+        return $this->belongsTo(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
     }
 
     function petugas(){
-        return $this->hasMany(Petugas::class,'id_petugas','id_petugas');
+        return $this->belongsTo(Petugas::class,'id_petugas','id_petugas');
     }
 
     function perusahaan(){
-        return $this->hasMany(Perusahaan::class,'id_sbr','id_sbr');
+        return $this->belongsTo(Perusahaan::class,'id_sbr','id_sbr');
     }
 
     function pegawai(){
-        return $this->hasMany(Pegawai::class,'nip','nip');
+        return $this->belongsTo(Pegawai::class,'nip','nip');
     }
 
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_survei','id_perusahaan_survei');
+        return $this->belongsTo(PerusahaanKegiatan::class,'id_perusahaan_survei','id_perusahaan_survei');
     }
 }

@@ -10,7 +10,7 @@
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
                 <li><a href="{{route('beranda')}}" class="hover:bg-blue">Beranda</a></li>
-                <li><a href="{{route('survei')}}" class="hover:bg-blue">Survei</a></li>
+                <li><a href="{{route('kegiatan-statistik')}}" class="hover:bg-blue">Kegiatan Statistik</a></li>
                 <li>
                     <a class="hover:bg-white">Direktori</a>
                       <ul class="p-2 w-32 text-black">
@@ -30,7 +30,7 @@
     <div class="navbar-end hidden lg:flex mr-36 text-white z-10">
         <ul class="menu menu-horizontal px-1 space-x-2">
             <li><a href="{{route('beranda')}}" class="{{($judul == 'Beranda')? 'border-b-2 border-white' : ''}} hover:bg-blue">Beranda</a></li>
-            <li><a href="{{route('survei')}}" class="{{($judul == 'Survei')? 'border-b-2 border-white' : ''}} hover:bg-blue">Survei</a></li>
+            <li><a href="{{route('kegiatan-statistik')}}" class="{{($judul == 'Kegiatan Statistik')? 'border-b-2 border-white' : ''}} hover:bg-blue">Kegiatan Statistik</a></li>
             <li>
               <details>
                 <summary class="{{($judul == 'Perusahaan')||($judul == 'Petugas')? 'border-b-2 border-white' : ''}} hover:bg-blue">Direktori</summary>

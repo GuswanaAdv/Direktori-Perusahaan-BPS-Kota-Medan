@@ -26,13 +26,13 @@ class Petugas extends Model
         'nama_petugas',
     ];
 
-    // Relasi banyak ke satu
+    // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->belongsTo(PerusahaanKegiatan::class,'id_petugas','id_petugas');
+        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
     }
 
     function histori(){
-        return $this->belongsTo(Histori::class,'id_petugas','id_petugas');
+        return $this->hasMany(Histori::class,'id_histori','id_histori');
     }
 
     // Relasi satu ke satu

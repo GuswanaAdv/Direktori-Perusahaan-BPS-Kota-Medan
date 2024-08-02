@@ -1,7 +1,15 @@
-<div class="flex justify-center w-full py-4">
+<div class="flex items-center justify-center w-full py-4">
+@if ($judul == 'Perusahaan')
     <form class="max-w-md mx-auto w-full" action="{{route('perusahaan-search2')}}" method="GET" id="cari" name="cari">
+@elseif($judul == 'Kegiatan Statistik')
+    <form class="max-w-md mx-auto w-full" action="{{route('kegiatan-statistik-search2')}}" method="GET" id="cari" name="cari">
+@elseif($judul == 'Petugas')
+    <form class="max-w-md mx-auto w-full" action="{{route('petugas-search2')}}" method="GET" id="cari" name="cari">
+@else
+    <form class="max-w-md mx-auto w-full" action="{{route('kegiatan-statistik-search2')}}" method="GET" id="cari" name="cari">
+@endif
         @csrf
-        <div class="flex w-full">
+        <div class="w-full">
             <div class="relative w-full">
                 <input type="text" 
                 id="search" 
@@ -10,8 +18,14 @@
                 @if ($judul == 'Perusahaan')
                     placeholder="Cari perusahaan..."
                     value="{{($cari != '-' )? $cari : ''}}"
+                @elseif($judul == 'Kegiatan Statistik')
+                    placeholder="Cari kegiatan statistik..."
+                    value="{{($cari != '-' )? $cari : ''}}"
+                @elseif($judul == 'Petugas')
+                    placeholder="Cari nama petugas..."
+                    value=""
                 @else
-                    placeholder="Cari..."
+                    placeholder="Cari kegiatan statistik..."
                     value=""
                 @endif
                 required />

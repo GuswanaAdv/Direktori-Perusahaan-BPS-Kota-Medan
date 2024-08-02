@@ -33,8 +33,9 @@ class PerusahaanKegiatanSeeder extends Seeder
                 'id_petugas' => $row[3],
                 'nip' => $row[4],
                 'aktivitas' => $row[5],
-                'hari_tanggal' => $row[6],
-                'keterangan' => $row[7],
+                'tanggal_kegiatan' => $row[6],
+                'tanggal_penginputan' => $row[7],
+                'keterangan' => $row[8],
             ]);
         }
 
