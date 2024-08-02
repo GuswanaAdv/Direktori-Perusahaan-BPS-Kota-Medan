@@ -5,6 +5,7 @@
         <tr>
           <th></th>
           <th>Kegiatan Statistik</th>
+          <th>Alamat</th>
           <th>Petugas</th>
           <th>Tanggal</th>
           <th>Penanggungjawab</th>
@@ -22,7 +23,8 @@
             @endphp
             <tr>
                 <th>{{$no}}</th>
-                <td>{{!empty($row->kegiatanStatistik->nama_kegiatan)? $row->kegiatanStatistik->nama_kegiatan: " "}}</td>
+                <td>{{!empty($row->perusahaan->nama_usaha)? $row->perusahaan->nama_usaha: " "}}</td>
+                <td>{{!empty($row->perusahaan->alamat_sbr)? $row->perusahaan->alamat_sbr: " "}}</td>
                 <td>{{!empty($row->petugas->nama_petugas)? $row->petugas->nama_petugas: " "}}</td>
                 <td>{{!empty($row->tanggal_kegiatan)? date('d-m-Y', strtotime($row->tanggal_kegiatan)): " "}}</td>
                 <td>{{!empty($row->pegawai->nama_pegawai)? $row->pegawai->nama_pegawai: " "}}</td>

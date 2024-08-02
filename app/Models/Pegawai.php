@@ -24,19 +24,23 @@ class Pegawai extends Model
         'nip',
         'id_pengguna',
         'nama_pegawai',
+        'jenis_kelamin',
+        'usia',
+        'no_wa',
+        'alamat'
     ];
 
     // Relasi satu ke banyak
     function histori(){
-        return $this->hasMany(Histori::class,'id_histori','id_histori');
+        return $this->hasMany(Histori::class,'nip','nip');
     }
 
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
+        return $this->hasMany(PerusahaanKegiatan::class,'nip','nip');
     }
 
     // Relasi satu ke satu
     function pengguna(){
-        return $this->hasOne(Pengguna::class,'id_pengguna','id_pengguna');
+        return $this->belongsTo(Pengguna::class,'id_pengguna','id_pengguna');
     }
 }

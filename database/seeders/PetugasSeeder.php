@@ -30,6 +30,10 @@ class PetugasSeeder extends Seeder
                 'id_petugas' => $row[0],
                 'id_pengguna' => $row[1],
                 'nama_petugas' => $row[2],
+                'jenis_kelamin' => $row[3],
+                'usia' => $row[4],
+                'no_wa' => $row[5],
+                'alamat' => $row[6],
             ]);
         }
 

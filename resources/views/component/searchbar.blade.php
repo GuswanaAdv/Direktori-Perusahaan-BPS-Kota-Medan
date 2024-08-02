@@ -22,7 +22,7 @@
                     placeholder="Cari kegiatan statistik..."
                     value="{{($cari != '-' )? $cari : ''}}"
                 @elseif($judul == 'Petugas')
-                    placeholder="Cari nama petugas..."
+                    placeholder="Cari petugas..."
                     value=""
                 @else
                     placeholder="Cari kegiatan statistik..."

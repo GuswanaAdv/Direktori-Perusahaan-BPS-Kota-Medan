@@ -24,19 +24,23 @@ class Petugas extends Model
         'id_petugas',
         'id_pengguna',
         'nama_petugas',
+        'jenis_kelamin',
+        'usia',
+        'no_wa',
+        'alamat'
     ];
 
     // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
+        return $this->hasMany(PerusahaanKegiatan::class,'id_petugas','id_petugas');
     }
 
     function histori(){
-        return $this->hasMany(Histori::class,'id_histori','id_histori');
+        return $this->hasMany(Histori::class,'id_petugas','id_petugas');
     }
 
     // Relasi satu ke satu
     function pengguna(){
-        return $this->hasOne(Pengguna::class,'id_pengguna','id_pengguna');
+        return $this->belongsTo(Pengguna::class,'id_pengguna','id_pengguna');
     }
 }

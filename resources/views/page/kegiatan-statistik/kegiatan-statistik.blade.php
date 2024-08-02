@@ -52,10 +52,13 @@
                                 <h2 class="card-title">{{!empty($kegiatan->nama_kegiatan)? $kegiatan->nama_kegiatan : ""}}</h2>
                                 <p>
                                     {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)? 
-                                    "Tanggal : ".$kegiatan->tanggal_mulai." s/d ".$kegiatan->tanggal_selesai : ""}}   
+                                        "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}      
                                 </p>
                                 <div class="card-actions">
-                                    <button class="btn btn-primary">Selengkapnya</button>
+                                    <a class="btn bg-darkblue text-white hover:bg-blue"
+                                        href="{{route('kegiatan-statistik-view', ['kode_kegiatan' => $kegiatan->kode_kegiatan])}}">
+                                        Selengkapnya
+                                    </a>
                                 </div>
                             </div>
                         </div>

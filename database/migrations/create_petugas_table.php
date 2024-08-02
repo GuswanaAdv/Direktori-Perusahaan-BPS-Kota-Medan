@@ -17,6 +17,10 @@ return new class extends Migration
             $table->char('id_petugas',5)->primmary();
             $table->integer('id_pengguna')->constrained('pengguna');
             $table->char('nama_petugas',50);
+            $table->char('jenis_kelamin', 9);
+            $table->char('usia', 2);
+            $table->char('no_wa', 15);
+            $table->char('alamat', 100);
         });
     }
 

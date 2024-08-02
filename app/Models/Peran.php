@@ -26,6 +26,6 @@ class Peran extends Model
 
     // Relasi satu ke satu
     function pengguna(){
-        return $this->belongsTo(Pengguna::class,'id_peran','id_peran');
+        return $this->hasMany(Pengguna::class,'id_peran','id_peran');
     }
 }

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->char('aktivitas',20);
             $table->char('tanggal_kegiatan',20);
             $table->char('tanggal_penginputan',20);
-            $table->char('keterangan',200);
+            $table->text('keterangan');
         });
     }
 

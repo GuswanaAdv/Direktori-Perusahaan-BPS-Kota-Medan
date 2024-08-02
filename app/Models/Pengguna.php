@@ -28,14 +28,14 @@ class Pengguna extends Model
 
     // Relasi satu ke satu
     function peran(){
-        return $this->hasOne(Peran::class,'id_peran','id_peran');
+        return $this->belongsTo(Peran::class,'id_peran','id_peran');
     }
 
     function pegawai(){
-        return $this->belongsTo(Pegawai::class,'id_pengguna','id_pengguna');
+        return $this->hasOne(Pegawai::class,'id_pengguna','id_pengguna');
     }
 
     function petugas(){
-        return $this->belongsTo(Petugas::class,'id_pengguna','id_pengguna');
+        return $this->hasOne(Petugas::class,'id_pengguna','id_pengguna');
     }
 }

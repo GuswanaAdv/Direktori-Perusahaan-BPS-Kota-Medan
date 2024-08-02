@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kegiatan_statistik', function (Blueprint $table) {
-            $table->char('kode_kegiatan',5)->primmary();
+            $table->char('kode_kegiatan',5)->primary();
             $table->char('nama_kegiatan',50);
             $table->char('tanggal_mulai',50);
             $table->char('tanggal_selesai',50);
-            $table->char('keterangan',200);
+            $table->text('keterangan');
         });
     }
 

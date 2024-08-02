@@ -51,7 +51,9 @@ class PerusahaanController extends Controller
 
     public function search1(){
         $search = request('search');
-        $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")->paginate(10);
+        $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")
+                        ->orWhere('alamat_sbr','like',"%$search%")
+                        ->paginate(10);
         return view('page.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
             'perusahaans' => $perusahaans,
@@ -62,7 +64,9 @@ class PerusahaanController extends Controller
 
     public function search2(){
         $search = request('search');
-        $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")->paginate(10);
+        $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")
+                        ->orWhere('alamat_sbr','like',"%$search%")
+                        ->paginate(10);
         $message = $perusahaans->isEmpty() ? 'tidak ditemukan' : '';
 
         return view('page.perusahaan.perusahaan',[

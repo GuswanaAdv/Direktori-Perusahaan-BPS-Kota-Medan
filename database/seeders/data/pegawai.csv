@@ -1,6 +1,6 @@
-nip,id_pengguna,nama_pegawai
-nip1,11,Tim IPDS
-nip2,12,Bagian Umum
-nip3,13,Tim Neraca
-nip4,14,Tim Distribusi
-nip5,15,Tim Sosial
+nip,id_pengguna,nama_pegawai,jenis_kelamin,usia,no_wa,alamat
+nip1,11,Tim IPDS,laki-laki,34,0853900821201,Jl.Helvetia
+nip2,12,Bagian Umum,perempuan,35,0853900821202,Jl.Helvetia
+nip3,13,Tim Neraca,laki-laki,36,0853900821203,Jl.Helvetia
+nip4,14,Tim Distribusi,perempuan,37,0853900821204,Jl.Helvetia
+nip5,15,Tim Sosial,laki-laki,38,0853900821205,Jl.Helvetia

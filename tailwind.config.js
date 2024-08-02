@@ -26,6 +26,8 @@ module.exports = {
         plusjakartasans: ['Plus Jakarta Sans', 'sans-serif']
       },},
   },
-  plugins: [require('daisyui'),],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 
