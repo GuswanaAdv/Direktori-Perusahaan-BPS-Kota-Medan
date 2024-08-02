@@ -14,11 +14,6 @@ class BerandaController extends Controller
         $currentMonth = Carbon::now()->month;
         $currentYear = Carbon::now()->year;
 
-        // $kegiatanStatistiks = KegiatanStatistik::whereMonth('tanggal_mulai', $currentMonth)
-        // ->whereYear('tanggal_mulai', $currentYear)
-        // ->orderBy('tanggal_mulai', 'desc')
-        // ->get();
-
         $kegiatanStatistiks = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')
         ->when($currentMonth, function ($query) use ($currentMonth) {
             return $query->whereMonth('tanggal_mulai', $currentMonth);
@@ -27,6 +22,7 @@ class BerandaController extends Controller
             return $query->whereYear('tanggal_mulai', $currentYear);
         })
         ->get();
+        $message = $kegiatanStatistiks->isEmpty() ? 'tidak ditemukan' : '';
 
         // dd($kegiatanStatistiks, $currentMonth, $currentYear);
 
@@ -34,7 +30,7 @@ class BerandaController extends Controller
             'judul' => 'Beranda',
             'kegiatanStatistiks' => $kegiatanStatistiks,
             'cari' => "-",
-            'pesan' => "-",
+            'pesan' => $message,
         ]);
     }
 }
