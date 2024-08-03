@@ -22,6 +22,8 @@ return new class extends Migration
             $table->char('aktivitas',20);
             $table->char('tanggal_kegiatan',20);
             $table->char('tanggal_penginputan',20);
+            $table->char('reverse_kegiatan',20);
+            $table->char('reverse_penginputan',20);
             $table->text('keterangan');
         });
     }

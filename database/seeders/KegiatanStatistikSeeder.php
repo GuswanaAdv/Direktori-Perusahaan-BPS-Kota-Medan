@@ -31,7 +31,9 @@ class KegiatanStatistikSeeder extends Seeder
                 'nama_kegiatan' => $row[1],
                 'tanggal_mulai' => $row[2],
                 'tanggal_selesai' => $row[3],
-                'keterangan' => $row[4],
+                'reverse_mulai' => $row[4],
+                'reverse_selesai' => $row[5],
+                'keterangan' => $row[6],
             ]);
         }
 

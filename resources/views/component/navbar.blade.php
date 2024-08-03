@@ -19,7 +19,7 @@
                       </ul>
                   </li>
                 <li><a class="hover:bg-white">Akun</a></li>
-                <li><a class="hover:bg-blue" href="{{route('login')}}">Logout</a></li>
+                <li><a class="hover:bg-blue" href="{{route('logout')}}">Logout</a></li>
             </ul>
         </div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskAcjFxQzZFo7W70mjP4OwNoovJe62tZ5Yw&s" class="w-16 mx-8 rounded-box">
@@ -48,7 +48,7 @@
                     <li><a class="mt-4 hover:bg-transparent">team: .....</a></li>
                     <li><a class="mt-4 hover:bg-transparent">email: .....</a></li>
                     <li><a href="" class="mt-4 btn">lengkap</a></li>
-                    <li><a href="{{route('login')}}" class="my-4 btn">logout</a></li>
+                    <li><a href="{{route('logout')}}" class="my-4 btn">logout</a></li>
                   </ul>
                 </details>
             </li>

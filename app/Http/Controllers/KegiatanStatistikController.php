@@ -37,8 +37,9 @@ class KegiatanStatistikController extends Controller
     public function search2(){
         $search = request('search');
         $kegiatanStatistiks = KegiatanStatistik::where('nama_kegiatan', 'like', "%$search%")->
-                                where('tanggal_mulai', 'like', "%$search%")->
-                                orderBy('tanggal_mulai', 'desc')->paginate(10);
+                                orWhere('reverse_mulai', 'like', "%$search%")->
+                                orWhere('reverse_selesai', 'like', "%$search%")->
+                                orderBy('tanggal_mulai', 'desc')->paginate(4);
         $message = $kegiatanStatistiks->isEmpty() ? 'tidak ditemukan' : '';
 
         return view('page.kegiatan-statistik.kegiatan-statistik',[

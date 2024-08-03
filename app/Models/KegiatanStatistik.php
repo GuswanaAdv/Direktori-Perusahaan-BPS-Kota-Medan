@@ -25,6 +25,8 @@ class KegiatanStatistik extends Model
         'nama_kegiatan',
         'tanggal_mulai',
         'tanggal_selesai',
+        'reverse_mulai',
+        'reverse_selesai',
         'keterangan',
     ];
 

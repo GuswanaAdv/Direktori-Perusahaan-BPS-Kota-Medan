@@ -35,7 +35,9 @@ class PerusahaanKegiatanSeeder extends Seeder
                 'aktivitas' => $row[5],
                 'tanggal_kegiatan' => $row[6],
                 'tanggal_penginputan' => $row[7],
-                'keterangan' => $row[8],
+                'reverse_kegiatan' => $row[8],
+                'reverse_penginputan' => $row[9],
+                'keterangan' => $row[10],
             ]);
         }
 

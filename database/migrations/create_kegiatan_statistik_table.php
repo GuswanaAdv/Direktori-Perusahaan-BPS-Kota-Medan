@@ -18,6 +18,8 @@ return new class extends Migration
             $table->char('nama_kegiatan',50);
             $table->char('tanggal_mulai',50);
             $table->char('tanggal_selesai',50);
+            $table->char('reverse_mulai',50);
+            $table->char('reverse_selesai',50);
             $table->text('keterangan');
         });
     }

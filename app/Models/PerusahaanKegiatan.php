@@ -29,6 +29,8 @@ class PerusahaanKegiatan extends Model
         'aktivitas',
         'tanggal_kegiatan',
         'tanggal_penginputan',
+        'reverse_kegiatan',
+        'reverse_penginputan',
         'keterangan',
     ];
 
