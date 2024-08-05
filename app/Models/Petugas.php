@@ -43,4 +43,8 @@ class Petugas extends Model
     function pengguna(){
         return $this->belongsTo(Pengguna::class,'id_pengguna','id_pengguna');
     }
+
+    function user(){
+        return $this->belongsTo(User::class,'id_pengguna','id_pengguna');
+    }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Pengguna;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class PenggunaSeeder extends Seeder
@@ -15,7 +16,7 @@ class PenggunaSeeder extends Seeder
     public function run()
     {
         // Truncate the table
-        Pengguna::truncate();
+        User::truncate();
 
         // Open the CSV file
         $csvFile = fopen(base_path('database/seeders/data/pengguna.csv'), 'r');
@@ -26,7 +27,7 @@ class PenggunaSeeder extends Seeder
         // Iterate over each row of the file
         while (($row = fgetcsv($csvFile)) !== FALSE) {
             // Insert data into the database
-            Pengguna::insert([
+            User::insert([
                 'id_pengguna' => $row[0],
                 'email' => $row[1],
                 'password' => $row[2],

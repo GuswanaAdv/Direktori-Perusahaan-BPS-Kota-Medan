@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [BerandaController::class, 'tampil'])->name('beranda');
-Route::post('/login', [BerandaController::class, 'login'])->name('login');
-Route::get('/login', [BerandaController::class, 'logout'])->name('logout');
+Route::get('/', [BerandaController::class, 'tampil'])->name('beranda')->middleware('auth');
+Route::post('/login', [BerandaController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/logout', [BerandaController::class, 'logout'])->name('logout')->middleware('auth');
+// Route::get('/login', [BerandaController::class, 'logout2'])->name('logout2');
 
 Route::get('/perusahaan', [PerusahaanController::class, 'tampil'])->name('perusahaan');
 Route::get('/perusahaan/{id_sbr}', [PerusahaanController::class, 'lengkap'])->name('perusahaan-view');

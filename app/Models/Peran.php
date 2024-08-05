@@ -28,4 +28,8 @@ class Peran extends Model
     function pengguna(){
         return $this->hasMany(Pengguna::class,'id_peran','id_peran');
     }
+
+    function user(){
+        return $this->hasMany(User::class,'id_peran','id_peran');
+    }
 }

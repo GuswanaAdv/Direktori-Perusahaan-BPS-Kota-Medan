@@ -1,6 +1,15 @@
 @extends('layout.app')
 @section('content')
     @include('component.searchbar')
+
+    @if (session()->has('success'))
+        <div class="toast toast-top toast-start" id="myToast">
+            <div class="alert alert-info bg-green text-white font-bold text-center">
+                <span>Login Berhasil!!</span>
+            </div>
+        </div>
+    @endif
+
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">
             <a class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white"
@@ -55,8 +64,8 @@
                                     <div class="card-body items-center text-center">
                                         <h2 class="card-title">{{!empty($kegiatan->nama_kegiatan)? $kegiatan->nama_kegiatan : ""}}</h2>
                                         <p>
-                                            {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)? 
-                                            "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}   
+                                            {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)?
+                                            "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}
                                         </p>
                                         <div class="card-actions">
                                             <a class="btn bg-darkblue text-white hover:bg-blue"
@@ -87,5 +96,15 @@
         </div>
 
     </div>
+
+    <script>
+        // Tunggu sampai halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setelah 2 detik, sembunyikan elemen toast
+            setTimeout(function() {
+                document.getElementById('myToast').style.display = 'none';
+            }, 2000); // 2000ms = 2 detik
+        });
+    </script>
 
 @endsection

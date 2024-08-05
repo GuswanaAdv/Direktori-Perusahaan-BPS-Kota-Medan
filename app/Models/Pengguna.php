@@ -3,15 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-class Pengguna extends Model
+class Pengguna extends Authenticatable
 {
-    use HasFactory;
+    use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'pengguna';
-
-    // The primary key is not auto-incrementing
-    public $incrementing = false;
 
     // The primary key is of type string
     protected $keyType = 'integer';
@@ -24,6 +23,11 @@ class Pengguna extends Model
         'email',
         'password',
         'id_peran',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
     ];
 
     // Relasi satu ke satu

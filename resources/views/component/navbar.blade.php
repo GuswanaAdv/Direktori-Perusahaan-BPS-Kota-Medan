@@ -44,11 +44,15 @@
                 <details>
                   <summary class="hover:bg-blue">Akun</summary>
                   <ul class="p-2 w-56 shadow-lg text-black">
-                    <li><a class="mt-4 hover:bg-transparent">username: ...</a></li>
-                    <li><a class="mt-4 hover:bg-transparent">team: .....</a></li>
-                    <li><a class="mt-4 hover:bg-transparent">email: .....</a></li>
+                    <li><a class="mt-4 hover:bg-transparent">Nama: {{ Auth::user()->pegawai->nama_pegawai }}</a></li>
+                    <li><a class="mt-4 hover:bg-transparent">NIP: {{ Auth::user()->pegawai->nip }}</a></li>
                     <li><a href="" class="mt-4 btn">lengkap</a></li>
-                    <li><a href="{{route('logout')}}" class="my-4 btn">logout</a></li>
+                    {{-- <li> --}}
+                        <form action="{{ route('logout') }}" method="POST" class="w-full">
+                            @csrf
+                            <button type="submit" class="my-4 btn w-full">logout</button>
+                        </form>
+                    {{-- </li> --}}
                   </ul>
                 </details>
             </li>

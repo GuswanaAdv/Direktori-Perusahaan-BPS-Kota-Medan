@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('pengguna', function (Blueprint $table) {
             $table->integer('id_pengguna')->primary();
-            $table->char('email',50);
+            $table->char('email',50)->unique();
             $table->char('password',50);
             $table->char('id_peran',2)->constrained('peran');
+            $table->rememberToken();
         });
     }
 

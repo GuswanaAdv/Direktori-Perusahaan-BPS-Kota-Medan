@@ -22,6 +22,7 @@
     <link rel='stylesheet' href='https://unpkg.com/leaflet@1.8.0/dist/leaflet.css' crossorigin='' />
 </head>
 <body class="bg-blue">
+
     <header class="bg-darkblue">
         @include('component.navbar')
     </header>
@@ -29,5 +30,6 @@
     <div id="footer">
         @include('component.footer')
     </div>
+
 </body>
 </html>
