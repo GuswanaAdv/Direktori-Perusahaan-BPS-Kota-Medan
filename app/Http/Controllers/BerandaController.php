@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\KegiatanStatistik;
-use App\Models\Pengguna;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class BerandaController extends Controller
 {
@@ -28,7 +29,7 @@ class BerandaController extends Controller
 
         // dd($kegiatanStatistiks, $currentMonth, $currentYear);
 
-        return view('page.beranda',[
+        return view('page-pegawai.beranda',[
             'judul' => 'Beranda',
             'kegiatanStatistiks' => $kegiatanStatistiks,
             'cari' => "-",
@@ -37,23 +38,39 @@ class BerandaController extends Controller
     }
 
     public function login(Request $request){
+        try {
+            $request->validate([
+                'email' => 'required|email:dns',
+                'password' => 'required',
+            ]);
 
-        $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required',
-        ]);
+            $credentials = $request->only('email', 'password');
 
-        $credentials = $request->only('email', 'password');
+            if (Auth::attempt($credentials)) {
+                $user = User::with('peran')->find(Auth::id());
+                // dd($user->peran->nama_peran);
+                if ($user->peran->nama_peran == 'Pegawai'){
+                    $request->session()->regenerate();
+                    return redirect()->route('beranda')->with('success', 'Login berhasil!');
+                }else{
+                    Auth::logout();
+                    Session::flush();
+                    Session::regenerate();
+                    $request->session()->invalidate();
+                    $request->session()->regenerateToken();
+                    return redirect()->route('tampil-login')->with('pesan-petugas', 'Maaf, Fitur khusus petugas masih dalam pengembangan!!');
+                }
+            }
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            // dd(Auth::user()->id_pengguna);
-            return redirect()->route('beranda')->with('success', 'Login berhasil!');
+            return back()->with([
+                'loginError' => "Login gagal!!",
+            ]);
+
+        } catch (\Illuminate\Session\TokenMismatchException $e) {
+            return redirect()->route('tampil-login')->with(
+                'sessionExpired','Sesi kamu telah berakhir, silahkan login kembali!!'
+            );
         }
-
-        return back()->with([
-            'loginError' => "login gagal ".Auth::attempt($credentials),
-        ]);
     }
 
     public function logout(Request $request)
@@ -61,10 +78,14 @@ class BerandaController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        Session::flush();
+        Session::regenerate();
+        return redirect()->route('tampil-login')->with([
+            'pesan-logout' => 'Logout berhasil!!',
+        ]);
     }
 
-    public function logout2()
+    public function tampilLogin()
     {
         return view('layout.login');
     }

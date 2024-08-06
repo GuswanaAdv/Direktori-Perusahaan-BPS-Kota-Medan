@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class KegiatanStatistikController extends Controller
 {
     public function tampil()
-    {   
+    {
         $kegiatanStatistiks = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')->paginate(4);
-        return view('page.kegiatan-statistik.kegiatan-statistik',[
+        return view('page-pegawai.kegiatan-statistik.kegiatan-statistik',[
             'judul' => 'Kegiatan Statistik',
             'kegiatanStatistiks' => $kegiatanStatistiks,
             'cari' => "-",
@@ -20,13 +20,13 @@ class KegiatanStatistikController extends Controller
     }
 
     public function lengkap($kode_kegiatan)
-    {   
+    {
         $kegiatanStatistik = KegiatanStatistik::where('kode_kegiatan', $kode_kegiatan)->first();
         $perusahaanKegiatans = PerusahaanKegiatan::with(['perusahaan','pegawai','petugas','kegiatanStatistik'])
         ->where('kode_kegiatan', $kode_kegiatan)->paginate(10);
         $message = $perusahaanKegiatans->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page.kegiatan-statistik.kegiatan-statistik-view',[
+        return view('page-pegawai.kegiatan-statistik.kegiatan-statistik-view',[
             'judul' => 'Kegiatan Statistik',
             'kegiatanStatistik' => $kegiatanStatistik,
             'perusahaanKegiatans' => $perusahaanKegiatans,
@@ -42,12 +42,12 @@ class KegiatanStatistikController extends Controller
                                 orderBy('tanggal_mulai', 'desc')->paginate(4);
         $message = $kegiatanStatistiks->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page.kegiatan-statistik.kegiatan-statistik',[
+        return view('page-pegawai.kegiatan-statistik.kegiatan-statistik',[
             'judul' => 'Kegiatan Statistik',
             'kegiatanStatistiks' => $kegiatanStatistiks,
             'cari' => $search,
             'pesan' => $message,
         ]);
     }
-    
+
 }

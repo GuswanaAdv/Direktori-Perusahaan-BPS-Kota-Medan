@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class PerusahaanController extends Controller
 {
     public function tampil()
-    {   
+    {
         $perusahaans = Perusahaan::paginate(10);
-        return view('page.perusahaan.perusahaan',[
+        return view('page-pegawai.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
             'perusahaans' => $perusahaans,
             'cari' => "-",
@@ -20,7 +20,7 @@ class PerusahaanController extends Controller
     }
 
     public function lengkap($id_sbr)
-    {   
+    {
         $perusahaan = Perusahaan::with(['jenisKepemilikan'])->where('id_sbr', $id_sbr)->first();
         $perusahaanKegiatans = PerusahaanKegiatan::with(['perusahaan','pegawai','petugas','kegiatanStatistik'])
         ->where('id_sbr', $id_sbr)->paginate(10);
@@ -40,7 +40,7 @@ class PerusahaanController extends Controller
 
         $message = $perusahaanKegiatans->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page.perusahaan.perusahaan-view',[
+        return view('page-pegawai.perusahaan.perusahaan-view',[
             'judul' => 'Perusahaan',
             'perusahaan' => $perusahaan,
             'perusahaanKegiatans' => $perusahaanKegiatans,
@@ -54,7 +54,7 @@ class PerusahaanController extends Controller
         $perusahaans = Perusahaan::where('nama_usaha', 'like', "%$search%")
                         ->orWhere('alamat_sbr','like',"%$search%")
                         ->paginate(10);
-        return view('page.perusahaan.perusahaan',[
+        return view('page-pegawai.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
             'perusahaans' => $perusahaans,
             'cari' => $search,
@@ -69,7 +69,7 @@ class PerusahaanController extends Controller
                         ->paginate(10);
         $message = $perusahaans->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page.perusahaan.perusahaan',[
+        return view('page-pegawai.perusahaan.perusahaan',[
             'judul' => 'Perusahaan',
             'perusahaans' => $perusahaans,
             'cari' => $search,

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
@@ -12,7 +12,7 @@
                 <div class="flex items-center justify-center py-2">
                     <button class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white">
                         Tambah Kegiatan Statistik
-                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png" 
+                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png"
                         alt=""
                         height="32"
                         width="32">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             @else
                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     @foreach ($kegiatanStatistiks as $kegiatan)
@@ -51,8 +51,8 @@
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title">{{!empty($kegiatan->nama_kegiatan)? $kegiatan->nama_kegiatan : ""}}</h2>
                                 <p>
-                                    {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)? 
-                                        "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}      
+                                    {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)?
+                                        "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}
                                 </p>
                                 <div class="card-actions">
                                     <a class="btn bg-darkblue text-white hover:bg-blue"
@@ -63,10 +63,10 @@
                             </div>
                         </div>
                     @endforeach
-                </div> 
+                </div>
 
             @endif
-            
+
         </div>
 
         <div class="flex items-center justify-center pt-8 pb-16">

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     <div class="flex items-center justify-center py-8">
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
@@ -9,8 +9,8 @@
                     </h2>
                 </div>
                 <p>
-                    {{!empty($kegiatanStatistik->tanggal_mulai) && !empty($kegiatanStatistik->tanggal_selesai)? 
-                                        "Pelaksanaan : ".date('d-m-Y', strtotime($kegiatanStatistik->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatanStatistik->tanggal_selesai)) : ""}}   
+                    {{!empty($kegiatanStatistik->tanggal_mulai) && !empty($kegiatanStatistik->tanggal_selesai)?
+                                        "Pelaksanaan : ".date('d-m-Y', strtotime($kegiatanStatistik->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatanStatistik->tanggal_selesai)) : ""}}
                 </p>
                 <p class="font-bold text-justify">
                     {{!empty($kegiatanStatistik->nama_kegiatan)? "Apa itu ".$kegiatanStatistik->nama_kegiatan."?" : ""}}
@@ -27,12 +27,12 @@
                 @else
                     @include('component.kegiatan-tabel')
                 @endif
-                
+
             </div>
 
             <div class="flex items-center justify-center pb-16">
                 {{ $perusahaanKegiatans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
             </div>
-        </div>    
-    </div>  
+        </div>
+    </div>
 @endsection

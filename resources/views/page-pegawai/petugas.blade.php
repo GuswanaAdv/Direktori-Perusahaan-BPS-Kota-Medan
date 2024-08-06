@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
@@ -12,7 +12,7 @@
                 <div class="flex items-center justify-center py-4">
                     <button class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white">
                         Tambah Petugas
-                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png" 
+                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png"
                         alt=""
                         height="32"
                         width="32">
@@ -36,12 +36,12 @@
                         <th>Riwayat</th>
                     </tr>
                     </thead>
-                    
+
                     <tbody>
                         @php
                             $no = ($petugass->currentPage() - 1) * $petugass->perPage();
                         @endphp
-                        
+
                         @foreach ($petugass as $petugas)
                             @php
                                 $no++;
@@ -56,7 +56,7 @@
                                 <td>{{!empty($petugas->alamat)? $petugas->alamat : ""}}</td>
                                 <td>
                                     <label for="my_modal_6" class="btn bg-transparent hover:bg-darkblue px-2 w-12 h-12">
-                                        <img 
+                                        <img
                                             src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-64.png"
                                             width="24"
                                             height="24">

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class PetugasController extends Controller
 {
     public function tampil()
-    {   
+    {
         $petugass = Petugas::with(["perusahaanKegiatan"])->paginate(5);
-        return view('page.petugas',[
+        return view('page-pegawai.petugas',[
             'judul' => 'Petugas',
             'petugass' => $petugass,
             'cari' => "-",
@@ -19,10 +19,10 @@ class PetugasController extends Controller
     }
 
     public function lengkap($id_petugas)
-    {   
+    {
         $petugas = Petugas::with(['jenisKepemilikan'])->where('id_petugas', $id_petugas)->first();
 
-        return view('page.petugas.petugas-view',[
+        return view('page-pegawai.petugas.petugas-view',[
             'judul' => 'Petugas',
             'petugas' => $petugas,
         ]);
@@ -38,7 +38,7 @@ class PetugasController extends Controller
                     ->paginate(5);
         $message = $petugass->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page.petugas',[
+        return view('page-pegawai.petugas',[
             'judul' => 'Petugas',
             'petugass' => $petugass,
             'cari' => $search,

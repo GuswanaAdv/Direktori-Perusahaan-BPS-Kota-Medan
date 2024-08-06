@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     <div class="flex items-center justify-center py-8">
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
@@ -30,8 +30,8 @@
                          @endif
                      </div>
                  </div>
-                 
-                 
+
+
                  <div class="collapse bg-white border-b-2 rounded-none">
                      <input type="checkbox" />
                      <div class="collapse-title text-xl font-medium">
@@ -41,8 +41,8 @@
                          <p>{{!empty($perusahaan->kegiatan_utama)? "Kegiatan Utama : ".$perusahaan->kegiatan_utama : ""}}</p>
                          <p>{{!empty($perusahaan->produk_utama)? "Produk Utama : ".$perusahaan->produk_utama : ""}}</p>
                          <p>{{!empty($perusahaan->jenisKepemilikan->nama_jenis_kepemilikan)? "Tipe Kepemilikan : ".$perusahaan->jenisKepemilikan->nama_jenis_kepemilikan : ""}}</p>
-                     </div> 
-                 </div> 
+                     </div>
+                 </div>
              </div>
 
             <div class="card-body w-full text-left sm:px-20 mb-8">
@@ -52,12 +52,12 @@
                 @else
                     @include('component.perusahaan-tabel')
                 @endif
-                
+
             </div>
 
             <div class="flex items-center justify-center pb-16">
                 {{ $perusahaanKegiatans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
             </div>
-        </div>    
-    </div>  
+        </div>
+    </div>
 @endsection

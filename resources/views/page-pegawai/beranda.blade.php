@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     @include('component.searchbar')
 

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.pegawai')
 @section('content')
     @include('component.searchbar')
     <div id="beranda" class="bg-lightgrey">
@@ -12,7 +12,7 @@
                 <div class="flex items-center justify-center py-2">
                     <button class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white">
                         Tambah Perusahaan
-                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png" 
+                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png"
                         alt=""
                         height="32"
                         width="32">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="flex items-center justify-center py-8">
-              
+
             @if ($pesan == 'tidak ditemukan')
             <div class="grid grid-cols-1 gap-8">
                 <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
@@ -52,7 +52,7 @@
                             <h2 class="card-title">{{!empty($perusahaan->nama_usaha)? $perusahaan->nama_usaha : ""}}</h2>
                             <p>{{!empty($perusahaan->alamat_sbr)? $perusahaan->alamat_sbr : ""}}</p>
                             <div class="card-actions">
-                                <a href="{{route('perusahaan-view',['id_sbr' => $perusahaan->id_sbr])}}" 
+                                <a href="{{route('perusahaan-view',['id_sbr' => $perusahaan->id_sbr])}}"
                                     class="btn bg-darkblue text-white hover:bg-blue">selengkapnya</a>
                             </div>
                         </div>

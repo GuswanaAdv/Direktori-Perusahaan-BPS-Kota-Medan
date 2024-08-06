@@ -23,13 +23,20 @@
 </head>
 <body class="bg-blue">
 
-    <header class="bg-darkblue">
-        @include('component.navbar')
-    </header>
-    @yield('content')
-    <div id="footer">
-        @include('component.footer')
-    </div>
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @else
+       <header class="bg-darkblue">
+            @include('component.navbar')
+        </header>
+        @yield('content')
+        <div id="footer">
+            @include('component.footer')
+        </div>
+    @endif
+
 
 </body>
 </html>
