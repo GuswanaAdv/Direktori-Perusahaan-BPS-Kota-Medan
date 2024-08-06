@@ -43,4 +43,20 @@
         </svg>
         <span>{{ session('pesan-petugas') }}</span>
     </div>
+@elseif (session()->has('pesan-logout'))
+    <div class="toast toast-top toast-center" id="myToast">
+        <div class="alert bg-green text-white font-bold text-center">
+            <span>{{ session('pesan-logout') }}</span>
+        </div>
+    </div>
 @endif
+
+<script>
+    // Tunggu sampai halaman selesai dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        // Setelah 2 detik, sembunyikan elemen toast
+        setTimeout(function() {
+            document.getElementById('myToast').style.display = 'none';
+        }, 2000); // 2000ms = 2 detik
+    });
+</script>

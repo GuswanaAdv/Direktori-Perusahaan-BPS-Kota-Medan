@@ -11,10 +11,10 @@
         @csrf
         <div class="w-full">
             <div class="relative w-full">
-                <input type="text" 
-                id="search" 
+                <input type="text"
+                id="search"
                 name="search"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"  
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
                 @if ($judul == 'Perusahaan')
                     placeholder="Cari perusahaan..."
                     value="{{($cari != '-' )? $cari : ''}}"
@@ -23,7 +23,7 @@
                     value="{{($cari != '-' )? $cari : ''}}"
                 @elseif($judul == 'Petugas')
                     placeholder="Cari petugas..."
-                    value=""
+                    value="{{($cari != '-' )? $cari : ''}}"
                 @else
                     placeholder="Cari kegiatan statistik..."
                     value=""

@@ -36,6 +36,7 @@ Route::post('/login-process', [BerandaController::class, 'login'])->name('login'
 
 //Harus login dulu
 Route::group(['middleware' => ['auth', 'nocache']], function () {
+
     Route::get('/beranda', [BerandaController::class, 'tampil'])->name('beranda');
     Route::post('/logout', [BerandaController::class, 'logout'])->name('logout');
 
@@ -50,5 +51,6 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
 
     Route::get('/petugas', [PetugasController::class, 'tampil'])->name('petugas');
     Route::get('/petugas_search', [PetugasController::class, 'search2'])->name('petugas-search2');
+
 });
 

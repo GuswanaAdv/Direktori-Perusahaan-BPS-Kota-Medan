@@ -10,7 +10,7 @@ class PetugasController extends Controller
     public function tampil()
     {
         $petugass = Petugas::with(["perusahaanKegiatan"])->paginate(5);
-        return view('page-pegawai.petugas',[
+        return view('page-pegawai.petugas.petugas',[
             'judul' => 'Petugas',
             'petugass' => $petugass,
             'cari' => "-",
@@ -38,7 +38,7 @@ class PetugasController extends Controller
                     ->paginate(5);
         $message = $petugass->isEmpty() ? 'tidak ditemukan' : '';
 
-        return view('page-pegawai.petugas',[
+        return view('page-pegawai.petugas.petugas',[
             'judul' => 'Petugas',
             'petugass' => $petugass,
             'cari' => $search,

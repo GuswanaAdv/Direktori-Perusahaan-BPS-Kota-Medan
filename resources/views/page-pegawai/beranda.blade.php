@@ -3,8 +3,8 @@
     @include('component.searchbar')
 
     @if (session()->has('success'))
-        <div class="toast toast-top toast-start" id="myToast">
-            <div class="alert alert-info bg-green text-white font-bold text-center">
+        <div class="toast toast-top toast-center" id="myToast">
+            <div class="alert bg-green text-white font-bold text-center">
                 <span>Login Berhasil!!</span>
             </div>
         </div>
