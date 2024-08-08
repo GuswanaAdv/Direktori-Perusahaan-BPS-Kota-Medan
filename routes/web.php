@@ -45,7 +45,7 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::post('/perusahaan_search', [PerusahaanController::class, 'search1'])->name('perusahaan-search1');
     Route::get('/perusahaan_search', [PerusahaanController::class, 'search2'])->name('perusahaan-search2');
     Route::get('/perusahaan_tambah', [PerusahaanController::class, 'tampilTambah'])->name('perusahaan-tambah');
-    Route::post('/perusahaan_tambah-proses', [PerusahaanController::class, 'importExcel'])->name('perusahaan-tambah-proses');
+    Route::post('/perusahaan_tambah_proses', [PerusahaanController::class, 'importExcel'])->name('perusahaan-tambah-proses');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');
@@ -53,6 +53,9 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
 
     Route::get('/petugas', [PetugasController::class, 'tampil'])->name('petugas');
     Route::get('/petugas_search', [PetugasController::class, 'search2'])->name('petugas-search2');
+    Route::get('/petugas_tambah', [PetugasController::class, 'tampilTambah'])->name('petugas-tambah');
+    Route::post('/petugas_tambah_proses', [PetugasController::class, 'importExcel'])->name('petugas-tambah-proses');
+
 
 });
 

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PetugasImport;
 use App\Models\Petugas;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PetugasController extends Controller
 {
@@ -45,4 +47,42 @@ class PetugasController extends Controller
             'pesan' => $message,
         ]);
     }
+
+    public function tampilTambah()
+    {
+        return view('page-pegawai.petugas.petugas-tambah',[
+            'judul' => 'Petugas',
+            'cari' => "-",
+            'pesan' => "-",
+        ]);
+    }
+
+    public function importExcel(Request $request)
+	{
+        try{
+            // validasi
+            $this->validate($request, [
+                'file' => 'required|mimes:csv,xls,xlsx'
+            ]);
+
+            // menangkap file excel
+            $file = $request->file('file');
+
+            // membuat nama file unik
+            $nama_file = rand().$file->getClientOriginalName();
+
+            // upload ke folder file_siswa di dalam folder public
+            $file->move('file_petugas',$nama_file);
+
+            // import data
+            Excel::import(new PetugasImport, public_path('/file_petugas/'.$nama_file));
+
+            // alihkan halaman kembali
+            return redirect()->route('petugas')->with('pesanTambahPetugas','Data Berhasil Diimport');
+        }
+        catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('petugas-tambah')->with('pesanTambahPetugas', 'Terjadi kesalahan saat mengimpor data: \n'.$e->getMessage());
+        }
+	}
 }

@@ -4,16 +4,16 @@
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
 
             <div class="card-body w-full text-2xl text-left sm:px-20 border-b-2 font-bold">
-                Silahkan upload data perusahaan dalam bentuk excel
+                Silahkan upload data petugas dalam bentuk excel
             </div>
             <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
-                @include('component.perusahaan-catatan')
+                @include('component.petugas-catatan')
             </div>
 
             @include('component.pesan')
             <div class="card-body w-full text-left sm:px-20">
 
-                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('perusahaan-tambah-proses') }}" method="POST" enctype="multipart/form-data">
+                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('petugas-tambah-proses') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="w-full flex items-center justify-center">
                         <div class="grid grid-cols-1">
@@ -47,5 +47,5 @@
         </div>
     </div>
 
-    @include('page-pegawai.perusahaan.perusahaan-script-preview')
+    @include('page-pegawai.petugas.petugas-script-preview')
 @endsection

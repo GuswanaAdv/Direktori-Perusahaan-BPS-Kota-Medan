@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $primaryKey = 'id_pengguna';
-    public $incrementing = false;
+    public $incrementing = true;
     public $timestamps = false;
     protected $fillable = [
         'id_pengguna',

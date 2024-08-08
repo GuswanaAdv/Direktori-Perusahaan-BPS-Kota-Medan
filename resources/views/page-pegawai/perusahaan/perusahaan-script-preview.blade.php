@@ -20,8 +20,8 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 
             // Membuat HTML tabel
             let html = `
-            <div class="overflow-x-auto w-full mx-auto">
-                <table class="table table-zebra">
+            <div class="overflow-x-auto w-full mx-auto shadow-xl">
+                <table class="table table-zebra shadow-xl">
                     <thead class="bg-grey">
                         <tr>
             `;

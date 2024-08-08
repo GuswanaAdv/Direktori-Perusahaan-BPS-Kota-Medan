@@ -7,7 +7,6 @@ use App\Models\Perusahaan;
 use App\Models\PerusahaanKegiatan;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Session;
 
 class PerusahaanController extends Controller
 {
@@ -113,7 +112,7 @@ class PerusahaanController extends Controller
             return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
-            return redirect()->route('perusahaan')->with('pesanTambahPerusahaan', 'Terjadi kesalahan saat mengimpor data: \n'.$e->getMessage());
+            return redirect()->route('perusahaan-tambah')->with('pesanTambahPerusahaan', 'Terjadi kesalahan saat mengimpor data: \n'.$e->getMessage());
         }
 	}
 }
