@@ -49,7 +49,26 @@
             <span>{{ session('pesan-logout') }}</span>
         </div>
     </div>
+@elseif (session()->has('pesanTambahPerusahaan'))
+    <div class="toast toast-top toast-center z-20" id="myToast">
+        @if (session('pesanTambahPerusahaan') == 'Data Berhasil Diimport')
+            <div class="alert bg-green text-white font-bold text-center">
+                <span>{{ session('pesanTambahPerusahaan') }}</span>
+            </div>
+        @else
+            <div class="alert bg-red text-white font-bold text-center">
+                <span>{{ session('pesanTambahPerusahaan') }}</span>
+            </div>
+        @endif
+    </div>
+@elseif (session()->has('success'))
+    <div class="toast toast-top toast-center" id="myToast">
+        <div class="alert bg-green text-white font-bold text-center">
+            <span>Login Berhasil!!</span>
+        </div>
+    </div>
 @endif
+
 
 <script>
     // Tunggu sampai halaman selesai dimuat

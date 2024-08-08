@@ -2,13 +2,7 @@
 @section('content')
     @include('component.searchbar')
 
-    @if (session()->has('success'))
-        <div class="toast toast-top toast-center" id="myToast">
-            <div class="alert bg-green text-white font-bold text-center">
-                <span>Login Berhasil!!</span>
-            </div>
-        </div>
-    @endif
+    @include('component.pesan')
 
     <div id="beranda" class="bg-lightgrey">
         <div class="flex items-center justify-center pt-4">

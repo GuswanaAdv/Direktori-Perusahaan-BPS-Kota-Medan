@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PerusahaanImport;
 use App\Models\Perusahaan;
 use App\Models\PerusahaanKegiatan;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Session;
 
 class PerusahaanController extends Controller
 {
@@ -76,4 +79,41 @@ class PerusahaanController extends Controller
             'pesan' => $message,
         ]);
     }
+
+    public function tampilTambah()
+    {
+        return view('page-pegawai.perusahaan.perusahaan-tambah',[
+            'judul' => 'Perusahaan',
+            'cari' => "-",
+            'pesan' => "-",
+        ]);
+    }
+
+    public function importExcel(Request $request)
+	{
+        try{
+            // validasi
+            $this->validate($request, [
+                'file' => 'required|mimes:csv,xls,xlsx'
+            ]);
+
+            // menangkap file excel
+            $file = $request->file('file');
+
+            // membuat nama file unik
+            $nama_file = rand().$file->getClientOriginalName();
+
+            // upload ke folder file_siswa di dalam folder public
+            $file->move('file_perusahaan',$nama_file);
+
+            // import data
+            Excel::import(new PerusahaanImport, public_path('/file_perusahaan/'.$nama_file));
+
+            // alihkan halaman kembali
+            return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
+        }catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('perusahaan')->with('pesanTambahPerusahaan', 'Terjadi kesalahan saat mengimpor data: \n'.$e->getMessage());
+        }
+	}
 }
