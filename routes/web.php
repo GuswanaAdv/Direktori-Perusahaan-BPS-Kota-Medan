@@ -50,6 +50,8 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');
     Route::get('/kegiatan-statistik_search', [KegiatanStatistikController::class, 'search2'])->name('kegiatan-statistik-search2');
+    Route::get('/kegiatan-statistik_tambah', [KegiatanStatistikController::class, 'tampilTambah'])->name('kegiatan-statistik-tambah');
+    Route::post('/kegiatan-statistik_proses', [KegiatanStatistikController::class, 'prosesTambah'])->name('kegiatan-statistik-tambah-proses');
 
     Route::get('/petugas', [PetugasController::class, 'tampil'])->name('petugas');
     Route::get('/petugas_search', [PetugasController::class, 'search2'])->name('petugas-search2');
