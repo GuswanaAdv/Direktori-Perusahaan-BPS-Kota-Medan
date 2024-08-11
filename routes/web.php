@@ -38,6 +38,7 @@ Route::post('/login-process', [BerandaController::class, 'login'])->name('login'
 Route::group(['middleware' => ['auth', 'nocache']], function () {
 
     Route::get('/beranda', [BerandaController::class, 'tampil'])->name('beranda');
+    Route::get('/profil', [BerandaController::class, 'tampilProfil'])->name('profil');
     Route::post('/logout', [BerandaController::class, 'logout'])->name('logout');
 
     Route::get('/perusahaan', [PerusahaanController::class, 'tampil'])->name('perusahaan');

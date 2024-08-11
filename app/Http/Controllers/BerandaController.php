@@ -89,4 +89,12 @@ class BerandaController extends Controller
     {
         return view('layout.login');
     }
+
+    public function tampilProfil(){
+        return view('page-pegawai.profil',[
+            'judul' => 'Profil',
+            'cari' => "-",
+            'pesan' => "-",
+        ]);
+    }
 }

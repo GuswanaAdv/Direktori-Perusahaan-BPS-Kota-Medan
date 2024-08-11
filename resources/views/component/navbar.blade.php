@@ -18,8 +18,11 @@
                         <li><a href="{{route('petugas')}}" class="hover:bg-blue">Petugas</a></li>
                       </ul>
                   </li>
-                <li><a class="hover:bg-white">Akun</a></li>
-                <li><a class="hover:bg-blue" href="{{route('logout')}}">Logout</a></li>
+                <li><a class="hover:bg-white btn p-0 mt-2" href="{{ route('profil') }}">Profil</a></li>
+                <form action="{{ route('logout') }}" method="POST" class="w-full">
+                    @csrf
+                    <button type="submit" class="btn w-full p-0 mt-2">logout</button>
+                </form>
             </ul>
         </div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskAcjFxQzZFo7W70mjP4OwNoovJe62tZ5Yw&s" class="w-16 mx-8 rounded-box">
@@ -42,11 +45,11 @@
             </li>
             <li>
                 <details>
-                  <summary class="hover:bg-blue">Akun</summary>
+                  <summary class="hover:bg-blue {{($judul == 'Profil')? 'border-b-2 border-white' : ''}}">Akun</summary>
                   <ul class="p-2 w-56 shadow-lg text-black">
                     <li><a class="mt-4 hover:bg-transparent">Nama: {{ Auth::user()->pegawai->nama_pegawai }}</a></li>
                     <li><a class="mt-4 hover:bg-transparent">NIP: {{ Auth::user()->pegawai->nip }}</a></li>
-                    <li><a href="" class="mt-4 btn">lengkap</a></li>
+                    <li><a href="{{ route('profil') }}" class="mt-4 btn">profil</a></li>
                     {{-- <li> --}}
                         <form action="{{ route('logout') }}" method="POST" class="w-full">
                             @csrf
