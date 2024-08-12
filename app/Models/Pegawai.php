@@ -11,6 +11,8 @@ class Pegawai extends Model
 
     protected $table = 'pegawai';
 
+    protected $primaryKey = 'nip';
+
     // The primary key is not auto-incrementing
     public $incrementing = false;
 

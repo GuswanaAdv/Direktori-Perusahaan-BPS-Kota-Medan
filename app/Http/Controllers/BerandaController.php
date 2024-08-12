@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\KegiatanStatistik;
 use App\Models\User;
+use App\Models\Pegawai;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -96,5 +97,63 @@ class BerandaController extends Controller
             'cari' => "-",
             'pesan' => "-",
         ]);
+    }
+
+    public function editProfil(Request $request){
+        try{
+            $this->validate($request, [
+                'nama-pegawai' => 'required',
+                'nip' => 'required',
+                'email' => 'required|email:dns',
+                'jenis-kelamin' => 'required',
+                'usia' => 'required',
+                'no-wa' => 'required',
+            ]);
+
+            $nama_pegawai = $request->input('nama-pegawai');
+            $nip = $request->input('nip');
+            $email = $request->input('email');
+            $jenis_kelamin = $request->input('jenis-kelamin');
+            $usia = $request->input('usia');
+            $no_wa = $request->input('no-wa');
+
+            $user = User::where('id_pengguna', Auth::user()->id_pengguna)->first();
+            $pegawai = Pegawai::where('nip', $nip)->first();
+
+            $user->update([
+                'email' => $email,
+            ]);
+
+            $pegawai->update([
+                'nama_pegawai' => $nama_pegawai,
+                'jenis_kelamin' => $jenis_kelamin,
+                'usia' => $usia,
+                'no_wa' => $no_wa,
+            ]);
+
+            return redirect()->route('profil')->with('pesanEditProfil','Profil Berhasil Diubah');
+        }catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('profil')->with('pesanEditProfil', 'Terjadi kesalahan saat mengubah profil: '.$e->getMessage());
+        }
+    }
+
+    public function gantiPassword(Request $request){
+        try{
+            $this->validate($request, [
+                'password-baru' => 'required',
+                'konfirmasi-password-baru' => 'required|same:password-baru',
+            ]);
+
+            $user = User::where('id_pengguna', Auth::user()->id_pengguna)->first();
+            $password = $request->input('password-baru');
+            $user->update([
+                'password' => $password,
+            ]);
+            return redirect()->route('profil')->with('pesanGantiPassword','Berhasil Mengganti Password');
+        }catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('profil')->with('pesanGantiPassword', 'Terjadi kesalahan saat mengganti password: '.$e->getMessage());
+        }
     }
 }

@@ -93,7 +93,7 @@ class KegiatanStatistikController extends Controller
             return redirect()->route('kegiatan-statistik')->with('pesanTambahKegiatanStatistik','Kegiatan Statistik Berhasil Ditambahkan');
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
-            return redirect()->route('kegiatan-statistik-tambah')->with('pesanTambahKegiatanStatistik', 'Terjadi kesalahan saat menambahkan data: \n'.$e->getMessage());
+            return redirect()->route('kegiatan-statistik-tambah')->with('pesanTambahKegiatanStatistik', 'Terjadi kesalahan saat menambahkan data: '.$e->getMessage());
         }
     }
 }

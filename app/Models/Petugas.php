@@ -10,6 +10,7 @@ class Petugas extends Model
     use HasFactory;
 
     protected $table = 'petugas';
+    protected $primaryKey = 'id_petugas';
 
     // The primary key is not auto-incrementing
     public $incrementing = false;

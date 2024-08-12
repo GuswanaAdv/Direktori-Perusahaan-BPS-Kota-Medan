@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('petugas', function (Blueprint $table) {
-            $table->char('id_petugas',5)->primmary();
+            $table->char('id_petugas',5)->primary();
             $table->integer('id_pengguna')->constrained('users');
             $table->char('nama_petugas',50);
             $table->char('jenis_kelamin', 9);

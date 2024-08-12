@@ -31,7 +31,7 @@ Route::get('/login-process', function () {
 });
 
 //Sebelum login
-Route::get('/login', [BerandaController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
+Route::get('/tampil-login', [BerandaController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
 Route::post('/login-process', [BerandaController::class, 'login'])->name('login');
 
 //Harus login dulu
@@ -40,6 +40,8 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::get('/beranda', [BerandaController::class, 'tampil'])->name('beranda');
     Route::get('/profil', [BerandaController::class, 'tampilProfil'])->name('profil');
     Route::post('/logout', [BerandaController::class, 'logout'])->name('logout');
+    Route::post('/edit-profil', [BerandaController::class, 'editProfil'])->name('edit-profil');
+    Route::post('/ganti-password', [BerandaController::class, 'gantiPassword'])->name('ganti-password');
 
     Route::get('/perusahaan', [PerusahaanController::class, 'tampil'])->name('perusahaan');
     Route::get('/perusahaan/{id_sbr}', [PerusahaanController::class, 'lengkap'])->name('perusahaan-view');

@@ -82,7 +82,7 @@ class PetugasController extends Controller
         }
         catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
-            return redirect()->route('petugas-tambah')->with('pesanTambahPetugas', 'Terjadi kesalahan saat mengimpor data: \n'.$e->getMessage());
+            return redirect()->route('petugas-tambah')->with('pesanTambahPetugas', 'Terjadi kesalahan saat mengimpor data: '.$e->getMessage());
         }
 	}
 }
