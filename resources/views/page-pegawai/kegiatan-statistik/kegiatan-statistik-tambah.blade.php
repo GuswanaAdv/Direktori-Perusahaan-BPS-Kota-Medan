@@ -57,7 +57,7 @@
                                     name="keterangan"></textarea>
                             </label>
                             <div class="flex justify-end w-full">
-                                <button class="btn bg-grey hover:bg-darkblue hover:text-white mt-8"
+                                <button class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey mt-8"
                                 type="submit">
                                     Tambah
                                 </button>

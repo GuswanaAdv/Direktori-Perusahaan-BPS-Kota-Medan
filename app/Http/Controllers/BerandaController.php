@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 
 class BerandaController extends Controller
 {
@@ -141,16 +142,23 @@ class BerandaController extends Controller
     public function gantiPassword(Request $request){
         try{
             $this->validate($request, [
+                'password-lama' => 'required',
                 'password-baru' => 'required',
                 'konfirmasi-password-baru' => 'required|same:password-baru',
             ]);
 
             $user = User::where('id_pengguna', Auth::user()->id_pengguna)->first();
-            $password = $request->input('password-baru');
-            $user->update([
-                'password' => $password,
-            ]);
-            return redirect()->route('profil')->with('pesanGantiPassword','Berhasil Mengganti Password');
+            $password_baru = $request->input('password-baru');
+            $password_lama = $request->input('password-lama');
+            if (Hash::check($password_lama, $user->password)){
+                $user->update([
+                    'password' => bcrypt($password_baru),
+                ]);
+                return redirect()->route('profil')->with('pesanGantiPassword','Berhasil Mengganti Password');
+            }else{
+                return redirect()->route('profil')->with('pesanGantiPassword', 'Password lama salah');
+            }
+
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
             return redirect()->route('profil')->with('pesanGantiPassword', 'Terjadi kesalahan saat mengganti password: '.$e->getMessage());

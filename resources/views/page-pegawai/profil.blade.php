@@ -1,7 +1,7 @@
 @extends('layout.pegawai')
 @section('content')
     <div class="flex items-center justify-center py-8">
-        <div class="card bg-white sm:w-3/4 shadow-xl w-full">
+        <div class="card bg-white sm:w-5/6 md:w-3/4 shadow-xl w-full">
 
             <div class="card-body w-full text-2xl text-left sm:px-20 border-b-2 font-bold">
                 Profil Anda
@@ -21,7 +21,7 @@
                 <form class="mx-auto w-full" action="{{ route('edit-profil') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid sm:grid-cols-2 grid-cols-1">
-                        <div>
+                        <div class="sm:mr-4 mr-0">
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">
                                     <span class="label-text">Nama Pegawai</span>
@@ -50,7 +50,7 @@
                             </label>
                         </div>
 
-                        <div>
+                        <div class="sm:ml-4 ml-0">
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">
                                     <span class="label-text">Jenis Kelamin</span>
@@ -79,7 +79,7 @@
                             </label>
 
                             <div class="flex justify-end w-full max-w-xs">
-                                <button class="btn bg-grey hover:bg-darkblue hover:text-white mt-8 hidden"
+                                <button class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey mt-8 hidden"
                                 id="edit-profil" type="submit">
                                     Edit
                                 </button>
@@ -99,6 +99,14 @@
                         @csrf
                         <label class="form-control w-full max-w-lg">
                             <div class="label">
+                                <span class="label-text">Password Lama</span>
+                            </div>
+                            <input type="password" name="password-lama"
+                            class="input input-bordered w-full max-w-lg"/>
+                        </label>
+
+                        <label class="form-control w-full max-w-lg">
+                            <div class="label">
                                 <span class="label-text">Password Baru</span>
                             </div>
                             <input type="password" name="password-baru"
@@ -114,7 +122,7 @@
                         </label>
 
                         <div class="flex justify-center w-full max-w-lg">
-                            <button class="btn bg-grey hover:bg-darkblue hover:text-white mt-8"
+                            <button class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey mt-8"
                             type="submit">
                                 Ubah Password
                             </button>

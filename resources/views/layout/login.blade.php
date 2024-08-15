@@ -7,12 +7,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('js/app.js') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url('logo/logo-bps.png') }}" type="image/x-icon">
     <title>Login</title>
 
     <style>
     </style>
 </head>
-<body class="bg-darkblue">
+<body class="bg-gradient-to-b from-darkorange to-orange">
     @if (session('error'))
         <div class="alert alert-danger">
             {{ session('error') }}

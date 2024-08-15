@@ -1,9 +1,9 @@
-<section class="bg-darkblue min-h-screen">
+<section class="bg-gradient-to-b from-darkorange to-orange min-h-screen">
     <div class="flex flex-col items-center justify-center px-6 sm:py-8 py-20 mx-auto md:h-screen lg:py-0">
         <a href="#" class="flex items-center mb-6 text-2xl font-bold text-white dark:text-white">
-            <img class="w-16 mr-8 rounded-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskAcjFxQzZFo7W70mjP4OwNoovJe62tZ5Yw&s"
+            <img class="w-16 mr-8 rounded-box" src="{{ url('logo/logo-bps.png') }}"
             alt="logo">
-            BPS KOTA MEDAN
+            DIREKTORI PERUSAHAAN KOTA MEDAN
         </a>
         <div class="w-full bg-white rounded-lg shadow
         dark:border md:mt-0 sm:max-w-md xl:p-0
@@ -15,7 +15,7 @@
 
                 <h1 class="text-xl font-bold leading-tight tracking-tight
                 text-gray-900 md:text-2xl dark:text-white text-center">
-                    Masuk ke Direktori Perusahaan
+                    Login
                 </h1>
                 <form class="space-y-4 md:space-y-6" action="{{route('login')}}" method="POST">
                     @csrf
@@ -25,7 +25,7 @@
                             Email
                         </label>
                         <input type="email" name="email" id="email"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg
+                        class="bg-gray-50 border border-darkgrey text-gray-900 rounded-lg
                         focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5
                         dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                         dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -35,7 +35,7 @@
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900
                         dark:text-white">Password</label>
                         <input type="password" name="password" id="password" placeholder="••••••••"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg
+                        class="bg-gray-50 border border-darkgrey text-gray-900 rounded-lg
                         focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5
                         dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                         dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -46,8 +46,8 @@
                         hover:underline dark:text-primary-500">Forgot password?</a>
                     </div> --}}
                     <button type="submit" class="w-full text-black bg-grey
-                    hover:bg-darkblue hover:text-white font-medium rounded-lg
-                    text-sm px-5 py-2.5 text-center ">Sign in</button>
+                    hover:bg-orange hover:text-white font-medium rounded-lg
+                    text-sm px-5 py-2.5 text-center ">login</button>
                 </form>
             </div>
         </div>

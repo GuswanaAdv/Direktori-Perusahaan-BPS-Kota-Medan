@@ -36,7 +36,7 @@
                     <div id="preview" class="mt-4 w-full flex items-center justify-center"></div>
 
                     <div class="w-full flex items-center justify-center">
-                       <button class="btn w-full max-w-xs bg-grey text-black hover:bg-darkblue hover:text-white"
+                       <button class="btn w-full max-w-xs bg-grey text-black hover:bg-orange hover:text-white"
                             type="submit">
                             UPLOAD
                         </button>

@@ -2,22 +2,28 @@
 @section('content')
     @include('component.searchbar')
     @include('component.pesan')
-    <div id="beranda" class="bg-lightgrey">
+    <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
             <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
                 <div class="flex items-center justify-center py-2">
-                    <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
+                    <button class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey">
+                        <img src="{{ url('logo/logo-list-2.png') }}"
+                            alt=""
+                            height="32"
+                            width="32"
+                        >
                         Daftar Perusahaan:
                     </button>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                    <a class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white"
+                    <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
                     href="{{ route('perusahaan-tambah') }}">
+                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                            alt=""
+                            height="32"
+                            width="32"
+                        >
                         Import Data Perusahaan
-                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png"
-                        alt=""
-                        height="32"
-                        width="32">
                     </a>
                 </div>
             </div>
@@ -30,7 +36,7 @@
                 <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
                     <figure class="px-10 pt-10">
                     <img
-                        src="https://cdn1.iconfinder.com/data/icons/building-71/100/Building-23-256.png"
+                        src="{{ url('logo/logo-perusahaan.webp') }}"
                         alt="Shoes"
                         class="rounded-xl" style="width: 50px"/>
                     </figure>
@@ -43,10 +49,10 @@
             @else
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 @foreach ($perusahaans as $perusahaan)
-                    <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
+                    <div class="card bg-white border border-darkgrey sm:w-96 w-full shadow-xl">
                         <figure class="px-10 pt-10">
                         <img
-                            src="https://cdn1.iconfinder.com/data/icons/building-71/100/Building-23-256.png"
+                            src="{{ url('logo/logo-perusahaan.webp') }}"
                             alt="Shoes"
                             class="rounded-xl" style="width: 50px"/>
                         </figure>
@@ -55,7 +61,7 @@
                             <p>{{!empty($perusahaan->alamat_sbr)? $perusahaan->alamat_sbr : ""}}</p>
                             <div class="card-actions">
                                 <a href="{{route('perusahaan-view',['id_sbr' => $perusahaan->id_sbr])}}"
-                                    class="btn bg-darkblue text-white hover:bg-blue">selengkapnya</a>
+                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>
                             </div>
                         </div>
                     </div>

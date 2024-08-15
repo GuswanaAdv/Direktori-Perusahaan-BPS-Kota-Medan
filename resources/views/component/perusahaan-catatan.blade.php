@@ -13,10 +13,10 @@
     Catatan : Ikuti urutan format kolom berikut
 </div>
 @include('component.perusahaan-format-kolom')
-<a class="btn bg-grey text-black hover:bg-darkblue hover:text-white"
+<a class="btn bg-grey text-black hover:bg-orange hover:text-white"
     href="{{ url('format-kolom/Format Kolom Perusahaan.xlsx') }}"
     id="download-link">
-    <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/folder-download-64.png"
+    <img src="{{ url('logo/logo-download-4.png') }}"
         alt="download-image"
         class="sm:mx-2 sm:w-8 w-4">
     Download Format Kolom Perusahaan!!

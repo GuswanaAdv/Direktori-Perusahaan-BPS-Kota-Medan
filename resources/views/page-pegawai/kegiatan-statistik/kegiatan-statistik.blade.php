@@ -2,22 +2,27 @@
 @section('content')
     @include('component.searchbar')
     @include('component.pesan')
-    <div id="beranda" class="bg-lightgrey">
+    <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
             <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
                 <div class="flex items-center justify-center py-2">
-                    <button class="btn border-darkblue text-darkblue bg-white hover:border-darkblue hover:bg-white hover:text-darkblue">
+                    <button class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey">
+                        <img src="{{ url('logo/logo-list-2.png') }}"
+                            alt=""
+                            height="28"
+                            width="28"
+                        >
                         Daftar Kegiatan Statistik:
                     </button>
                 </div>
                 <div class="flex items-center justify-center py-2">
-                    <a class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white"
+                    <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
                         href="{{ route('kegiatan-statistik-tambah') }}">
-                        Tambah Kegiatan Statistik
-                        <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-5/24/plus-circle-64.png"
+                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
                         alt=""
-                        height="32"
-                        width="32">
+                        height="28"
+                        width="28">
+                        Tambah Kegiatan Statistik
                     </a>
                 </div>
             </div>
@@ -27,10 +32,10 @@
 
             @if ($pesan == 'tidak ditemukan')
                 <div class="grid grid-cols-1 gap-8">
-                    <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
+                    <div class="card bg-white border border-darkgrey sm:w-96 w-full shadow-xl">
                         <figure class="px-10 pt-10">
                         <img
-                            src="https://cdn3.iconfinder.com/data/icons/survey-rating/512/Survey_rating_rate-19-256.png"
+                            src="{{ url('logo/logo-kegiatan-statistik.png') }}"
                             alt="Shoes"
                             class="rounded-xl" style="width: 50px"/>
                         </figure>
@@ -43,10 +48,10 @@
             @else
                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     @foreach ($kegiatanStatistiks as $kegiatan)
-                        <div class="card bg-base-100 w-96 shadow-xl">
+                        <div class="card bg-white border border-darkgrey w-96 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <img
-                                    src="https://cdn3.iconfinder.com/data/icons/survey-rating/512/Survey_rating_rate-19-256.png"
+                                    src="{{ url('logo/logo-kegiatan-statistik.png') }}"
                                     alt="Shoes"
                                     class="rounded-xl" style="width: 50px"/>
                             </figure>
@@ -57,7 +62,7 @@
                                         "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}
                                 </p>
                                 <div class="card-actions">
-                                    <a class="btn bg-darkblue text-white hover:bg-blue"
+                                    <a class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey"
                                         href="{{route('kegiatan-statistik-view', ['kode_kegiatan' => $kegiatan->kode_kegiatan])}}">
                                         Selengkapnya
                                     </a>
