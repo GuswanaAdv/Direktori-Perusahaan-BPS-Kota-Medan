@@ -60,7 +60,7 @@
                             <h2 class="card-title">{{!empty($perusahaan->nama_usaha)? $perusahaan->nama_usaha : ""}}</h2>
                             <p>{{!empty($perusahaan->alamat_sbr)? $perusahaan->alamat_sbr : ""}}</p>
                             <div class="card-actions">
-                                <a href="{{route('perusahaan-view',['id_sbr' => $perusahaan->id_sbr])}}"
+                                <a href="{{route('perusahaan-view',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
                                     class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>
                             </div>
                         </div>

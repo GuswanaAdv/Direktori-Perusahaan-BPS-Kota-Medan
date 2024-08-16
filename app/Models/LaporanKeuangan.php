@@ -26,6 +26,10 @@ class LaporanKeuangan extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_laporan_keuangan','kode_laporan_keuangan');
+        return $this->hasOne(Perusahaan::class,'kode_laporan_keuangan','kode_laporan_keuangan');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_laporan_keuangan','kode_laporan_keuangan');
     }
 }

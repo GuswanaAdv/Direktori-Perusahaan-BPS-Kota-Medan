@@ -26,6 +26,10 @@ class KondisiPerusahaan extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_kondisi_perusahaan','kode_kondisi_perusahaan');
+        return $this->hasOne(Perusahaan::class,'kode_kondisi_perusahaan','kode_kondisi_perusahaan');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_kondisi_perusahaan','kode_kondisi_perusahaan');
     }
 }

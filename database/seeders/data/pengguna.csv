@@ -14,3 +14,11 @@ id_pengguna,email,password,id_peran
 13,pegawai3@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
 14,pegawai4@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
 15,pegawai5@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+16,pegawai6@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+17,pegawai7@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+18,pegawai8@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+19,pegawai9@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+20,pegawai10@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+21,pegawai11@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+22,pegawai12@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p1
+23,admin@gmail.com,$2a$12$9FvYAtoAUev9C4ssBWO3IOKOEKlvAbvBXX1dxWGesBQeQ2.Nhmqni,p3

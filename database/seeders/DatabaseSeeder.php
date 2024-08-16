@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Perusahaan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +12,9 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {
+        $this->call(TimKerjaSeeder::class);
+        $this->call(JabatanSeeder::class);
         $this->call(PerusahaanKegiatanSeeder::class);
         $this->call(PeranSeeder::class);
         $this->call(PenggunaSeeder::class);
@@ -22,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(KegiatanStatistikSeeder::class);
         $this->call(PerusahaanSeeder::class);
 
-        $this->call(KBLISeeder::class); 
+        $this->call(KBLISeeder::class);
         $this->call(UnitStatistikSeeder::class);
         $this->call(JabatanPenanggungjawabSeeder::class);
         $this->call(SkalaUsahaSeeder::class);

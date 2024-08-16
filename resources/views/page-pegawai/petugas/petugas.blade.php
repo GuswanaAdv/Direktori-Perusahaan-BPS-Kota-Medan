@@ -62,19 +62,19 @@
                                 <td>{{!empty($petugas->no_wa)? $petugas->no_wa : ""}}</td>
                                 <td>{{!empty($petugas->alamat)? $petugas->alamat : ""}}</td>
                                 <td>
-                                    <label for="my_modal_6" class="btn bg-transparent hover:bg-orange px-2 w-12 h-12">
+                                    <label for="my_modal_{{ $petugas->id_petugas }}" class="btn bg-transparent hover:bg-orange px-2 w-12 h-12">
                                         <img
                                             src="{{ url('logo/logo-lengkap-2.png') }}"
                                             width="24"
                                             height="24">
                                     </label>
                                     <!-- Put this part before </body> tag -->
-                                    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                                    <input type="checkbox" id="my_modal_{{ $petugas->id_petugas }}" class="modal-toggle" />
                                     <div class="modal" role="dialog">
                                         <div class="modal-box w-11/12 max-w-5xl bg-orange">
                                             @include('component.petugas-detail')
                                             <div class="modal-action">
-                                                <label for="my_modal_6" class="btn bg-grey hover:bg-darkgrey hover:text-white">
+                                                <label for="my_modal_{{ $petugas->id_petugas }}" class="btn bg-grey hover:bg-darkgrey hover:text-white">
                                                     Tutup!
                                                 </label>
                                             </div>

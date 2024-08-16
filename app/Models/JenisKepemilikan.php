@@ -25,6 +25,10 @@ class JenisKepemilikan extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_jenis_kepemilikan','kode_jenis_kepemilikan');
+        return $this->hasOne(Perusahaan::class,'kode_jenis_kepemilikan','kode_jenis_kepemilikan');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_jenis_kepemilikan','kode_jenis_kepemilikan');
     }
 }

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->char('nip', 18)->primary() ;
             $table->integer('id_pengguna')->constrained('users');
             $table->char('nama_pegawai', 50);
+            $table->char('id_tim_kerja', 4)->constrained('tim_kerja');
+            $table->char('id_jabatan', 4)->constrained('jabatan');
             $table->char('jenis_kelamin', 9);
             $table->char('usia', 2);
             $table->char('no_wa', 15);

@@ -28,12 +28,13 @@ class KegiatanStatistikSeeder extends Seeder
             // Insert data into the database
             KegiatanStatistik::insert([
                 'kode_kegiatan' => $row[0],
-                'nama_kegiatan' => $row[1],
-                'tanggal_mulai' => $row[2],
-                'tanggal_selesai' => $row[3],
-                'reverse_mulai' => $row[4],
-                'reverse_selesai' => $row[5],
-                'keterangan' => $row[6],
+                'nip' => $row[1],
+                'nama_kegiatan' => $row[2],
+                'tanggal_mulai' => $row[3],
+                'tanggal_selesai' => $row[4],
+                'reverse_mulai' => $row[5],
+                'reverse_selesai' => $row[6],
+                'keterangan' => $row[7],
             ]);
         }
 

@@ -10,9 +10,7 @@ class Perusahaan extends Model
     use HasFactory;
 
     protected $table = 'perusahaan';
-
-    // The primary key is not auto-incrementing
-    public $incrementing = false;
+    protected $primaryKey = 'id_perusahaan';
 
     // The primary key is of type string
     protected $keyType = 'string';
@@ -22,9 +20,13 @@ class Perusahaan extends Model
 
     protected $fillable = [
         // Blok 1
+        'id_perusahaan',
         'id_sbr',
+        'tanggal_cacah_pertama',
+        'tanggal_cacah_terakhir',
         'nama_usaha',
         'nama_komersial',
+        'nip',
         'kode_unit_statistik',
         'provinsi',
         'kabupaten',
@@ -74,58 +76,63 @@ class Perusahaan extends Model
         'kode_status_penanaman_modal',
     ];
 
-    
+
     // Relasi satu ke satu
     function bentukBadanUsaha(){
-        return $this->hasOne(BentukBadanUsaha::class, 'kode_bentuk_badan_usaha', 'kode_bentuk_badan_usaha');
+        return $this->belongsTo(BentukBadanUsaha::class, 'kode_bentuk_badan_usaha', 'kode_bentuk_badan_usaha');
     }
 
     function jabatanPenanggungjawab(){
-        return $this->hasOne(JabatanPenanggungjawab::class, 'kode_jabatan_penanggungjawab', 'kode_jabatan_penanggungjawab');
+        return $this->belongsTo(JabatanPenanggungjawab::class, 'kode_jabatan_penanggungjawab', 'kode_jabatan_penanggungjawab');
     }
 
     function jaringanUsaha(){
-        return $this->hasOne(JaringanUsaha::class, 'kode_jaringan_usaha', 'kode_jaringan_usaha');
+        return $this->belongsTo(JaringanUsaha::class, 'kode_jaringan_usaha', 'kode_jaringan_usaha');
     }
 
     function jenisKepemilikan(){
-        return $this->hasOne(JenisKepemilikan::class, 'kode_jenis_kepemilikan', 'kode_jenis_kepemilikan');
+        return $this->belongsTo(JenisKepemilikan::class, 'kode_jenis_kepemilikan', 'kode_jenis_kepemilikan');
     }
 
     function kbli(){
-        return $this->hasOne(KBLI::class, 'kode_kbli', 'kode_kbli');
+        return $this->belongsTo(KBLI::class, 'kode_kbli', 'kode_kbli');
     }
 
     function kondisiPerusahaan(){
-        return $this->hasOne(KondisiPerusahaan::class, 'kode_kondisi_perusahaan', 'kode_kondisi_perusahaan');
+        return $this->belongsTo(KondisiPerusahaan::class, 'kode_kondisi_perusahaan', 'kode_kondisi_perusahaan');
     }
 
     function laporanKeuangan(){
-        return $this->hasOne(LaporanKeuangan::class, 'kode_laporan_keuangan', 'kode_laporan_keuangan');
+        return $this->belongsTo(LaporanKeuangan::class, 'kode_laporan_keuangan', 'kode_laporan_keuangan');
     }
 
     function preferensiLokasiPencacahan(){
-        return $this->hasOne(PreferensiLokasiPencacahan::class, 'kode_preferensi', 'kode_preferensi');
+        return $this->belongsTo(PreferensiLokasiPencacahan::class, 'kode_preferensi', 'kode_preferensi');
     }
 
     function skalaUsaha(){
-        return $this->hasOne(SkalaUsaha::class, 'kode_skala_usaha', 'kode_skala_usaha');
+        return $this->belongsTo(SkalaUsaha::class, 'kode_skala_usaha', 'kode_skala_usaha');
     }
 
     function statusPenanamanModal(){
-        return $this->hasOne(StatusPenanamanModal::class, 'kode_status_penanaman_modal', 'kode_status_penanaman_modal');
+        return $this->belongsTo(StatusPenanamanModal::class, 'kode_status_penanaman_modal', 'kode_status_penanaman_modal');
     }
 
     function unitStatistik(){
-        return $this->hasOne(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
+        return $this->belongsTo(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
     }
 
     // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class, 'kode_kegiatan', 'kode_kegiatan');
+        return $this->hasMany(PerusahaanKegiatan::class, 'id_perusahaan', 'id_perusahaan');
     }
 
     function histori(){
-        return $this->hasMany(Histori::class, 'id_histori', 'id_histori');
+        return $this->hasMany(Histori::class, 'id_perusahaan', 'id_perusahaan');
+    }
+
+    // Relasi banyak ke satu
+    function pegawai(){
+        return $this->belongsTo(Pegawai::class, 'nip', 'nip');
     }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('petugas', function (Blueprint $table) {
             $table->char('id_petugas',5)->primary();
             $table->integer('id_pengguna')->constrained('users');
+            $table->char('kode_kegiatan',20)->constrained('kegiatan_statistik');
             $table->char('nama_petugas',50);
             $table->char('jenis_kelamin', 9);
             $table->char('usia', 2);

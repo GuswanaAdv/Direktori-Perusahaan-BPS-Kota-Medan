@@ -29,7 +29,7 @@ class PerusahaanKegiatanSeeder extends Seeder
             PerusahaanKegiatan::insert([
                 'id_perusahaan_kegiatan' => $row[0],
                 'kode_kegiatan' => $row[1],
-                'id_sbr' => $row[2],
+                'id_perusahaan' => $row[2],
                 'id_petugas' => $row[3],
                 'nip' => $row[4],
                 'aktivitas' => $row[5],

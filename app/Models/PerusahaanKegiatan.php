@@ -23,7 +23,7 @@ class PerusahaanKegiatan extends Model
     protected $fillable = [
         'id_perusahaan_kegiatan',
         'kode_kegiatan',
-        'id_sbr',
+        'id_perusahaan',
         'id_petugas',
         'nip',
         'aktivitas',
@@ -44,7 +44,7 @@ class PerusahaanKegiatan extends Model
     }
 
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'id_sbr','id_sbr');
+        return $this->belongsTo(Perusahaan::class,'id_perusahaan','id_perusahaan');
     }
 
     function pegawai(){

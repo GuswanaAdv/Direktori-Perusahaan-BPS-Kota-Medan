@@ -25,6 +25,7 @@ class Petugas extends Model
         'id_petugas',
         'id_pengguna',
         'nama_petugas',
+        'kode_kegiatan',
         'jenis_kelamin',
         'usia',
         'no_wa',
@@ -40,6 +41,10 @@ class Petugas extends Model
         return $this->hasMany(Histori::class,'id_petugas','id_petugas');
     }
 
+    function perusahaanSementara(){
+        return $this->hasMany(PerusahaanSementara::class,'id_petugas','id_petugas');
+    }
+
     // Relasi satu ke satu
     function pengguna(){
         return $this->belongsTo(Pengguna::class,'id_pengguna','id_pengguna');
@@ -47,5 +52,9 @@ class Petugas extends Model
 
     function user(){
         return $this->belongsTo(User::class,'id_pengguna','id_pengguna');
+    }
+
+    function kegiatanStatistik(){
+        return $this->belongsTo(KegiatanStatistik::class,'kode_kegiatan','kode_kegiatan');
     }
 }

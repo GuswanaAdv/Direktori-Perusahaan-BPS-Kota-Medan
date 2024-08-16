@@ -27,6 +27,10 @@ class StatusPenanamanModal extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_status_penanaman_modal','kode_status_penanaman_modal');
+        return $this->hasOne(Perusahaan::class,'kode_status_penanaman_modal','kode_status_penanaman_modal');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_status_penanaman_modal','kode_status_penanaman_modal');
     }
 }

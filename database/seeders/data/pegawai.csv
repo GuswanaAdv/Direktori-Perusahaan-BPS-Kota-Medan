@@ -1,6 +1,13 @@
-nip,id_pengguna,nama_pegawai,jenis_kelamin,usia,no_wa,alamat
-nip1,11,Tim IPDS,laki-laki,34,0853900821201,Jl.Helvetia
-nip2,12,Bagian Umum,perempuan,35,0853900821202,Jl.Helvetia
-nip3,13,Tim Neraca,laki-laki,36,0853900821203,Jl.Helvetia
-nip4,14,Tim Distribusi,perempuan,37,0853900821204,Jl.Helvetia
-nip5,15,Tim Sosial,laki-laki,38,0853900821205,Jl.Helvetia
+nip,id_pengguna,nama_pegawai,id_tim_kerja,id_jabatan,jenis_kelamin,usia,no_wa,alamat
+nip1,11,pegawai1,tk01,jb01,laki-laki,34,0853900821201,Jl.Helvetia
+nip2,12,pegawai2,tk01,jb02,perempuan,35,0853900821202,Jl.Helvetia
+nip3,13,pegawai3,tk02,jb01,laki-laki,36,0853900821203,Jl.Helvetia
+nip4,14,pegawai4,tk02,jb02,perempuan,37,0853900821204,Jl.Helvetia
+nip5,15,pegawai5,tk03,jb01,laki-laki,38,0853900821205,Jl.Helvetia
+nip6,16,pegawai6,tk03,jb02,perempuan,38,0853900821206,Jl.Helvetia
+nip7,17,pegawai7,tk04,jb01,laki-laki,34,0853900821207,Jl.Helvetia
+nip8,18,pegawai8,tk04,jb02,perempuan,35,0853900821208,Jl.Helvetia
+nip9,19,pegawai9,tk05,jb01,laki-laki,36,0853900821209,Jl.Helvetia
+nip10,20,pegawai10,tk05,jb02,perempuan,37,0853900821210,Jl.Helvetia
+nip11,21,pegawai11,tk06,jb01,laki-laki,38,0853900821211,Jl.Helvetia
+nip12,22,pegawai12,tk06,jb02,perempuan,38,0853900821212,Jl.Helvetia

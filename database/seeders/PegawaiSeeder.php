@@ -30,10 +30,12 @@ class PegawaiSeeder extends Seeder
                 'nip' => $row[0],
                 'id_pengguna' => $row[1],
                 'nama_pegawai' => $row[2],
-                'jenis_kelamin' => $row[3],
-                'usia' => $row[4],
-                'no_wa' => $row[5],
-                'alamat' => $row[6],
+                'id_tim_kerja' => $row[3],
+                'id_jabatan' => $row[4],
+                'jenis_kelamin' => $row[5],
+                'usia' => $row[6],
+                'no_wa' => $row[7],
+                'alamat' => $row[8],
             ]);
         }
 

@@ -24,7 +24,7 @@ class Histori extends Model
         'id_histori',
         'id_perusahaan_survei',
         'kode_kegiatan',
-        'id_sbr',
+        'id_perusahaan',
         'id_petugas',
         'nip',
         'keterangan',
@@ -40,7 +40,7 @@ class Histori extends Model
     }
 
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'id_sbr','id_sbr');
+        return $this->belongsTo(Perusahaan::class,'id_perusahaan','id_perusahaan');
     }
 
     function pegawai(){

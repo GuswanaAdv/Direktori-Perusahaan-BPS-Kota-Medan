@@ -44,7 +44,7 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::post('/ganti-password', [BerandaController::class, 'gantiPassword'])->name('ganti-password');
 
     Route::get('/perusahaan', [PerusahaanController::class, 'tampil'])->name('perusahaan');
-    Route::get('/perusahaan/{id_sbr}', [PerusahaanController::class, 'lengkap'])->name('perusahaan-view');
+    Route::get('/perusahaan/{id_perusahaan}', [PerusahaanController::class, 'lengkap'])->name('perusahaan-view');
     Route::post('/perusahaan_search', [PerusahaanController::class, 'search1'])->name('perusahaan-search1');
     Route::get('/perusahaan_search', [PerusahaanController::class, 'search2'])->name('perusahaan-search2');
     Route::get('/perusahaan_tambah', [PerusahaanController::class, 'tampilTambah'])->name('perusahaan-tambah');

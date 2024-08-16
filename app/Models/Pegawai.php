@@ -26,6 +26,8 @@ class Pegawai extends Model
         'nip',
         'id_pengguna',
         'nama_pegawai',
+        'id_tim_kerja',
+        'id_jabatan',
         'jenis_kelamin',
         'usia',
         'no_wa',
@@ -48,5 +50,18 @@ class Pegawai extends Model
 
     function user(){
         return $this->belongsTo(User::class,'id_pengguna','id_pengguna');
+    }
+
+    function timKerja(){
+        return $this->belongsTo(TimKerja::class,'id_tim_kerja','id_tim_kerja');
+    }
+
+    function jabatan(){
+        return $this->belongsTo(Jabatan::class,'id_jabatan','id_jabatan');
+    }
+
+    // Relasi satu ke banyak
+    function perusahaan(){
+        return $this->hasMany(Perusahaan::class,'nip','nip');
     }
 }

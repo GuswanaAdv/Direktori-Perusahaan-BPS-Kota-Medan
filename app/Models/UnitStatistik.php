@@ -27,6 +27,10 @@ class UnitStatistik extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_unit_statistik','kode_unit_statistik');
+        return $this->hasOne(Perusahaan::class,'kode_unit_statistik','kode_unit_statistik');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_unit_statistik','kode_unit_statistik');
     }
 }

@@ -21,11 +21,11 @@ class PerusahaanController extends Controller
         ]);
     }
 
-    public function lengkap($id_sbr)
+    public function lengkap($id_perusahaan)
     {
-        $perusahaan = Perusahaan::with(['jenisKepemilikan'])->where('id_sbr', $id_sbr)->first();
+        $perusahaan = Perusahaan::with(['jenisKepemilikan'])->where('id_perusahaan', $id_perusahaan)->first();
         $perusahaanKegiatans = PerusahaanKegiatan::with(['perusahaan','pegawai','petugas','kegiatanStatistik'])
-        ->where('id_sbr', $id_sbr)->paginate(10);
+        ->where('id_perusahaan', $id_perusahaan)->paginate(10);
 
         if ($perusahaan->lattitude != 0)
             $initialMarkers = [

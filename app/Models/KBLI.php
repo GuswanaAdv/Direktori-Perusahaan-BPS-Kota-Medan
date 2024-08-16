@@ -27,6 +27,10 @@ class KBLI extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_kbli','kode_kbli');
+        return $this->hasOne(Perusahaan::class,'kode_kbli','kode_kbli');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_kbli','kode_kbli');
     }
 }

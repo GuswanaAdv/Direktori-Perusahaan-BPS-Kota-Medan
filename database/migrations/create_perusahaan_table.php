@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('perusahaan', function (Blueprint $table) {
             // Blok 1
-            $table->char('id_sbr',10)->primary();
+            $table->char('id_perusahaan',20)->primary();
+            $table->char('id_sbr',10);
+            $table->char('tanggal_cacah_pertama',10);
+            $table->char('tanggal_cacah_terakhir',10);
             $table->char('nama_usaha',100);
             $table->char('nama_komersial',100);
+            $table->char('nip',18)->constrained('pegawai');
             $table->integer('kode_unit_statistik')->constrained('unit_statistik');
             $table->char('provinsi');
             $table->char('kabupaten');

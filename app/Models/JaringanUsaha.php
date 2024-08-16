@@ -26,6 +26,10 @@ class JaringanUsaha extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_jaringan_usaha','kode_jaringan_usaha');
+        return $this->hasOne(Perusahaan::class,'kode_jaringan_usaha','kode_jaringan_usaha');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_jaringan_usaha','kode_jaringan_usaha');
     }
 }

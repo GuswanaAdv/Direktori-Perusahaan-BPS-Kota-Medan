@@ -28,6 +28,7 @@ class PetugasImport implements ToModel, WithHeadingRow
             $petugas->update([
                 'nama_petugas' => $row['nama_petugas'],
                 'jenis_kelamin' => $row['jenis_kelamin'],
+                'kode_kegiatan' => $row['kode_kegiatan'],
                 'usia' => $row['usia'],
                 'no_wa' => $row['no_wa'],
                 'alamat' => $row['alamat'],
@@ -44,6 +45,7 @@ class PetugasImport implements ToModel, WithHeadingRow
                 'id_petugas' => $row['id_petugas'],
                 'id_pengguna' => $newUser->id_pengguna,
                 'nama_petugas' => $row['nama_petugas'],
+                'kode_kegiatan' => $row['kode_kegiatan'],
                 'jenis_kelamin' => $row['jenis_kelamin'],
                 'usia' => $row['usia'],
                 'no_wa' => $row['no_wa'],

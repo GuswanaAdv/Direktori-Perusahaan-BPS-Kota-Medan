@@ -32,7 +32,7 @@ class KegiatanStatistik extends Model
 
     // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
+        return $this->hasOne(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
     }
 
     function histori(){

@@ -26,6 +26,10 @@ class SkalaUsaha extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_skala_usaha','kode_skala_usaha');
+        return $this->hasOne(Perusahaan::class,'kode_skala_usaha','kode_skala_usaha');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_skala_usaha','kode_skala_usaha');
     }
 }

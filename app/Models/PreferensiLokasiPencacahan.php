@@ -26,6 +26,10 @@ class PreferensiLokasiPencacahan extends Model
 
     // Relasi banyak ke satu ke tabel Perusahaan
     function perusahaan(){
-        return $this->belongsTo(Perusahaan::class,'kode_preferensi','kode_preferensi');
+        return $this->hasOne(Perusahaan::class,'kode_preferensi','kode_preferensi');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasOne(PerusahaanSementara::class,'kode_preferensi','kode_preferensi');
     }
 }
