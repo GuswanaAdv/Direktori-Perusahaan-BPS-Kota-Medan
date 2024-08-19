@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pegawai;
 
 use App\Models\KegiatanStatistik;
 use App\Models\PerusahaanKegiatan;
 use Illuminate\Support\Carbon;
+use App\Rules\MinimumDateDifference;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class KegiatanStatistikController extends Controller
 {
@@ -53,10 +55,14 @@ class KegiatanStatistikController extends Controller
 
     public function tampilTambah()
     {
+        $tahun = Carbon::now()->year;
+        $jumlah = KegiatanStatistik::whereYear('tanggal_mulai', $tahun)->count() + 1;
+        $kode_kegiatan = 'ks'.$jumlah.'-'.$tahun;
         return view('page-pegawai.kegiatan-statistik.kegiatan-statistik-tambah',[
             'judul' => 'Kegiatan Statistik',
             'cari' => "-",
             'pesan' => "-",
+            'kode_kegiatan' => $kode_kegiatan,
         ]);
     }
 
@@ -65,8 +71,8 @@ class KegiatanStatistikController extends Controller
             $this->validate($request, [
                 'kode-kegiatan' => 'required',
                 'nama-kegiatan' => 'required',
-                'waktu-mulai' => 'required|date_format:Y-m-d',
-                'waktu-selesai' => 'required|date_format:Y-m-d|after:waktu-mulai',
+                'waktu-mulai' => 'required|date_format:Y-m-d|after or equal:today',
+                'waktu-selesai' => ['required', 'date_format:Y-m-d', 'after:waktu-mulai', new MinimumDateDifference(30)],
                 'keterangan' => 'required',
             ]);
 
@@ -77,8 +83,10 @@ class KegiatanStatistikController extends Controller
             $reverse_mulai = Carbon::createFromFormat('Y-m-d', $request->input('waktu-mulai'))->format('d-m-Y');
             $reverse_selesai = Carbon::createFromFormat('Y-m-d', $request->input('waktu-selesai'))->format('d-m-Y');
             $keterangan = $request->input('keterangan');
+            $nip = Auth()->user()->pegawai->nip;
 
             KegiatanStatistik::create([
+                'nip' => $nip,
                 'kode_kegiatan' => $kode_kegiatan,
                 'nama_kegiatan' => $nama_kegiatan,
                 'tanggal_mulai' => $waktu_mulai,
@@ -87,13 +95,24 @@ class KegiatanStatistikController extends Controller
                 'reverse_selesai' => $reverse_selesai,
                 'keterangan' => $keterangan,
             ]);
-
-            // dd($waktu_selesai,$reverse_selesai);
-
             return redirect()->route('kegiatan-statistik')->with('pesanTambahKegiatanStatistik','Kegiatan Statistik Berhasil Ditambahkan');
+
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
-            return redirect()->route('kegiatan-statistik-tambah')->with('pesanTambahKegiatanStatistik', 'Terjadi kesalahan saat menambahkan data: '.$e->getMessage());
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            return redirect()->route('kegiatan-statistik-tambah')->with('pesanTambahKegiatanStatistik', 'Terjadi kesalahan saat menambahkan data: '. $result);
         }
     }
 }

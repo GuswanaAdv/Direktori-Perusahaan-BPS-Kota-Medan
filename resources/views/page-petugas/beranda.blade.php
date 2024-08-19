@@ -1,6 +1,6 @@
-@extends('layout.pegawai')
+@extends('layout.petugas')
 @section('content')
-    @include('component.searchbar')
+    @include('component.searchbar.searchbar-petugas')
 
     @if (session()->has('success'))
         <div class="toast toast-top toast-start" id="myToast">

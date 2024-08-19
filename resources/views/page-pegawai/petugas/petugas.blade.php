@@ -1,6 +1,6 @@
 @extends('layout.pegawai')
 @section('content')
-    @include('component.searchbar')
+    @include('component.searchbar.searchbar-pegawai')
     @include('component.pesan')
     <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">

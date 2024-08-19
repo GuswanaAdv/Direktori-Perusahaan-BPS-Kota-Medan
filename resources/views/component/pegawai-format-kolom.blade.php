@@ -5,7 +5,10 @@
             <tr>
                 <td>email</td>
                 <td>password</td>
-                <td>nama_petugas</td>
+                <td>nip</td>
+                <td>nama_pegawai</td>
+                <td>tim_kerja</td>
+                <td>jabatan</td>
                 <td>jenis_kelamin</td>
                 <td>usia</td>
                 <td>no_wa</td>

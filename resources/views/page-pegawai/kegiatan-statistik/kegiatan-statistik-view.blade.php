@@ -18,6 +18,7 @@
                 <p>
                     {{!empty($kegiatanStatistik->keterangan)? $kegiatanStatistik->keterangan : ""}}
                 </p>
+                <p class="text-sm text-right">{{!empty($kegiatanStatistik->pegawai->nama_pegawai)? "created by : ".$kegiatanStatistik->pegawai->nama_pegawai : ""}}</p>
             </div>
 
             <div class="card-body w-full text-left sm:px-20 mb-8">

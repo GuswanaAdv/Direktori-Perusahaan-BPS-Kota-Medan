@@ -13,6 +13,7 @@
                 <p>{{!empty($perusahaan->kecamatan)? "Kecamatan : ".$perusahaan->kecamatan : ""}}</p>
                 <p>{{!empty($perusahaan->kelurahan)? " Kelurahan : ".$perusahaan->kelurahan : ""}}</p>
                 <p>{{!empty($perusahaan->alamat_sbr)? "Alamat : ".$perusahaan->alamat_sbr : ""}}</p>
+                <p class="text-sm text-right">{{!empty($editor)? "last edited by : ".$editor->pegawai->nama_pegawai." at ".date('d-m-Y', strtotime($editor->reverse_penginputan)) : ""}}</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2">

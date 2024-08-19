@@ -1,4 +1,4 @@
-@extends('layout.pegawai')
+@extends('layout.admin')
 @section('content')
     <div class="flex items-center justify-center py-8">
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
@@ -7,31 +7,16 @@
                 Silahkan upload data petugas dalam bentuk excel
             </div>
             <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
-                @include('component.petugas-catatan')
+                @include('component.pegawai-catatan')
             </div>
 
             @include('component.pesan')
             <div class="card-body w-full text-left sm:px-20">
 
-                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('petugas-tambah-proses') }}" method="POST" enctype="multipart/form-data" id="petugas-form">
+                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('pegawai-tambah-proses') }}" method="POST" enctype="multipart/form-data" id="petugas-form">
                     @csrf
                     <div class="w-full flex items-center justify-center">
                         <div class="grid grid-cols-1">
-                            <label class="form-control w-full mb-4">
-                                <div class="label">
-                                    <span class="label-text">Pilih kegiatan yang akan diikuti</span>
-                                </div>
-                                <select class="select select-bordered" name="kode-kegiatan" id="kode-kegiatan">
-                                    <option value="-">Pilih Kegiatan</option>
-                                    @foreach ($kegiatans as $kegiatan)
-                                        <option value="{{ $kegiatan->kode_kegiatan }}">{{ $kegiatan->nama_kegiatan }}</option>
-                                    @endforeach
-                                </select>
-                                <div id="warning-message" style="display: none; color: red; text-align: center;">
-                                    Silakan pilih kegiatan terlebih dahulu.
-                                </div>
-                            </label>
-
                             <label class="block mb-2 text-sm font-bold text-black pl-2"
                                 for="user_avatar">
                                 Upload File Berekstensi .xlsx
@@ -86,5 +71,5 @@
         </script>
 
 
-    @include('page-pegawai.petugas.petugas-script-preview')
+    @include('page-admin.pegawai-script-preview')
 @endsection

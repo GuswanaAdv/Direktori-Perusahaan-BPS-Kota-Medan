@@ -30,7 +30,7 @@
         </div>
     @else
        <header class="bg-darkblue">
-            @include('component.navbar.navbar-pegawai')
+            @include('component.navbar.navbar-admin')
         </header>
         @yield('content')
         <div id="footer">

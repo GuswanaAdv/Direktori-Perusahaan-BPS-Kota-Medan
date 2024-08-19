@@ -48,9 +48,27 @@
                                 class="input input-bordered w-full max-w-xs"
                                 value="{{ !empty(Auth::user()->email)? Auth::user()->email:'' }}"/>
                             </label>
+
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text">Tim Kerja</span>
+                                </div>
+                                <input readonly type="text" name="tim-kerja"
+                                class="input input-bordered w-full max-w-xs"
+                                value="{{ !empty(Auth::user()->pegawai->timKerja->nama_tim_kerja)? Auth::user()->pegawai->timKerja->nama_tim_kerja:'' }}"/>
+                            </label>
                         </div>
 
                         <div class="sm:ml-4 ml-0">
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text">Jabatan</span>
+                                </div>
+                                <input readonly type="text" name="jabatan"
+                                class="input input-bordered w-full max-w-xs"
+                                value="{{ !empty(Auth::user()->pegawai->jabatan->nama_jabatan)? Auth::user()->pegawai->jabatan->nama_jabatan:'' }}"/>
+                            </label>
+
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">
                                     <span class="label-text">Jenis Kelamin</span>

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pegawai;
 use Carbon\Carbon;
 use App\Models\KegiatanStatistik;
 use App\Models\User;
 use App\Models\Pegawai;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
 
 class BerandaController extends Controller
 {
@@ -54,13 +54,12 @@ class BerandaController extends Controller
                 if ($user->peran->nama_peran == 'Pegawai'){
                     $request->session()->regenerate();
                     return redirect()->route('beranda')->with('success', 'Login berhasil!');
-                }else{
-                    Auth::logout();
-                    Session::flush();
-                    Session::regenerate();
-                    $request->session()->invalidate();
-                    $request->session()->regenerateToken();
-                    return redirect()->route('tampil-login')->with('pesan-petugas', 'Maaf, Fitur khusus petugas masih dalam pengembangan!!');
+                }else if ($user->peran->nama_peran == 'Admin'){
+                    $request->session()->regenerate();
+                    return redirect()->route('beranda-admin')->with('success', 'Login berhasil!');
+                }else if ($user->peran->nama_peran == 'Petugas'){
+                    $request->session()->regenerate();
+                    return redirect()->route('beranda-petugas')->with('success', 'Login berhasil!');
                 }
             }
 

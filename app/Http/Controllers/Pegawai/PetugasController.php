@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pegawai;
 
 use App\Imports\PetugasImport;
+use Carbon\Carbon;
 use App\Models\Petugas;
+use App\Models\KegiatanStatistik;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class PetugasController extends Controller
 {
@@ -50,10 +53,25 @@ class PetugasController extends Controller
 
     public function tampilTambah()
     {
+        $currentMonth = Carbon::now()->month;
+        $currentYear = Carbon::now()->year;
+        $today = Carbon::now()->day;
+
+        $kegiatans = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')
+        ->when($currentMonth, function ($query) use ($currentMonth) {
+            return $query->whereMonth('tanggal_mulai', $currentMonth);
+        })
+        ->when($currentYear, function ($query) use ($currentYear) {
+            return $query->whereYear('tanggal_mulai', $currentYear);
+        })
+        ->whereDate('tanggal_mulai', '>=', $today)
+        ->get();
+
         return view('page-pegawai.petugas.petugas-tambah',[
             'judul' => 'Petugas',
             'cari' => "-",
             'pesan' => "-",
+            'kegiatans'=> $kegiatans
         ]);
     }
 
@@ -62,8 +80,11 @@ class PetugasController extends Controller
         try{
             // validasi
             $this->validate($request, [
-                'file' => 'required|mimes:csv,xls,xlsx'
+                'file' => 'required|mimes:csv,xls,xlsx',
+                'kode-kegiatan' => 'required',
             ]);
+
+            $kode_kegiatan = $request->input('kode-kegiatan');
 
             // menangkap file excel
             $file = $request->file('file');
@@ -75,7 +96,7 @@ class PetugasController extends Controller
             $file->move('file_petugas',$nama_file);
 
             // import data
-            Excel::import(new PetugasImport, public_path('/file_petugas/'.$nama_file));
+            Excel::import(new PetugasImport ($kode_kegiatan), public_path('/file_petugas/'.$nama_file) );
 
             // alihkan halaman kembali
             return redirect()->route('petugas')->with('pesanTambahPetugas','Data Berhasil Diimport');

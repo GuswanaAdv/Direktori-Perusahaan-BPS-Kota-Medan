@@ -18,14 +18,14 @@
                                 <div class="label">
                                     <span class="label-text">Kode Kegiatan</span>
                                 </div>
-                                <input type="text" placeholder="Kode Kegiatan" name="kode-kegiatan" class="input input-bordered w-full max-w-xs" />
+                                <input type="text" placeholder="Kode Kegiatan" name="kode-kegiatan" class="input input-bordered w-full max-w-xs" value="{{ $kode_kegiatan }}" readonly required/>
                             </label>
 
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">
                                     <span class="label-text">Nama Kegiatan</span>
                                 </div>
-                                <input type="text" placeholder="Nama Kegiatan" name="nama-kegiatan" class="input input-bordered w-full max-w-xs" />
+                                <input type="text" placeholder="Nama Kegiatan" name="nama-kegiatan" class="input input-bordered w-full max-w-xs" required/>
                             </label>
 
                             <label class="form-control w-full max-w-xs">
@@ -34,7 +34,7 @@
                                 </div>
                                 <input type="date" placeholder="Waktu Mulai" name="waktu-mulai"
                                 class="input input-bordered w-full max-w-xs"
-                                id="waktu-mulai"/>
+                                id="waktu-mulai" required/>
                             </label>
 
                             <label class="form-control w-full max-w-xs">
@@ -43,7 +43,7 @@
                                 </div>
                                 <input type="date" placeholder="Waktu Selesai" name="waktu-selesai"
                                 class="input input-bordered w-full max-w-xs"
-                                id="waktu-selesai"/>
+                                id="waktu-selesai" required/>
                             </label>
                         </div>
 
@@ -54,7 +54,7 @@
                                 </div>
                                 <textarea class="textarea textarea-bordered h-52 textarea-md"
                                     placeholder="Keterangan Kegiatan Statistik"
-                                    name="keterangan"></textarea>
+                                    name="keterangan" required></textarea>
                             </label>
                             <div class="flex justify-end w-full">
                                 <button class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey mt-8"

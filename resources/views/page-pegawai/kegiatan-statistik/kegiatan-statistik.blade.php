@@ -1,6 +1,6 @@
 @extends('layout.pegawai')
 @section('content')
-    @include('component.searchbar')
+    @include('component.searchbar.searchbar-pegawai')
     @include('component.pesan')
     <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
@@ -61,6 +61,7 @@
                                     {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)?
                                         "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}
                                 </p>
+                                <p class="text-sm">created by : {{ !empty($kegiatan->pegawai->nama_pegawai)?  $kegiatan->pegawai->nama_pegawai : "-"}}</p>
                                 <div class="card-actions">
                                     <a class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey"
                                         href="{{route('kegiatan-statistik-view', ['kode_kegiatan' => $kegiatan->kode_kegiatan])}}">

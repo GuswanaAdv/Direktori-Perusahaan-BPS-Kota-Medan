@@ -22,6 +22,7 @@ class KegiatanStatistik extends Model
 
     protected $fillable = [
         'kode_kegiatan',
+        'nip',
         'nama_kegiatan',
         'tanggal_mulai',
         'tanggal_selesai',
@@ -37,5 +38,10 @@ class KegiatanStatistik extends Model
 
     function histori(){
         return $this->hasMany(Histori::class,'id_histori','id_histori');
+    }
+
+    // Relasi banyak ke satu
+    function pegawai(){
+        return $this->belongsTo(Pegawai::class,'nip','nip');
     }
 }

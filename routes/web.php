@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\BerandaController;
-use App\Http\Controllers\PerusahaanController;
-use App\Http\Controllers\KegiatanStatistikController;
-use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\Pegawai\BerandaController;
+use App\Http\Controllers\Pegawai\PerusahaanController;
+use App\Http\Controllers\Pegawai\KegiatanStatistikController;
+use App\Http\Controllers\Pegawai\PetugasController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Petugas\Petugas2Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,8 +36,8 @@ Route::get('/login-process', function () {
 Route::get('/tampil-login', [BerandaController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
 Route::post('/login-process', [BerandaController::class, 'login'])->name('login');
 
-//Harus login dulu
-Route::group(['middleware' => ['auth', 'nocache']], function () {
+// Login sebagai pegawai
+Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
 
     Route::get('/beranda', [BerandaController::class, 'tampil'])->name('beranda');
     Route::get('/profil', [BerandaController::class, 'tampilProfil'])->name('profil');
@@ -60,7 +62,24 @@ Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::get('/petugas_search', [PetugasController::class, 'search2'])->name('petugas-search2');
     Route::get('/petugas_tambah', [PetugasController::class, 'tampilTambah'])->name('petugas-tambah');
     Route::post('/petugas_tambah_proses', [PetugasController::class, 'importExcel'])->name('petugas-tambah-proses');
-
-
 });
 
+// Login sebagai admin
+Route::group(['middleware' => ['auth', 'nocache','peran:p3']], function () {
+
+    Route::get('/beranda/admin', [AdminController::class, 'tampil'])->name('beranda-admin');
+    Route::post('/logout/admin', [AdminController::class, 'logout'])->name('logout-admin');
+    Route::get('/pegawai_search', [AdminController::class, 'search2'])->name('pegawai-search2');
+    Route::get('/pegawai_tambah', [AdminController::class, 'tampilTambah'])->name('pegawai-tambah');
+    Route::post('/pegawai_tambah_proses', [AdminController::class, 'importExcel'])->name('pegawai-tambah-proses');
+    Route::get('/profil/admin', [AdminController::class, 'tampilProfil'])->name('profil-admin');
+    Route::post('/edit-profil/admin', [AdminController::class, 'editProfil'])->name('edit-profil-admin');
+    Route::post('/ganti-password/admin', [AdminController::class, 'gantiPassword'])->name('ganti-password-admin');
+});
+
+// Login sebagai petugas
+Route::group(['middleware' => ['auth', 'nocache','peran:p2']], function () {
+
+    Route::get('/beranda/petugas', [Petugas2Controller::class, 'tampil'])->name('beranda-petugas');
+    Route::post('/logout/admin', [AdminController::class, 'logout'])->name('logout-admin');
+});

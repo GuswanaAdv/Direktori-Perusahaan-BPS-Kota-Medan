@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pegawai;
 
 use App\Imports\PerusahaanImport;
 use App\Models\Perusahaan;
 use App\Models\PerusahaanKegiatan;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class PerusahaanController extends Controller
 {
@@ -41,6 +42,9 @@ class PerusahaanController extends Controller
             $initialMarkers = 0;
 
         $message = $perusahaanKegiatans->isEmpty() ? 'tidak ditemukan' : '';
+        $editor = PerusahaanKegiatan::where('nip', $perusahaan->nip)->when($id_perusahaan, function ($query) use ($id_perusahaan) {
+            return $query->where('id_perusahaan', $id_perusahaan);
+        })->latest('tanggal_penginputan')->first();
 
         return view('page-pegawai.perusahaan.perusahaan-view',[
             'judul' => 'Perusahaan',
@@ -48,6 +52,7 @@ class PerusahaanController extends Controller
             'perusahaanKegiatans' => $perusahaanKegiatans,
             'initialMarkers' => $initialMarkers,
             'pesan' => $message,
+            'editor' => $editor,
         ]);
     }
 

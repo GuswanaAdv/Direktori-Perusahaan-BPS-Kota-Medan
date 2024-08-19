@@ -1,6 +1,6 @@
 @extends('layout.pegawai')
 @section('content')
-    @include('component.searchbar')
+    @include('component.searchbar.searchbar-pegawai')
     @include('component.pesan')
     <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
@@ -59,6 +59,7 @@
                         <div class="card-body items-center text-center">
                             <h2 class="card-title">{{!empty($perusahaan->nama_usaha)? $perusahaan->nama_usaha : ""}}</h2>
                             <p>{{!empty($perusahaan->alamat_sbr)? $perusahaan->alamat_sbr : ""}}</p>
+                            <p class="text-sm">{{!empty($perusahaan->nip)? "latest edit by : ".$perusahaan->nip : ""}}</p>
                             <div class="card-actions">
                                 <a href="{{route('perusahaan-view',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
                                     class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>

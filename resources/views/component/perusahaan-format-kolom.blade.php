@@ -4,9 +4,13 @@
         <thead>
             <tr>
                 {{-- Blok 1 --}}
+                <th>id_perusahaan</th>
                 <th>id_sbr</th>
+                <th>tanggal_cacah_pertama</th>
+                <th>tanggal_cacah_terakhir</th>
                 <th>nama_usaha</th>
                 <th>nama_komersial</th>
+                <th>nip</th>
                 <th>kode_unit_statistik</th>
                 <th>provinsi</th>
                 <th>kabupaten</th>
