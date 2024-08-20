@@ -24,7 +24,9 @@ class PerusahaanSementara extends Model
         'tanggal_cacah_terakhir',
         'nama_usaha',
         'nama_komersial',
-        'id_petugas',
+        // 'id_petugas',
+        'nip',
+        'id_pembaruan',
         'kode_kegiatan',
         'kode_unit_statistik',
         'provinsi',
@@ -136,5 +138,9 @@ class PerusahaanSementara extends Model
     }
     function kegiatanStatistik(){
         return $this->belongsTo(KegiatanStatistik::class, 'kode_kegiatan', 'kode_kegiatan');
+    }
+
+    function pembaruan(){
+        return $this->belongsTo(Pembaruan::class, 'id_pembaruan', 'id_pembaruan');
     }
 }

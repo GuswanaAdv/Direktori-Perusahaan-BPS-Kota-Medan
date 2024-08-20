@@ -65,6 +65,10 @@ class Pegawai extends Model
         return $this->hasMany(Perusahaan::class,'nip','nip');
     }
 
+    function pembaruan(){
+        return $this->hasMany(Pembaruan::class,'nip','nip');
+    }
+
     function kegiatanStatistik(){
         return $this->hasMany(KegiatanStatistik::class,'nip','nip');
     }

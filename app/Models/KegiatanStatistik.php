@@ -44,6 +44,10 @@ class KegiatanStatistik extends Model
         return $this->hasMany(PerusahaanSementara::class,'kode_kegiatan','kode_kegiatan');
     }
 
+    function pembaruan(){
+        return $this->hasMany(Pembaruan::class,'kode_kegiatan','kode_kegiatan');
+    }
+
     // Relasi banyak ke satu
     function pegawai(){
         return $this->belongsTo(Pegawai::class,'nip','nip');
