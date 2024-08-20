@@ -7,7 +7,7 @@
                 Silahkan upload data perusahaan dalam bentuk excel
             </div>
             <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
-                @include('component.perusahaan-catatan')
+                @include('component.catatan.perusahaan-catatan')
             </div>
 
             @include('component.pesan')

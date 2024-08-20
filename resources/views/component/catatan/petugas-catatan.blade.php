@@ -12,7 +12,7 @@
     </svg>
     Catatan : Ikuti urutan format kolom berikut
 </div>
-@include('component.petugas-format-kolom')
+@include('component.catatan.petugas-format-kolom')
 <a class="btn bg-grey text-black hover:bg-orange hover:text-white"
     href="{{ url('format-kolom/Format Kolom Petugas.xlsx') }}"
     id="download-link">

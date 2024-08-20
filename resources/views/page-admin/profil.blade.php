@@ -4,7 +4,7 @@
         <div class="card bg-white sm:w-5/6 md:w-3/4 shadow-xl w-full">
 
             <div class="card-body w-full text-2xl text-left sm:px-20 border-b-2 font-bold">
-                Profil Anda
+                Profil Admin Direktori
             </div>
 
             @include('component.pesan')

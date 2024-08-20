@@ -25,7 +25,7 @@
                     />
                     Profil
                 </a></li>
-                <form action="{{ route('logout-admin') }}" method="POST" class="w-full">
+                <form action="{{ route('logout') }}" method="POST" class="w-full">
                     @csrf
 
                     <button type="submit" class="hover:bg-darkgrey hover:text-white btn w-full p-0 mt-2">
@@ -63,7 +63,7 @@
                             />
                             profil
                         </a></li>
-                        <form action="{{ route('logout-admin') }}" method="POST" class="w-full">
+                        <form action="{{ route('logout') }}" method="POST" class="w-full">
                             @csrf
                             <button type="submit" class="my-4 btn w-full">
                                 <img

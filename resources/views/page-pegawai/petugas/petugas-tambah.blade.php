@@ -7,7 +7,7 @@
                 Silahkan upload data petugas dalam bentuk excel
             </div>
             <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
-                @include('component.petugas-catatan')
+                @include('component.catatan.petugas-catatan')
             </div>
 
             @include('component.pesan')

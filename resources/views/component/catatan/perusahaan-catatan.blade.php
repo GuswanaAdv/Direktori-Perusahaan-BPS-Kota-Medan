@@ -12,7 +12,7 @@
     </svg>
     Catatan : Ikuti urutan format kolom berikut
 </div>
-@include('component.perusahaan-format-kolom')
+@include('component.catatan.perusahaan-format-kolom')
 <a class="btn bg-grey text-black hover:bg-orange hover:text-white"
     href="{{ url('format-kolom/Format Kolom Perusahaan.xlsx') }}"
     id="download-link">

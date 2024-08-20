@@ -5,6 +5,7 @@ use App\Http\Controllers\Pegawai\PerusahaanController;
 use App\Http\Controllers\Pegawai\KegiatanStatistikController;
 use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Petugas\Petugas2Controller;
 use Illuminate\Support\Facades\Route;
 
@@ -33,15 +34,19 @@ Route::get('/login-process', function () {
 });
 
 //Sebelum login
-Route::get('/tampil-login', [BerandaController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
-Route::post('/login-process', [BerandaController::class, 'login'])->name('login');
+Route::get('/tampil-login', [LoginController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
+Route::post('/login-process', [LoginController::class, 'login'])->name('login');
+
+// Setelah login
+Route::group(['middleware' => ['auth', 'nocache']], function () {
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 // Login sebagai pegawai
 Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
 
     Route::get('/beranda', [BerandaController::class, 'tampil'])->name('beranda');
     Route::get('/profil', [BerandaController::class, 'tampilProfil'])->name('profil');
-    Route::post('/logout', [BerandaController::class, 'logout'])->name('logout');
     Route::post('/edit-profil', [BerandaController::class, 'editProfil'])->name('edit-profil');
     Route::post('/ganti-password', [BerandaController::class, 'gantiPassword'])->name('ganti-password');
 
@@ -68,7 +73,6 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
 Route::group(['middleware' => ['auth', 'nocache','peran:p3']], function () {
 
     Route::get('/beranda/admin', [AdminController::class, 'tampil'])->name('beranda-admin');
-    Route::post('/logout/admin', [AdminController::class, 'logout'])->name('logout-admin');
     Route::get('/pegawai_search', [AdminController::class, 'search2'])->name('pegawai-search2');
     Route::get('/pegawai_tambah', [AdminController::class, 'tampilTambah'])->name('pegawai-tambah');
     Route::post('/pegawai_tambah_proses', [AdminController::class, 'importExcel'])->name('pegawai-tambah-proses');
@@ -81,5 +85,4 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p3']], function () {
 Route::group(['middleware' => ['auth', 'nocache','peran:p2']], function () {
 
     Route::get('/beranda/petugas', [Petugas2Controller::class, 'tampil'])->name('beranda-petugas');
-    Route::post('/logout/admin', [AdminController::class, 'logout'])->name('logout-admin');
 });

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Pegawai;
 use App\Models\User;
+use App\Models\TimKerja;
+use App\Models\Jabatan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
@@ -25,18 +27,6 @@ class AdminController extends Controller
             'pegawais' => $pegawais,
             'cari' => "-",
             'pesan' => $message,
-        ]);
-    }
-
-    public function logout(Request $request)
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        Session::flush();
-        Session::regenerate();
-        return redirect()->route('tampil-login')->with([
-            'pesan-logout' => 'Logout berhasil!!',
         ]);
     }
 
@@ -61,10 +51,14 @@ class AdminController extends Controller
 
     public function tampilTambah()
     {
+        $timKerjas = Timkerja::all();
+        $jabatans = Jabatan::all();
         return view('page-admin.pegawai-tambah',[
             'judul' => 'Petugas',
             'cari' => "-",
             'pesan' => "-",
+            'timKerjas' => $timKerjas,
+            'jabatans' => $jabatans,
         ]);
     }
 
