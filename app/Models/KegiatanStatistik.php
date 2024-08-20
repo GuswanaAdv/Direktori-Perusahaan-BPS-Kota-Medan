@@ -33,11 +33,15 @@ class KegiatanStatistik extends Model
 
     // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->hasOne(PerusahaanKegiatan::class,'id_perusahaan_kegiatan','id_perusahaan_kegiatan');
+        return $this->hasMany(PerusahaanKegiatan::class,'kode_kegiatan','kode_kegiatan');
     }
 
     function histori(){
-        return $this->hasMany(Histori::class,'id_histori','id_histori');
+        return $this->hasMany(Histori::class,'kode_kegiatan','kode_kegiatan');
+    }
+
+    function perusahaanSementara(){
+        return $this->hasMany(PerusahaanSementara::class,'kode_kegiatan','kode_kegiatan');
     }
 
     // Relasi banyak ke satu

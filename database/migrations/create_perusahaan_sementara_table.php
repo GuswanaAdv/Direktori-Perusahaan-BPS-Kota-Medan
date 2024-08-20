@@ -22,6 +22,7 @@ return new class extends Migration
             $table->char('nama_usaha',100);
             $table->char('nama_komersial',100);
             $table->char('id_petugas',18)->constrained('petugas');
+            $table->char('kode_kegiatan',18)->constrained('kegiatan_statistik');
             $table->integer('kode_unit_statistik')->constrained('unit_statistik');
             $table->char('provinsi');
             $table->char('kabupaten');

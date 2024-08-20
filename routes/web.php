@@ -7,6 +7,8 @@ use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Petugas\Petugas2Controller;
+use App\Http\Controllers\Petugas\TambahPerusahaanController;
+use App\Http\Controllers\Petugas\UpdatePerusahaanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -85,4 +87,12 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p3']], function () {
 Route::group(['middleware' => ['auth', 'nocache','peran:p2']], function () {
 
     Route::get('/beranda/petugas', [Petugas2Controller::class, 'tampil'])->name('beranda-petugas');
+    Route::get('/perusahaan/petugas/{id_perusahaan}', [Petugas2Controller::class, 'lengkap'])->name('perusahaan-view-petugas');
+    Route::get('/perusahaan_search/petugas', [Petugas2Controller::class, 'search2'])->name('perusahaan-search2-petugas');
+    Route::get('/profil/petugas', [Petugas2Controller::class, 'tampilProfil'])->name('profil-petugas');
+    Route::post('/edit-profil/petugas', [Petugas2Controller::class, 'editProfil'])->name('edit-profil-petugas');
+    Route::post('/ganti-password/petugas', [Petugas2Controller::class, 'gantiPassword'])->name('ganti-password-petugas');
+
+    Route::get('/perusahaan_tambah/blok1', [TambahPerusahaanController::class, 'tampilBlok1'])->name('perusahaan-tambah-blok1');
+    Route::post('/perusahaan_tambah/blok1/proses', [TambahPerusahaanController::class, 'tambahBlok1'])->name('perusahaan-tambah-blok1-proses');
 });

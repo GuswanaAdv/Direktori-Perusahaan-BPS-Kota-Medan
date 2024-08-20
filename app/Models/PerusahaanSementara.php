@@ -25,6 +25,7 @@ class PerusahaanSementara extends Model
         'nama_usaha',
         'nama_komersial',
         'id_petugas',
+        'kode_kegiatan',
         'kode_unit_statistik',
         'provinsi',
         'kabupaten',
@@ -132,5 +133,8 @@ class PerusahaanSementara extends Model
     // Relasi banyak ke satu
     function petugas(){
         return $this->belongsTo(Petugas::class, 'id_petugas', 'id_petugas');
+    }
+    function kegiatanStatistik(){
+        return $this->belongsTo(KegiatanStatistik::class, 'kode_kegiatan', 'kode_kegiatan');
     }
 }

@@ -1,98 +1,82 @@
 @extends('layout.petugas')
 @section('content')
     @include('component.searchbar.searchbar-petugas')
+    @include('component.pesan')
 
-    @if (session()->has('success'))
-        <div class="toast toast-top toast-start" id="myToast">
-            <div class="alert alert-info bg-green text-white font-bold text-center">
-                <span>Login Berhasil!!</span>
-            </div>
-        </div>
-    @endif
-
-    <div id="beranda" class="bg-lightgrey">
+    <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
-            <a class="btn border-darkblue text-darkblue bg-white hover:bg-darkblue hover:text-white"
-             href="{{route('kegiatan-statistik')}}">Kegiatan Statistik Bulan Ini:</a>
+            <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
+                <div class="flex items-center justify-center py-2">
+                    <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
+                    href="#">
+                        <img src="{{ url('logo/logo-list-2.png') }}"
+                            alt=""
+                            height="32"
+                            width="32"
+                        >
+                        Perusahaan Terinput:
+                    </a>
+                </div>
+                <div class="flex items-center justify-center py-2">
+                    <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
+                    href="{{ route('perusahaan-tambah-blok1') }}">
+                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                            alt=""
+                            height="32"
+                            width="32"
+                        >
+                        Tambah Perusahaan Baru
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="flex items-center justify-center py-8">
-            <div class="carousel sm:w-2/4">
 
-                @php
-                    $no = 0;
-                    $jumlah = count($kegiatanStatistiks);
-                @endphp
+            @if ($pesan == 'tidak ditemukan')
+            <div class="grid grid-cols-1 gap-8">
+                <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img
+                        src="{{ url('logo/logo-perusahaan.webp') }}"
+                        alt="Shoes"
+                        class="rounded-xl" style="width: 50px"/>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title text-red">Perusahaan Tidak Ditemukan </h2>
+                    </div>
+                </div>
+            </div>
 
-                @if ($pesan == 'tidak ditemukan')
-
-                    <div id="{{ $no < $jumlah? 'slide'.$no : 'slide'.$jumlah}}" class="carousel-item relative w-full">
-                        <div class="w-full flex items-center justify-center">
-                            <div class="grid grid-cols-1 gap-8">
-                                <div class="card bg-base-100 sm:w-96 w-full shadow-xl">
-                                    <figure class="px-10 pt-10">
-                                    <img
-                                        src="https://cdn3.iconfinder.com/data/icons/survey-rating/512/Survey_rating_rate-19-256.png"
-                                        alt="Shoes"
-                                        class="rounded-xl" style="width: 50px"/>
-                                    </figure>
-                                    <div class="card-body items-center text-center">
-                                        <h2 class="card-title text-red">Tidak Ada Kegiatan Statistik di Bulan ini</h2>
-                                    </div>
-                                </div>
+            @else
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                @foreach ($perusahaans as $perusahaan)
+                    <div class="card bg-white border border-darkgrey sm:w-96 w-full shadow-xl">
+                        <figure class="px-10 pt-10">
+                        <img
+                            src="{{ url('logo/logo-perusahaan.webp') }}"
+                            alt="Shoes"
+                            class="rounded-xl" style="width: 50px"/>
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">{{!empty($perusahaan->nama_usaha)? $perusahaan->nama_usaha : ""}}</h2>
+                            <p>{{!empty($perusahaan->alamat_sbr)? $perusahaan->alamat_sbr : ""}}</p>
+                            <p class="text-sm">{{!empty($perusahaan->nip)? "latest edit by : ".$perusahaan->nip : ""}}</p>
+                            <div class="card-actions">
+                                <a href="{{route('perusahaan-view-petugas',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
+                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">update</a>
                             </div>
-                        </div>
-                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         </div>
                     </div>
-
-                @else
-                    @foreach ($kegiatanStatistiks as $kegiatan)
-                        @php
-                            $no++;
-                        @endphp
-
-                        <div id="{{ $no < $jumlah? 'slide'.$no : 'slide'.$jumlah}}" class="carousel-item relative w-full">
-                            <div class="w-full flex items-center justify-center">
-                                <div class="card bg-base-100 w-96 shadow-xl">
-                                    <figure class="px-10 pt-10">
-                                        <img
-                                            src="https://cdn3.iconfinder.com/data/icons/survey-rating/512/Survey_rating_rate-19-256.png"
-                                            alt="Shoes"
-                                            class="rounded-xl" style="width: 50px"/>
-                                    </figure>
-                                    <div class="card-body items-center text-center">
-                                        <h2 class="card-title">{{!empty($kegiatan->nama_kegiatan)? $kegiatan->nama_kegiatan : ""}}</h2>
-                                        <p>
-                                            {{!empty($kegiatan->tanggal_mulai) && !empty($kegiatan->tanggal_selesai)?
-                                            "Tanggal : ".date('d-m-Y', strtotime($kegiatan->tanggal_mulai))." s/d ".date('d-m-Y', strtotime($kegiatan->tanggal_selesai)) : ""}}
-                                        </p>
-                                        <div class="card-actions">
-                                            <a class="btn bg-darkblue text-white hover:bg-blue"
-                                                href="{{route('kegiatan-statistik-view', ['kode_kegiatan' => $kegiatan->kode_kegiatan])}}">
-                                                Selengkapnya
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                                @if ($no == 1)
-                                    <a href="{{'#slide'.$jumlah}}" class="btn btn-circle bg-white shadow-lg">❮</a>
-                                    <a href="{{'#slide'.$no + 1}}" class="btn btn-circle bg-white shadow-lg">❯</a>
-                                @elseif($no < $jumlah)
-                                    <a href="{{'#slide'.$no - 1}}" class="btn btn-circle bg-white shadow-lg">❮</a>
-                                    <a href="{{'#slide'.$no + 1}}" class="btn btn-circle bg-white shadow-lg">❯</a>
-                                @else
-                                    <a href="{{'#slide'.$no - 1}}" class="btn btn-circle bg-white shadow-lg">❮</a>
-                                    <a href="{{'#slide1'}}" class="btn btn-circle bg-white shadow-lg">❯</a>
-                                @endif
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
-
+                @endforeach
             </div>
+            @endif
+
+        </div>
+
+        <div class="flex items-center justify-center pt-8 pb-16">
+            {{-- {{$perusahaans->links('vendor.pagination.tailwind-2')}} --}}
+            {{ $perusahaans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
         </div>
 
     </div>

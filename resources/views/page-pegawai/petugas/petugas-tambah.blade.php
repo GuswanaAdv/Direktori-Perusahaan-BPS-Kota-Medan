@@ -83,7 +83,7 @@
                 warningMessage.style.display = 'none';
             }
         });
-        </script>
+    </script>
 
 
     @include('page-pegawai.petugas.petugas-script-preview')

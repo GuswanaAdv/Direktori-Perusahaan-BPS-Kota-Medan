@@ -12,7 +12,7 @@
 
                 <form class="mx-auto w-full" action="{{ route('kegiatan-statistik-tambah-proses') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="grid sm:grid-cols-2 grid-cols-1">
+                    <div class="grid sm:grid-cols-2 grid-cols-1 space-x-4">
                         <div>
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">

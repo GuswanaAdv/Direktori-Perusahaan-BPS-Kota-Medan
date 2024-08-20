@@ -9,7 +9,7 @@
             </div>
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
-                <li><a href="{{route('beranda-admin')}}" class="{{($judul == 'Beranda')? 'bg-darkorange' : ''}} hover:bg-darkorange">
+                <li><a href="{{route('beranda-petugas')}}" class="{{($judul == 'Beranda')? 'bg-darkorange' : ''}} hover:bg-darkorange">
                     <img
                         src="{{ url('logo/logo-beranda.webp') }}"
                         width="20"
@@ -17,7 +17,7 @@
                     />
                     Beranda
                 </a></li>
-                <li><a class="{{($judul == 'Profil')? 'bg-darkgrey' : ''}} hover:bg-darkgrey hover:text-white btn p-0 mt-2" href="{{ route('profil-admin') }}">
+                <li><a class="{{($judul == 'Profil')? 'bg-darkgrey' : ''}} hover:bg-darkgrey hover:text-white btn p-0 mt-2" href="{{ route('profil-petugas') }}">
                     <img
                         src="{{ url('logo/logo-profil.webp') }}"
                         width="20"
@@ -46,7 +46,7 @@
     {{-- Tampilan Desktop --}}
     <div class="navbar-end hidden lg:flex md:mr-36 ml-20 text-white z-10">
         <ul class="menu menu-horizontal px-1 space-x-2">
-            <li><a href="{{route('beranda-admin')}}" class="{{($judul == 'Beranda')? 'border-b-2 border-white' : ''}} hover:bg-darkorange">
+            <li><a href="{{route('beranda-petugas')}}" class="{{($judul == 'Beranda')? 'border-b-2 border-white' : ''}} hover:bg-darkorange">
                 Beranda
             </a></li>
             <li>
@@ -55,7 +55,15 @@
                         Akun
                     </summary>
                     <ul class="p-2 w-56 shadow-lg text-black">
-                        <li><a href="{{ route('profil-admin') }}" class="mt-4 btn">
+                        <li><a class="mt-4 hover:bg-transparent">
+                            <img
+                                src="{{ url('logo/logo-tanda-panah-kanan.webp') }}"
+                                width="20"
+                                height="20"
+                            />
+                            Nama: {{ strlen(Auth::user()->petugas->nama_petugas) <= 12 ? Auth::user()->petugas->nama_petugas : explode(' ', Auth::user()->petugas->nama_petugas)[0] }}
+                        </a></li>
+                        <li><a href="{{ route('profil-petugas') }}" class="mt-4 btn">
                             <img
                                 src="{{ url('logo/logo-profil.webp') }}"
                                 width="20"

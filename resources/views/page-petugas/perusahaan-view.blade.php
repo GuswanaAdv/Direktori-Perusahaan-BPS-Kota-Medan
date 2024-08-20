@@ -1,4 +1,4 @@
-@extends('layout.pegawai')
+@extends('layout.petugas')
 @section('content')
     <div class="flex items-center justify-center py-8">
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
