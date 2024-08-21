@@ -10,6 +10,7 @@ class Perusahaan extends Model
     use HasFactory;
 
     protected $table = 'perusahaan';
+
     protected $primaryKey = 'id_perusahaan';
 
     // The primary key is of type string

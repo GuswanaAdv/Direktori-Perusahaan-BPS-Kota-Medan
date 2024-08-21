@@ -82,29 +82,29 @@
                 Kegiatan Statistik
             </a></li>
             <li>
-              <details>
-                <summary class="{{($judul == 'Perusahaan')||($judul == 'Petugas')? 'border-b-2 border-white' : ''}} hover:bg-darkorange">
-                    Direktori
-                </summary>
-                <ul class="p-2 w-40 shadow-lg text-black">
-                    <li><a href="{{route('perusahaan')}}" class="hover:bg-darkorange">
-                        <img
-                            src="{{ url('logo/logo-menu.webp') }}"
-                            width="20"
-                            height="20"
-                        />
-                        Perusahaan
-                    </a></li>
-                    <li><a href="{{route('petugas')}}" class="hover:bg-darkorange">
-                        <img
-                            src="{{ url('logo/logo-menu.webp') }}"
-                            width="20"
-                            height="20"
-                        />
-                        Petugas
-                    </a></li>
-                </ul>
-              </details>
+                <details>
+                    <summary class="{{($judul == 'Perusahaan')||($judul == 'Petugas')? 'border-b-2 border-white' : ''}} hover:bg-darkorange">
+                        Direktori
+                    </summary>
+                    <ul class="p-2 w-40 shadow-lg text-black">
+                        <li><a href="{{route('perusahaan')}}" class="hover:bg-darkorange">
+                            <img
+                                src="{{ url('logo/logo-menu.webp') }}"
+                                width="20"
+                                height="20"
+                            />
+                            Perusahaan
+                        </a></li>
+                        <li><a href="{{route('petugas')}}" class="hover:bg-darkorange">
+                            <img
+                                src="{{ url('logo/logo-menu.webp') }}"
+                                width="20"
+                                height="20"
+                            />
+                            Petugas
+                        </a></li>
+                    </ul>
+                </details>
             </li>
             <li>
                 <details>

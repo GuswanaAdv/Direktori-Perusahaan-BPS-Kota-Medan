@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Pegawai;
 
 use App\Imports\PerusahaanImport;
+use App\Imports\PerusahaanTambah;
 use App\Models\Perusahaan;
 use App\Models\PerusahaanKegiatan;
+use App\Models\Pembaruan;
+use App\Models\KegiatanStatistik;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
@@ -86,19 +90,36 @@ class PerusahaanController extends Controller
 
     public function tampilTambah()
     {
+        $currentMonth = Carbon::now()->month;
+        $currentYear = Carbon::now()->year;
+        $today = Carbon::now()->day;
+
+        $kegiatans = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')
+        ->when($currentMonth, function ($query) use ($currentMonth) {
+            return $query->whereMonth('tanggal_mulai','>=', $currentMonth);
+        })
+        ->when($currentYear, function ($query) use ($currentYear) {
+            return $query->whereYear('tanggal_mulai', $currentYear);
+        })
+        ->whereDate('tanggal_mulai', '>=', $today)
+        ->get();
+
         return view('page-pegawai.perusahaan.perusahaan-tambah',[
             'judul' => 'Perusahaan',
             'cari' => "-",
             'pesan' => "-",
+            'kegiatans'=> $kegiatans,
         ]);
     }
 
-    public function importExcel(Request $request)
+    public function tambahPerusahaan(Request $request)
 	{
         try{
             // validasi
             $this->validate($request, [
-                'file' => 'required|mimes:csv,xls,xlsx'
+                'file' => 'required|mimes:csv,xls,xlsx',
+                'kode-kegiatan' => 'required',
+                'nip' => 'required',
             ]);
 
             // menangkap file excel
@@ -110,8 +131,17 @@ class PerusahaanController extends Controller
             // upload ke folder file_siswa di dalam folder public
             $file->move('file_perusahaan',$nama_file);
 
+            $nip = $request->input('nip');
+            $kode_kegiatan = $request->input('kode-kegiatan');
+
+            $pembaruan = Pembaruan::create([
+                'nip' => $nip,
+                'kode_kegiatan' => $kode_kegiatan,
+                'keterangan'=> 'menambah perusahaan baru',
+            ]);
+
             // import data
-            Excel::import(new PerusahaanImport, public_path('/file_perusahaan/'.$nama_file));
+            Excel::import(new PerusahaanTambah ($kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
 
             // alihkan halaman kembali
             return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');

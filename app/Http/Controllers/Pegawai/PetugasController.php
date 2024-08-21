@@ -59,7 +59,7 @@ class PetugasController extends Controller
 
         $kegiatans = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')
         ->when($currentMonth, function ($query) use ($currentMonth) {
-            return $query->whereMonth('tanggal_mulai', $currentMonth);
+            return $query->whereMonth('tanggal_mulai', '>=', $currentMonth);
         })
         ->when($currentYear, function ($query) use ($currentYear) {
             return $query->whereYear('tanggal_mulai', $currentYear);

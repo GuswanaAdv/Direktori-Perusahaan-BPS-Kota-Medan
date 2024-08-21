@@ -16,15 +16,48 @@
                     </button>
                 </div>
                 <div class="flex items-center justify-center py-2">
+                    @if(Auth::user()->pegawai->jabatan->nama_jabatan == 'Ketua Tim')
                     <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                    href="{{ route('perusahaan-tambah') }}">
-                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                    href="{{ route('perusahaan-aproval') }}">
+                        <img src="{{ url('logo/logo-lengkap-3.png') }}"
                             alt=""
                             height="32"
                             width="32"
                         >
-                        Import Data Perusahaan
+                        Aprove Data Perusahaan
                     </a>
+                    @else
+                    <div class="dropdown dropdown-bottom">
+                        <div tabindex="0" role="button" class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white">
+                            <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                                alt=""
+                                height="32"
+                                width="32"
+                            >
+                            Tambah atau Edit
+                        </div>
+                        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white flex justify-start"
+                                href="{{ route('perusahaan-tambah') }}">
+                                <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                                    alt=""
+                                    height="32"
+                                    width="32"
+                                >
+                                Tambah
+                            </a>
+                            <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white mt-2 flex justify-start"
+                                href="">
+                                <img src="{{ url('logo/logo-lengkap-3.png') }}"
+                                    alt=""
+                                    height="32"
+                                    width="32"
+                                >
+                                Edit
+                            </a>
+                        </ul>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

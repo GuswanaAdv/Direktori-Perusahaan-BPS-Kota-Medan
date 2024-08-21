@@ -125,11 +125,11 @@ class PerusahaanSementara extends Model
 
     // Relasi satu ke banyak
     function perusahaanKegiatan(){
-        return $this->hasMany(PerusahaanKegiatan::class, 'id_perusahaan', 'id_perusahaan');
+        return $this->hasMany(PerusahaanKegiatan::class, 'id_perusahaan_sementara', 'id_perusahaan_sementara');
     }
 
     function histori(){
-        return $this->hasMany(Histori::class, 'id_perusahaan', 'id_perusahaan');
+        return $this->hasMany(Histori::class, 'id_perusahaan_sementara', 'id_perusahaan_sementara');
     }
 
     // Relasi banyak ke satu

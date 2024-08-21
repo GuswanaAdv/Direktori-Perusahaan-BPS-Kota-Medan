@@ -17,8 +17,24 @@
                     @csrf
                     <div class="w-full flex items-center justify-center">
                         <div class="grid grid-cols-1">
+                            <label class="form-control w-full mb-4">
+                                <div class="label">
+                                    <span class="label-text font-bold">Pilih kegiatan yang akan diikuti</span>
+                                </div>
+                                <select class="select select-bordered" name="kode-kegiatan" id="kode-kegiatan">
+                                    <option value="-">Pilih Kegiatan</option>
+                                    @foreach ($kegiatans as $kegiatan)
+                                        <option value="{{ $kegiatan->kode_kegiatan }}">{{ $kegiatan->nama_kegiatan }}</option>
+                                    @endforeach
+                                </select>
+                                <div id="warning-message" style="display: none; color: red; text-align: center;">
+                                    Silakan pilih kegiatan terlebih dahulu.
+                                </div>
+                            </label>
+
                             <label class="block mb-2 text-sm font-bold text-black pl-2"
                                 for="user_avatar">
+                                <input type="hidden" value="{{ Auth::user()->pegawai->nip }}" name="nip">
                                 Upload File Berekstensi .xlsx
                             </label>
                             <div class="w-full flex items-center justify-center">
@@ -48,4 +64,27 @@
     </div>
 
     @include('page-pegawai.perusahaan.perusahaan-script-preview')
+
+    <script>
+        document.getElementById('petugas-form').addEventListener('submit', function(event) {
+            // Ambil elemen select
+            var selectElement = document.getElementById('kode-kegiatan');
+            // Ambil nilai yang dipilih
+            var selectedValue = selectElement.value;
+
+            // Ambil elemen peringatan
+            var warningMessage = document.getElementById('warning-message');
+
+            // Cek jika nilai yang dipilih adalah placeholder (kosong)
+            if (selectedValue === "-") {
+                // Tampilkan peringatan
+                warningMessage.style.display = 'block';
+                // Hentikan pengiriman form
+                event.preventDefault();
+            } else {
+                // Sembunyikan peringatan jika nilai valid
+                warningMessage.style.display = 'none';
+            }
+        });
+    </script>
 @endsection

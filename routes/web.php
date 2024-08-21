@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Pegawai\BerandaController;
 use App\Http\Controllers\Pegawai\PerusahaanController;
+use App\Http\Controllers\Pegawai\PerusahaanAprovalController;
 use App\Http\Controllers\Pegawai\KegiatanStatistikController;
 use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
@@ -39,6 +40,9 @@ Route::get('/login-process', function () {
 Route::get('/tampil-login', [LoginController::class, 'tampilLogin'])->name('tampil-login')->middleware('guest');
 Route::post('/login-process', [LoginController::class, 'login'])->name('login');
 
+// Khusus download
+Route::get('/perusahaan_aproval/cek/{id_pembaruan}', [PerusahaanAprovalController::class, 'downloadAproval'])->name('perusahaan-aproval-cek');
+
 // Setelah login
 Route::group(['middleware' => ['auth', 'nocache']], function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -57,7 +61,9 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
     Route::post('/perusahaan_search', [PerusahaanController::class, 'search1'])->name('perusahaan-search1');
     Route::get('/perusahaan_search', [PerusahaanController::class, 'search2'])->name('perusahaan-search2');
     Route::get('/perusahaan_tambah', [PerusahaanController::class, 'tampilTambah'])->name('perusahaan-tambah');
-    Route::post('/perusahaan_tambah_proses', [PerusahaanController::class, 'importExcel'])->name('perusahaan-tambah-proses');
+    Route::post('/perusahaan_tambah_proses', [PerusahaanController::class, 'tambahPerusahaan'])->name('perusahaan-tambah-proses');
+    Route::get('/perusahaan_aproval', [PerusahaanAprovalController::class, 'tampilAproval'])->name('perusahaan-aproval');
+    Route::get('/perusahaan_aproval/proses/{id_pembaruan}', [PerusahaanAprovalController::class, 'prosesAproval'])->name('perusahaan-aproval-proses');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');
@@ -94,5 +100,6 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p2']], function () {
     Route::post('/ganti-password/petugas', [Petugas2Controller::class, 'gantiPassword'])->name('ganti-password-petugas');
 
     Route::get('/perusahaan_tambah/blok1', [TambahPerusahaanController::class, 'tampilBlok1'])->name('perusahaan-tambah-blok1');
+    Route::get('/perusahaan_tambah/blok2', [TambahPerusahaanController::class, 'tampilBlok2'])->name('perusahaan-tambah-blok2');
     Route::post('/perusahaan_tambah/blok1/proses', [TambahPerusahaanController::class, 'tambahBlok1'])->name('perusahaan-tambah-blok1-proses');
 });

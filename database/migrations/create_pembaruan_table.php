@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pembaruan', function (Blueprint $table) {
-            $table->increments('id_pengguna');
+            $table->increments('id_pembaruan');
             $table->char('nip',18)->constrained('pegawai');
             $table->char('kode_kegiatan',20)->constrained('kegiatan_statistik');
             $table->text('keterangan');

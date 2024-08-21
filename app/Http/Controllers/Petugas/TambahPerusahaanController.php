@@ -30,6 +30,19 @@ class TambahPerusahaanController extends Controller
         ]);
     }
 
+    public function tampilBlok2()
+    {
+        $unitStatistiks = UnitStatistik::all();
+        $kondisiPerusahaans = KondisiPerusahaan::all();
+        return view('page-petugas.tambah.perusahaan-tambah-blok2',[
+            'judul' => 'Perusahaan',
+            'cari' => "-",
+            'pesan' => "-",
+            'unitStatistiks' => $unitStatistiks,
+            'kondisiPerusahaans' => $kondisiPerusahaans,
+        ]);
+    }
+
     public function tambahBlok1(Request $request){
         try{
             $this->validate($request, [
@@ -63,7 +76,8 @@ class TambahPerusahaanController extends Controller
             PerusahaanSementara::create([
                 // Blok 1
                 'id_perusahaan' => $request->input('id-perusahaan'),
-                'id_petugas' => $request->input('id-petugas'),
+                'nip' => $request->input('id-petugas'),
+                'id_pembaruan' => 1,
                 'kode_kegiatan' => $request->input('kode-kegiatan'),
                 'id_sbr' => $request->input('id-sbr'),
                 'tanggal_cacah_pertama' => $tahun.'-'.$bulan.'-'.$hari,
@@ -116,7 +130,10 @@ class TambahPerusahaanController extends Controller
                 'npwp_perusahaan' => '-',
                 'kode_status_penanaman_modal' => '0',
             ]);
-            return view('page-petugas.tambah.perusahaan-tambah-blok1')->with('pesanBlok','berhasil menambahkan blok');
+            $unitStatistiks = UnitStatistik::all();
+            $kondisiPerusahaans = KondisiPerusahaan::all();
+
+            return redirect()->route('perusahaan-tambah-blok2')->with('pesanBlok','berhasil menambahkan blok');
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
             return redirect()->route('perusahaan-tambah-blok1')->with('pesanBlok', 'terjadi kesalahan penambahan data : '.$e->getMessage());
