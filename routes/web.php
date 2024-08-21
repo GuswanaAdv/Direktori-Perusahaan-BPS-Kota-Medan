@@ -62,8 +62,11 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
     Route::get('/perusahaan_search', [PerusahaanController::class, 'search2'])->name('perusahaan-search2');
     Route::get('/perusahaan_tambah', [PerusahaanController::class, 'tampilTambah'])->name('perusahaan-tambah');
     Route::post('/perusahaan_tambah_proses', [PerusahaanController::class, 'tambahPerusahaan'])->name('perusahaan-tambah-proses');
-    Route::get('/perusahaan_aproval', [PerusahaanAprovalController::class, 'tampilAproval'])->name('perusahaan-aproval');
+
+    Route::get('/perusahaan_aproval/ketuatim', [PerusahaanAprovalController::class, 'tampilAprovalKetuaTim'])->name('perusahaan-aproval-ketuatim');
+    Route::get('/perusahaan_aproval/staff', [PerusahaanAprovalController::class, 'tampilAprovalStaff'])->name('perusahaan-aproval-staff');
     Route::get('/perusahaan_aproval/proses/{id_pembaruan}', [PerusahaanAprovalController::class, 'prosesAproval'])->name('perusahaan-aproval-proses');
+    Route::get('/perusahaan_aproval/tolak/{id_pembaruan}', [PerusahaanAprovalController::class, 'tolakAproval'])->name('perusahaan-aproval-tolak');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');

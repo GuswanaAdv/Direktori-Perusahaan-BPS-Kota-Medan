@@ -6,19 +6,32 @@
         <div class="flex items-center justify-center pt-4">
             <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
                 <div class="flex items-center justify-center py-2">
-                    <button class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey">
-                        <img src="{{ url('logo/logo-list-2.png') }}"
-                            alt=""
-                            height="32"
-                            width="32"
-                        >
-                        Daftar Perusahaan:
-                    </button>
+                    @if (Auth::user()->pegawai->jabatan->nama_jabatan == 'Ketua Tim')
+                        <a class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey"
+                        href="#">
+                            <img src="{{ url('logo/logo-list-2.png') }}"
+                                alt=""
+                                height="32"
+                                width="32"
+                            >
+                            Daftar Perusahaan:
+                        </a>
+                    @else
+                        <a class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey"
+                        href="{{ route('perusahaan-aproval-staff') }}">
+                            <img src="{{ url('logo/logo-list-2.png') }}"
+                                alt=""
+                                height="32"
+                                width="32"
+                            >
+                            Daftar Aproval:
+                        </a>
+                    @endif
                 </div>
                 <div class="flex items-center justify-center py-2">
                     @if(Auth::user()->pegawai->jabatan->nama_jabatan == 'Ketua Tim')
                     <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                    href="{{ route('perusahaan-aproval') }}">
+                    href="{{ route('perusahaan-aproval-ketuatim') }}">
                         <img src="{{ url('logo/logo-lengkap-3.png') }}"
                             alt=""
                             height="32"
@@ -47,7 +60,7 @@
                                 Tambah
                             </a>
                             <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white mt-2 flex justify-start"
-                                href="">
+                                href="#">
                                 <img src="{{ url('logo/logo-lengkap-3.png') }}"
                                     alt=""
                                     height="32"
