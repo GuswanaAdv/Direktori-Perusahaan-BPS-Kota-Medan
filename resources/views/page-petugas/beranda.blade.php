@@ -19,7 +19,8 @@
                 </div>
                 <div class="flex items-center justify-center py-2">
                     <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                    href="{{ route('perusahaan-tambah-blok1') }}">
+                    {{-- href="{{ route('perusahaan-tambah-blok1') }}"> --}}
+                    href="#">
                         <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
                             alt=""
                             height="32"

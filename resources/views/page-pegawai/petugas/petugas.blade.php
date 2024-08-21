@@ -4,7 +4,7 @@
     @include('component.pesan')
     <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
-            <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
+            <div class="flex sm:space-x-12 grid {{ (Auth::user()->pegawai->jabatan->nama_jabatan == 'Ketua Tim')? 'sm:grid-cols-2' : ''}} grid-cols-1">
                 <div class="flex items-center justify-center py-4">
                     <button class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey">
                         <img src="{{ url('logo/logo-list-2.png') }}"
@@ -15,16 +15,19 @@
                         Daftar Petugas:
                     </button>
                 </div>
-                <div class="flex items-center justify-center py-4">
-                    <a href="{{route('petugas-tambah')}}" class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white">
-                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
-                            alt=""
-                            height="32"
-                            width="32"
-                        >
-                        Tambah Petugas
-                    </a>
-                </div>
+                @if (Auth::user()->pegawai->jabatan->nama_jabatan == 'Ketua Tim')
+                    <div class="flex items-center justify-center py-4">
+                        <a href="{{route('petugas-tambah')}}" class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white">
+                            <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
+                                alt=""
+                                height="32"
+                                width="32"
+                            >
+                            Tambah Petugas
+                        </a>
+                    </div>
+                @endif
+
             </div>
         </div>
 
