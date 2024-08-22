@@ -17,7 +17,7 @@
                             Daftar Perusahaan:
                         </a>
                     @else
-                        <a class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey"
+                        <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
                         href="{{ route('perusahaan-aproval-staff') }}">
                             <img src="{{ url('logo/logo-list-2.png') }}"
                                 alt=""
@@ -108,7 +108,11 @@
                             <p class="text-sm">{{!empty($perusahaan->nip)? "latest edit by : ".$perusahaan->nip : ""}}</p>
                             <div class="card-actions">
                                 <a href="{{route('perusahaan-view',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
-                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>
+                                class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>
+                                @if (Auth::user()->pegawai->jabatan->nama_jabatan == 'Staff')
+                                    <a href="{{route('perusahaan-edit1',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
+                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">Edit</a>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,6 @@
         <thead>
             <tr>
                 {{-- Blok 1 --}}
-                <th>id_perusahaan</th>
                 <th>id_sbr</th>
                 <th>tanggal_cacah_pertama</th>
                 <th>tanggal_cacah_terakhir</th>

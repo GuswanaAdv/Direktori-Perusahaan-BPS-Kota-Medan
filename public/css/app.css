@@ -3221,6 +3221,9 @@ details.collapse summary::-webkit-details-marker {
 .pl-2 {
   padding-left: 0.5rem;
 }
+.pl-4 {
+  padding-left: 1rem;
+}
 .pt-10 {
   padding-top: 2.5rem;
 }

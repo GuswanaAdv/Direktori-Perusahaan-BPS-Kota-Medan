@@ -37,9 +37,9 @@
                                             @endphp
                                             <tr>
                                                 <td>{{ $no }}</td>
-                                                <td>{{ $pembaruan->pegawai->nama_pegawai }}</td>
-                                                <td>{{ $pembaruan->kegiatanStatistik->nama_kegiatan }}</td>
-                                                <td>{{ $pembaruan->keterangan }}</td>
+                                                <td>{{ !empty($pembaruan->pegawai->nama_pegawai)? $pembaruan->pegawai->nama_pegawai : ''}}</td>
+                                                <td>{{ !empty($pembaruan->kegiatanStatistik->nama_kegiatan)? $pembaruan->kegiatanStatistik->nama_kegiatan : ''}}</td>
+                                                <td>{{ !empty($pembaruan->keterangan)? $pembaruan->keterangan : '' }}</td>
                                                 <td>
                                                     <a href="{{ route('perusahaan-aproval-cek', ['id_pembaruan' => $pembaruan->id_pembaruan]) }}"
                                                     class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">Periksa</a>

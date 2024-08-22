@@ -3,13 +3,13 @@
 use App\Http\Controllers\Pegawai\BerandaController;
 use App\Http\Controllers\Pegawai\PerusahaanController;
 use App\Http\Controllers\Pegawai\PerusahaanAprovalController;
+use App\Http\Controllers\Pegawai\PerusahaanEditController;
 use App\Http\Controllers\Pegawai\KegiatanStatistikController;
 use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Petugas\Petugas2Controller;
 use App\Http\Controllers\Petugas\TambahPerusahaanController;
-use App\Http\Controllers\Petugas\UpdatePerusahaanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,6 +67,9 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
     Route::get('/perusahaan_aproval/staff', [PerusahaanAprovalController::class, 'tampilAprovalStaff'])->name('perusahaan-aproval-staff');
     Route::get('/perusahaan_aproval/proses/{id_pembaruan}', [PerusahaanAprovalController::class, 'prosesAproval'])->name('perusahaan-aproval-proses');
     Route::get('/perusahaan_aproval/tolak/{id_pembaruan}', [PerusahaanAprovalController::class, 'tolakAproval'])->name('perusahaan-aproval-tolak');
+
+    Route::get('perusahaan/edit/{id_perusahaan}', [PerusahaanEditController::class, 'tampilEdit1'])->name('perusahaan-edit1');
+    Route::post('perusahaan/edit/proses', [PerusahaanEditController::class, 'prosesEdit1'])->name('perusahaan-edit1-proses');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');

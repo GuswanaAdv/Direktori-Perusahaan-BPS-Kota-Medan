@@ -52,7 +52,7 @@ class PerusahaanAprovalController extends Controller
             $perusahaanSementaras = PerusahaanSementara::where('id_pembaruan',$id_pembaruan)->get();
             $pembaruan = Pembaruan::find($id_pembaruan);
             foreach ($perusahaanSementaras as $perusahaanSementara){
-                $perusahaan = Perusahaan::where('id_perusahaan', $perusahaanSementara->id_perusahaan)->first();
+                $perusahaan = Perusahaan::find($perusahaanSementara->id_perusahaan);
                 if($perusahaan){
                     $perusahaan->update([
                         // Blok 1
@@ -204,9 +204,9 @@ class PerusahaanAprovalController extends Controller
                 $perusahaanSementara->delete();
             }
             $pembaruan->delete();
-            return redirect()->route('perusahaan-aproval')->with('pesanAproval','Data berhasil di aproval');
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data berhasil di aproval');
         }catch(\Exception $e){
-            return redirect()->route('perusahaan-aproval')->with('pesanAproval','Data gagal di aproval : '.$e->getMessage());
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di aproval : '.$e->getMessage());
         }
 
     }
@@ -219,9 +219,9 @@ class PerusahaanAprovalController extends Controller
             }
             $pembaruan = Pembaruan::find($id_pembaruan);
             $pembaruan->delete();
-            return redirect()->route('perusahaan-aproval')->with('pesanAproval','Data berhasil di tolak');
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data berhasil di tolak');
         }catch(\Exception $e){
-            return redirect()->route('perusahaan-aproval')->with('pesanAproval','Data gagal di tolak : '.$e->getMessage());
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di tolak : '.$e->getMessage());
         }
     }
 

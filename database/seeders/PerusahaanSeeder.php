@@ -49,6 +49,7 @@ class PerusahaanSeeder extends Seeder
                 'kode_kondisi_perusahaan' => $row[19],
                 'lattitude' => $row[20],
                 'longitude' => $row[21],
+
                 'kegiatan_utama' => $row[22],
                 'kode_kbli' => $row[23],
                 'produk_utama' => $row[24],
@@ -69,6 +70,7 @@ class PerusahaanSeeder extends Seeder
                 'provinsi_kantor_pusat' => $row[39],
                 'kabupaten_kantor_pusat' => $row[40],
                 'kecamatan_kantor_pusat' => $row[41],
+
                 'nama_penanggungjawab' => $row[42],
                 'jenis_kelamin_penanggungjawab' => $row[43],
                 'tanggal_lahir_penanggungjawab' => $row[44],

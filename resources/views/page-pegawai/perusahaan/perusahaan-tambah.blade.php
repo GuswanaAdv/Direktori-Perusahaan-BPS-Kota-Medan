@@ -13,7 +13,8 @@
             @include('component.pesan')
             <div class="card-body w-full text-left sm:px-20">
 
-                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('perusahaan-tambah-proses') }}" method="POST" enctype="multipart/form-data">
+                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('perusahaan-tambah-proses') }}"
+                id="perusahaan-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="w-full flex items-center justify-center">
                         <div class="grid grid-cols-1">
@@ -66,7 +67,7 @@
     @include('page-pegawai.perusahaan.perusahaan-script-preview')
 
     <script>
-        document.getElementById('petugas-form').addEventListener('submit', function(event) {
+        document.getElementById('perusahaan-form').addEventListener('submit', function(event) {
             // Ambil elemen select
             var selectElement = document.getElementById('kode-kegiatan');
             // Ambil nilai yang dipilih
