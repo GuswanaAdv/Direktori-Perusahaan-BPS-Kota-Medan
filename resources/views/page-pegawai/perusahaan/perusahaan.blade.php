@@ -60,13 +60,13 @@
                                 Tambah
                             </a>
                             <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white mt-2 flex justify-start"
-                                href="#">
+                                href="{{ route('perusahaan-update') }}">
                                 <img src="{{ url('logo/logo-lengkap-3.png') }}"
                                     alt=""
                                     height="32"
                                     width="32"
                                 >
-                                Edit
+                                Update
                             </a>
                         </ul>
                     </div>

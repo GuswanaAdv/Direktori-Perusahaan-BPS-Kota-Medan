@@ -8,6 +8,7 @@ use App\Http\Controllers\Pegawai\KegiatanStatistikController;
 use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Pegawai\PerusahaanUpdateController;
 use App\Http\Controllers\Petugas\Petugas2Controller;
 use App\Http\Controllers\Petugas\TambahPerusahaanController;
 use Illuminate\Support\Facades\Route;
@@ -70,6 +71,9 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
 
     Route::get('perusahaan/edit/{id_perusahaan}', [PerusahaanEditController::class, 'tampilEdit1'])->name('perusahaan-edit1');
     Route::post('perusahaan/edit/proses', [PerusahaanEditController::class, 'prosesEdit1'])->name('perusahaan-edit1-proses');
+
+    Route::get('/perusahaan_update', [PerusahaanUpdateController::class, 'tampilUpdate'])->name('perusahaan-update');
+    Route::get('/perusahaan_update_search', [PerusahaanUpdateController::class, 'search1'])->name('perusahaan-update-search1');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');
