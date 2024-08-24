@@ -103,7 +103,20 @@ class PetugasController extends Controller
         }
         catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
-            return redirect()->route('petugas-tambah')->with('pesanTambahPetugas', 'Terjadi kesalahan saat mengimpor data: '.$e->getMessage());
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            return redirect()->route('petugas-tambah')->with('pesanTambahPetugas', 'Terjadi kesalahan saat mengimpor data: '.$result);
         }
 	}
 }

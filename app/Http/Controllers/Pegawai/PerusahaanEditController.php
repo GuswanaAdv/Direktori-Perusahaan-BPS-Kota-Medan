@@ -198,7 +198,21 @@ public function tampilEdit1($id_perusahaan)
 
             return redirect()->route('perusahaan')->with('pesanEdit1', 'Perusahaan berhasil diedit');
         }catch(\Exception $e){
-            return back()->with('pesanEdit1', 'Perusahaan gagal diedit : '.$e->getMessage());
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            return back()->with('pesanEdit1', 'Perusahaan gagal diedit : '.$result);
         }
 
     }

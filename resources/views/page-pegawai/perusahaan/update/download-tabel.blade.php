@@ -106,9 +106,9 @@
             $('#'+id).remove();
         });
 
-        // Untuk validasi form
+        // Untuk validasi form download
         $(document).ready(function() {
-            $('form').on('submit', function(e) {
+            $('#form-download').on('submit', function(e) {
                 var labelsInKotak = $('#kotak label').length;
 
                 if (labelsInKotak === 0) {

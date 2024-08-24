@@ -9,6 +9,7 @@ use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Pegawai\PerusahaanUpdateController;
+use App\Http\Controllers\Petugas\KegiatanStatistik2Controller;
 use App\Http\Controllers\Petugas\Petugas2Controller;
 use App\Http\Controllers\Petugas\TambahPerusahaanController;
 use Illuminate\Support\Facades\Route;
@@ -110,6 +111,10 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p2']], function () {
     Route::get('/profil/petugas', [Petugas2Controller::class, 'tampilProfil'])->name('profil-petugas');
     Route::post('/edit-profil/petugas', [Petugas2Controller::class, 'editProfil'])->name('edit-profil-petugas');
     Route::post('/ganti-password/petugas', [Petugas2Controller::class, 'gantiPassword'])->name('ganti-password-petugas');
+
+    Route::get('/kegiatan-statistik_petugas', [KegiatanStatistik2Controller::class, 'tampil'])->name('kegiatan-statistik-petugas');
+    Route::get('/kegiatan-statistik_petugas/{kode_kegiatan}', [KegiatanStatistik2Controller::class, 'lengkap'])->name('kegiatan-statistik-view-petugas');
+    Route::get('/kegiatan-statistik_search/petugas', [KegiatanStatistik2Controller::class, 'search2'])->name('kegiatan-statistik-search2-petugas');
 
     Route::get('/perusahaan_tambah/blok1', [TambahPerusahaanController::class, 'tampilBlok1'])->name('perusahaan-tambah-blok1');
     Route::get('/perusahaan_tambah/blok2', [TambahPerusahaanController::class, 'tampilBlok2'])->name('perusahaan-tambah-blok2');

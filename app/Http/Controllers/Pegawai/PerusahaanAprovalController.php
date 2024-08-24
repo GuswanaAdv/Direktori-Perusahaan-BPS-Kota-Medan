@@ -206,7 +206,21 @@ class PerusahaanAprovalController extends Controller
             $pembaruan->delete();
             return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data berhasil di aproval');
         }catch(\Exception $e){
-            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di aproval : '.$e->getMessage());
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di aproval : '.$result);
         }
 
     }
@@ -221,7 +235,21 @@ class PerusahaanAprovalController extends Controller
             $pembaruan->delete();
             return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data berhasil di tolak');
         }catch(\Exception $e){
-            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di tolak : '.$e->getMessage());
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            return redirect()->route('perusahaan-aproval-ketuatim')->with('pesanAproval','Data gagal di tolak : '.$result);
         }
     }
 

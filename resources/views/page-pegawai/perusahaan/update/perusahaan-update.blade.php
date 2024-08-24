@@ -7,13 +7,13 @@
                 <p class="pl-4 font-bold text-lg text-center">
                     Daftar Perusahaan yang Dipilih
                 </p>
-                <form action="{{ route('perusahaan-update-download') }}" method="post" id="form">
+                <form action="{{ route('perusahaan-update-download') }}" method="post" id="form-download">
                     @csrf
                     <div class="w-full grid md:grid-cols-3 grid-cols-1 border-2 rounded-lg p-4 max-h-80 overflow-y-auto border border-darkgrey" id="kotak"></div>
                     <div id="warning-message-perusahaan" style="display: none;" class="text-center text-red text-sm">
                         Silahkan pilih perusahaan terlebih dahulu.
                     </div>
-                    <button class="btn w-full mt-4 bg-grey text-black hover:bg-orange hover:text-whit">Download</button>
+                    <button class="btn w-full mt-4 bg-grey text-black hover:bg-orange hover:text-whit" id="button-download">Download</button>
                 </form>
             </div>
             <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
@@ -28,7 +28,7 @@
             <div class="card-body w-full text-left sm:px-20">
 
                 <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('perusahaan-update-proses') }}"
-                id="perusahaan-form" method="POST" enctype="multipart/form-data">
+                id="form-update" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="w-full flex items-center justify-center">
                         <div class="grid grid-cols-1">
@@ -81,7 +81,7 @@
     @include('page-pegawai.perusahaan.perusahaan-script-preview')
 
     <script>
-        document.getElementById('perusahaan-form').addEventListener('submit', function(event) {
+        document.getElementById('form-update').addEventListener('submit', function(event) {
             // Ambil elemen select
             var selectElement = document.getElementById('kode-kegiatan');
             // Ambil nilai yang dipilih

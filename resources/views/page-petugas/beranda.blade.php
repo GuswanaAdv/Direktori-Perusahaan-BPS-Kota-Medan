@@ -5,28 +5,16 @@
 
     <div id="beranda" class="bg-white">
         <div class="flex items-center justify-center pt-4">
-            <div class="flex sm:space-x-12 grid sm:grid-cols-2 grid-cols-1">
+            <div class="flex sm:space-x-12 grid grid-cols-1">
                 <div class="flex items-center justify-center py-2">
                     <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                    href="#">
+                    href="{{ route('kegiatan-statistik-petugas') }}">
                         <img src="{{ url('logo/logo-list-2.png') }}"
                             alt=""
                             height="32"
                             width="32"
                         >
-                        Perusahaan Terinput:
-                    </a>
-                </div>
-                <div class="flex items-center justify-center py-2">
-                    <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                    {{-- href="{{ route('perusahaan-tambah-blok1') }}"> --}}
-                    href="#">
-                        <img src="{{ url('logo/logo-tambah-lingkaran-2.png') }}"
-                            alt=""
-                            height="32"
-                            width="32"
-                        >
-                        Tambah Perusahaan Baru
+                        Kegiatan Statistik Terkini:
                     </a>
                 </div>
             </div>
@@ -65,7 +53,9 @@
                             <p class="text-sm">{{!empty($perusahaan->nip)? "latest edit by : ".$perusahaan->nip : ""}}</p>
                             <div class="card-actions">
                                 <a href="{{route('perusahaan-view-petugas',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
-                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">update</a>
+                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">
+                                    Selengkapnya
+                                </a>
                             </div>
                         </div>
                     </div>
