@@ -43,6 +43,7 @@ Route::post('/login-process', [LoginController::class, 'login'])->name('login');
 
 // Khusus download
 Route::get('/perusahaan_aproval/cek/{id_pembaruan}', [PerusahaanAprovalController::class, 'downloadAproval'])->name('perusahaan-aproval-cek');
+Route::post('/perusahaan_update_download', [PerusahaanUpdateController::class, 'download'])->name('perusahaan-update-download');
 
 // Setelah login
 Route::group(['middleware' => ['auth', 'nocache']], function () {
@@ -74,6 +75,7 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
 
     Route::get('/perusahaan_update', [PerusahaanUpdateController::class, 'tampilUpdate'])->name('perusahaan-update');
     Route::get('/perusahaan_update_search', [PerusahaanUpdateController::class, 'search1'])->name('perusahaan-update-search1');
+    Route::post('/perusahaan_update_proses', [PerusahaanUpdateController::class, 'prosesUpdate'])->name('perusahaan-update-proses');
 
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');

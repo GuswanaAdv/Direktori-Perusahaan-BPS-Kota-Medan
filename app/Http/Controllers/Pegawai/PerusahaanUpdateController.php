@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Pegawai;
 
-use App\Imports\PerusahaanImport;
-use App\Imports\PerusahaanTambah;
+use App\Exports\PerusahaanUpdateExport;
+use App\Imports\PerusahaanUpdateImport;
 use App\Models\Perusahaan;
 use App\Models\PerusahaanKegiatan;
 use App\Models\Pembaruan;
@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PerusahaanUpdateController extends Controller
 {
@@ -71,6 +72,53 @@ class PerusahaanUpdateController extends Controller
                 $notfound = '<tr class="text-red text-center">'.'Data tidak ditemukan'.'</tr>';
                 return response($notfound);
             }
+        }
+    }
+
+    public function download(Request $request){
+        // Mengambil semua input sebagai array
+        $inputData = array_values($request->input())[1];
+        $input = collect($inputData);
+        return Excel::download(new PerusahaanUpdateExport($input),
+            Auth::user()->pegawai->nama_pegawai.'-updating.xlsx'
+        );
+    }
+
+    public function prosesUpdate(Request $request){
+        try{
+            // validasi
+            $this->validate($request, [
+                'file' => 'required|mimes:csv,xls,xlsx',
+                'kode-kegiatan' => 'required',
+                'nip' => 'required',
+            ]);
+
+            // menangkap file excel
+            $file = $request->file('file');
+
+            // membuat nama file unik
+            $nama_file = rand().$file->getClientOriginalName();
+
+            // upload ke folder file_siswa di dalam folder public
+            $file->move('file_perusahaan',$nama_file);
+
+            $nip = $request->input('nip');
+            $kode_kegiatan = $request->input('kode-kegiatan');
+
+            $pembaruan = Pembaruan::create([
+                'nip' => $nip,
+                'kode_kegiatan' => $kode_kegiatan,
+                'keterangan'=> 'mengupdate perusahaan',
+            ]);
+
+            // import data
+            Excel::import(new PerusahaanUpdateImport ($kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
+
+            // alihkan halaman kembali
+            return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
+        }catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('perusahaan-update')->with('pesanTambahPerusahaan', 'Terjadi kesalahan saat mengimpor data: '.$e->getMessage());
         }
     }
 }

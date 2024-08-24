@@ -4,14 +4,15 @@
         <div class="card bg-white sm:w-3/4 shadow-xl w-full">
 
             <div class="card-body w-full text-2xl text-left sm:px-20 border-b-2 font-bold">
-                Silahkan upload data perusahaan dalam bentuk excel
-            </div>
-            <div class="card-body w-full text-2xl text-left sm:px-20 border-b-2 font-bold">
-                <p class="pl-4 font-bold text-lg">
+                <p class="pl-4 font-bold text-lg text-center">
                     Daftar Perusahaan yang Dipilih
                 </p>
-                <form action="">
+                <form action="{{ route('perusahaan-update-download') }}" method="post" id="form">
+                    @csrf
                     <div class="w-full grid md:grid-cols-3 grid-cols-1 border-2 rounded-lg p-4 max-h-80 overflow-y-auto border border-darkgrey" id="kotak"></div>
+                    <div id="warning-message-perusahaan" style="display: none;" class="text-center text-red text-sm">
+                        Silahkan pilih perusahaan terlebih dahulu.
+                    </div>
                     <button class="btn w-full mt-4 bg-grey text-black hover:bg-orange hover:text-whit">Download</button>
                 </form>
             </div>
@@ -19,10 +20,14 @@
                 @include('page-pegawai.perusahaan.update.download-tabel')
             </div>
 
+            <div class="card-body w-full text-2xl text-center sm:px-20 border-b-2 font-bold">
+                Update Data Perusahaan
+            </div>
+
             @include('component.pesan')
             <div class="card-body w-full text-left sm:px-20">
 
-                <form class="mx-auto py-4 space-y-2 w-full" action="#"
+                <form class="mx-auto py-4 space-y-2 w-full" action="{{ route('perusahaan-update-proses') }}"
                 id="perusahaan-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="w-full flex items-center justify-center">

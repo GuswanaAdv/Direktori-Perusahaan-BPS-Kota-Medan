@@ -58,6 +58,7 @@
     });
 </script>
 <script type="text/javascript">
+    // Untuk live search
     $('#search').on('keyup',function(e){
         e.preventDefault();
         $value = $(this).val();
@@ -76,6 +77,7 @@
     })
 
     function bindCheckboxEvent() {
+        // Untuk pilih perusahaan
         $(document).on('change', '.perusahaan-checkbox', function() {
             var perusahaanNama = $(this).data('nama');
             var parts = perusahaanNama.split('-');
@@ -89,7 +91,7 @@
                     +'<div class="label">'+'<span class="label-text">'
                     +parts[1]+'-'+parts[2]+'</span>'+'</div>'+
                     '<input class="perusahaan-item pl-2" type="text" value="'
-                    +parts[0]+'" readonly>'+'</label>');
+                    +parts[0]+'" name="inputs[]" readonly>'+'</label>');
 
             } else {
                 // Hapus nama perusahaan dari dalam div 'kotak'
@@ -97,10 +99,25 @@
             }
         });
 
+        // Untuk hapus nama perusahaan dari div 'kotak'
         $(document).on('click','.label-checkbox',function(){
             var id = $(this).attr('id');
             console.log('Trying to remove element with ID:', id);
             $('#'+id).remove();
+        });
+
+        // Untuk validasi form
+        $(document).ready(function() {
+            $('form').on('submit', function(e) {
+                var labelsInKotak = $('#kotak label').length;
+
+                if (labelsInKotak === 0) {
+                    e.preventDefault(); // Mencegah pengiriman form
+                    $('#warning-message-perusahaan').show(); // Tampilkan pesan peringatan
+                } else {
+                    $('#warning-message-perusahaan').hide(); // Sembunyikan pesan peringatan jika ada label
+                }
+            });
         });
     }
     bindCheckboxEvent();
