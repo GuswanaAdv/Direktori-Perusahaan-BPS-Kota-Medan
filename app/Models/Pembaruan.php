@@ -24,6 +24,7 @@ class Pembaruan extends Model
         'nip',
         'kode_kegiatan',
         'keterangan',
+        'status',
     ];
 
     // Relasi satu ke satu

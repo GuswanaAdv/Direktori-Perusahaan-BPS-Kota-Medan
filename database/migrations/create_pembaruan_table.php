@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id_pembaruan');
             $table->char('nip',18)->constrained('pegawai');
             $table->char('kode_kegiatan',20)->constrained('kegiatan_statistik');
+            $table->enum('status', ['update', 'download'])->default('update');
             $table->text('keterangan');
         });
     }

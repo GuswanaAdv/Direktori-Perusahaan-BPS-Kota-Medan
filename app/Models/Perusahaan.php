@@ -22,6 +22,7 @@ class Perusahaan extends Model
     protected $fillable = [
         // Blok 1
         'id_perusahaan',
+        'ada_sbr',//baru
         'id_sbr',
         'tanggal_cacah_pertama',
         'tanggal_cacah_terakhir',
@@ -45,7 +46,8 @@ class Perusahaan extends Model
         'longitude',
 
         // Blok 2
-        'kegiatan_utama',
+        // 'kegiatan_utama', //dihilangkan
+        'kode_kategori',//baru
         'kode_kbli',
         'produk_utama',
         'kode_kbki',
@@ -121,6 +123,10 @@ class Perusahaan extends Model
 
     function unitStatistik(){
         return $this->belongsTo(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
+    }
+
+    function kategoriUsaha(){
+        return $this->belongsTo(UnitStatistik::class, 'kode_kategori', 'kode_kategori');
     }
 
     // Relasi satu ke banyak
