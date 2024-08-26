@@ -6,9 +6,11 @@
           <th></th>
           <th>Kegiatan Statistik</th>
           <th>Petugas</th>
-          <th>Tanggal</th>
-          <th>Penanggungjawab</th>
-          <th>Keterangan</th>
+          <th>Tanggal Pencacahan</th>
+          <th>Tanggal Penginputan</th>
+          <th>Petugas</th>
+          <th>Penginput</th>
+          <th>Status Perusahaan</th>
         </tr>
       </thead>
       <tbody>
@@ -25,9 +27,11 @@
                 <td>{{!empty($row->kegiatanStatistik->nama_kegiatan)? $row->kegiatanStatistik->nama_kegiatan: " "}}</td>
                 <td>{{!empty($row->petugas->nama_petugas)? $row->petugas->nama_petugas: " "}}</td>
                 <td>{{!empty($row->tanggal_kegiatan)? date('d-m-Y', strtotime($row->tanggal_kegiatan)): " "}}</td>
+                <td>{{!empty($row->tanggal_penginputan)? date('d-m-Y', strtotime($row->tanggal_penginputan)): " "}}</td>
+                <td>{{!empty($row->nama_petugas)? $row->nama_petugas: " "}}</td>
                 <td>{{!empty($row->pegawai->nama_pegawai)? $row->pegawai->nama_pegawai: " "}}</td>
-                <td>{{!empty($row->keterangan)? $row->keterangan: " "}}</td>
-            </tr> 
+                <td>{{!empty($row->status)? $row->status: " "}}</td>
+            </tr>
         @endforeach
 
       </tbody>

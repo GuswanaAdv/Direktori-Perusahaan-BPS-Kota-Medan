@@ -125,7 +125,7 @@ class PerusahaanSementara extends Model
         return $this->belongsTo(UnitStatistik::class, 'kode_unit_statistik', 'kode_unit_statistik');
     }
     function kategoriUsaha(){
-        return $this->belongsTo(UnitStatistik::class, 'kode_kategori', 'kode_kategori');
+        return $this->belongsTo(KategoriUsaha::class, 'kode_kategori', 'kode_kategori');
     }
 
     // Relasi satu ke banyak

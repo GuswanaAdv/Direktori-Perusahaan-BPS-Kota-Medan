@@ -39,7 +39,7 @@
                          <a class="btn bg-darkblue text-white sm:mx-16">Informasi Tambahan</a>
                      </div>
                      <div class="collapse-content sm:mx-8 space-y-4">
-                         <p>{{!empty($perusahaan->kegiatan_utama)? "Kegiatan Utama : ".$perusahaan->kegiatan_utama : ""}}</p>
+                         <p>{{!empty($perusahaan->kategoriUsaha->nama_kategori)? "Kegiatan Utama : ".$perusahaan->kategoriUsaha->nama_kategori : ""}}</p>
                          <p>{{!empty($perusahaan->produk_utama)? "Produk Utama : ".$perusahaan->produk_utama : ""}}</p>
                          <p>{{!empty($perusahaan->jenisKepemilikan->nama_jenis_kepemilikan)? "Tipe Kepemilikan : ".$perusahaan->jenisKepemilikan->nama_jenis_kepemilikan : ""}}</p>
                      </div>

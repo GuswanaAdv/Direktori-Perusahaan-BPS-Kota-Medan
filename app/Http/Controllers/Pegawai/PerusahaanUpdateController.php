@@ -32,14 +32,15 @@ class PerusahaanUpdateController extends Controller
         ->whereDate('tanggal_mulai', '>=', $today)
         ->get();
 
-        $perusahaans = Perusahaan::orderBy('id_perusahaan', 'asc')->get();
+        // $perusahaans = Perusahaan::orderBy('id_perusahaan', 'asc')->get();
 
-        return view('page-pegawai.perusahaan.update.perusahaan-update',[
+        // return view('page-pegawai.perusahaan.update.perusahaan-update',[
+        return view('page-pegawai.perusahaan.perusahaan-update',[
             'judul' => 'Perusahaan',
             'cari' => "-",
             'pesan' => "-",
             'kegiatans'=> $kegiatans,
-            'perusahaans' => $perusahaans,
+            // 'perusahaans' => $perusahaans,
         ]);
     }
 
