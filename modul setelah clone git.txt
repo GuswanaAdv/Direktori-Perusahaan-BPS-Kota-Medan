@@ -1,0 +1,6 @@
+PS D:\ApkLaravel\si-ku> composer install
+PS D:\ApkLaravel\si-ku> cp .env.example .env
+PS D:\ApkLaravel\si-ku> php artisan key:generate
+
+$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
