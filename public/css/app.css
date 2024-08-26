@@ -2700,6 +2700,10 @@ details.collapse summary::-webkit-details-marker {
 .relative {
   position: relative;
 }
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
 .end-0 {
   inset-inline-end: 0px;
 }
@@ -3064,10 +3068,6 @@ details.collapse summary::-webkit-details-marker {
 .border-t {
   border-top-width: 1px;
 }
-.border-darkblue {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 43 106 / var(--tw-border-opacity));
-}
 .border-darkgrey {
   --tw-border-opacity: 1;
   border-color: rgb(95 95 87 / var(--tw-border-opacity));
@@ -3309,10 +3309,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-darkblue {
-  --tw-text-opacity: 1;
-  color: rgb(0 43 106 / var(--tw-text-opacity));
-}
 .text-darkgrey {
   --tw-text-opacity: 1;
   color: rgb(95 95 87 / var(--tw-text-opacity));
@@ -3336,6 +3332,10 @@ details.collapse summary::-webkit-details-marker {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-grey {
+  --tw-text-opacity: 1;
+  color: rgb(217 217 217 / var(--tw-text-opacity));
 }
 .text-red {
   --tw-text-opacity: 1;
@@ -3397,21 +3397,9 @@ details.collapse summary::-webkit-details-marker {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hover\:border-darkblue:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 43 106 / var(--tw-border-opacity));
-}
 .hover\:border-darkgrey:hover {
   --tw-border-opacity: 1;
   border-color: rgb(95 95 87 / var(--tw-border-opacity));
-}
-.hover\:bg-blue:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(92 158 191 / var(--tw-bg-opacity));
-}
-.hover\:bg-darkblue:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 43 106 / var(--tw-bg-opacity));
 }
 .hover\:bg-darkgrey:hover {
   --tw-bg-opacity: 1;
@@ -3439,10 +3427,6 @@ details.collapse summary::-webkit-details-marker {
 .hover\:bg-yellowpastel:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 251 69 / var(--tw-bg-opacity));
-}
-.hover\:text-darkblue:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 43 106 / var(--tw-text-opacity));
 }
 .hover\:text-darkgrey:hover {
   --tw-text-opacity: 1;

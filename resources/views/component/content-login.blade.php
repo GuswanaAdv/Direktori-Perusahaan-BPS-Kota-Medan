@@ -39,7 +39,15 @@
                         focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5
                         dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                         dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required="">
+                        required>
+                    </div>
+                    <div class="form-control w-full flex items-center justify-center">
+                        <div class="w-40">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">Lihat Password</span>
+                                <input type="checkbox" class="toggle toggle-primary" id="toggle-password"/>
+                            </label>
+                        </div>
                     </div>
                     {{-- <div class="flex items-center">
                         <a href="#" class="text-sm font-medium text-primary-600
@@ -52,4 +60,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('toggle-password').addEventListener('change', function () {
+            const password = document.getElementById('password');
+            if (this.checked) {
+                password.type = 'text'; // Tampilkan password
+            } else {
+                password.type = 'password'; // Sembunyikan password
+            }
+        });
+    </script>
 </section>

@@ -109,35 +109,44 @@
             </div>
 
             {{-- @include('component.pesan') --}}
-            <div class="card-body w-full sm:px-20 flex items-center justify-center">
+            <div class="card-body w-full flex items-center justify-center">
 
                 <p class="text-xl font-bold">Ubah Password</p>
-                <div>
-                    <form class="mx-auto w-full" action="{{ route('ganti-password') }}" method="POST" enctype="multipart/form-data">
+                <div class="md:w-1/3 w-full max-w-xs">
+                    <form class="mx-auto" action="{{ route('ganti-password') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <label class="form-control w-full max-w-lg">
+                        <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Password Lama</span>
                             </div>
-                            <input type="password" name="password-lama"
-                            class="input input-bordered w-full max-w-lg"/>
+                            <input type="password" name="password-lama" id="password-lama"
+                            class="input input-bordered w-full max-w-xs"/>
                         </label>
 
-                        <label class="form-control w-full max-w-lg">
+                        <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Password Baru</span>
                             </div>
-                            <input type="password" name="password-baru"
-                            class="input input-bordered w-full max-w-lg"/>
+                            <input type="password" name="password-baru" id="password-baru"
+                            class="input input-bordered w-full max-w-xs"/>
                         </label>
 
-                        <label class="form-control w-full max-w-lg">
+                        <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Konfirmasi Password Baru</span>
                             </div>
-                            <input type="password" name="konfirmasi-password-baru"
-                            class="input input-bordered w-full max-w-lg"/>
+                            <input type="password" name="konfirmasi-password-baru" id="konfirmasi-password-baru"
+                            class="input input-bordered w-full max-w-xs" id="konfirmasi-password-baru"/>
                         </label>
+
+                        <div class="form-control w-full flex items-center justify-center">
+                            <div class="w-40">
+                                <label class="label cursor-pointer">
+                                    <span class="label-text">Lihat Password</span>
+                                    <input type="checkbox" class="toggle toggle-primary" id="toggle-password"/>
+                                </label>
+                            </div>
+                        </div>
 
                         <div class="flex justify-center w-full max-w-lg">
                             <button class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey mt-8"
@@ -166,6 +175,22 @@
                 submitButton.classList.remove('hidden'); // Tampilkan tombol submit saat mode edit
             } else {
                 submitButton.classList.add('hidden'); // Sembunyikan tombol submit saat mode readonly
+            }
+        });
+
+        document.getElementById('toggle-password').addEventListener('change', function () {
+            const lama = document.getElementById('password-lama');
+            const baru = document.getElementById('password-baru');
+            const konfirmasi = document.getElementById('konfirmasi-password-baru');
+
+            if (this.checked) {
+                lama.type = 'text'; // Tampilkan password
+                baru.type = 'text'; // Tampilkan password
+                konfirmasi.type = 'text'; // Tampilkan password
+            } else {
+                lama.type = 'password'; // Sembunyikan password
+                baru.type = 'password'; // Sembunyikan password
+                konfirmasi.type = 'password'; // Sembunyikan password
             }
         });
     </script>
