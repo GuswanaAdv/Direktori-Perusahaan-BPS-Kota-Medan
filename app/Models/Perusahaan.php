@@ -29,6 +29,7 @@ class Perusahaan extends Model
         'nama_usaha',
         'nama_komersial',
         'nip',
+        'nama_petugas',
         'kode_unit_statistik',
         'provinsi',
         'kabupaten',

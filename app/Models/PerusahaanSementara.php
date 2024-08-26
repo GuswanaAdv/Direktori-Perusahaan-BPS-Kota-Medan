@@ -27,6 +27,7 @@ class PerusahaanSementara extends Model
         'nama_komersial',
         // 'id_petugas',
         'nip',
+        'nama_petugas',
         'id_pembaruan',
         'kode_kegiatan',
         'kode_unit_statistik',
