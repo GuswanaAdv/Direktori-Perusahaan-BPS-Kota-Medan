@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('perusahaan_kegiatan', function (Blueprint $table) {
             $table->id('id_perusahaan_kegiatan');
-            $table->char('kode_kegiatan',5)->constrained('kegiatan_statistik');
+            $table->char('kode_kegiatan',18)->constrained('kegiatan_statistik');
             $table->char('id_perusahaan',20)->constrained('perusahaan');
             $table->char('id_petugas',5)->consrainted('petugas');
             $table->char('nip',18)->constranted('pegawai');

@@ -211,11 +211,11 @@ class PerusahaanAprovalController extends Controller
             $messageArray = explode(' ', $message);
 
             // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
-            if (count($messageArray) < 11) {
+            if (count($messageArray) < 12) {
                 $result = $message;
             } else {
                 // Ambil 11 elemen pertama
-                $first11Elements = array_slice($messageArray, 0, 11);
+                $first11Elements = array_slice($messageArray, 0, 12);
 
                 // Gabungkan elemen-elemen tersebut menjadi string
                 $result = implode(' ', $first11Elements);
@@ -240,11 +240,11 @@ class PerusahaanAprovalController extends Controller
             $messageArray = explode(' ', $message);
 
             // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
-            if (count($messageArray) < 11) {
+            if (count($messageArray) < 12) {
                 $result = $message;
             } else {
                 // Ambil 11 elemen pertama
-                $first11Elements = array_slice($messageArray, 0, 11);
+                $first11Elements = array_slice($messageArray, 0, 12);
 
                 // Gabungkan elemen-elemen tersebut menjadi string
                 $result = implode(' ', $first11Elements);
