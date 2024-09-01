@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pegawai;
 
 use App\Models\KegiatanStatistik;
 use App\Models\PerusahaanKegiatan;
+use App\Models\PerusahaanSementara;
 use Illuminate\Support\Carbon;
 use App\Rules\MinimumDateDifference;
 use Illuminate\Http\Request;
@@ -25,14 +26,16 @@ class KegiatanStatistikController extends Controller
     public function lengkap($kode_kegiatan)
     {
         $kegiatanStatistik = KegiatanStatistik::where('kode_kegiatan', $kode_kegiatan)->first();
+        $perusahaanSementaras = (!empty($kegiatanStatistik->pembaruan))? PerusahaanSementara::where('id_pembaruan',$kegiatanStatistik->pembaruan->id_pembaruan)->paginate(10):'';
         $perusahaanKegiatans = PerusahaanKegiatan::with(['perusahaan','pegawai','petugas','kegiatanStatistik'])
         ->where('kode_kegiatan', $kode_kegiatan)->paginate(10);
         $message = $perusahaanKegiatans->isEmpty() ? 'tidak ditemukan' : '';
-
+        // dd($perusahaanSementaras);
         return view('page-pegawai.kegiatan-statistik.kegiatan-statistik-view',[
             'judul' => 'Kegiatan Statistik',
             'kegiatanStatistik' => $kegiatanStatistik,
             'perusahaanKegiatans' => $perusahaanKegiatans,
+            'perusahaanSementaras' => $perusahaanSementaras,
             'pesan' => $message,
         ]);
     }

@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('perusahaan_sementara', function (Blueprint $table) {
             // Blok 1
-            $table->char('id_perusahaan',20)->primary();
+            $table->bigIncrements('id');
+            $table->char('id_perusahaan',20);
             $table->enum('ada_sbr', ['ada','tidak ada'])->default('tidak ada'); //Tambahan Baris Baru
             $table->char('id_sbr',10);
             $table->char('tanggal_cacah_pertama',10);
@@ -32,7 +33,7 @@ return new class extends Migration
             $table->char('kabupaten');
             $table->char('kecamatan');
             $table->char('kelurahan');
-            $table->char('nama_sls',200);
+            $table->char('nama_sls',200)->nullable();
             $table->char('alamat_sbr',200);
             $table->char('alamat_pencacahan',200)->nullable();
             $table->char('kode_pos',5)->nullable();

@@ -6,7 +6,7 @@
                 Daftar Perusahaan yang belum diapprove
             </div>
             @include('component.pesan')
-            <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
+            <div class="card-body w-full text-left sm:px-20 font-bold">
                 <div class="flex items-center justify-center py-8 w-full">
                     <div class="overflow-x-auto shadow-xl">
                         <table class="table table-zebra bg-white shadow-2xl">
@@ -66,9 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
 
-            </div>
         </div>
     </div>
 @endsection

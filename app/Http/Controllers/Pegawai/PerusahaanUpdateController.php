@@ -32,15 +32,14 @@ class PerusahaanUpdateController extends Controller
         ->whereDate('tanggal_mulai', '>=', $today)
         ->get();
 
-        // $perusahaans = Perusahaan::orderBy('id_perusahaan', 'asc')->get();
+        $perusahaans = Perusahaan::orderBy('id_perusahaan', 'asc')->get();
 
-        // return view('page-pegawai.perusahaan.update.perusahaan-update',[
         return view('page-pegawai.perusahaan.perusahaan-update',[
             'judul' => 'Perusahaan',
             'cari' => "-",
             'pesan' => "-",
             'kegiatans'=> $kegiatans,
-            // 'perusahaans' => $perusahaans,
+            'perusahaans' => $perusahaans,
         ]);
     }
 
@@ -114,7 +113,7 @@ class PerusahaanUpdateController extends Controller
 
             // import data
             Excel::import(new PerusahaanUpdateImport ($kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
-
+            unlink(public_path('/file_perusahaan/' . $nama_file));
             // alihkan halaman kembali
             return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
         }catch (\Exception $e) {

@@ -86,5 +86,5 @@
     </script>
 
 
-    @include('page-pegawai.petugas.petugas-script-preview')
+    @include('component.script-preview')
 @endsection

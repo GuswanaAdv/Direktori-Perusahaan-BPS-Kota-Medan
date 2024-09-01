@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    @include('page-pegawai.perusahaan.perusahaan-script-preview')
+    @include('component.script-preview')
 
     <script>
         document.getElementById('perusahaan-form').addEventListener('submit', function(event) {

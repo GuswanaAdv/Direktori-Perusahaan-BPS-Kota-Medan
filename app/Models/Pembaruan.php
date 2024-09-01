@@ -37,6 +37,6 @@ class Pembaruan extends Model
     }
 
     function perusahaanSementara(){
-        return $this->hasOne(perusahaanSementara::class,'id_perusahaan','id_perusahaan');
+        return $this->hasMany(perusahaanSementara::class,'id','id');
     }
 }

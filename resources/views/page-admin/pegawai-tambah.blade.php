@@ -71,5 +71,5 @@
         </script>
 
 
-    @include('page-admin.pegawai-script-preview')
+    @include('component.script-preview')
 @endsection

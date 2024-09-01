@@ -28,13 +28,14 @@ class PerusahaanSeeder extends Seeder
             // Insert data into the database
             Perusahaan::insert([
                 'id_perusahaan' => $row[0],
-                'ada_sbr' => 'ada',
+                'ada_sbr' => ($row[0]<=1862)?'ada':'tidak ada',
                 'id_sbr' => $row[1],
                 'tanggal_cacah_pertama' => $row[2],
                 'tanggal_cacah_terakhir' => $row[3],
                 'nama_usaha' => $row[4],
                 'nama_komersial' => $row[5],
                 'nip' => $row[6],
+                'kode_kegiatan' => 'sk01',
                 'kode_unit_statistik' => $row[7],
                 'provinsi' => $row[8],
                 'kabupaten' => $row[9],

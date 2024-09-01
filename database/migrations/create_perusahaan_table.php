@@ -24,6 +24,7 @@ return new class extends Migration
             $table->char('nama_komersial',100);
             $table->char('nip',18)->constrained('pegawai');
             $table->char('nama_petugas',50)->default('belum ada');
+            $table->char('kode_kegiatan',18)->constrained('kegiatan_statistik')->nullable();
             $table->integer('kode_unit_statistik')->constrained('unit_statistik');
             $table->char('provinsi');
             $table->char('kabupaten');

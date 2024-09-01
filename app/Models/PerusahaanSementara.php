@@ -9,10 +9,10 @@ class PerusahaanSementara extends Model
 {
     use HasFactory;
     protected $table = 'perusahaan_sementara';
-    protected $primaryKey = 'id_perusahaan';
+    // protected $primaryKey = 'id_perusahaan';
 
     // The primary key is of type string
-    protected $keyType = 'string';
+    // protected $keyType = 'string';
 
     // Indicates if the model should be timestamped.
     public $timestamps = false;
@@ -141,6 +141,9 @@ class PerusahaanSementara extends Model
     // Relasi banyak ke satu
     function petugas(){
         return $this->belongsTo(Petugas::class, 'id_petugas', 'id_petugas');
+    }
+    function pegawai(){
+        return $this->belongsTo(Pegawai::class, 'nip', 'nip');
     }
     function kegiatanStatistik(){
         return $this->belongsTo(KegiatanStatistik::class, 'kode_kegiatan', 'kode_kegiatan');

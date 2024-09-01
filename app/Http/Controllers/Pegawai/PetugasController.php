@@ -97,7 +97,7 @@ class PetugasController extends Controller
 
             // import data
             Excel::import(new PetugasImport ($kode_kegiatan), public_path('/file_petugas/'.$nama_file) );
-
+            unlink(public_path('/file_petugas/' . $nama_file));
             // alihkan halaman kembali
             return redirect()->route('petugas')->with('pesanTambahPetugas','Data Berhasil Diimport');
         }

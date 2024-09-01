@@ -138,6 +138,12 @@
                 <span>{{ session('pesanTambahKegiatanStatistik') }}</span>
             </div>
         </div>
+    @elseif (session('pesanTambahKegiatanStatistik') == 'Selamat Kegiatan Statistik Berhasil Ditambahkan')
+        <div class="toast toast-top toast-center z-20" id="myToast">
+            <div class="alert bg-green text-white font-bold text-center">
+                <span>{{ session('pesanTambahKegiatanStatistik') }}</span>
+            </div>
+        </div>
     @else
         <div class="card-body w-full text-left sm:px-20 border-b-2 font-bold">
             <div role="alert" class="alert alert-error">

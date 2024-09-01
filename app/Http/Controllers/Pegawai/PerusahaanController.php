@@ -142,7 +142,7 @@ class PerusahaanController extends Controller
 
             // import data
             Excel::import(new PerusahaanTambah ($kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
-
+            unlink(public_path('/file_perusahaan/' . $nama_file));
             // alihkan halaman kembali
             return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
         }catch (\Exception $e) {

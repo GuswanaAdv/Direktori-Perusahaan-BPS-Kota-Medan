@@ -32,7 +32,11 @@
             </div>
 
             <div class="flex items-center justify-center pb-16">
-                {{ $perusahaanKegiatans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
+                @if (!empty($kegiatanStatistik->pembaruan->keterangan)&&$kegiatanStatistik->pembaruan->keterangan === 'menunggu proses update')
+                    {{ $perusahaanSementaras->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
+                @else
+                    {{ $perusahaanKegiatans->appends(request()->input())->links('vendor.pagination.tailwind-2') }}
+                @endif
             </div>
         </div>
     </div>

@@ -45,7 +45,7 @@ class KegiatanStatistik extends Model
     }
 
     function pembaruan(){
-        return $this->hasMany(Pembaruan::class,'kode_kegiatan','kode_kegiatan');
+        return $this->hasOne(Pembaruan::class,'kode_kegiatan','kode_kegiatan');
     }
 
     // Relasi banyak ke satu

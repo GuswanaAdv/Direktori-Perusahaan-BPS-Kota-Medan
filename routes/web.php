@@ -5,6 +5,7 @@ use App\Http\Controllers\Pegawai\PerusahaanController;
 use App\Http\Controllers\Pegawai\PerusahaanAprovalController;
 use App\Http\Controllers\Pegawai\PerusahaanEditController;
 use App\Http\Controllers\Pegawai\KegiatanStatistikController;
+use App\Http\Controllers\Pegawai\PerusahaanKegiatanController;
 use App\Http\Controllers\Pegawai\PetugasController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
@@ -44,6 +45,7 @@ Route::post('/login-process', [LoginController::class, 'login'])->name('login');
 
 // Khusus download
 Route::get('/perusahaan_aproval/cek/{id_pembaruan}', [PerusahaanAprovalController::class, 'downloadAproval'])->name('perusahaan-aproval-cek');
+Route::get('/perusahaan/download/tahap5/{id_pembaruan}', [PerusahaanKegiatanController::class, 'downloadKolomPetugas'])->name('download-kolom-petugas');
 Route::post('/perusahaan_update_download', [PerusahaanUpdateController::class, 'download'])->name('perusahaan-update-download');
 
 // Setelah login
@@ -81,13 +83,27 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p1']], function () {
     Route::get('/kegiatan-statistik', [KegiatanStatistikController::class, 'tampil'])->name('kegiatan-statistik');
     Route::get('/kegiatan-statistik/{kode_kegiatan}', [KegiatanStatistikController::class, 'lengkap'])->name('kegiatan-statistik-view');
     Route::get('/kegiatan-statistik_search', [KegiatanStatistikController::class, 'search2'])->name('kegiatan-statistik-search2');
-    Route::get('/kegiatan-statistik_tambah', [KegiatanStatistikController::class, 'tampilTambah'])->name('kegiatan-statistik-tambah');
-    Route::post('/kegiatan-statistik_proses', [KegiatanStatistikController::class, 'prosesTambah'])->name('kegiatan-statistik-tambah-proses');
+    Route::get('/kegiatan-statistik/tambah', [KegiatanStatistikController::class, 'tampilTambah'])->name('kegiatan-statistik-tambah');
+    Route::post('/kegiatan-statistik/proses', [KegiatanStatistikController::class, 'prosesTambah'])->name('kegiatan-statistik-tambah-proses');
 
     Route::get('/petugas', [PetugasController::class, 'tampil'])->name('petugas');
     Route::get('/petugas_search', [PetugasController::class, 'search2'])->name('petugas-search2');
     Route::get('/petugas_tambah', [PetugasController::class, 'tampilTambah'])->name('petugas-tambah');
     Route::post('/petugas_tambah_proses', [PetugasController::class, 'importExcel'])->name('petugas-tambah-proses');
+
+    Route::get('/kegiatan/tambah/tahap1', [PerusahaanKegiatanController::class,'kegiatanTambah'])->name('kegiatan-tambah');
+    Route::post('/kegiatan/tambah/tahap1/proses', [PerusahaanKegiatanController::class,'prosesKegiatanTambah'])->name('proses-kegiatan-tambah');
+    Route::get('/kegiatan/tambah/tahap2/{kode_kegiatan}', [PerusahaanKegiatanController::class,'perusahaanCekSbr'])->name('perusahaan-cek-sbr');
+    Route::post('/kegiatan/tambah/tahap2/proses', [PerusahaanKegiatanController::class,'prosesPerusahaanCekSbr'])->name('proses-perusahaan-cek-sbr');
+    Route::get('/kegiatan/tambah/tahap3/{id_pembaruan}', [PerusahaanKegiatanController::class,'perusahaanHasilSbr'])->name('perusahaan-hasil-sbr');
+    Route::get('/kegiatan/tambah/tahap4/{id_pembaruan}', [PerusahaanKegiatanController::class,'perusahaanCariTambah'])->name('perusahaan-cari-tambah');
+    Route::get('/perusahaan/tambah/tahap4/cari', [PerusahaanKegiatanController::class, 'perusahaanCari'])->name('perusahaan-cari');
+    Route::post('/perusahaan/tambah/tahap4/tambah1', [PerusahaanKegiatanController::class, 'perusahaanTambah1'])->name('perusahaan-tambah1');
+    Route::post('/perusahaan/tambah/tahap4/tambah2', [PerusahaanKegiatanController::class, 'perusahaanTambah2'])->name('perusahaan-tambah2');
+    Route::get('/petugas/tambah/tahap5/{id_pembaruan}', [PerusahaanKegiatanController::class, 'perusahaanPetugas'])->name('perusahaan-petugas');
+    Route::post('/petugas/tambah/tahap5/tambah', [PerusahaanKegiatanController::class, 'PetugasTambah'])->name('perusahaan-petugas-tambah');
+    Route::get('/perusahaan/daftar/tahap6/{id_pembaruan}', [PerusahaanKegiatanController::class, 'perusahaankegiatan'])->name('perusahaan-kegiatan');
+    Route::get('/perusahaan/daftar/tahap6', [PerusahaanKegiatanController::class, 'selesai'])->name('kegiatan-selesai');
 });
 
 // Login sebagai admin

@@ -81,7 +81,7 @@ class AdminController extends Controller
 
             // import data
             Excel::import(new PegawaiImport, public_path('/file_pegawai/'.$nama_file) );
-
+            unlink(public_path('/file_pegawai/' . $nama_file));
             // alihkan halaman kembali
             return redirect()->route('beranda-admin')->with('pesanTambahPegawai','Data Berhasil Diimport');
         }
