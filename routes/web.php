@@ -116,6 +116,7 @@ Route::group(['middleware' => ['auth', 'nocache','peran:p3']], function () {
     Route::get('/profil/admin', [AdminController::class, 'tampilProfil'])->name('profil-admin');
     Route::post('/edit-profil/admin', [AdminController::class, 'editProfil'])->name('edit-profil-admin');
     Route::post('/ganti-password/admin', [AdminController::class, 'gantiPassword'])->name('ganti-password-admin');
+    Route::get('/reset-password/pegawai/{nip}', [AdminController::class, 'resetPassword'])->name('reset-password-pegawai');
 });
 
 // Login sebagai petugas

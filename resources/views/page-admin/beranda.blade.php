@@ -45,6 +45,7 @@
                         <th>Jenis Kelamin</th>
                         <th>No WA</th>
                         <th>Alamat</th>
+                        <th>Reset Password</th>
                     </tr>
                     </thead>
 
@@ -68,6 +69,8 @@
                                 <td>{{!empty($pegawai->jenis_kelamin)? $pegawai->jenis_kelamin : ""}}</td>
                                 <td>{{!empty($pegawai->no_wa)? $pegawai->no_wa : ""}}</td>
                                 <td>{{!empty($pegawai->alamat)? $pegawai->alamat : ""}}</td>
+                                <td><a href="{{ route('reset-password-pegawai',['nip'=>$pegawai->nip]) }}"
+                                    class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">Reset Password</a></td>
                             </tr>
                         @endforeach
 

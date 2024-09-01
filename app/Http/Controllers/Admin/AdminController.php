@@ -184,4 +184,33 @@ class AdminController extends Controller
             return redirect()->route('profil-admin')->with('pesanGantiPassword', 'Terjadi kesalahan saat mengganti password: '.$result);
         }
     }
+
+    public function resetPassword($nip){
+        try{
+            $pegawai = Pegawai::find($nip);
+            $user = User::where('id_pengguna', $pegawai->user->id_pengguna)->first();
+            $user->update([
+                'password' => bcrypt('password'),
+            ]);
+            return redirect()->route('beranda-admin')->with('pesanGantiPassword','Berhasil Mereset Password');
+
+        }catch (\Exception $e) {
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            $message = $e->getMessage();
+            $messageArray = explode(' ', $message);
+
+            // Jika panjang pesan kurang dari atau sama dengan 30 karakter, gunakan pesan tersebut
+            if (count($messageArray) < 11) {
+                $result = $message;
+            } else {
+                // Ambil 11 elemen pertama
+                $first11Elements = array_slice($messageArray, 0, 11);
+
+                // Gabungkan elemen-elemen tersebut menjadi string
+                $result = implode(' ', $first11Elements);
+            }
+            // Tangkap exception dan alihkan halaman kembali dengan pesan error
+            return redirect()->route('beranda-admin')->with('pesanGantiPassword', 'Terjadi kesalahan saat mengganti password: '.$result);
+        }
+    }
 }
