@@ -21,14 +21,14 @@
                  <div class="collapse bg-white border-r-2 border-b-2 rounded-none">
                      <input type="checkbox" />
                      <div class="collapse-title text-xl font-medium">
-                         <a class="btn bg-darkblue text-white sm:mx-16">Lihat Peta</a>
+                        <a class="btn bg-darkblue text-white sm:mx-16">Lihat Peta</a>
                      </div>
                      <div class="collapse-content">
-                         @if ($perusahaan->lattitude != 0)
-                             @include('component.map')
-                         @else
-                             <p class="text-2xl text-red text-center"> Geotagging belum ditambahkan </p>
-                         @endif
+                        @if ($perusahaan->lattitude != 0)
+                            @include('component.map')
+                        @else
+                            <p class="text-2xl text-red text-center"> Geotagging belum ditambahkan </p>
+                        @endif
                      </div>
                  </div>
 
@@ -36,12 +36,12 @@
                  <div class="collapse bg-white border-b-2 rounded-none">
                      <input type="checkbox" />
                      <div class="collapse-title text-xl font-medium">
-                         <a class="btn bg-darkblue text-white sm:mx-16">Informasi Tambahan</a>
+                        <a class="btn bg-darkblue text-white sm:mx-16">Informasi Tambahan</a>
                      </div>
                      <div class="collapse-content sm:mx-8 space-y-4">
-                         <p>{{!empty($perusahaan->kategoriUsaha->nama_kategori)? "Kegiatan Utama : ".$perusahaan->kategoriUsaha->nama_kategori : ""}}</p>
-                         <p>{{!empty($perusahaan->produk_utama)? "Produk Utama : ".$perusahaan->produk_utama : ""}}</p>
-                         <p>{{!empty($perusahaan->jenisKepemilikan->nama_jenis_kepemilikan)? "Tipe Kepemilikan : ".$perusahaan->jenisKepemilikan->nama_jenis_kepemilikan : ""}}</p>
+                        <p>{{!empty($perusahaan->telepon)? "Telepon : ".$perusahaan->telepon : ""}}</p>
+                        <p>{{!empty($perusahaan->kategoriUsaha->nama_kategori)? "Kategori Usaha : ".$perusahaan->kategoriUsaha->nama_kategori : ""}}</p>
+                        <p>{{!empty($perusahaan->kondisiPerusahaan->nama_kondisi_perusahaan)? "Status Perusahaan Terakhir : ".$perusahaan->kondisiPerusahaan->nama_kondisi_perusahaan : ""}}</p>
                      </div>
                  </div>
              </div>

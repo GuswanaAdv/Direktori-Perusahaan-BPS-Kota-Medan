@@ -5,11 +5,13 @@ use Carbon\Carbon;
 use App\Models\KegiatanStatistik;
 use App\Models\User;
 use App\Models\Pegawai;
+use App\Models\Perusahaan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
+use App\Models\KondisiPerusahaan;
 
 class BerandaController extends Controller
 {
@@ -29,13 +31,21 @@ class BerandaController extends Controller
         ->get();
         $message = $kegiatanStatistiks->isEmpty() ? 'tidak ditemukan' : '';
 
-        // dd($kegiatanStatistiks, $currentMonth, $currentYear);
-
+        $kondisiPerusahaan = KondisiPerusahaan::all();
+        $ringkasan = array();
+        foreach($kondisiPerusahaan as $kondisi){
+            $test = array();
+            $test['status'] = $kondisi->nama_kondisi_perusahaan;
+            $test['jumlah'] = Perusahaan::where('kode_kondisi_perusahaan', $kondisi->kode_kondisi_perusahaan)->get()->count();
+            array_push($ringkasan,$test);
+        }
+        // dd($ringkasan);
         return view('page-pegawai.beranda',[
             'judul' => 'Beranda',
             'kegiatanStatistiks' => $kegiatanStatistiks,
             'cari' => "-",
             'pesan' => $message,
+            'ringkasan' => $ringkasan,
         ]);
     }
 

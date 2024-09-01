@@ -26,7 +26,8 @@ class KegiatanStatistikController extends Controller
     public function lengkap($kode_kegiatan)
     {
         $kegiatanStatistik = KegiatanStatistik::where('kode_kegiatan', $kode_kegiatan)->first();
-        $perusahaanSementaras = (!empty($kegiatanStatistik->pembaruan))? PerusahaanSementara::where('id_pembaruan',$kegiatanStatistik->pembaruan->id_pembaruan)->paginate(10):'';
+        $perusahaanSementaras = ($kegiatanStatistik->pembaruan != '')? PerusahaanSementara::where('id_pembaruan',$kegiatanStatistik->pembaruan->id_pembaruan)->paginate(10) : '';
+        $message_tambahan = $perusahaanSementaras === '' ? 'tidak ditemukan' : '';
         $perusahaanKegiatans = PerusahaanKegiatan::with(['perusahaan','pegawai','petugas','kegiatanStatistik'])
         ->where('kode_kegiatan', $kode_kegiatan)->paginate(10);
         $message = $perusahaanKegiatans->isEmpty() ? 'tidak ditemukan' : '';
@@ -37,6 +38,7 @@ class KegiatanStatistikController extends Controller
             'perusahaanKegiatans' => $perusahaanKegiatans,
             'perusahaanSementaras' => $perusahaanSementaras,
             'pesan' => $message,
+            'pesan_tambahan' => $message_tambahan,
         ]);
     }
 

@@ -10,6 +10,7 @@ class PerusahaanKegiatan extends Model
     use HasFactory;
 
     protected $table = 'perusahaan_kegiatan';
+    protected $primaryKey = 'id_perusahaan_kegiatan';
 
     // The primary key is not auto-incrementing
     public $incrementing = true;

@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <!-- row 1 -->
-        @if (!empty($kegiatanStatistik->pembaruan->keterangan)&&$kegiatanStatistik->pembaruan->keterangan === 'menunggu proses update')
+        @if ($pesan_tambahan != 'tidak ditemukan')
             @php
                 $no = ($perusahaanSementaras->currentPage() - 1) * $perusahaanSementaras->perPage();
             @endphp
@@ -44,7 +44,7 @@
                     <th>{{$no}}</th>
                     <td>{{!empty($row->perusahaan->nama_usaha)? $row->perusahaan->nama_usaha: " "}}</td>
                     <td>{{!empty($row->perusahaan->alamat_sbr)? $row->perusahaan->alamat_sbr: " "}}</td>
-                    <td>{{!empty($row->petugas->nama_petugas)? $row->petugas->nama_petugas: " "}}</td>
+                    <td>{{!empty($row->nama_petugas)? $row->nama_petugas: " "}}</td>
                     <td>{{!empty($row->tanggal_kegiatan)? date('d-m-Y', strtotime($row->tanggal_kegiatan)): " "}}</td>
                     <td>{{!empty($row->pegawai->nama_pegawai)? $row->pegawai->nama_pegawai: " "}}</td>
                     <td>{{!empty($row->keterangan)? $row->keterangan: " "}}</td>

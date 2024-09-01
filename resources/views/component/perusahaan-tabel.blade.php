@@ -5,7 +5,6 @@
         <tr>
           <th></th>
           <th>Kegiatan Statistik</th>
-          <th>Petugas</th>
           <th>Tanggal Pencacahan</th>
           <th>Tanggal Penginputan</th>
           <th>Petugas</th>
@@ -25,7 +24,6 @@
             <tr>
                 <th>{{$no}}</th>
                 <td>{{!empty($row->kegiatanStatistik->nama_kegiatan)? $row->kegiatanStatistik->nama_kegiatan: " "}}</td>
-                <td>{{!empty($row->petugas->nama_petugas)? $row->petugas->nama_petugas: " "}}</td>
                 <td>{{!empty($row->tanggal_kegiatan)? date('d-m-Y', strtotime($row->tanggal_kegiatan)): " "}}</td>
                 <td>{{!empty($row->tanggal_penginputan)? date('d-m-Y', strtotime($row->tanggal_penginputan)): " "}}</td>
                 <td>{{!empty($row->nama_petugas)? $row->nama_petugas: " "}}</td>

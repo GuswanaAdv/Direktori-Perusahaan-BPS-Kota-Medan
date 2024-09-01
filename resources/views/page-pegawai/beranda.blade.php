@@ -95,6 +95,52 @@
             </div>
         </div>
 
+        <div class="flex items-center justify-center pt-8 pb-12">
+            <div class="w-full">
+                <div>
+                    <p class="flex items-center justify-center py-8"><a class="btn border-darkgrey text-darkgrey bg-white hover:bg-white hover:text-darkgrey">
+                            <img src="{{ url('logo/logo-list-2.png') }}"
+                                alt=""
+                                height="28"
+                                width="28"
+                            >
+                            Ringkasan Statistik:
+                    </a></p>
+                </div>
+                <div class="flex items-center justify-center w-full">
+                    <div class="overflow-x-auto sm:w-2/4 w-full shadow-xl">
+                        <table class="table table-zebra w-full">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Status Perusahaan</th>
+                                <th>Jumlah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $no = 0;
+                            @endphp
+                            @foreach ($ringkasan as $row)
+                                @php
+                                    $no++;
+                                @endphp
+                                <tr>
+                                    <th>{{$no}}</th>
+                                    <td>{{!empty($row['status'])? $row['status']: "0"}}</td>
+                                    <td>{{!empty($row['jumlah'])? $row['jumlah']: "0"}}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <script>

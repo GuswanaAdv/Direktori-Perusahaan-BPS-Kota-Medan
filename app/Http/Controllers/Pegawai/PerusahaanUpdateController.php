@@ -18,28 +18,13 @@ class PerusahaanUpdateController extends Controller
 {
     public function tampilUpdate()
     {
-        $currentMonth = Carbon::now()->month;
-        $currentYear = Carbon::now()->year;
-        $today = Carbon::now()->day;
-
-        $kegiatans = KegiatanStatistik::orderBy('tanggal_mulai', 'desc')
-        ->when($currentMonth, function ($query) use ($currentMonth) {
-            return $query->whereMonth('tanggal_mulai','>=', $currentMonth);
-        })
-        ->when($currentYear, function ($query) use ($currentYear) {
-            return $query->whereYear('tanggal_mulai', $currentYear);
-        })
-        ->whereDate('tanggal_mulai', '>=', $today)
-        ->get();
-
-        $perusahaans = Perusahaan::orderBy('id_perusahaan', 'asc')->get();
+        $pembaruans = Pembaruan::all();
 
         return view('page-pegawai.perusahaan.perusahaan-update',[
             'judul' => 'Perusahaan',
             'cari' => "-",
             'pesan' => "-",
-            'kegiatans'=> $kegiatans,
-            'perusahaans' => $perusahaans,
+            'pembaruans' => $pembaruans,
         ]);
     }
 
@@ -89,7 +74,7 @@ class PerusahaanUpdateController extends Controller
             // validasi
             $this->validate($request, [
                 'file' => 'required|mimes:csv,xls,xlsx',
-                'kode-kegiatan' => 'required',
+                'id-pembaruan' => 'required',
                 'nip' => 'required',
             ]);
 
@@ -103,19 +88,18 @@ class PerusahaanUpdateController extends Controller
             $file->move('file_perusahaan',$nama_file);
 
             $nip = $request->input('nip');
-            $kode_kegiatan = $request->input('kode-kegiatan');
-
-            $pembaruan = Pembaruan::create([
-                'nip' => $nip,
-                'kode_kegiatan' => $kode_kegiatan,
-                'keterangan'=> 'mengupdate perusahaan',
+            $id_pembaruan = $request->input('id-pembaruan');
+            $pembaruan = Pembaruan::find($id_pembaruan);
+            $pembaruan->update([
+                'nip'=>$nip,
+                'keterangan'=>'menunggu persetujuan',
             ]);
-
             // import data
-            Excel::import(new PerusahaanUpdateImport ($kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
+            Excel::import(new PerusahaanUpdateImport ($pembaruan->kode_kegiatan, $pembaruan->id_pembaruan), public_path('/file_perusahaan/'.$nama_file));
             unlink(public_path('/file_perusahaan/' . $nama_file));
             // alihkan halaman kembali
-            return redirect()->route('perusahaan')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
+
+            return redirect()->route('perusahaan-update')->with('pesanTambahPerusahaan','Data Berhasil Diimport');
         }catch (\Exception $e) {
             // Tangkap exception dan alihkan halaman kembali dengan pesan error
             $message = $e->getMessage();

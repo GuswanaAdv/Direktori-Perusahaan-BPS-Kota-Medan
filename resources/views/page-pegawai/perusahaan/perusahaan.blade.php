@@ -17,14 +17,14 @@
                             Daftar Perusahaan:
                         </a>
                     @else
-                        <a class="btn border-darkgrey text-darkgrey bg-white hover:bg-darkgrey hover:text-white"
-                        href="{{ route('perusahaan-aproval-staff') }}">
+                        <a class="btn border-darkgrey text-darkgrey bg-white hover:border-darkgrey hover:bg-white hover:text-darkgrey"
+                        href="#">
                             <img src="{{ url('logo/logo-list-2.png') }}"
                                 alt=""
                                 height="32"
                                 width="32"
                             >
-                            Daftar Aproval:
+                            Daftar Perusahaan:
                         </a>
                     @endif
                 </div>
@@ -88,10 +88,10 @@
                             <div class="card-actions">
                                 <a href="{{route('perusahaan-view',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
                                 class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">selengkapnya</a>
-                                @if (Auth::user()->pegawai->jabatan->nama_jabatan == 'Staff')
+                                {{-- @if (Auth::user()->pegawai->jabatan->nama_jabatan == 'Staff')
                                     <a href="{{route('perusahaan-edit1',['id_perusahaan' => $perusahaan->id_perusahaan])}}"
                                     class="btn bg-orange text-white hover:bg-yellowpastel hover:text-darkgrey">Edit</a>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
                     </div>
