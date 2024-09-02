@@ -126,7 +126,7 @@
                                 @php
                                     $no++;
                                 @endphp
-                                <tr>
+                                <tr class="{{ $no === 11? 'border-t-2 border-black font-bold':'' }}">
                                     <th>{{$no}}</th>
                                     <td>{{!empty($row['status'])? $row['status']: "0"}}</td>
                                     <td>{{!empty($row['jumlah'])? $row['jumlah']: "0"}}</td>

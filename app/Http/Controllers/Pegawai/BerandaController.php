@@ -33,13 +33,20 @@ class BerandaController extends Controller
 
         $kondisiPerusahaan = KondisiPerusahaan::all();
         $ringkasan = array();
+        $test1 = array();
+        $test1['status'] = 'Belum Diberikan Kode Kondisi';
+        $test1['jumlah'] = Perusahaan::where('kode_kondisi_perusahaan', 10)->orWhere('kode_kondisi_perusahaan', '-')->get()->count();
+        array_push($ringkasan,$test1);
         foreach($kondisiPerusahaan as $kondisi){
             $test = array();
             $test['status'] = $kondisi->nama_kondisi_perusahaan;
             $test['jumlah'] = Perusahaan::where('kode_kondisi_perusahaan', $kondisi->kode_kondisi_perusahaan)->get()->count();
             array_push($ringkasan,$test);
         }
-        // dd($ringkasan);
+        $test1['status'] = 'Total';
+        $test1['jumlah'] = Perusahaan::all()->count();
+        array_push($ringkasan,$test1);
+
         return view('page-pegawai.beranda',[
             'judul' => 'Beranda',
             'kegiatanStatistiks' => $kegiatanStatistiks,
