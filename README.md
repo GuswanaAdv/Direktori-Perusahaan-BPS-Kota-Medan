@@ -14,5 +14,5 @@ Direktori Perusahaan Kota Medan adalah suatu aplikasi berbasis web yang bertujua
 ### Tim Kerja
 - **[Pengolahan Data Diseminasi Statistik & TI]()**
 
-## Instansi
+### Instansi
 - **[BPS Kota Medan](https://www.instagram.com/bpskotamedan/)**
