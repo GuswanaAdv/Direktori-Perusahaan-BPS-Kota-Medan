@@ -1,4 +1,4 @@
-<div align="center" style="display: grid; grid-template-columns: auto 1fr; align-items: center; justify-content: center;">
+<div align="center" style="display: grid; grid-template-columns: auto auto; align-items: center; justify-content: center;">
     <img src="public/logo/logo-bps.png" width="40">
     <p>
         Direktori Perusahaan Kota Medan
