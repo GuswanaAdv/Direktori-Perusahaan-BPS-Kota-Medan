@@ -1,8 +1,6 @@
-<div align="center" style="display: grid; grid-template-columns: auto auto; align-items: center; justify-content: center;">
+<div align="center">
     <img src="public/logo/logo-bps.png" width="40">
-    <p>
-        Direktori Perusahaan Kota Medan
-    </p>
+    Direktori Perusahaan Kota Medan
 </div>
 
 <p align="center">
