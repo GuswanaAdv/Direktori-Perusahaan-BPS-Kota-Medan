@@ -1,7 +1,8 @@
 <div align="center">
     <img src="public/logo/logo-bps.png" width="40">
-    Direktori Perusahaan Kota Medan
+    <p style="font-size: 24px;">Direktori Perusahaan Kota Medan</p>
 </div>
+
 
 <p align="center">
     <a href="">
