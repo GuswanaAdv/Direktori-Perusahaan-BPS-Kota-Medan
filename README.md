@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" style="display: flex; align-items: center; justify-content: center;">
     <img src="public/logo/logo-bps.png" width="40">
     <p>
         Direktori Perusahaan Kota Medan
