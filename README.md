@@ -1,9 +1,9 @@
-<p align="center">
-    <a href="#" target="_blank">
-        <img src="public/logo/logo-bps.png" width="40">
-    </a> 
-    Direktori Perusahaan Kota Medan
-</p>
+<div align="center">
+    <img src="public/logo/logo-bps.png" width="40">
+    <p>
+        Direktori Perusahaan Kota Medan
+    </p>
+</div>
 
 <p align="center">
     <a href="">
